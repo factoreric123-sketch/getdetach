@@ -65,7 +65,8 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-bold mb-3">Contact</h2>
             <p className="text-muted-foreground">
-              If you have any questions about this Privacy Policy, please contact us at support@detachapp.com.
+              If you have any questions about this Privacy Policy, please{" "}
+              <Link to="/contact" className="text-primary hover:underline">contact us</Link>.
             </p>
           </section>
         </div>

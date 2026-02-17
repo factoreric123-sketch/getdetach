@@ -69,7 +69,8 @@ const Terms = () => {
           <section>
             <h2 className="text-xl font-bold mb-3">Contact</h2>
             <p className="text-muted-foreground">
-              For questions about these Terms & Conditions, contact us at support@detachapp.com.
+              For questions about these Terms & Conditions,{" "}
+              <Link to="/contact" className="text-primary hover:underline">contact us</Link>.
             </p>
           </section>
         </div>
