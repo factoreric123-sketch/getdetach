@@ -60,10 +60,6 @@ const Contact = () => {
           </Button>
         </form>
 
-        <p className="text-xs text-muted-foreground mt-6 text-center">
-          Or email us directly at{" "}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
-        </p>
       </div>
     </div>
   );
