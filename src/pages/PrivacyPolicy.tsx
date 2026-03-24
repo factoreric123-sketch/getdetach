@@ -18,7 +18,6 @@ const PrivacyPolicy = () => {
             <h2 className="text-xl font-bold mb-3">Overview</h2>
             <p className="text-muted-foreground">
               Detach is built to minimize data collection. Most app data stays on your device.
-              We only send limited NFC verification data required to confirm whether a scanned tag is an authorized Detach tag.
             </p>
           </section>
 
@@ -29,8 +28,7 @@ const PrivacyPolicy = () => {
             </p>
             <p className="text-muted-foreground mb-2">We process:</p>
             <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
-              <li>NFC tag identifier (serial/UID or tag code) when you scan a tag</li>
-              <li>Basic request metadata needed for service operation/security (for example, request timing and technical logs)</li>
+              <li>Basic request metadata needed for service operation and security (for example, request timing and technical logs)</li>
             </ul>
           </section>
 
@@ -54,25 +52,17 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3">NFC Verification</h2>
-            <p className="text-muted-foreground">
-              When you scan a tag, Detach sends the tag identifier to our verification backend to check if the tag is authorized.
-              If the tag is authorized, the requested action (start/end) proceeds. If not, it is denied.
-            </p>
-          </section>
-
-          <section>
             <h2 className="text-xl font-bold mb-3">Analytics & Tracking</h2>
             <p className="text-muted-foreground">
               Detach does not use advertising SDKs.
-              Detach does not use third-party behavioral tracking across apps/websites.
+              Detach does not use third-party behavioral tracking across apps or websites.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold mb-3">Third-Party Services</h2>
             <p className="text-muted-foreground">
-              Detach uses a backend service for NFC tag authorization storage and verification.
+              Detach uses a backend service for authorization and verification purposes.
             </p>
           </section>
 
@@ -82,14 +72,14 @@ const PrivacyPolicy = () => {
               On-device focus/session/settings data remains on your device until you delete it or remove the app.
             </p>
             <p className="text-muted-foreground">
-              Server-side tag authorization records are retained as needed to operate and secure tag verification.
+              Server-side authorization records are retained as needed to operate and secure the service.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold mb-3">Your Choices</h2>
             <p className="text-muted-foreground">
-              You can stop NFC verification by not using tag-based actions and can remove the app at any time.
+              You can remove the app at any time.
               You may contact us to request deletion of server-side data where applicable.
             </p>
           </section>
