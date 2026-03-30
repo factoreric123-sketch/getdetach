@@ -65,10 +65,10 @@ const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Everything you need to <span className="text-gradient">stay focused</span>
+            App Blocker Features That <span className="text-gradient">Keep You Focused</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Designed for people who want to be more present — not preachy, just practical.
+            The Detach app blocker is designed for people who want to be more present — not preachy, just practical.
           </p>
         </motion.div>
 
