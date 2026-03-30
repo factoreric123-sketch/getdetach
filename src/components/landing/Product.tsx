@@ -24,8 +24,8 @@ const Product = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Coming Soon
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent text-sm font-semibold mb-4">
+            Available Now
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             The Detach <span className="text-gradient">NFC Tag</span>
@@ -33,6 +33,7 @@ const Product = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A beautifully minimal physical tag that starts your focus session with a single tap.
           </p>
+          <p className="text-2xl font-bold text-foreground mt-4">$9.99</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
