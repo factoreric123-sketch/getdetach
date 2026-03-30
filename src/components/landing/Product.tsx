@@ -78,33 +78,18 @@ const Product = () => {
             </div>
 
             <div className="glass-card p-6 mt-8">
-              <h3 className="text-lg font-bold mb-2">Join the waitlist</h3>
+              <h3 className="text-lg font-bold mb-2">Get Your Detach Tag</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Be the first to know when the Detach NFC Tag is available.
+                Order your NFC tag and start your focus sessions with a single tap.
               </p>
-              {submitted ? (
-                <div className="flex items-center gap-2 text-accent font-semibold">
-                  <Check className="w-5 h-5" />
-                  You're on the list!
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex gap-3">
-                  <input
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shrink-0"
-                  >
-                    Join
-                  </button>
-                </form>
-              )}
+              <a
+                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity"
+              >
+                Buy Now — $9.99
+              </a>
             </div>
           </motion.div>
         </div>
