@@ -39,6 +39,7 @@ const Navbar = () => {
           <a href="#features" onClick={() => setOpen(false)} className="block text-muted-foreground hover:text-foreground">Features</a>
           <a href="#how-it-works" onClick={() => setOpen(false)} className="block text-muted-foreground hover:text-foreground">How It Works</a>
           <a href="#privacy" onClick={() => setOpen(false)} className="block text-muted-foreground hover:text-foreground">Privacy</a>
+          <Link to="/blog" onClick={() => setOpen(false)} className="block text-muted-foreground hover:text-foreground">Blog</Link>
           <a
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"

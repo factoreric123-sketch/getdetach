@@ -15,6 +15,8 @@ const Footer = () => {
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
             <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
+            <Link to="/detach-app" className="hover:text-foreground transition-colors">What is Detach?</Link>
+            <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>

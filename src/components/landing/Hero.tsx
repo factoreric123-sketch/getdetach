@@ -28,8 +28,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Detach blocks distracting apps and websites during focus sessions.
-          Tap an NFC tag to start — creating real friction between you and your screen.
+          Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Tap an NFC tag to start — creating real friction between you and your screen.
         </motion.p>
 
         <motion.div
