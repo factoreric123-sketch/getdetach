@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://getdetach.lovable.app/sitemap.xml
+Sitemap: https://getdetach.app/sitemap.xml
