@@ -43,10 +43,18 @@ const Hero = () => {
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-2xl font-semibold text-lg hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-3 border-2 border-muted-foreground/40 bg-muted/30 backdrop-blur-sm text-foreground px-8 py-4 rounded-full font-semibold text-lg hover:border-muted-foreground/60 transition-all"
           >
             <Apple className="w-6 h-6" />
-            Download on the App Store
+            Download App
+          </a>
+          <a
+            href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all shadow-[0_0_30px_8px_hsl(var(--accent)/0.3)]"
+          >
+            Shop Tag
           </a>
         </motion.div>
 
