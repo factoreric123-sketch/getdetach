@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-1">Detach</h3>
             <p className="text-sm text-muted-foreground">Be present. By design.</p>
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
             <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
