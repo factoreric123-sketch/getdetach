@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
