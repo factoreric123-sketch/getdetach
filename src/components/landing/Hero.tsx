@@ -18,8 +18,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-            Be here.{" "}
-            <span className="text-gradient">Not on your phone.</span>
+            Detach – <span className="text-gradient">App Blocker</span> for Social Media & Screen Time
           </h1>
         </motion.div>
 
