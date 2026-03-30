@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,10 @@ import { useToast } from "@/hooks/use-toast";
 const CONTACT_EMAIL = "factoreric123@gmail.com";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact Us — Detach";
+  }, []);
+
   const { toast } = useToast();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

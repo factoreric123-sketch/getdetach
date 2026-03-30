@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const Terms = () => {
+  useEffect(() => {
+    document.title = "Terms & Conditions — Detach";
+  }, []);
+
   return (
     <div className="min-h-screen bg-background px-6 py-16">
       <div className="max-w-3xl mx-auto">
