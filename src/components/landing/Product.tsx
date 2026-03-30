@@ -4,13 +4,7 @@ import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubmitted(true);
-      setEmail("");
-    }
-  };
+
 
   return (
     <section id="product" className="py-24 px-6">
