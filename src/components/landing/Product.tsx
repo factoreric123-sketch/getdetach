@@ -64,7 +64,7 @@ const Product = () => {
             <div className="space-y-4">
               {[
                 "Soft-touch matte finish",
-                "Works with any iPhone (7 or later)",
+                "Requires iOS 17 or later",
                 "No battery or charging needed",
                 "Pairs instantly with the Detach app",
               ].map((feature) => (
