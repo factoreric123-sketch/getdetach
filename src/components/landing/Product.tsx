@@ -74,7 +74,7 @@ const Product = () => {
                 Order your NFC tag and start your focus sessions with a single tap.
               </p>
               <a
-                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity"
