@@ -19,7 +19,7 @@ const Navbar = () => {
           <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
           <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
           <a
-            href="https://apps.apple.com"
+            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-5 py-2 rounded-xl font-semibold hover:opacity-90 transition-opacity"
