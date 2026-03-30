@@ -40,7 +40,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="https://apps.apple.com"
+            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-2xl font-semibold text-lg hover:opacity-90 transition-opacity"

@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
 
           <a
-            href="https://apps.apple.com"
+            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-3 rounded-xl font-semibold text-sm hover:bg-secondary/80 transition-colors"
