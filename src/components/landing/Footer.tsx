@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-1">Detach</h3>
-            <p className="text-sm text-muted-foreground">Be present. By design.</p>
+            <p className="text-sm text-muted-foreground">The app blocker for reducing screen time.</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
