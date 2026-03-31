@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Apple, ChevronDown, Nfc } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8"
         >
-          <Nfc className="w-3.5 h-3.5" />
+          <img src={logo} alt="Detach logo" className="w-4 h-4 rounded-md" />
           Free App — NFC-powered focus sessions
         </motion.div>
 
@@ -63,7 +64,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
           >
-            <Apple className="w-5 h-5" />
+            <img src={logo} alt="Detach logo" className="w-5 h-5 rounded-lg" />
             Download App
           </a>
           <a
