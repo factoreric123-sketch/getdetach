@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Apple, ChevronDown, Nfc } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -10,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Detach app — block distracting apps and focus with NFC tags"
+          alt="Detach app — block distracting apps and focus"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/75 to-background" />
@@ -26,8 +25,8 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8"
         >
-          <Nfc className="w-3.5 h-3.5" />
-          Free App — NFC-powered focus sessions
+          <Sparkles className="w-3.5 h-3.5" />
+          Block apps with a physical tap
         </motion.div>
 
         <motion.div
@@ -48,7 +47,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Block distracting apps and reduce screen time. Tap a physical NFC tag
+          Block distracting apps and reduce screen time. Tap a small physical tag
           to start — creating real friction between you and your phone.
         </motion.p>
 
@@ -64,7 +63,6 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
           >
-            <Apple className="w-5 h-5" />
             Download App
           </a>
           <a
@@ -83,7 +81,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-6 text-sm text-muted-foreground/70"
         >
-          Free to download · iOS 16+ · No account required
+          iOS 17+ · No account required
         </motion.p>
 
         {/* Scroll indicator */}
