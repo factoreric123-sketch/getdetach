@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-lg font-bold">Detach</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              The app blocker that uses physical NFC tags to help you reduce screen time and reclaim your focus.
+              An app blocker for iPhone that uses a physical tag to make quitting your session feel intentional — not accidental.
             </p>
             <a
               href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
@@ -41,7 +41,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
-                  Shop NFC Tag — $9.99
+                  Shop the Tag — $9.99
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground/60">
           <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
-          <span>Free to download · iOS 16+ · No account required</span>
+          <span>iOS 17+ · No account required</span>
         </div>
       </div>
     </footer>

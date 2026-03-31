@@ -1,30 +1,26 @@
 import { motion } from "framer-motion";
-import { Settings2, Nfc, Brain, BarChart3 } from "lucide-react";
+import { Settings2, Tag, Brain, BarChart3 } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
     icon: Settings2,
-    title: "Set up your mode",
-    description: "Choose which apps and websites to block. Create different modes for different situations.",
+    title: "Pick what to block",
+    description: "Choose your apps — Instagram, TikTok, games, whatever. Set up different modes for work, sleep, or just getting through your morning.",
   },
   {
-    number: "02",
-    icon: Nfc,
-    title: "Tap your NFC tag",
-    description: "Hold your phone to the NFC tag to start a focus session. It's that simple.",
+    icon: Tag,
+    title: "Place your tag somewhere",
+    description: "Stick it on your desk, nightstand, or fridge. Somewhere you have to physically go. That's the point.",
   },
   {
-    number: "03",
     icon: Brain,
-    title: "Stay present",
-    description: "Blocked apps are inaccessible. Focus on what matters. No willpower required.",
+    title: "Your phone is yours again",
+    description: "Blocked apps are gone. Not hidden — gone. You can't negotiate with it or talk yourself into five more minutes.",
   },
   {
-    number: "04",
     icon: BarChart3,
-    title: "Tap again to end",
-    description: "When you're ready, tap the tag again. Check your stats and see your progress.",
+    title: "Tap to end, see how you did",
+    description: "Go back to the tag when you're ready. Check your stats. Over time you'll actually see the difference.",
   },
 ];
 
@@ -42,7 +38,7 @@ const HowItWorks = () => {
             How it <span className="text-gradient">works</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Four steps to a more intentional relationship with your phone.
+            Simple enough to set up in five minutes. Effective enough to actually change habits.
           </p>
         </motion.div>
 
@@ -53,14 +49,13 @@ const HowItWorks = () => {
           <div className="space-y-5">
             {steps.map((step, index) => (
               <motion.div
-                key={step.number}
+                key={step.title}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-card p-6 sm:p-8 flex items-start gap-5 hover:border-primary/20 transition-colors duration-300 group"
               >
-                {/* Step icon bubble */}
                 <div className="relative shrink-0">
                   <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/15 transition-colors duration-300">
                     <step.icon className="w-6 h-6 text-primary" />

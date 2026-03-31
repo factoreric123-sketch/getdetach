@@ -4,18 +4,18 @@ import { ShieldCheck, UserX, WifiOff } from "lucide-react";
 const pillars = [
   {
     icon: UserX,
-    title: "No account needed",
-    description: "Download and use immediately. No sign-up, no email.",
+    title: "No account",
+    description: "Download it, open it, use it. No email, no sign-up, no onboarding flow.",
   },
   {
     icon: ShieldCheck,
-    title: "No data collection",
-    description: "We collect nothing. Your usage stays entirely on-device.",
+    title: "Nothing collected",
+    description: "Your blocking sessions, your habits, your screen time — all of it stays on your phone.",
   },
   {
     icon: WifiOff,
-    title: "No cloud sync",
-    description: "Nothing leaves your phone. Ever. That's a promise.",
+    title: "No internet required",
+    description: "The app works entirely offline. There's no server to send data to because there is no server.",
   },
 ];
 
@@ -33,11 +33,10 @@ const Privacy = () => {
             <ShieldCheck className="w-7 h-7 text-accent" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Your data stays <span className="text-accent">yours</span>
+            Your data stays <span className="text-accent">on your phone</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Detach doesn't require an account. No servers, no analytics, no tracking.
-            Everything happens on your device — exactly how it should be.
+            Most apps want your data. Detach doesn't have a use for it. There are no servers, no analytics dashboard, no way for us to see anything you do.
           </p>
         </motion.div>
 
