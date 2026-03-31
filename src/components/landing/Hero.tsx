@@ -1,67 +1,68 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
-      {/* Background image with overlay */}
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Detach app — block distracting apps and focus"
-          className="w-full h-full object-cover opacity-30"
+          alt="Detach app"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/75 to-background" />
-        {/* Subtle radial glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_20%,hsl(220_95%_60%/0.08),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/85 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_30%,hsl(217_91%_60%/0.06),transparent)]" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8"
-        >
-          <Sparkles className="w-3.5 h-3.5" />
-          Block apps with a physical tap
-        </motion.div>
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
-            Detach –{" "}
-            <span className="text-gradient">App Blocker</span>
-            <br className="hidden sm:block" /> for Social Media
-          </h1>
-        </motion.div>
-
+        {/* Label */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-6"
         >
-          Block distracting apps and reduce screen time. Tap a small physical tag
-          to start — creating real friction between you and your phone.
+          App Blocker for iPhone
         </motion.p>
 
-        <motion.div
+        {/* Heading */}
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          className="text-[clamp(2.8rem,8vw,5.5rem)] font-black tracking-tight leading-[0.95] mb-7"
+        >
+          Put down{" "}
+          <span className="text-gradient">the phone.</span>
+          <br />
+          For real this time.
+        </motion.h1>
+
+        {/* Sub */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.22 }}
+          className="text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
+        >
+          Detach blocks your apps at the OS level. A small physical tag on your desk is the only way to end a session — making it impossible to give in.
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <a
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
+            className="inline-flex items-center gap-2.5 border border-white/15 bg-white/[0.05] text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/[0.08] hover:border-white/25 transition-all duration-150 cursor-pointer"
           >
             Download App
           </a>
@@ -69,7 +70,7 @@ const Hero = () => {
             href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all duration-200 shadow-[0_0_30px_6px_rgba(255,255,255,0.25)]"
+            className="inline-flex items-center gap-2.5 bg-white text-black px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-150 shadow-[0_0_25px_rgba(255,255,255,0.18)] cursor-pointer"
           >
             Order Now
           </a>
@@ -78,24 +79,24 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-6 text-sm text-muted-foreground/70"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-5 text-xs text-muted-foreground/50 tracking-wide"
         >
           iOS 17+ · No account required
         </motion.p>
 
-        {/* Scroll indicator */}
+        {/* Scroll cue */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          transition={{ duration: 1, delay: 1.4 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ChevronDown className="w-5 h-5 text-muted-foreground/40" />
+            <ChevronDown className="w-4 h-4 text-muted-foreground/30" />
           </motion.div>
         </motion.div>
       </div>
