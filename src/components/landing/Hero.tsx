@@ -61,18 +61,18 @@ const Hero = () => {
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-[0_0_40px_8px_hsl(0_0%_95%/0.08)]"
+            className="inline-flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
           >
             <Apple className="w-5 h-5" />
-            Download Free
+            Download App
           </a>
           <a
             href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 border border-border/60 bg-muted/20 backdrop-blur-sm text-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-muted/40 hover:border-border transition-all duration-200"
+            className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all duration-200 shadow-[0_0_30px_6px_rgba(255,255,255,0.25)]"
           >
-            Shop NFC Tag — $9.99
+            Order Now
           </a>
         </motion.div>
 
