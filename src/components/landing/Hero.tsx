@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Apple, ChevronDown } from "lucide-react";
+import { Apple, ChevronDown, Nfc } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import logo from "@/assets/logo.png";
 
@@ -26,7 +26,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-8"
         >
-          <img src={logo} alt="Detach logo" className="w-4 h-4 rounded-md" />
+          <Nfc className="w-3.5 h-3.5" />
           Free App — NFC-powered focus sessions
         </motion.div>
 
