@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { Apple, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import logo from "@/assets/logo.png";
 
@@ -64,7 +64,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
           >
-            <img src={logo} alt="Detach logo" className="w-5 h-5 rounded-lg" />
+            <Apple className="w-5 h-5" />
             Download App
           </a>
           <a
