@@ -1,40 +1,68 @@
 import { Link } from "react-router-dom";
 import { Apple } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border py-12 px-6">
+    <footer className="border-t border-border/50 pt-12 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-1">Detach</h3>
-            <p className="text-sm text-muted-foreground">The app blocker for reducing screen time.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <img src={logo} alt="Detach logo" className="w-7 h-7 rounded-lg" />
+              <span className="text-lg font-bold">Detach</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              The app blocker that uses physical NFC tags to help you reduce screen time and reclaim your focus.
+            </p>
+            <a
+              href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-secondary/80 transition-colors"
+            >
+              <Apple className="w-4 h-4" />
+              Download on App Store
+            </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-            <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
-            <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
-            <Link to="/detach-app" className="hover:text-foreground transition-colors">What is Detach?</Link>
-            <Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link>
-            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+          {/* Product links */}
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Product</h4>
+            <ul className="space-y-2.5 text-sm text-muted-foreground">
+              <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
+              <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
+              <li><a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
+              <li>
+                <a
+                  href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Shop NFC Tag — $9.99
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <a
-            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-3 rounded-xl font-semibold text-sm hover:bg-secondary/80 transition-colors"
-          >
-            <Apple className="w-4 h-4" />
-            App Store
-          </a>
+          {/* Company links */}
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Company</h4>
+            <ul className="space-y-2.5 text-sm text-muted-foreground">
+              <li><Link to="/detach-app" className="hover:text-foreground transition-colors">What is Detach?</Link></li>
+              <li><Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Detach. All rights reserved.
+        <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground/60">
+          <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
+          <span>Free to download · iOS 16+ · No account required</span>
         </div>
       </div>
     </footer>
