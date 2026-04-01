@@ -157,6 +157,62 @@ Users of the Detach app report spending significantly less time on social media.
     `.trim(),
   },
   {
+    slug: "detach-vs-brick-vs-blok-vs-bloom",
+    title: "Detach vs Brick vs Blok vs Bloom: They All Do the Same Thing",
+    metaTitle: "Detach vs Brick vs Blok vs Bloom — Which App Blocker Is Worth It?",
+    metaDescription: "Brick, Blok, and Bloom all do the same thing as Detach — block your apps with a physical tag. The difference is price. Here's why you're being overcharged.",
+    excerpt: "Brick, Blok, and Bloom all use a physical tag to block your apps. So does Detach. The difference? They charge $50–$70. We charge $9.99.",
+    date: "2025-04-01",
+    content: `
+## Brick, Blok, Bloom, and Detach all do the same thing
+
+Here's the pitch you've seen: tap a physical device to your phone, your distracting apps get blocked, you actually get stuff done. It's a good idea. It works.
+
+Brick does it. Blok does it. Bloom does it. Detach does it.
+
+The difference is what they charge you for it.
+
+## What you're actually buying
+
+All four of these apps use the same mechanism: a small NFC chip. When you tap it to your phone, it triggers the app to block or unblock your apps using Apple's Screen Time API.
+
+An NFC chip costs pennies to manufacture. A nice plastic casing costs a little more. Let's call it $2–3 in materials.
+
+So what justifies a $50–70 price tag? Marketing, mostly.
+
+## The price breakdown
+
+| App | Tag price | App cost |
+|---|---|---|
+| Brick | $69 | Free |
+| Blok | $59 | Subscription |
+| Bloom | $49 | Subscription |
+| **Detach** | **$9.99** | **Free** |
+
+Same chip. Same idea. Wildly different prices.
+
+## Why the others cost so much
+
+They've built brands around the hardware. Nice packaging, influencer deals, Instagram ads. That costs money, and you're paying for it.
+
+There's nothing wrong with good branding — but when the product itself is a $2 NFC sticker, a $69 price tag is a stretch.
+
+## What Detach does differently
+
+Detach charges $9.99 for the tag. That's it. The app is free, there's no subscription, and there's no account required.
+
+The blocking is enforced the same way as every other app on this list — through Apple's Screen Time API. Your apps are gone until you tap the tag. Strict mode means you can't even delete the app to get around it.
+
+The only thing Detach doesn't have is a $60 price tag and a lifestyle brand built around it.
+
+## Should you care about brand?
+
+If you want a nicer unboxing experience, Brick or Bloom might feel more premium. That's a real thing. But if you want your apps blocked and you don't want to spend $60 on a chip that costs $2, Detach is the move.
+
+[Download Detach free](https://apps.apple.com/us/app/detach-screen-break/id6759267252) and [grab the tag for $9.99](https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400). Same result. Much less money.
+    `.trim(),
+  },
+  {
     slug: "detach-vs-other-app-blockers",
     title: "Detach vs Other App Blockers: What's Different?",
     metaTitle: "Detach vs Other App Blockers – Why Detach Wins",

@@ -58,8 +58,8 @@ const Features = () => {
           {[
             {
               icon: Shield,
-              title: "Blocks at the OS level",
-              description: "Instagram, TikTok, YouTube — gone. Uses Apple Screen Time. No workarounds, no way around it.",
+              title: "Apps are actually gone",
+              description: "Instagram, TikTok, YouTube — completely blocked. Not just hidden. You can't open them, period.",
               number: "01",
             },
             {

@@ -41,7 +41,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
-                  Shop the Tag — $9.99
+                  Shop the Tag
                 </a>
               </li>
             </ul>

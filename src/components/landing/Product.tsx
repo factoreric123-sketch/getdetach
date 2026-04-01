@@ -1,103 +1,80 @@
 import { motion } from "framer-motion";
-import { Check, Star, Zap } from "lucide-react";
+import { Check } from "lucide-react";
 import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
   return (
-    <section id="product" className="py-24 px-6">
+    <section id="product" className="py-24 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-accent/15 border border-accent/20 text-accent text-sm font-semibold mb-4">
-            <Zap className="w-3.5 h-3.5" />
-            Available Now
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            The Detach <span className="text-gradient">NFC Tag</span>
+          <p className="section-label mb-3">The tag</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
+            Small. Cheap.{" "}
+            <span className="text-gradient">Actually works.</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A beautifully minimal physical tag that starts your focus session with a single tap.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-2xl overflow-hidden border border-border/40 bg-card"
           >
-            <div className="glass-card p-4 rounded-3xl overflow-hidden">
-              <img
-                src={nfcDevice}
-                alt="Detach NFC Tag — a minimal, curved physical tag"
-                className="w-full rounded-2xl object-cover"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src={nfcDevice}
+              alt="Detach tag"
+              className="w-full object-cover"
+              loading="lazy"
+            />
           </motion.div>
 
           {/* Details */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
+            transition={{ duration: 0.5 }}
           >
-            {/* Price + rating */}
-            <div className="flex items-center gap-4">
-              <span className="text-4xl font-bold">$9.99</span>
-              <div className="flex items-center gap-1 text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-                <span className="text-sm text-muted-foreground ml-1">5.0</span>
-              </div>
+            <div className="mb-8">
+              <span className="text-5xl font-black tracking-tight">$9.99</span>
+              <p className="text-muted-foreground text-sm mt-2">One-time. No subscription. Shipped to your door.</p>
             </div>
 
-            {/* Features */}
-            <div className="space-y-3">
+            <div className="space-y-3 mb-10">
               {[
                 "Soft-touch matte finish",
-                "Requires iOS 17 or later",
-                "No battery or charging needed",
-                "Pairs instantly with the Detach app",
-              ].map((feature) => (
-                <div key={feature} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-accent" />
-                  </div>
-                  <span className="text-foreground/90 text-sm">{feature}</span>
+                "No battery, no charging, ever",
+                "Works with iPhone (iOS 17+)",
+                "Pairs with the app instantly",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-foreground/40 shrink-0" />
+                  <span className="text-sm text-muted-foreground">{item}</span>
                 </div>
               ))}
             </div>
 
-            {/* CTA card */}
-            <div className="glass-card p-6 border-primary/20">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-base font-bold">Get Your Detach Tag</h3>
-                <span className="text-xs text-accent font-semibold bg-accent/10 px-2 py-1 rounded-full">
-                  Free shipping
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Order your NFC tag and start focus sessions with a single tap.
-              </p>
-              <a
-                href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-primary text-primary-foreground text-center px-6 py-3 rounded-xl font-semibold text-sm hover:opacity-90 hover:scale-[1.02] transition-all duration-200"
-              >
-                Buy Now — $9.99
-              </a>
-            </div>
+            <a
+              href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-colors duration-150 cursor-pointer shadow-[0_0_25px_rgba(255,255,255,0.12)]"
+            >
+              Order Now
+            </a>
+
+            <p className="text-xs text-muted-foreground/40 mt-4">
+              Other brands charge $50+ for the same chip. We don't.
+            </p>
           </motion.div>
         </div>
       </div>

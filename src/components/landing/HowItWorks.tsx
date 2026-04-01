@@ -37,7 +37,7 @@ const HowItWorks = () => {
           <p className="section-label mb-3">How it works</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
             Set up in{" "}
-            <span className="text-gradient">five minutes.</span>
+            <span className="text-gradient">one minute.</span>
           </h2>
         </motion.div>
 
