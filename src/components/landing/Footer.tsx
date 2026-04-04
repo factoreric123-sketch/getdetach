@@ -34,16 +34,7 @@ const Footer = () => {
               <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
               <li><a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
-              <li>
-                <a
-                  href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Shop the Tag
-                </a>
-              </li>
+              <li><a href="/shop" className="hover:text-foreground transition-colors">Shop the Tag</a></li>
             </ul>
           </div>
 

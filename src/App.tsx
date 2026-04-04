@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import DetachApp from "./pages/DetachApp";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Shop from "./pages/Shop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/detach-app" element={<DetachApp />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
