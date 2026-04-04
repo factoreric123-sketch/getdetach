@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import DetachApp from "./pages/DetachApp";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Shop from "./pages/Shop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
