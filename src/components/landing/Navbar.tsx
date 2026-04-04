@@ -29,10 +29,9 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors duration-150">Features</a>
-          <a href="#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</a>
-          <a href="#privacy" className="hover:text-foreground transition-colors duration-150">Privacy</a>
-          <Link to="/blog" className="hover:text-foreground transition-colors duration-150">Blog</Link>
+          <Link to="/#features" className="hover:text-foreground transition-colors duration-150">Features</Link>
+          <Link to="/#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</Link>
+          <Link to="/shop" className="hover:text-foreground transition-colors duration-150">Shop</Link>
           <a
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
