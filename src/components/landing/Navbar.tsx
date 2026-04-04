@@ -29,10 +29,9 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors duration-150">Features</a>
-          <a href="#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</a>
-          <a href="#privacy" className="hover:text-foreground transition-colors duration-150">Privacy</a>
-          <Link to="/blog" className="hover:text-foreground transition-colors duration-150">Blog</Link>
+          <Link to="/#features" className="hover:text-foreground transition-colors duration-150">Features</Link>
+          <Link to="/#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</Link>
+          <Link to="/shop" className="hover:text-foreground transition-colors duration-150">Shop</Link>
           <a
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
@@ -63,31 +62,19 @@ const Navbar = () => {
           >
             <div className="px-6 py-4 space-y-1">
               {[
-                { label: "Features", href: "#features", isAnchor: true },
-                { label: "How it works", href: "#how-it-works", isAnchor: true },
-                { label: "Privacy", href: "#privacy", isAnchor: true },
-                { label: "Blog", href: "/blog", isAnchor: false },
-              ].map((link) =>
-                link.isAnchor ? (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
+                { label: "Features", to: "/#features" },
+                { label: "How it works", to: "/#how-it-works" },
+                { label: "Shop", to: "/shop" },
+              ].map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  onClick={() => setOpen(false)}
+                  className="block px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
               <div className="pt-2 pb-1">
                 <a
                   href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
