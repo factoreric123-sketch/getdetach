@@ -64,9 +64,7 @@ const Product = () => {
             </div>
 
             <a
-              href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/shop"
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-colors duration-150 cursor-pointer shadow-[0_0_25px_rgba(255,255,255,0.12)]"
             >
               Order Now

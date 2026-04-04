@@ -67,9 +67,7 @@ const Hero = () => {
             Download App
           </a>
           <a
-            href="https://buy.stripe.com/eVq5kEcTqbLRf8la6sfw400"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/shop"
             className="inline-flex items-center gap-2.5 bg-white text-black px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-150 shadow-[0_0_25px_rgba(255,255,255,0.18)] cursor-pointer"
           >
             Order Now
