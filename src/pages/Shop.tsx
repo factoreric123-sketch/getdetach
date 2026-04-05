@@ -84,7 +84,7 @@ const Shop = () => {
               <div className="rounded-2xl overflow-hidden border border-border/40 bg-card">
                 <img
                   src={nfcDevice}
-                  alt="Detach NFC tag — app blocker device"
+                  alt="Detach card — app blocker device"
                   className="w-full object-cover"
                 />
               </div>
