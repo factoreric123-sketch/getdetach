@@ -14,6 +14,7 @@ const Shop = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
