@@ -149,7 +149,7 @@ const BlogPost = () => {
 
           {/* CTA */}
           <div className="mt-12 glass-card p-8 text-center">
-            <h3 className="text-xl font-bold mb-3">Try Detach — The App Blocker That Works</h3>
+            <h3 className="text-xl font-bold mb-3">Try Detach: The App Blocker That Works</h3>
             <p className="text-muted-foreground mb-6">
               Free to download. No account required. Start blocking social media and reducing screen time today.
             </p>

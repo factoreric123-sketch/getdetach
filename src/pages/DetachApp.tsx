@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How does Detach block apps?",
-    a: "Detach uses Apple's Screen Time API to block apps at the system level. When an app is blocked during a Detach session, you cannot open it at all — not through notifications, links, or search. To end the session, you must physically tap your NFC tag.",
+    a: "Detach uses Apple's Screen Time API to block apps at the system level. When an app is blocked during a Detach session, you cannot open it at all. Not through notifications, links, or search. To end the session, you must physically tap your NFC card.",
   },
   {
     q: "Is Detach free?",

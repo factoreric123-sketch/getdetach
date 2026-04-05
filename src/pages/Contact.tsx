@@ -11,7 +11,7 @@ const CONTACT_EMAIL = "factoreric123@gmail.com";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact Us — Detach";
+    document.title = "Contact Us | Detach";
   }, []);
 
   const { toast } = useToast();

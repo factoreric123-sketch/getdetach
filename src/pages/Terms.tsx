@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 const Terms = () => {
   useEffect(() => {
-    document.title = "Terms & Conditions — Detach";
+    document.title = "Terms & Conditions | Detach";
   }, []);
 
   return (
