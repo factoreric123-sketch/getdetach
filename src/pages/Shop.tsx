@@ -14,7 +14,7 @@ const Shop = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    document.title = "Shop – Buy the Detach Tag | App Blocker Device";
+    document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", "Order the Detach NFC tag — the physical device that locks distracting apps. $9.99, one-time purchase, shipped to your door.");
