@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
 
 const competitors = [
   {
