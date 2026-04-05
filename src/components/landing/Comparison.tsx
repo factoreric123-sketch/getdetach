@@ -85,38 +85,6 @@ const Comparison = () => {
                   </td>
                 ))}
               </tr>
-              {/* Subscription row */}
-              <tr className="border-b border-border/20">
-                <td className="py-4 pr-4 text-muted-foreground">Subscription required</td>
-                {competitors.map((c) => (
-                  <td key={c.name} className="py-4 px-3 text-center">
-                    {c.subscription === "No" ? (
-                      <X className="w-4 h-4 text-muted-foreground/40 mx-auto" />
-                    ) : (
-                      <Check className="w-4 h-4 text-destructive/60 mx-auto" />
-                    )}
-                  </td>
-                ))}
-              </tr>
-              {/* Feature rows */}
-              {features.map((f) => (
-                <tr key={f.label} className="border-b border-border/20">
-                  <td className="py-4 pr-4 text-muted-foreground">{f.label}</td>
-                  {competitors.map((c) => {
-                    const has = f.all ? true : f.values?.[c.name as keyof typeof f.values];
-                    return (
-                      <td key={c.name} className="py-4 px-3 text-center">
-                        {has ? (
-                          <Check className="w-4 h-4 text-foreground/50 mx-auto" />
-                        ) : (
-                          <X className="w-4 h-4 text-muted-foreground/30 mx-auto" />
-                        )}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
           </table>
         </motion.div>
 
