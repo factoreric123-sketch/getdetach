@@ -46,7 +46,7 @@ const Product = () => {
           >
             <div className="mb-8">
               <span className="text-5xl font-black tracking-tight">$9.99</span>
-              <p className="text-muted-foreground text-sm mt-2">One-time. No subscription. Shipped to your door.</p>
+              <p className="text-muted-foreground text-sm mt-2">One-time. No subscription. Free shipping (USA only).</p>
             </div>
 
             <div className="space-y-3 mb-10">
