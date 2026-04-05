@@ -79,7 +79,7 @@ const BlogPost = () => {
           elements.push(
             <div key={i} className="flex gap-3 my-2">
               <span className="text-primary font-bold">{line.match(/^\d+/)?.[0]}.</span>
-              <p className="text-muted-foreground"><strong className="text-foreground">{match[1]}</strong> — {renderInline(match[2])}</p>
+              <p className="text-muted-foreground"><strong className="text-foreground">{match[1]}</strong> {renderInline(match[2])}</p>
             </div>
           );
         } else {
