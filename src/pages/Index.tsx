@@ -30,6 +30,7 @@ const Index = () => {
       <Features />
       <HowItWorks />
       <Product />
+      <WhyDetach />
       <Comparison />
       <Privacy />
       <Footer />
