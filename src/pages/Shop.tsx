@@ -97,8 +97,9 @@ const Shop = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="pt-2"
             >
-              <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-                Detach Tag
+               <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+                Detach Card
+               </p>
               </p>
               <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">
                 The Card That Locks{" "}
