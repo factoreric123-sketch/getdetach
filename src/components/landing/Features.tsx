@@ -27,6 +27,11 @@ const secondary = [
     title: "Progress stats",
     description: "See how much time you've actually spent away from your phone.",
   },
+  {
+    icon: AlertTriangle,
+    title: "No subscription",
+    description: "Pay once. $9.99 and it's yours forever. No monthly fee, ever.",
+  },
 ];
 
 const Features = () => {
