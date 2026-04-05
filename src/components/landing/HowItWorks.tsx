@@ -51,7 +51,7 @@ const HowItWorks = () => {
               transition={{ delay: i * 0.08 }}
               className="bg-background p-6 hover:bg-card transition-colors duration-200 group cursor-default"
             >
-              <span className="text-[2.5rem] font-black text-border/60 leading-none block mb-3 group-hover:text-border/80 transition-colors duration-200">
+              <span className="text-[2.5rem] font-black text-border/20 leading-none block mb-3 group-hover:text-border/30 transition-colors duration-200">
                 {step.number}
               </span>
               <h3 className="text-base font-semibold mb-2 text-foreground">{step.title}</h3>
