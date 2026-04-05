@@ -85,6 +85,7 @@ const Comparison = () => {
                   </td>
                 ))}
               </tr>
+            </tbody>
           </table>
         </motion.div>
 
