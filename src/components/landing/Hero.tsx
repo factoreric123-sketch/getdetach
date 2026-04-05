@@ -48,7 +48,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.22 }}
           className="text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          Detach locks your apps so you can't open them. A small physical tag on your desk is the only way to end a session — making it impossible to give in.
+          Detach locks your apps so you can't open them. A small physical card on your desk is the only way to end a session — making it impossible to give in.
         </motion.p>
 
         {/* Buttons */}

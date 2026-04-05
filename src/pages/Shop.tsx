@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, Minus, Plus, ShoppingBag, Truck, Shield, Package } from "lucide-react";
+import { Check, Minus, Plus, ShoppingBag, Truck, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -14,10 +14,10 @@ const Shop = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    document.title = "Shop – Buy the Detach Tag | App Blocker Device";
+    document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Order the Detach NFC tag — the physical device that locks distracting apps. $9.99, one-time purchase, shipped to your door.");
+      meta.setAttribute("content", "Order the Detach card — the physical device that locks distracting apps. $9.99, one-time purchase, free shipping in the USA.");
     }
   }, []);
 
@@ -53,7 +53,7 @@ const Shop = () => {
             </div>
             <h1 className="text-3xl font-black mb-3">Order Confirmed!</h1>
             <p className="text-muted-foreground mb-6">
-              Your Detach tag is on its way. You'll receive a shipping confirmation email soon.
+              Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
             <a
               href="/"
@@ -84,7 +84,7 @@ const Shop = () => {
               <div className="rounded-2xl overflow-hidden border border-border/40 bg-card">
                 <img
                   src={nfcDevice}
-                  alt="Detach NFC tag — app blocker device"
+                  alt="Detach card — app blocker device"
                   className="w-full object-cover"
                 />
               </div>
@@ -98,19 +98,19 @@ const Shop = () => {
               className="pt-2"
             >
               <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-                Detach Tag
+                Detach Card
               </p>
               <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">
                 The Card That Locks{" "}
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A small NFC tag that pairs with the Detach app. Place it on your desk — tap it to end a focus session. No battery, no charging, works forever.
+                A small NFC card that pairs with the Detach app. Place it on your desk — tap it to end a focus session. No battery, no charging, works forever.
               </p>
 
               <div className="mb-8">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>
-                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping</p>
+                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping (USA only)</p>
               </div>
 
               {/* Features */}
@@ -165,11 +165,10 @@ const Shop = () => {
               </p>
 
               {/* Trust signals */}
-              <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-border/30">
+              <div className="grid grid-cols-2 gap-4 mt-10 pt-8 border-t border-border/30">
                 {[
-                  { icon: Truck, label: "Free Shipping" },
+                  { icon: Truck, label: "Free Shipping (USA)" },
                   { icon: Shield, label: "Secure Payment" },
-                  { icon: Package, label: "Ships in 2-3 days" },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2 text-center">
                     <Icon className="w-4 h-4 text-muted-foreground/50" />
