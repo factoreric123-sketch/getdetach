@@ -4,7 +4,7 @@ import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
   return (
-    <section id="product" className="py-24 px-6 border-t border-border/30">
+    <section id="product" className="py-14 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
 
         <motion.div
