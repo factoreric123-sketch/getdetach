@@ -8,7 +8,7 @@ const steps = [
   },
   {
     number: "2",
-    title: "Place your tag somewhere",
+    title: "Place your card somewhere",
     description: "Stick it on your desk, nightstand, or fridge. Somewhere you have to physically go. That's the point.",
   },
   {
