@@ -89,15 +89,6 @@ const Comparison = () => {
           </table>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-xs text-muted-foreground/40 text-center mt-6"
-        >
-          Prices as of April 2026. All products use the same NFC chip technology.
-        </motion.p>
       </div>
     </section>
   );

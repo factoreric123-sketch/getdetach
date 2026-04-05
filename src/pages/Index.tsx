@@ -26,12 +26,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <Comparison />
       <WhatIsDetach />
+      <WhyDetach />
+      <Product />
       <Features />
       <HowItWorks />
-      <Product />
-      <WhyDetach />
-      <Comparison />
       <Privacy />
       <Footer />
     </div>
