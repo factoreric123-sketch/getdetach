@@ -4,19 +4,19 @@ import { Check, X } from "lucide-react";
 const competitors = [
   {
     name: "Brick",
-    price: "$69",
+    price: "$59",
     subscription: "No",
     highlight: false,
   },
   {
     name: "Bloom",
-    price: "$49",
+    price: "$39",
     subscription: "Yes",
     highlight: false,
   },
   {
     name: "Blok",
-    price: "$59",
+    price: "$49",
     subscription: "Yes",
     highlight: false,
   },
