@@ -112,7 +112,7 @@ const Shop = () => {
 
               <div className="mb-8">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>
-                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping</p>
+                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping (USA only)</p>
               </div>
 
               {/* Features */}
