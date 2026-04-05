@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    document.title = "Privacy Policy — Detach";
+    document.title = "Privacy Policy | Detach";
   }, []);
 
   return (

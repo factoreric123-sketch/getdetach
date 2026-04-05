@@ -17,7 +17,7 @@ const Shop = () => {
     document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Order the Detach card — the physical device that locks distracting apps. $9.99, one-time purchase, free shipping in the USA.");
+      meta.setAttribute("content", "Order the Detach card, the physical device that locks distracting apps and websites. $9.99, one-time purchase, free shipping in the USA.");
     }
   }, []);
 
@@ -84,7 +84,7 @@ const Shop = () => {
               <div className="rounded-2xl overflow-hidden border border-border/40 bg-card">
                 <img
                   src={nfcDevice}
-                  alt="Detach card — app blocker device"
+                  alt="Detach card app blocker device"
                   className="w-full object-cover"
                 />
               </div>
@@ -105,7 +105,7 @@ const Shop = () => {
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A small NFC card that pairs with the Detach app. Place it on your desk — tap it to end a focus session. No battery, no charging, works forever.
+                A small NFC card that pairs with the Detach app. Place it on your desk, tap it to end a focus session. No battery, no charging, works forever.
               </p>
 
               <div className="mb-8">

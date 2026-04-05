@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-lg font-bold">Detach</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              An app blocker for iPhone that uses a physical card to make quitting your session feel intentional — not accidental.
+              An app blocker for iPhone that uses a physical card to make quitting your session feel intentional, not accidental.
             </p>
             <a
               href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
@@ -34,7 +34,7 @@ const Footer = () => {
               <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
               <li><a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
-              <li><a href="/shop" className="hover:text-foreground transition-colors">Shop the Card</a></li>
+              <li><a href="/shop" className="hover:text-foreground transition-colors">Shop</a></li>
             </ul>
           </div>
 

@@ -10,7 +10,7 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: "Nothing collected",
-    description: "Your blocking sessions, your habits, your screen time — all of it stays on your phone.",
+    description: "Your blocking sessions, your habits, your screen time. All of it stays on your phone.",
   },
   {
     icon: WifiOff,

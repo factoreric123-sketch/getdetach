@@ -74,12 +74,12 @@ const BlogPost = () => {
       } else if (line.startsWith("### ")) {
         elements.push(<h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.slice(4)}</h3>);
       } else if (line.match(/^\d+\.\s\*\*/)) {
-        const match = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–-]\s*(.+)/);
+        const match = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–:,-]\s*(.+)/);
         if (match) {
           elements.push(
             <div key={i} className="flex gap-3 my-2">
               <span className="text-primary font-bold">{line.match(/^\d+/)?.[0]}.</span>
-              <p className="text-muted-foreground"><strong className="text-foreground">{match[1]}</strong> — {renderInline(match[2])}</p>
+              <p className="text-muted-foreground"><strong className="text-foreground">{match[1]}</strong> {renderInline(match[2])}</p>
             </div>
           );
         } else {
@@ -149,7 +149,7 @@ const BlogPost = () => {
 
           {/* CTA */}
           <div className="mt-12 glass-card p-8 text-center">
-            <h3 className="text-xl font-bold mb-3">Try Detach — The App Blocker That Works</h3>
+            <h3 className="text-xl font-bold mb-3">Try Detach: The App Blocker That Works</h3>
             <p className="text-muted-foreground mb-6">
               Free to download. No account required. Start blocking social media and reducing screen time today.
             </p>

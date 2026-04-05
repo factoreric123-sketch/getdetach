@@ -5,7 +5,7 @@ const secondary = [
   {
     icon: Layers,
     title: "Different modes",
-    description: "Work, sleep, deep focus — each blocks different apps on its own schedule.",
+    description: "Work, sleep, deep focus. Each blocks different apps on its own schedule.",
   },
   {
     icon: Calendar,
@@ -59,7 +59,7 @@ const Features = () => {
             {
               icon: Shield,
               title: "Apps are actually gone",
-              description: "Instagram, TikTok, YouTube — completely blocked. Not just hidden. You can't open them, period.",
+              description: "Instagram, TikTok, YouTube: completely blocked. Not just hidden. You can't open them, period.",
               number: "01",
             },
             {
