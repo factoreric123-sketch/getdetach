@@ -6,8 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-
-const CONTACT_EMAIL = "getdetach@gmail.com";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   useEffect(() => {
@@ -18,17 +17,29 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
       toast({ title: "Please fill in all fields", variant: "destructive" });
       return;
     }
-    const subject = encodeURIComponent(`Detach Contact: Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    toast({ title: "Opening your email client…", description: "Your message has been prepared." });
+
+    setLoading(true);
+    const { error } = await supabase.functions.invoke("send-contact-email", {
+      body: { name, email, message },
+    });
+    setLoading(false);
+
+    if (error) {
+      toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" });
+    } else {
+      toast({ title: "Message sent!", description: "We'll get back to you soon." });
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
   };
 
   return (
@@ -59,8 +70,8 @@ const Contact = () => {
             <Label htmlFor="message">Message</Label>
             <Textarea id="message" placeholder="How can we help?" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} maxLength={2000} />
           </div>
-          <Button type="submit" className="w-full gap-2">
-            <Send className="w-4 h-4" /> Send Message
+          <Button type="submit" className="w-full gap-2" disabled={loading}>
+            <Send className="w-4 h-4" /> {loading ? "Sending..." : "Send Message"}
           </Button>
         </form>
 
