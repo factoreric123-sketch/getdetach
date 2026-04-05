@@ -13,7 +13,6 @@ const Product = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <p className="section-label mb-3">The card</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
             The <span className="text-gradient">Detach Card</span>
           </h2>
@@ -69,9 +68,6 @@ const Product = () => {
               Order Now
             </a>
 
-            <p className="text-xs text-muted-foreground/40 mt-4">
-              Other brands charge $50+ for the same chip. We don't.
-            </p>
           </motion.div>
         </div>
       </div>
