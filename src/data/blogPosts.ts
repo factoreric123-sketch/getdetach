@@ -174,7 +174,7 @@ The difference is what they charge you for it.
 
 ## What you're actually buying
 
-All four of these apps use the same mechanism: a small NFC chip. When you tap it to your phone, it triggers the app to block or unblock your apps using Apple's Screen Time API.
+All four of these apps use the same mechanism: an NFC chip. When you tap it to your phone, it triggers the app to block or unblock your apps using Apple's Screen Time API.
 
 An NFC chip costs pennies to manufacture. A nice plastic casing costs a little more. Let's call it $2-3 in materials.
 

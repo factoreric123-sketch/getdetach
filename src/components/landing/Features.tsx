@@ -65,7 +65,7 @@ const Features = () => {
             {
               icon: CreditCard,
               title: "Physical card to end sessions",
-              description: "A small card sits on your desk. Getting up to tap it is the only exit. That's the whole trick.",
+              description: "A card sits on your desk. Getting up to tap it is the only exit. That's the whole trick.",
               number: "02",
             },
           ].map((f, i) => (

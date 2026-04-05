@@ -15,7 +15,7 @@ const Product = () => {
         >
           <p className="section-label mb-3">The card</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
-            Small. Cheap.{" "}
+            Cheap.{" "}
             <span className="text-gradient">Actually works.</span>
           </h2>
         </motion.div>
