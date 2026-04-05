@@ -36,7 +36,7 @@ const secondary = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-14 px-6">
+    <section id="features" className="py-10 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -44,7 +44,7 @@ const Features = () => {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10"
         >
           <p className="section-label mb-3">What it does</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">

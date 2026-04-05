@@ -4,14 +4,14 @@ import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
   return (
-    <section id="product" className="py-14 px-6 border-t border-border/30">
+    <section id="product" className="py-10 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
             The <span className="text-gradient">Detach Card</span>

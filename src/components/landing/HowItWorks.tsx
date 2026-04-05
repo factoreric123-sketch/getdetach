@@ -25,14 +25,14 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-14 px-6 border-t border-border/30">
+    <section id="how-it-works" className="py-10 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10"
         >
           <p className="section-label mb-3">How it works</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
