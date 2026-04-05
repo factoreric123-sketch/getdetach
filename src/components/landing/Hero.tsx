@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_30%,hsl(217_91%_60%/0.06),transparent)]" />
       </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+      <div className="relative z-10 max-w-3xl mx-auto text-center pt-16 md:pt-0">
 
         {/* Label */}
         <motion.p
