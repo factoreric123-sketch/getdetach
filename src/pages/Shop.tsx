@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, Minus, Plus, ShoppingBag, Truck, Shield, Package } from "lucide-react";
+import { Check, Minus, Plus, ShoppingBag, Truck, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
