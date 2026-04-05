@@ -73,7 +73,7 @@ const Comparison = () => {
             <tbody>
               {/* Price row */}
               <tr className="border-b border-border/20">
-                <td className="py-4 pr-4 text-muted-foreground">Card price</td>
+                <td className="py-4 pr-4 text-muted-foreground">Price</td>
                 {competitors.map((c) => (
                   <td
                     key={c.name}
