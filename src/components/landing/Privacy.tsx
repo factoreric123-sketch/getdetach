@@ -33,7 +33,7 @@ const Privacy = () => {
             <ShieldCheck className="w-7 h-7 text-primary" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Your data stays <span className="text-primary">on your phone</span>
+            Your data stays <span className="text-gradient">on your phone</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Most apps want your data. Detach doesn't have a use for it. There are no servers, no analytics dashboard, no way for us to see anything you do.
