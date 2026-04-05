@@ -53,7 +53,7 @@ const Shop = () => {
             </div>
             <h1 className="text-3xl font-black mb-3">Order Confirmed!</h1>
             <p className="text-muted-foreground mb-6">
-              Your Detach tag is on its way. You'll receive a shipping confirmation email soon.
+              Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
             <a
               href="/"
