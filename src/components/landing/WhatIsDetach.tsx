@@ -19,7 +19,7 @@ const WhatIsDetach = () => {
             Detach is an app and website blocker for iPhone. You pick what to block: Instagram, TikTok, whatever pulls you in, and they go dark until you decide to stop.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-            The difference: you can't just tap your way out. A small physical card sits somewhere in your home. To end a session, you have to get up and go tap it. That's the whole trick, making it just inconvenient enough to actually work.
+            The difference: you can't just tap your way out. A physical tag sits somewhere in your home. To end a session, you have to get up and go tap it. That's the whole trick — making it just inconvenient enough to actually work.
           </p>
           <Link
             to="/detach-app"

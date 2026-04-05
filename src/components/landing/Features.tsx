@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3, Eye, CreditCard } from "lucide-react";
+import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3, Eye, Tag } from "lucide-react";
 
 const secondary = [
   {
@@ -63,9 +63,9 @@ const Features = () => {
               number: "01",
             },
             {
-              icon: CreditCard,
-              title: "Physical card to end sessions",
-              description: "A small card sits on your desk. Getting up to tap it is the only exit. That's the whole trick.",
+              icon: Tag,
+              title: "Physical tag to end sessions",
+              description: "A tag sits on your desk. Getting up to tap it is the only exit. That's the whole trick.",
               number: "02",
             },
           ].map((f, i) => (
