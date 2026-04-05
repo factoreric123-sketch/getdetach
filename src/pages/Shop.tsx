@@ -107,7 +107,6 @@ const Shop = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 A small NFC card that pairs with the Detach app. Place it on your desk — tap it to end a focus session. No battery, no charging, works forever.
               </p>
-              </p>
 
               <div className="mb-8">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>

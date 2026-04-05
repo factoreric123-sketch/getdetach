@@ -73,8 +73,6 @@ const Product = () => {
             <p className="text-xs text-muted-foreground/40 mt-4">
               Other brands charge $50+ for the same chip. We don't.
             </p>
-              Other brands charge $50+ for the same chip. We don't.
-            </p>
           </motion.div>
         </div>
       </div>
