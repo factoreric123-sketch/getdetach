@@ -75,7 +75,7 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-6 py-7 border-b border-border/40 group cursor-default"
+              className="flex items-start gap-6 py-5 border-b border-border/40 group cursor-default"
             >
               <span className="text-xs font-mono text-muted-foreground/30 pt-1 shrink-0 w-6">{f.number}</span>
               <div className="w-8 h-8 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-white/15 transition-colors duration-200">
@@ -102,7 +102,7 @@ const Features = () => {
               key={f.title}
               className="bg-background p-6 hover:bg-card transition-colors duration-200 cursor-default group"
             >
-              <f.icon className="w-4 h-4 text-muted-foreground mb-4 group-hover:text-foreground transition-colors duration-200" />
+              <f.icon className="w-4 h-4 text-muted-foreground mb-3 group-hover:text-foreground transition-colors duration-200" />
               <h3 className="text-sm font-semibold mb-1.5 text-foreground">{f.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{f.description}</p>
             </div>

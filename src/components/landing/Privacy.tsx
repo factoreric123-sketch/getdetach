@@ -21,15 +21,15 @@ const pillars = [
 
 const Privacy = () => {
   return (
-    <section id="privacy" className="py-14 px-6">
+    <section id="privacy" className="py-10 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 mb-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 mb-4">
             <ShieldCheck className="w-7 h-7 text-accent" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -50,10 +50,10 @@ const Privacy = () => {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="glass-card p-6 text-center hover:border-accent/20 transition-colors duration-300 group"
+              className="glass-card p-4 text-center hover:border-accent/20 transition-colors duration-300 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
-                <pillar.icon className="w-5 h-5 text-accent" />
+              <div className="w-8 h-8 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-2 group-hover:bg-accent/20 transition-colors duration-300">
+                <pillar.icon className="w-4 h-4 text-accent" />
               </div>
               <p className="font-bold text-accent mb-1">{pillar.title}</p>
               <p className="text-xs text-muted-foreground leading-relaxed">{pillar.description}</p>
