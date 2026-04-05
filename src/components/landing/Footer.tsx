@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-lg font-bold">Detach</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              An app blocker for iPhone that uses a physical tag to make quitting your session feel intentional — not accidental.
+              An app blocker for iPhone that uses a physical card to make quitting your session feel intentional — not accidental.
             </p>
             <a
               href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
