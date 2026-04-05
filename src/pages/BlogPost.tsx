@@ -74,7 +74,7 @@ const BlogPost = () => {
       } else if (line.startsWith("### ")) {
         elements.push(<h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.slice(4)}</h3>);
       } else if (line.match(/^\d+\.\s\*\*/)) {
-        const match = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–-]\s*(.+)/);
+        const match = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–:,-]\s*(.+)/);
         if (match) {
           elements.push(
             <div key={i} className="flex gap-3 my-2">
