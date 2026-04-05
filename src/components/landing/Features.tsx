@@ -5,7 +5,7 @@ const secondary = [
   {
     icon: Layers,
     title: "Different modes",
-    description: "Work, sleep, deep focus — each blocks different apps on its own schedule.",
+    description: "Work, sleep, deep focus. Each blocks different apps on its own schedule.",
   },
   {
     icon: Calendar,
