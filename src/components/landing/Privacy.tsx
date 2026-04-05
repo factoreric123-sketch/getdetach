@@ -37,26 +37,6 @@ const Privacy = () => {
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4"
-        >
-          {pillars.map((pillar) => (
-            <div
-              key={pillar.title}
-              className="glass-card p-4 text-center hover:border-primary/20 transition-colors duration-300 group"
-            >
-              <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-2 group-hover:bg-primary/20 transition-colors duration-300">
-                <pillar.icon className="w-4 h-4 text-primary" />
-              </div>
-              <p className="font-bold text-primary mb-1">{pillar.title}</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">{pillar.description}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
