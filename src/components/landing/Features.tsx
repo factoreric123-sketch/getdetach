@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3, Eye, Tag } from "lucide-react";
+import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3, Eye, CreditCard } from "lucide-react";
 
 const secondary = [
   {
