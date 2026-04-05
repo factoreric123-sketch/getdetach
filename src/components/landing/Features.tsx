@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3, Eye, CreditCard } from "lucide-react";
+import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3 } from "lucide-react";
 
 const secondary = [
   {
@@ -26,11 +26,6 @@ const secondary = [
     icon: BarChart3,
     title: "Progress stats",
     description: "See how much time you've actually spent away from your phone.",
-  },
-  {
-    icon: Eye,
-    title: "No account, ever",
-    description: "Nothing leaves your phone. No email to sign up with.",
   },
 ];
 
@@ -61,12 +56,6 @@ const Features = () => {
               title: "Apps are actually gone",
               description: "Instagram, TikTok, YouTube: completely blocked. Not just hidden. You can't open them, period.",
               number: "01",
-            },
-            {
-              icon: CreditCard,
-              title: "Physical card to end sessions",
-              description: "A card sits on your desk. Getting up to tap it is the only exit. That's the whole trick.",
-              number: "02",
             },
           ].map((f, i) => (
             <motion.div

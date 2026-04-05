@@ -4,7 +4,7 @@ const steps = [
   {
     number: "1",
     title: "Pick what to block",
-    description: "Choose your apps and websites. Instagram, TikTok, games, whatever. Set up different modes for work, sleep, or just getting through your morning.",
+    description: "Choose your apps and websites. Instagram, TikTok, games, whatever.",
   },
   {
     number: "2",
@@ -14,7 +14,7 @@ const steps = [
   {
     number: "3",
     title: "Your phone is yours again",
-    description: "Blocked apps are gone. Not hidden, gone. You can't negotiate with it or talk yourself into five more minutes.",
+    description: "Blocked apps are gone. Not hidden. Gone.",
   },
   {
     number: "4",
