@@ -28,13 +28,6 @@ const competitors = [
   },
 ];
 
-const features = [
-  { label: "Physical NFC card", all: true },
-  { label: "System-level blocking", all: true },
-  { label: "Free app", detachOnly: false, values: { Brick: true, Bloom: false, Blok: false, Detach: true } },
-  { label: "No subscription", detachOnly: false, values: { Brick: true, Bloom: false, Blok: false, Detach: true } },
-];
-
 const Comparison = () => {
   return (
     <section className="py-24 px-6 border-t border-border/30">
