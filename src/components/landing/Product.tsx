@@ -31,7 +31,7 @@ const Product = () => {
           >
             <img
               src={nfcDevice}
-              alt="Detach tag"
+              alt="Detach card"
               className="w-full object-cover"
               loading="lazy"
             />
