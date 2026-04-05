@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-const CONTACT_EMAIL = "factoreric123@gmail.com";
+const CONTACT_EMAIL = "getdetach@gmail.com";
 
 const Contact = () => {
   useEffect(() => {
