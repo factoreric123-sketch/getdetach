@@ -4,7 +4,7 @@ const steps = [
   {
     number: "1",
     title: "Pick what to block",
-    description: "Choose your apps — Instagram, TikTok, games, whatever. Set up different modes for work, sleep, or just getting through your morning.",
+    description: "Choose your apps and websites. Instagram, TikTok, games, whatever. Set up different modes for work, sleep, or just getting through your morning.",
   },
   {
     number: "2",
