@@ -4,7 +4,7 @@ import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Product = () => {
   return (
-    <section id="product" className="py-24 px-6 border-t border-border/30">
+    <section id="product" className="py-14 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
 
         <motion.div
@@ -15,8 +15,7 @@ const Product = () => {
         >
           <p className="section-label mb-3">The card</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
-            Cheap.{" "}
-            <span className="text-gradient">Actually works.</span>
+            The <span className="text-gradient">Detach Card</span>
           </h2>
         </motion.div>
 

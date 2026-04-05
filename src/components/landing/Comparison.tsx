@@ -29,7 +29,7 @@ const competitors = [
 
 const Comparison = () => {
   return (
-    <section className="py-24 px-6 border-t border-border/30">
+    <section className="py-14 px-6 border-t border-border/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

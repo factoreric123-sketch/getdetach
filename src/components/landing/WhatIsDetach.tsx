@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const WhatIsDetach = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
