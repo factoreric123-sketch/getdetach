@@ -6,7 +6,6 @@ import WhatIsDetach from "@/components/landing/WhatIsDetach";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
-import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
 import Privacy from "@/components/landing/Privacy";
 import Footer from "@/components/landing/Footer";
