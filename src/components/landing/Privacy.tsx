@@ -35,6 +35,9 @@ const Privacy = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Your data stays <span className="text-gradient">on your phone</span>
           </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Most apps want your data. Detach doesn't have a use for it.
+          </p>
         </motion.div>
 
       </div>
