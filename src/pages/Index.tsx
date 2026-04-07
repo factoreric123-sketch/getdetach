@@ -7,6 +7,7 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
 import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
+import BestPractices from "@/components/landing/BestPractices";
 import Privacy from "@/components/landing/Privacy";
 import Footer from "@/components/landing/Footer";
 
@@ -30,6 +31,7 @@ const Index = () => {
       <Product />
       <Features />
       <HowItWorks />
+      <BestPractices />
       <Privacy />
       <Footer />
     </div>
