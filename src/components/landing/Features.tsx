@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Layers, Calendar, Lock, AlertTriangle, BarChart3 } from "lucide-react";
+import { Layers, Calendar, Lock, AlertTriangle, BarChart3 } from "lucide-react";
 
 const secondary = [
   {
@@ -52,36 +52,6 @@ const Features = () => {
             <span className="text-gradient">work.</span>
           </h2>
         </motion.div>
-
-        {/* Two hero features — horizontal rule style */}
-        <div className="mb-6 space-y-px">
-          {[
-            {
-              icon: Shield,
-              title: "Apps are actually gone",
-              description: "Instagram, TikTok, YouTube: completely blocked. Not just hidden. You can't open them, period.",
-              number: "01",
-            },
-          ].map((f, i) => (
-            <motion.div
-              key={f.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-6 py-5 border-b border-border/40 group cursor-default"
-            >
-              <span className="text-xs font-mono text-muted-foreground/30 pt-1 shrink-0 w-6">{f.number}</span>
-              <div className="w-8 h-8 rounded-lg bg-white/[0.05] border border-white/[0.08] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-white/15 transition-colors duration-200">
-                <f.icon className="w-4 h-4 text-white/60" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-base font-semibold mb-1 text-foreground group-hover:text-white transition-colors duration-200">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Secondary features — compact 3-col grid, minimal cards */}
         <motion.div

@@ -53,7 +53,6 @@ const Footer = () => {
 
         <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground/60">
           <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
-          <span>iOS 17+ · No account required</span>
         </div>
       </div>
     </footer>
