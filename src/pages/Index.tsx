@@ -29,9 +29,9 @@ const Index = () => {
       <Comparison />
       <WhyDetach />
       <Product />
+      <BestPractices />
       <Features />
       <HowItWorks />
-      <BestPractices />
       <Privacy />
       <Footer />
     </div>
