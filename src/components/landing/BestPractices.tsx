@@ -17,7 +17,7 @@ const practices = [
     number: "3",
     title: "Shut it down at night",
     description:
-      "Activate Detach before bed and leave the card outside your room. No scrolling. No easy way out.",
+      "Activate Detach before bed and leave the card outside your room. Let your brain turn off.",
   },
 ];
 
