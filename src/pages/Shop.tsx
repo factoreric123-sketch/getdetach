@@ -18,7 +18,7 @@ const Shop = () => {
     document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Order the Detach card, the physical device that locks distracting apps and websites. $9.99, one-time purchase, free shipping in the USA.");
+      meta.setAttribute("content", "Order the Detach card, the physical device that locks distracting apps and websites. $9.99, one-time purchase, free shipping worldwide.");
     }
   }, []);
 
@@ -111,7 +111,7 @@ const Shop = () => {
 
               <div className="mb-8">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>
-                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping (USA only)</p>
+                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping worldwide</p>
               </div>
 
               {/* Features */}
@@ -168,7 +168,7 @@ const Shop = () => {
               {/* Trust signals */}
               <div className="grid grid-cols-2 gap-4 mt-10 pt-8 border-t border-border/30">
                 {[
-                  { icon: Truck, label: "Free Shipping (USA)" },
+                  { icon: Truck, label: "Free Shipping Worldwide" },
                   { icon: Shield, label: "Secure Payment" },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2 text-center">
