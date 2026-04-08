@@ -168,7 +168,7 @@ const Shop = () => {
               {/* Trust signals */}
               <div className="grid grid-cols-2 gap-4 mt-10 pt-8 border-t border-border/30">
                 {[
-                  { icon: Truck, label: "Free Shipping (USA)" },
+                  { icon: Truck, label: "Free Shipping Worldwide" },
                   { icon: Shield, label: "Secure Payment" },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex flex-col items-center gap-2 text-center">
