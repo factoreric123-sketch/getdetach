@@ -9,6 +9,7 @@ import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
 import BestPractices from "@/components/landing/BestPractices";
 import Privacy from "@/components/landing/Privacy";
+import Reality from "@/components/landing/Reality";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
