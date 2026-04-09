@@ -91,7 +91,7 @@ The Detach app also includes activity tracking, showing you daily and weekly sta
 ## Cons of Detach App
 
 - **iOS only**, no Android version yet
-- **Requires NFC card**, though you can buy one for $10
+- **Requires NFC card**, though you can buy one for $9.99
 - **Strict mode is very strict**, can't end session by deleting the app
 
 ## Final Verdict

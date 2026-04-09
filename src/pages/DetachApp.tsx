@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Is Detach free?",
-    a: "Yes! The Detach app is free to download and use. There are no subscriptions or hidden fees. You just need an NFC card to start sessions, which you can buy for $10.",
+    a: "Yes! The Detach app is free to download and use. There are no subscriptions or hidden fees. You just need an NFC card to start sessions, which you can buy for $9.99.",
   },
   {
     q: "Is Detach better than other app blockers?",
