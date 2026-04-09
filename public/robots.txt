@@ -14,3 +14,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://getdetach.app/sitemap.xml
+LLMS: https://getdetach.app/llms.txt
