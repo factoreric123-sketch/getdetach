@@ -30,7 +30,7 @@ serve(async (req) => {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SE", "NO", "DK", "FI", "IE", "NZ", "AT", "BE", "CH", "ES", "IT", "PT"],
       },
-      success_url: `${req.headers.get("origin")}/shop?success=true`,
+      success_url: `${req.headers.get("origin")}/shop?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.get("origin")}/shop`,
     });
 
