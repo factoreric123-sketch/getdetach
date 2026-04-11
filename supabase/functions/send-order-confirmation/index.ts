@@ -70,49 +70,39 @@ serve(async (req) => {
         Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
       },
       body: JSON.stringify({
-        from: "Detach <onboarding@resend.dev>",
+        from: "detach <getdetach@gmail.com>",
         to: [customerEmail],
         bcc: ["getdetach@gmail.com"],
-        subject: "Order Confirmed – Your Detach Card is on its way!",
+        subject: "Your Detach Order Confirmation",
         html: `
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"/></head>
 <body style="margin:0;padding:0;background:#ffffff;font-family:Arial,sans-serif;">
-  <div style="max-width:520px;margin:0 auto;padding:40px 24px;">
-    <h1 style="font-size:24px;font-weight:800;color:#000;margin:0 0 8px;">Order Confirmed ✓</h1>
-    <p style="font-size:15px;color:#555;margin:0 0 28px;line-height:1.5;">
-      Hey ${customerName}, thanks for ordering the Detach card! Your order has been received and will ship soon.
+  <div style="max-width:580px;margin:0 auto;padding:40px 24px;">
+    <p style="font-size:15px;color:#222;margin:0 0 16px;line-height:1.6;">
+      Hi ${customerName},
+    </p>
+    <p style="font-size:15px;color:#222;margin:0 0 24px;line-height:1.6;">
+      Thank you for your order. This email confirms that we've received your request and it is now being processed.
     </p>
 
-    <div style="background:#f9f9f9;border-radius:12px;padding:20px 24px;margin-bottom:28px;">
-      <p style="font-size:13px;color:#999;margin:0 0 12px;text-transform:uppercase;letter-spacing:1px;font-weight:600;">Order Summary</p>
-      <table style="width:100%;font-size:14px;color:#333;">
-        <tr>
-          <td style="padding:6px 0;">Detach Card × ${quantity}</td>
-          <td style="padding:6px 0;text-align:right;font-weight:600;">$${total}</td>
-        </tr>
-        <tr>
-          <td style="padding:6px 0;">Shipping</td>
-          <td style="padding:6px 0;text-align:right;font-weight:600;">Free</td>
-        </tr>
-        <tr style="border-top:1px solid #e5e5e5;">
-          <td style="padding:12px 0 0;font-weight:700;">Total</td>
-          <td style="padding:12px 0 0;text-align:right;font-weight:700;">$${total}</td>
-        </tr>
-      </table>
-    </div>
+    <p style="font-size:15px;color:#222;margin:0 0 6px;line-height:1.6;"><strong>Order Details</strong></p>
+    <p style="font-size:15px;color:#222;margin:0;line-height:1.6;">Items: Detach</p>
+    <p style="font-size:15px;color:#222;margin:0;line-height:1.6;">Quantity: ${quantity}</p>
+    <p style="font-size:15px;color:#222;margin:0 0 24px;line-height:1.6;">Status: Confirmed</p>
 
-    <div style="margin-bottom:28px;">
-      <p style="font-size:13px;color:#999;margin:0 0 8px;text-transform:uppercase;letter-spacing:1px;font-weight:600;">Shipping To</p>
-      <p style="font-size:14px;color:#333;line-height:1.6;margin:0;">${addressLines}</p>
-    </div>
+    <p style="font-size:15px;color:#222;margin:0 0 6px;line-height:1.6;"><strong>Shipping To</strong></p>
+    <p style="font-size:15px;color:#222;margin:0 0 24px;line-height:1.6;">${addressLines}</p>
 
-    <p style="font-size:14px;color:#555;line-height:1.5;margin:0 0 8px;">
+    <p style="font-size:15px;color:#222;margin:0 0 4px;line-height:1.6;"><strong>Total: $${total}</strong></p>
+    <p style="font-size:14px;color:#666;margin:0 0 24px;line-height:1.6;">Free shipping</p>
+
+    <p style="font-size:15px;color:#222;margin:0 0 24px;line-height:1.6;">
       You'll receive a shipping confirmation with tracking info once your card ships.
     </p>
 
-    <p style="font-size:13px;color:#999;margin:32px 0 0;">
+    <p style="font-size:13px;color:#999;margin:24px 0 0;">
       Questions? Reply to this email or contact us at getdetach@gmail.com
     </p>
   </div>
