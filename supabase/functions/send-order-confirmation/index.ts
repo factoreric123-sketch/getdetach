@@ -70,7 +70,7 @@ serve(async (req) => {
         Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
       },
       body: JSON.stringify({
-        from: "detach <getdetach@gmail.com>",
+        from: "Detach <onboarding@resend.dev>",
         to: [customerEmail],
         bcc: ["getdetach@gmail.com"],
         subject: "Your Detach Order Confirmation",
