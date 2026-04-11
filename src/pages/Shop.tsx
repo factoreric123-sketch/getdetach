@@ -10,8 +10,19 @@ import nfcDevice from "@/assets/nfc-device.jpg";
 const Shop = () => {
   const [searchParams] = useSearchParams();
   const isSuccess = searchParams.get("success") === "true";
+  const sessionId = searchParams.get("session_id");
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+
+  useEffect(() => {
+    if (isSuccess && sessionId && !emailSent) {
+      setEmailSent(true);
+      supabase.functions.invoke("send-order-confirmation", {
+        body: { sessionId },
+      }).catch((err) => console.error("Order confirmation email error:", err));
+    }
+  }, [isSuccess, sessionId, emailSent]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
