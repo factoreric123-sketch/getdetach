@@ -5,6 +5,7 @@ import { Check, Minus, Plus, ShoppingBag, Truck, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import AppScreenshots from "@/components/shop/AppScreenshots";
 import nfcDevice from "@/assets/nfc-device.jpg";
 
 const Shop = () => {
@@ -192,6 +193,8 @@ const Shop = () => {
           </div>
         </div>
       </section>
+
+      <AppScreenshots />
 
       <Footer />
     </div>
