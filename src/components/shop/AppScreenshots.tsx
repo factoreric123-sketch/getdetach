@@ -37,19 +37,6 @@ const AppScreenshots = () => {
   return (
     <section className="pt-16 pb-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-8"
-        >
-          <h2 className="text-2xl md:text-3xl font-black tracking-tight">
-            See the App in Action
-          </h2>
-          <p className="text-muted-foreground text-sm mt-2">
-            The Detach card pairs with the free iOS app to block distracting apps & websites.
-          </p>
-        </motion.div>
 
         <div className="relative">
           <button
