@@ -35,7 +35,7 @@ const AppScreenshots = () => {
   };
 
   return (
-    <section className="pt-16 pb-24 px-6">
+    <section className="pt-6 pb-16 px-6">
       <div className="max-w-5xl mx-auto">
 
         <div className="relative">
