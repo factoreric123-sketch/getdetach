@@ -5,6 +5,7 @@ import Hero from "@/components/landing/Hero";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
+import AppScreenshots from "@/components/shop/AppScreenshots";
 import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
 import BestPractices from "@/components/landing/BestPractices";
