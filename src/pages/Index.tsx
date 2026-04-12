@@ -31,6 +31,7 @@ const Index = () => {
       <Comparison />
       <WhyDetach />
       <Product />
+      <AppScreenshots />
       <BestPractices />
       <Reality />
       <Features />
