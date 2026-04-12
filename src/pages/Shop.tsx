@@ -194,6 +194,8 @@ const Shop = () => {
         </div>
       </section>
 
+      <AppScreenshots />
+
       <Footer />
     </div>
   );
