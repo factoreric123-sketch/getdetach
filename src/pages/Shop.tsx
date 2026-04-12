@@ -84,7 +84,7 @@ const Shop = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-28 pb-24 px-6">
+      <section className="pt-28 pb-10 px-6">
         <div className="max-w-5xl mx-auto">
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
