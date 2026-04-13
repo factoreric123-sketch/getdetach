@@ -18,15 +18,6 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-3xl mx-auto text-center pt-16 md:pt-0">
 
-        {/* Label */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-6"
-        >
-          App Blocker for iPhone
-        </motion.p>
 
         {/* Heading */}
         <motion.h1
