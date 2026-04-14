@@ -65,14 +65,6 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-5 text-xs text-muted-foreground/50 tracking-wide"
-        >
-          iOS 17+ · No account required
-        </motion.p>
 
         {/* Scroll cue */}
         <motion.div
