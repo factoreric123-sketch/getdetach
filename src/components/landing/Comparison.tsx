@@ -39,11 +39,11 @@ const Comparison = () => {
         >
           <p className="section-label mb-3">Compare</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-            Same chip.{" "}
+            Same app.{" "}
             <span className="text-gradient">Different price.</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Every NFC app blocker uses the same technology. The only difference is how much they charge you for it.
+            Every app blocker uses the same technology. The only difference is how much they charge you for it.
           </p>
         </motion.div>
 
