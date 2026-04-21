@@ -22,7 +22,7 @@ const Reality = () => {
           <div className="grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
             {[
               { stat: "15 years", label: "lost at 4–5 hrs/day" },
-              { stat: "20–30 yrs", label: "lost at 7–10 hrs/day" },
+              { stat: "20+ yrs", label: "lost at 7–10 hrs/day" },
               { stat: "1 life", label: "you only get one" },
             ].map((item) => (
               <div key={item.stat} className="bg-background p-5 md:p-6">
