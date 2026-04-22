@@ -39,6 +39,9 @@ const HowItWorks = () => {
             Set up in{" "}
             <span className="text-gradient">one minute.</span>
           </h2>
+          <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-xl">
+            You don't need more discipline. You need friction.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-px bg-border/20 rounded-xl overflow-hidden">
