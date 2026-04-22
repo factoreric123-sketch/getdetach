@@ -12,11 +12,11 @@ const Reality = () => {
         >
           <p className="section-label mb-4">The reality</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] mb-8">
-            You're not wasting time.{" "}
-            <span className="text-gradient">You're spending years.</span>
+            You don&rsquo;t notice it.{" "}
+            <span className="text-gradient">Until the years are gone.</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
-            It's not a bad habit. It's the biggest trade you're making without realizing it.
+            It's not a bad habit. It's the biggest trade you're making without realizing it. Hours feel small. Years aren&rsquo;t.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
