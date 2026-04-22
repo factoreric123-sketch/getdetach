@@ -33,11 +33,16 @@ const Reality = () => {
             ))}
           </div>
 
-          <p className="text-xs md:text-sm text-muted-foreground/70 mt-4 italic">
-            For context: the average human lifespan is about 73 years.
-          </p>
+          <div className="mt-8 flex flex-col items-center">
+            <p className="text-4xl md:text-5xl font-black tracking-tight">
+              <span className="text-gradient">1 life.</span>
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground mt-2">
+              You only get one — and it's about 73 years.
+            </p>
+          </div>
 
-          <p className="text-muted-foreground text-base mt-8">
+          <p className="text-muted-foreground text-base mt-10">
             You don't need more discipline. You need friction.
           </p>
         </motion.div>
