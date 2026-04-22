@@ -28,7 +28,7 @@ const Reality = () => {
             ].map((item) => (
               <div key={item.stat} className="bg-background p-5 md:p-6">
                 <p className="text-xl md:text-2xl font-black text-foreground mb-1">{item.stat}</p>
-                <p className="text-xs text-muted-foreground">{item.label}</p>
+                <p className="text-sm md:text-base text-muted-foreground">{item.label}</p>
               </div>
             ))}
           </div>
