@@ -30,7 +30,6 @@ const WhyDetach = () => {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <p className="section-label mb-3">Compare</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
             Why Detach{" "}
             <span className="text-gradient">works better</span>

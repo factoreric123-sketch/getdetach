@@ -34,7 +34,6 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           className="mb-10"
         >
-          <p className="section-label mb-3">How it works</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
             Set up in{" "}
             <span className="text-gradient">one minute.</span>

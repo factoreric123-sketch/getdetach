@@ -10,7 +10,6 @@ const Reality = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-label mb-3">The reality</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6">
             You don't notice it.{" "}
             <span className="text-gradient">Until the years are gone.</span>

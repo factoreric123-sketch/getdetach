@@ -46,7 +46,6 @@ const Features = () => {
           viewport={{ once: true }}
           className="mb-10"
         >
-          <p className="section-label mb-3">What it does</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-lg">
             Built to actually{" "}
             <span className="text-gradient">work.</span>
