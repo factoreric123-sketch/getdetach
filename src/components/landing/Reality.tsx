@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 
 const Reality = () => {
   return (
-    <section className="py-16 md:py-24 px-6 border-t border-border/30">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="py-10 px-6 border-t border-border/30">
+      <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-label mb-4">The reality</p>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6 max-w-3xl mx-auto">
-            You don&rsquo;t notice it.{" "}
-            <span className="text-gradient">Until the years are gone.</span>
+          <p className="section-label mb-3">The reality</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6">
+            You're not wasting time.{" "}
+            <span className="text-gradient">You're spending years.</span>
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
-            It's not a bad habit. It's the biggest trade you're making without realizing it. Hours feel small. Years aren&rsquo;t.
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed mb-10">
+            4 to 5 hours a day adds up to 13 to 17 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
@@ -26,23 +26,23 @@ const Reality = () => {
               { stat: "23.3 yrs", label: "lost at 7 hrs/day" },
               { stat: "33.3 yrs", label: "lost at 10 hrs/day" },
             ].map((item) => (
-              <div key={item.stat} className="bg-background p-6 md:p-8">
-                <p className="text-2xl md:text-4xl font-black text-foreground mb-2">{item.stat}</p>
-                <p className="text-sm md:text-lg text-muted-foreground">{item.label}</p>
+              <div key={item.stat} className="bg-background p-5 md:p-6">
+                <p className="text-xl md:text-2xl font-black text-foreground mb-1">{item.stat}</p>
+                <p className="text-sm md:text-base text-muted-foreground">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-px bg-background p-6 md:p-8 text-left rounded-b-xl">
-            <p className="text-2xl md:text-4xl font-black mb-2">
+          <div className="mt-8 flex flex-col items-center">
+            <p className="text-4xl md:text-5xl font-black tracking-tight">
               <span className="text-gradient">1 life.</span>
             </p>
-            <p className="text-sm md:text-lg text-muted-foreground">
-              avg. lifespan ~73 yrs
+            <p className="text-base md:text-lg text-muted-foreground mt-2">
+              You only get one, and the average human life expectancy is about 73 years.
             </p>
           </div>
 
-          <p className="text-muted-foreground text-base md:text-lg mt-12">
+          <p className="text-muted-foreground text-base mt-10">
             You don't need more discipline. You need friction.
           </p>
         </motion.div>
