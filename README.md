@@ -1,5 +1,7 @@
 # Welcome to your Lovable project
 
+Codex test comment: edit, commit, and push verified.
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
