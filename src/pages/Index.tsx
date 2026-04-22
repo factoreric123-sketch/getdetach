@@ -7,7 +7,6 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import Comparison from "@/components/landing/Comparison";
-import OneLife from "@/components/landing/OneLife";
 import WhyDetach from "@/components/landing/WhyDetach";
 import BestPractices from "@/components/landing/BestPractices";
 import Privacy from "@/components/landing/Privacy";
@@ -29,7 +28,6 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <OneLife />
       <Comparison />
       <WhyDetach />
       <Product />

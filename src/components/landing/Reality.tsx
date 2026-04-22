@@ -33,6 +33,15 @@ const Reality = () => {
             ))}
           </div>
 
+          <div className="mt-8 flex flex-col items-center">
+            <p className="text-4xl md:text-5xl font-black tracking-tight">
+              <span className="text-gradient">1 life.</span>
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground mt-2">
+              You only get one, and the average human life expectancy is about 73 years.
+            </p>
+          </div>
+
           <p className="text-muted-foreground text-base mt-10">
             You don't need more discipline. You need friction.
           </p>
