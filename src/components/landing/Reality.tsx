@@ -11,11 +11,11 @@ const Reality = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="section-label mb-4">The reality</p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6 max-w-3xl mx-auto">
             You don&rsquo;t notice it.{" "}
             <span className="text-gradient">Until the years are gone.</span>
           </h2>
-          <p className="text-muted-foreground text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
             It's not a bad habit. It's the biggest trade you're making without realizing it. Hours feel small. Years aren&rsquo;t.
           </p>
 
