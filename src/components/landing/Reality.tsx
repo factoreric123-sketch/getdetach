@@ -34,11 +34,11 @@ const Reality = () => {
           </div>
 
           <div className="mt-12 flex flex-col items-center">
-            <p className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight">
+            <p className="text-3xl md:text-5xl font-black tracking-tight">
               <span className="text-gradient">1 life.</span>
             </p>
-            <p className="text-lg md:text-2xl text-muted-foreground mt-3">
-              You only get one, and it's about 73 years.
+            <p className="text-base md:text-lg text-muted-foreground mt-3 max-w-2xl">
+              You only get one, and the average human life expectancy is about 73 years.
             </p>
           </div>
 
