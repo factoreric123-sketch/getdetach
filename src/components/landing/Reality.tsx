@@ -33,6 +33,10 @@ const Reality = () => {
             ))}
           </div>
 
+          <p className="text-xs md:text-sm text-muted-foreground/70 mt-4 italic">
+            For context: the average human lifespan is about 73 years.
+          </p>
+
           <p className="text-muted-foreground text-base mt-8">
             You don't need more discipline. You need friction.
           </p>
