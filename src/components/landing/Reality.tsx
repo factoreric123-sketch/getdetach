@@ -16,13 +16,13 @@ const Reality = () => {
             <span className="text-gradient">You're spending years.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed mb-10">
-            4 to 5 hours a day adds up to 15 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
+            4 to 5 hours a day adds up to 13 to 17 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
           </p>
 
           <div className="grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
             {[
-              { stat: "15 years", label: "lost at 4–5 hrs/day" },
-              { stat: "20+ yrs", label: "lost at 7–10 hrs/day" },
+              { stat: "13–17 yrs", label: "lost at 4–5 hrs/day" },
+              { stat: "23–33 yrs", label: "lost at 7–10 hrs/day" },
               { stat: "1 life", label: "you only get one" },
             ].map((item) => (
               <div key={item.stat} className="bg-background p-5 md:p-6">
