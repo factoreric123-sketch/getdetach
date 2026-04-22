@@ -38,7 +38,7 @@ const Reality = () => {
               <span className="text-gradient">1 life.</span>
             </p>
             <p className="text-base md:text-lg text-muted-foreground mt-2">
-              You only get one, and it's about 73 years.
+              You only get one, and the average human life expectancy is about 73 years.
             </p>
           </div>
 
