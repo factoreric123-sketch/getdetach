@@ -16,7 +16,7 @@ const Reality = () => {
             <span className="text-gradient">You're spending years.</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
-            4 to 5 hours a day adds up to 13 to 17 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
+            It's not a bad habit. It's the biggest trade you're making without realizing it.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
