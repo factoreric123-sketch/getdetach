@@ -19,14 +19,15 @@ const Reality = () => {
             4 to 5 hours a day adds up to 13 to 17 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
           </p>
 
-          <div className="grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
             {[
-              { stat: "13–17 yrs", label: "lost at 4–5 hrs/day" },
-              { stat: "23–33 yrs", label: "lost at 7–10 hrs/day" },
-              { stat: "1 life", label: "you only get one" },
+              { stat: "13.3 yrs", label: "lost at 4 hrs/day" },
+              { stat: "16.7 yrs", label: "lost at 5 hrs/day" },
+              { stat: "23.3 yrs", label: "lost at 7 hrs/day" },
+              { stat: "33.3 yrs", label: "lost at 10 hrs/day" },
             ].map((item) => (
               <div key={item.stat} className="bg-background p-5 md:p-6">
-                <p className="text-2xl md:text-3xl font-black text-foreground mb-1">{item.stat}</p>
+                <p className="text-xl md:text-2xl font-black text-foreground mb-1">{item.stat}</p>
                 <p className="text-xs text-muted-foreground">{item.label}</p>
               </div>
             ))}
