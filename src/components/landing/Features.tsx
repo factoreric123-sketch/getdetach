@@ -53,7 +53,7 @@ const Features = () => {
           </h2>
         </motion.div>
 
-        {/* Secondary features — compact 3-col grid, minimal cards */}
+        {/* Secondary features: compact 3-col grid, minimal cards */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
