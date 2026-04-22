@@ -19,7 +19,7 @@ Detach stops the "unlock phone, open Instagram, lose an hour" loop by making dis
 1. Download the Detach app (free, iOS 17+)
 2. Choose which apps and websites to block
 3. Place your Detach card somewhere in your home
-4. Start a session — blocked apps disappear
+4. Start a session, blocked apps disappear
 5. To end the session, go tap the card
 
 ## Pricing
