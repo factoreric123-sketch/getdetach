@@ -12,11 +12,11 @@ const Reality = () => {
         >
           <p className="section-label mb-3">The reality</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6">
-            You're not wasting time.{" "}
-            <span className="text-gradient">You're spending years.</span>
+            You don't notice it.{" "}
+            <span className="text-gradient">Until the years are gone.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed mb-10">
-            4 to 5 hours a day adds up to 13 to 17 years of your life. Most people are doing more than that. It's not a bad habit. It's the biggest trade you're making without realizing it.
+            It's not a bad habit. It's the biggest trade you're making without realizing it. Hours feel small. Years aren't.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden text-left">
