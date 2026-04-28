@@ -6,6 +6,7 @@ import screenshot1 from "@/assets/app-screenshot-1.jpg";
 import screenshot2 from "@/assets/app-screenshot-2.jpg";
 import screenshot3 from "@/assets/app-screenshot-3.jpg";
 import screenshot4 from "@/assets/app-screenshot-4.jpg";
+import screenshotBePresent from "@/assets/app-screenshot-be-present.jpg";
 import screenshot5 from "@/assets/app-screenshot-5.jpg";
 import screenshot6 from "@/assets/app-screenshot-6.jpg";
 import screenshot7 from "@/assets/app-screenshot-7.jpg";
@@ -15,6 +16,7 @@ const screenshots = [
   { src: screenshot1, alt: "Detach app home screen – tap or hold to start a focus session" },
   { src: screenshot2, alt: "Ready to scan – hold the NFC card to your phone" },
   { src: screenshot3, alt: "Active Detach session with timer counting up" },
+  { src: screenshotBePresent, alt: "Be Present screen – the best moments happen when you look up" },
   { src: screenshot4, alt: "Modes screen – create Focus and Bedtime blocking modes" },
   { src: screenshot5, alt: "Schedules screen – set automatic daily blocking schedules" },
   { src: screenshot6, alt: "Edit schedule – configure start time, days, and mode" },
