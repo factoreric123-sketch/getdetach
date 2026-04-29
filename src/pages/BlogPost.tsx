@@ -26,6 +26,98 @@ const BlogPost = () => {
 
   if (!post) return <Navigate to="/blog" replace />;
 
+  const postUrl = `https://getdetach.app/blog/${post.slug}`;
+  const faqEntities = post.faqSchema?.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  }));
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.metaDescription,
+      datePublished: post.date,
+      dateModified: post.date,
+      mainEntityOfPage: postUrl,
+      url: postUrl,
+      author: {
+        "@type": "Organization",
+        name: "Detach",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Detach",
+        url: "https://getdetach.app",
+      },
+    },
+    ...(faqEntities?.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqEntities,
+          },
+        ]
+      : []),
+    ...(post.comparedProducts?.map((product) => ({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.description,
+      url: product.url,
+      ...(product.price
+        ? {
+            offers: {
+              "@type": "Offer",
+              price: product.price,
+              priceCurrency: product.priceCurrency ?? "USD",
+              url: product.url ?? postUrl,
+            },
+          }
+        : {}),
+    })) ?? []),
+    ...(post.reviewedProduct
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            name: post.title,
+            reviewBody: post.excerpt,
+            itemReviewed: {
+              "@type": "Product",
+              name: post.reviewedProduct.name,
+              description: post.reviewedProduct.description,
+              url: post.reviewedProduct.url,
+              ...(post.reviewedProduct.price
+                ? {
+                    offers: {
+                      "@type": "Offer",
+                      price: post.reviewedProduct.price,
+                      priceCurrency: post.reviewedProduct.priceCurrency ?? "USD",
+                      url: post.reviewedProduct.url ?? postUrl,
+                    },
+                  }
+                : {}),
+            },
+            author: {
+              "@type": "Organization",
+              name: "Detach",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Detach",
+            },
+          },
+        ]
+      : []),
+  ];
+
   // Simple markdown-like rendering for headings, bold, links, lists, and tables
   const renderContent = (content: string) => {
     const lines = content.split("\n");
@@ -155,6 +247,14 @@ const BlogPost = () => {
 
       <main className="pt-24 pb-16 px-6">
         <article className="max-w-3xl mx-auto">
+          {structuredData.map((item, index) => (
+            <script
+              key={`structured-data-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+            />
+          ))}
+
           <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>

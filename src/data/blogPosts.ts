@@ -1,5 +1,19 @@
 import { trafficExpansionPosts } from "@/data/blogPostsTrafficExpansion";
 import { seoExpansionPosts } from "@/data/blogPostsSeoExpansion";
+import { comparisonExpansionPosts } from "@/data/blogPostsComparisonExpansion";
+
+export interface BlogPostFaq {
+  question: string;
+  answer: string;
+}
+
+export interface BlogPostProductSchema {
+  name: string;
+  description: string;
+  url?: string;
+  price?: string;
+  priceCurrency?: string;
+}
 
 export interface BlogPost {
   slug: string;
@@ -9,6 +23,9 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   content: string;
+  faqSchema?: BlogPostFaq[];
+  reviewedProduct?: BlogPostProductSchema;
+  comparedProducts?: BlogPostProductSchema[];
 }
 
 const baseBlogPosts: BlogPost[] = [
@@ -1532,4 +1549,9 @@ If you've tried other app blockers and they didn't stick, the Detach app's NFC a
   },
 ];
 
-export const blogPosts: BlogPost[] = [...trafficExpansionPosts, ...seoExpansionPosts, ...baseBlogPosts];
+export const blogPosts: BlogPost[] = [
+  ...comparisonExpansionPosts,
+  ...trafficExpansionPosts,
+  ...seoExpansionPosts,
+  ...baseBlogPosts,
+];

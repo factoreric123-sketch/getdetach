@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages -->
   <url>
     <loc>https://getdetach.app/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/shop</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/detach-app</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/blog</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/contact</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/privacy-policy</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/terms</loc>
     <lastmod>2026-03-04</lastmod>
@@ -46,199 +50,370 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- High-Priority Brand & Comparison Posts -->
   <url>
-    <loc>https://getdetach.app/blog/detach-vs-brick-vs-blok-vs-bloom</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/unpluq-vs-brick-vs-detach-which-physical-app-blocker-should-you-buy</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/brick-alternative-what-to-buy-instead-of-brick</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/brick-app-blocker-review-is-it-worth-59</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/detach-vs-other-app-blockers</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/opal-vs-detach</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/one-sec-vs-detach</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/screenzen-vs-detach</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/freedom-vs-detach</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/physical-vs-digital-app-blockers-which-actually-works</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/what-is-a-physical-app-blocker-and-does-it-work</loc>
+    <loc>https://getdetach.app/blog/is-brick-worth-it</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Brand Posts -->
   <url>
-    <loc>https://getdetach.app/blog/what-is-detach-app</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/detach-app-review</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-detach-blocks-social-media</loc>
-    <lastmod>2026-03-25</lastmod>
+    <loc>https://getdetach.app/blog/brick-app-review</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- High-Volume "Best Of" Listicles -->
   <url>
-    <loc>https://getdetach.app/blog/best-app-blockers-for-iphone-2026</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-screen-time-apps-for-iphone-2026</loc>
+    <loc>https://getdetach.app/blog/brick-vs-detach</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-apps-to-reduce-screen-time-on-iphone-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-apps-to-block-social-media-on-iphone-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-app-blockers-for-work-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-app-blockers-for-students-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/best-free-app-blockers-for-iphone-2026</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
-  <!-- How-To: Blocking Apps on iPhone -->
+  <url>
+    <loc>https://getdetach.app/blog/blok-vs-brick-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/bloom-vs-brick-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/why-app-blockers-fail</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/expensive-app-blockers</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-alternative-for-iphone</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-brick-alternatives-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/app-blockers-like-brick</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/cheaper-alternative-to-brick</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-vs-opal</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-vs-one-sec</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-vs-screenzen</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-vs-freedom</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-vs-unpluq</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/blok-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/bloom-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/blok-vs-bloom</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/is-blok-worth-it</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/is-bloom-worth-it</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/blok-app-review</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/bloom-app-review</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-physical-app-blockers-in-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-nfc-app-blockers-for-iphone</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-app-blockers-without-a-subscription</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/physical-app-blocker-vs-screen-time</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/do-nfc-app-blockers-actually-work</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/cheapest-physical-app-blocker-for-iphone</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-much-should-an-app-blocker-cost</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/which-app-blocker-is-hardest-to-cheat</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/which-physical-app-blocker-is-best-for-bedtime-scrolling</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/which-physical-app-blocker-is-best-for-morning-routines</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-app-blockers-for-people-who-always-ignore-screen-time</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/physical-app-blocker-vs-deleting-social-media</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/are-expensive-app-blockers-more-effective</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/why-physical-friction-works-better-than-app-limits</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/blok-vs-brick</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/bloom-vs-brick</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-physical-app-blocker-for-iphone-in-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-lock-apps-on-iphone</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-hide-apps-on-iphone-without-deleting-them</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-block-apps-on-iphone-without-deleting-them</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-block-social-media-on-iphone</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-block-instagram-on-iphone-without-deleting-it</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-block-tiktok-on-iphone-without-deleting-it</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-block-youtube-on-iphone-without-deleting-it</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stop-watching-youtube-shorts</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-block-youtube-shorts-on-iphone</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-block-reddit-on-iphone-without-deleting-it</loc>
+    <loc>https://getdetach.app/blog/best-screen-time-apps-for-iphone-2026</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-block-websites-on-iphone-without-deleting-safari</loc>
+    <loc>https://getdetach.app/blog/best-apps-to-reduce-screen-time-on-iphone-2026</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-apps-to-block-social-media-on-iphone-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-app-blockers-for-work-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/app-limits-not-working-on-iphone-how-to-fix-screen-time</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-use-screen-time-on-iphone-to-block-apps</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-block-apps-during-certain-times-on-iphone</loc>
     <lastmod>2026-04-29</lastmod>
@@ -246,31 +421,146 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Screen Time / Apple -->
   <url>
-    <loc>https://getdetach.app/blog/why-apple-screen-time-doesnt-work-and-what-does</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-use-screen-time-on-iphone-to-block-apps</loc>
+    <loc>https://getdetach.app/blog/apps-to-stop-doomscrolling-in-2026-what-actually-works</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-make-apple-screen-time-harder-to-bypass</loc>
+    <loc>https://getdetach.app/blog/how-to-stop-mindless-scrolling</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/app-limits-not-working-on-iphone-how-to-fix-screen-time</loc>
+    <loc>https://getdetach.app/blog/how-to-stop-wasting-time-on-your-phone</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-make-your-phone-less-distracting</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stay-off-your-phone-while-studying</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-reduce-social-media-use-without-quitting-everything</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/social-media-detox-benefits-what-actually-changes</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stop-being-addicted-to-your-phone</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stop-watching-instagram-reels</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-block-reddit-on-iphone-without-deleting-it</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-alternative-what-to-buy-instead-of-brick</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-free-app-blockers-for-iphone-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-block-instagram-on-iphone-without-deleting-it</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-block-apps-on-iphone-without-deleting-them</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/opal-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/one-sec-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/screenzen-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/freedom-vs-detach</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/app-blocker-for-adhd-what-actually-helps-adults-focus</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-app-blockers-for-students-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-reduce-screen-time-on-iphone-without-relying-on-willpower</loc>
     <lastmod>2026-04-29</lastmod>
@@ -278,97 +568,125 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Habit / Behavior -->
   <url>
-    <loc>https://getdetach.app/blog/how-to-stop-doomscrolling-at-night</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/apps-to-stop-doomscrolling-in-2026-what-actually-works</loc>
+    <loc>https://getdetach.app/blog/how-to-make-apple-screen-time-harder-to-bypass</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-stop-mindless-scrolling</loc>
+    <loc>https://getdetach.app/blog/how-to-block-tiktok-on-iphone-without-deleting-it</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-stop-watching-youtube-shorts</loc>
+    <loc>https://getdetach.app/blog/how-to-block-websites-on-iphone-without-deleting-safari</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-stop-watching-instagram-reels</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-stop-wasting-time-on-your-phone</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-make-your-phone-less-distracting</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-stay-off-your-phone-while-studying</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-stop-being-addicted-to-your-phone</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-stop-checking-your-phone-every-5-minutes</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-stop-checking-your-phone-first-thing-in-the-morning</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-stop-opening-instagram-automatically</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-protect-your-morning-routine-from-your-phone</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/how-to-quit-social-media-without-deleting-every-app</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/how-to-reduce-social-media-use-without-quitting-everything</loc>
+    <loc>https://getdetach.app/blog/what-is-a-physical-app-blocker-and-does-it-work</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/social-media-addiction-symptoms-when-you-need-more-than-screen-time</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/digital-detox-plan-7-day-reset-for-your-phone-habit</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/brick-app-blocker-review-is-it-worth-59</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stop-checking-your-phone-first-thing-in-the-morning</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/best-app-blockers-for-iphone-2026</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/why-apple-screen-time-doesnt-work-and-what-does</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-do-a-dopamine-detox-with-your-phone</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/physical-vs-digital-app-blockers-which-actually-works</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-to-stop-doomscrolling-at-night</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/unpluq-vs-brick-vs-detach-which-physical-app-blocker-should-you-buy</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://getdetach.app/blog/does-deleting-instagram-actually-work</loc>
     <lastmod>2026-04-21</lastmod>
@@ -376,46 +694,58 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Detox & Science -->
   <url>
-    <loc>https://getdetach.app/blog/digital-detox-plan-7-day-reset-for-your-phone-habit</loc>
-    <lastmod>2026-04-29</lastmod>
+    <loc>https://getdetach.app/blog/how-to-protect-your-morning-routine-from-your-phone</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://getdetach.app/blog/how-to-do-a-dopamine-detox-with-your-phone</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/social-media-detox-benefits-what-actually-changes</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/the-science-behind-phone-addiction-and-how-to-break-it</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getdetach.app/blog/social-media-addiction-symptoms-when-you-need-more-than-screen-time</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://getdetach.app/blog/screen-time-statistics-2026-how-much-time-are-we-really-losing</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://getdetach.app/blog/app-blocker-for-adhd-what-actually-helps-adults-focus</loc>
-    <lastmod>2026-04-29</lastmod>
+    <loc>https://getdetach.app/blog/the-science-behind-phone-addiction-and-how-to-break-it</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/what-is-detach-app</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/detach-app-review</loc>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/how-detach-blocks-social-media</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/detach-vs-brick-vs-blok-vs-bloom</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/blog/detach-vs-other-app-blockers</loc>
+    <lastmod>2025-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
