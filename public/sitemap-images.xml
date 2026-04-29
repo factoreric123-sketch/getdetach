@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://getdetach.app/</loc>
+    <image:image>
+      <image:loc>https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png</image:loc>
+      <image:title>Detach App Blocker for iPhone</image:title>
+      <image:caption>Detach is a physical iPhone app blocker. Block social media and distracting apps using an NFC card. Cheaper alternative to Brick.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://getdetach.app/shop</loc>
+    <image:image>
+      <image:loc>https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png</image:loc>
+      <image:title>Detach Card - Physical iPhone App Blocker</image:title>
+      <image:caption>The Detach card. $9.99 one-time. NFC card that physically blocks apps on your iPhone. No subscription. Free shipping USA.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
