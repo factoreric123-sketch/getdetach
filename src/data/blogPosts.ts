@@ -1,3 +1,4 @@
+import { trafficExpansionPosts } from "@/data/blogPostsTrafficExpansion";
 import { seoExpansionPosts } from "@/data/blogPostsSeoExpansion";
 
 export interface BlogPost {
@@ -1531,4 +1532,4 @@ If you've tried other app blockers and they didn't stick, the Detach app's NFC a
   },
 ];
 
-export const blogPosts: BlogPost[] = [...seoExpansionPosts, ...baseBlogPosts];
+export const blogPosts: BlogPost[] = [...trafficExpansionPosts, ...seoExpansionPosts, ...baseBlogPosts];
