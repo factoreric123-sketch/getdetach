@@ -73,17 +73,36 @@ const BlogPost = () => {
         elements.push(<h2 key={i} className="text-2xl font-bold mt-10 mb-4">{line.slice(3)}</h2>);
       } else if (line.startsWith("### ")) {
         elements.push(<h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.slice(4)}</h3>);
-      } else if (line.match(/^\d+\.\s\*\*/)) {
-        const match = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–:,-]\s*(.+)/);
-        if (match) {
+      } else if (line.match(/^\d+\.\s/)) {
+        const number = line.match(/^\d+/)?.[0];
+        const detailedMatch = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–:,-]\s*(.+)/);
+        const boldOnlyMatch = line.match(/^\d+\.\s\*\*(.+?)\*\*$/);
+
+        if (detailedMatch) {
           elements.push(
             <div key={i} className="flex gap-3 my-2">
-              <span className="text-primary font-bold">{line.match(/^\d+/)?.[0]}.</span>
-              <p className="text-muted-foreground"><strong className="text-foreground">{match[1]}</strong> {renderInline(match[2])}</p>
+              <span className="text-primary font-bold">{number}.</span>
+              <p className="text-muted-foreground">
+                <strong className="text-foreground">{detailedMatch[1]}</strong> {renderInline(detailedMatch[2])}
+              </p>
+            </div>
+          );
+        } else if (boldOnlyMatch) {
+          elements.push(
+            <div key={i} className="flex gap-3 my-2">
+              <span className="text-primary font-bold">{number}.</span>
+              <p className="text-muted-foreground">
+                <strong className="text-foreground">{boldOnlyMatch[1]}</strong>
+              </p>
             </div>
           );
         } else {
-          elements.push(<p key={i} className="text-muted-foreground my-2">{renderInline(line)}</p>);
+          elements.push(
+            <div key={i} className="flex gap-3 my-2">
+              <span className="text-primary font-bold">{number}.</span>
+              <p className="text-muted-foreground">{renderInline(line.replace(/^\d+\.\s/, ""))}</p>
+            </div>
+          );
         }
       } else if (line.startsWith("- **")) {
         const match = line.match(/^-\s\*\*(.+?)\*\*\s*(.*)/);
