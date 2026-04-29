@@ -13,7 +13,6 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://getdetach.app/sitemap.xml
 Sitemap: https://getdetach.app/sitemap-index.xml
 Sitemap: https://getdetach.app/sitemap-pages.xml
 Sitemap: https://getdetach.app/sitemap-blog.xml
