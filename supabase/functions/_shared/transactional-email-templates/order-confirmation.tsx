@@ -1,11 +1,10 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text, Section, Hr, Img,
+  Body, Container, Head, Heading, Html, Preview, Text, Section, Hr,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = "Detach"
-const LOGO_URL = "https://dxlplpliaylvagnenucj.supabase.co/storage/v1/object/public/email-assets/logo.png"
 
 interface OrderConfirmationProps {
   customerName?: string
@@ -25,7 +24,6 @@ const OrderConfirmationEmail = ({
     <Preview>Your {SITE_NAME} order has been confirmed</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src={LOGO_URL} width="48" height="48" alt="Detach" style={logo} />
         <Text style={greeting}>Hi {customerName},</Text>
 
         <Text style={text}>
@@ -73,7 +71,6 @@ export const template = {
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
 const container = { padding: '40px 24px', maxWidth: '580px', margin: '0 auto' }
-const logo = { margin: '0 0 24px', borderRadius: '12px' } as const
 const greeting = { fontSize: '15px', color: '#222', margin: '0 0 16px', lineHeight: '1.6' }
 const text = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
 const sectionHeading = { fontSize: '15px', color: '#222', margin: '0 0 6px', lineHeight: '1.6' }
