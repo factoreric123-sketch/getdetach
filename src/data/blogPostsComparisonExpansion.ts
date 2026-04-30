@@ -177,7 +177,7 @@ const createPost = (config: ComparisonPostConfig): BlogPost => ({
   metaTitle: config.metaTitle,
   metaDescription: config.metaDescription,
   excerpt: config.excerpt,
-  date: config.date ?? DEFAULT_DATE,
+  date: config.date ?? dateForSlug(config.slug),
   content: buildContent(config),
   faqSchema: config.faq,
   reviewedProduct: config.reviewedProduct,
