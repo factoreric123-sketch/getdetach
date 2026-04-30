@@ -3,6 +3,7 @@ import { seoExpansionPosts } from "@/data/blogPostsSeoExpansion";
 import { comparisonExpansionPosts } from "@/data/blogPostsComparisonExpansion";
 import { expansion50Posts } from "@/data/blogPostsExpansion50";
 import { expansion50v2Posts } from "@/data/blogPostsExpansion50v2";
+import { brickAlternativePosts } from "@/data/blogPostsBrickAlternative";
 
 export interface BlogPostFaq {
   question: string;
@@ -1552,6 +1553,7 @@ If you've tried other app blockers and they didn't stick, the Detach app's NFC a
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...brickAlternativePosts,
   ...expansion50v2Posts,
   ...expansion50Posts,
   ...comparisonExpansionPosts,
