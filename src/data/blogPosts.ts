@@ -1,6 +1,7 @@
 import { trafficExpansionPosts } from "@/data/blogPostsTrafficExpansion";
 import { seoExpansionPosts } from "@/data/blogPostsSeoExpansion";
 import { comparisonExpansionPosts } from "@/data/blogPostsComparisonExpansion";
+import { expansion50Posts } from "@/data/blogPostsExpansion50";
 
 export interface BlogPostFaq {
   question: string;
