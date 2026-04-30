@@ -21,7 +21,7 @@ const OrderConfirmationEmail = ({
 }: OrderConfirmationProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Hi {customerName}, thank you for your order. We're getting your card ready to ship.</Preview>
+    <Preview>Your {SITE_NAME} order has been confirmed</Preview>
     <Body style={main}>
       <Container style={container}>
         <Text style={greeting}>Hi {customerName},</Text>
