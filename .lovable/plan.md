@@ -1,120 +1,104 @@
+## Goal
 
+Add 50 new SEO-optimized blog posts targeting high-intent, low-competition long-tail keywords around app blockers, screen time, phone addiction, and competitor comparisons. Each post will be substantial (1200-2000 words), include FAQ schema, internal links, and follow the existing `BlogPost` interface.
 
-# SEO Domination Plan for "Detach App"
+## Approach
 
-## Overview
+The site already has ~103 posts split across 4 data files. I'll add a new file `src/data/blogPostsExpansion50.ts` and wire it into `src/data/blogPosts.ts`, then add all 50 URLs to `public/sitemap-blog.xml`.
 
-Restructure the site to rank #1 for "detach app", "detach app blocker", and "what is detach app" by adding keyword-rich pages, a blog system, and stronger on-page SEO signals — without redesigning anything.
+To produce 50 high-quality posts efficiently, I'll use the Lovable AI gateway (Gemini 3 Flash) via the ai-gateway skill script to generate each post's content from a structured prompt that enforces our SEO and brand rules (no em-dashes, "card" terminology, $9.99 price, internal links to `/`, `/detach-app`, `/shop`, App Store CTA, FAQ section). Each post will be returned as JSON matching the `BlogPost` interface, then assembled into the TS file.
 
----
+## 50 New Blog Topics
 
-## 1. Homepage SEO Rewrite
+Targeted across 5 SEO clusters:
 
-**File: `index.html`**
-- Title tag: `Detach App Blocker – Block Social Media & Reduce Screen Time`
-- Meta description: `Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+.`
-- Update OG/Twitter tags to match
+**Competitor & alternative (12)**
+1. brick-vs-jomo
+2. opal-app-review-2026
+3. one-sec-app-review-2026
+4. freedom-app-review-2026
+5. jomo-app-review
+6. unpluq-review-2026
+7. screenzen-review-2026
+8. best-alternatives-to-opal
+9. best-alternatives-to-one-sec
+10. best-alternatives-to-freedom
+11. detach-vs-jomo
+12. detach-vs-unpluq
 
-**File: `src/components/landing/Hero.tsx`**
-- H1: `Detach – App Blocker for Social Media & Screen Time`
-- First paragraph: "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Tap an NFC tag to start — creating real friction between you and your screen."
+**How-to / iPhone tutorials (12)**
+13. how-to-block-snapchat-on-iphone
+14. how-to-block-twitter-x-on-iphone
+15. how-to-block-facebook-on-iphone
+16. how-to-block-news-apps-on-iphone
+17. how-to-block-shopping-apps-on-iphone
+18. how-to-block-dating-apps-on-iphone
+19. how-to-block-games-on-iphone
+20. how-to-set-app-time-limits-that-actually-work
+21. how-to-grayscale-iphone-to-reduce-screen-time
+22. how-to-set-up-focus-mode-on-iphone
+23. how-to-block-apps-on-ipad
+24. how-to-use-downtime-on-iphone-effectively
 
-**File: `src/pages/Index.tsx`**
-- Add a new `WhatIsDetach` section between Hero and Features
-- Content: short explainer reinforcing "Detach is an app blocker that blocks social media and reduces screen time"
-- Links to `/detach-app` for more detail
+**Habit / behavior (10)**
+25. how-to-stop-scrolling-before-bed
+26. how-to-build-a-no-phone-morning-routine
+27. how-to-take-a-week-off-social-media
+28. signs-you-need-to-quit-instagram
+29. signs-you-need-to-quit-tiktok
+30. how-to-be-present-without-deleting-your-phone
+31. why-you-pick-up-your-phone-without-thinking
+32. how-to-stop-watching-tiktok-for-hours
+33. how-to-read-more-and-scroll-less
+34. how-to-replace-screen-time-with-real-hobbies
 
-## 2. Brand Page: `/detach-app`
+**Listicles / "best of" (8)**
+35. best-app-blockers-for-couples-2026
+36. best-app-blockers-for-parents-2026
+37. best-app-blockers-for-remote-workers-2026
+38. best-app-blockers-for-writers-2026
+39. best-one-time-purchase-app-blockers-2026
+40. best-app-blockers-no-subscription-2026
+41. best-app-blockers-with-strict-mode-2026
+42. best-nfc-products-for-focus-2026
 
-**New file: `src/pages/DetachApp.tsx`**
+**Brand / Detach-focused (8)**
+43. how-detach-strict-mode-works
+44. detach-card-vs-app-only-blockers
+45. is-detach-worth-it
+46. how-much-does-detach-cost
+47. how-to-set-up-detach-in-5-minutes
+48. detach-for-students
+49. detach-for-adhd
+50. detach-faq-everything-you-need-to-know
 
-A dedicated SEO landing page targeting all brand searches. Includes:
-- H1: "What is Detach App? The App Blocker That Reduces Screen Time"
-- Clear explanation section
-- How it works (reuse steps)
-- Who it's for section
-- FAQ accordion with questions:
-  - "What is Detach app?"
-  - "How does Detach block apps?"
-  - "Is Detach free?"
-  - "Is Detach better than other app blockers?"
-  - "Does Detach work on Android?"
-- CTAs linking to App Store and homepage
-- Uses existing Navbar + Footer
-- Page title & meta description set via useEffect
+## Technical Plan
 
-**Add route** `/detach-app` in `App.tsx`
+1. **Generate content** using `/tmp/lovable_ai.py` (copied from the ai-gateway skill). For each of the 50 slugs, call the model with a strict prompt that returns JSON: `{title, metaTitle, metaDescription, excerpt, content}`. The prompt enforces:
+   - 1200-2000 word markdown body using `##`/`###` headings, bullet lists, one comparison table where relevant
+   - Natural keyword usage in H1, first paragraph, and 2-3 H2s
+   - At least 3 internal markdown links (`/`, `/detach-app`, `/shop`, plus 1-2 related blog slugs from the existing list)
+   - App Store link in conclusion
+   - "Card" terminology only (never NFC tag/chip)
+   - No em-dashes
+   - $9.99 price for Detach card
+2. **Write `src/data/blogPostsExpansion50.ts`** exporting `expansion50Posts: BlogPost[]` with all 50 entries. Add a hand-written 4-question `faqSchema` for each post (script-generated, then included in the file).
+3. **Wire it up** in `src/data/blogPosts.ts`:
+   ```ts
+   import { expansion50Posts } from "@/data/blogPostsExpansion50";
+   export const blogPosts = [...expansion50Posts, ...comparisonExpansionPosts, ...];
+   ```
+4. **Sitemap**: append 50 `<url>` entries to `public/sitemap-blog.xml` with `lastmod` 2026-04-30.
+5. **Verify** no slug collisions with existing posts and that the file builds.
 
-## 3. Blog System
+## Files Changed
 
-**New files:**
-- `src/pages/Blog.tsx` — blog index page listing all posts
-- `src/pages/BlogPost.tsx` — single post template
-- `src/data/blogPosts.ts` — static blog post data (title, slug, content, meta)
+- Create: `src/data/blogPostsExpansion50.ts`
+- Edit: `src/data/blogPosts.ts` (add import + spread)
+- Edit: `public/sitemap-blog.xml` (append 50 URLs)
 
-**Routes:**
-- `/blog` — index
-- `/blog/:slug` — individual post
+## Notes
 
-**Pre-created posts (stored as static data):**
-1. `what-is-detach-app` — "What is Detach App and How Does It Work?"
-2. `detach-app-review` — "Detach App Review: Does It Actually Reduce Screen Time?"
-3. `how-detach-blocks-social-media` — "How Detach Blocks Social Media Without Willpower"
-4. `detach-vs-other-app-blockers` — "Detach vs Other App Blockers: What's Different?"
-
-Each post:
-- Mentions "Detach app" and "app blocker" naturally throughout
-- Links to `/` and `/detach-app`
-- Ends with a CTA: "Try Detach" linking to App Store
-- Has its own meta title + description via useEffect
-
-## 4. Internal Linking
-
-- Footer: add links to `/detach-app` and `/blog`
-- Navbar: add "Blog" link
-- Homepage WhatIsDetach section links to `/detach-app`
-- Every blog post links to homepage and `/detach-app`
-- `/detach-app` links to blog posts and homepage
-
-## 5. Keyword Reinforcement Across Existing Sections
-
-- **Features heading**: "App Blocker Features That Keep You Focused"
-- **Features intro**: mention "Detach app blocker" naturally
-- **Footer tagline**: "Detach — the app blocker for reducing screen time"
-
-## 6. Structured Data & Technical SEO
-
-**File: `index.html`**
-- Add `Organization` schema (name: Detach, url, logo)
-- Update existing `SoftwareApplication` schema — add "applicationSubCategory": "App Blocker"
-
-**File: `public/sitemap.xml`**
-- Add `/detach-app`, `/blog`, and all 4 blog post URLs
-
----
-
-## Technical Details
-
-- All blog content is static data in `src/data/blogPosts.ts` — no backend needed
-- Blog posts rendered via a shared `BlogPost` component using route params to match slugs
-- Each page sets `document.title` and meta description via `useEffect`
-- Existing design system (glass-card, text-gradient, Nunito font) used throughout
-- No new dependencies needed (accordion already exists for FAQ)
-
-## Files to Create
-- `src/components/landing/WhatIsDetach.tsx`
-- `src/pages/DetachApp.tsx`
-- `src/pages/Blog.tsx`
-- `src/pages/BlogPost.tsx`
-- `src/data/blogPosts.ts`
-
-## Files to Edit
-- `index.html` — title, meta, structured data
-- `src/App.tsx` — add 3 new routes
-- `src/pages/Index.tsx` — add WhatIsDetach section
-- `src/components/landing/Hero.tsx` — update H1 and first paragraph
-- `src/components/landing/Features.tsx` — keyword-rich heading
-- `src/components/landing/Footer.tsx` — add blog/brand page links, update tagline
-- `src/components/landing/Navbar.tsx` — add Blog link
-- `public/sitemap.xml` — add new URLs
-
+- Generation will take a few minutes (50 sequential AI calls with a small delay).
+- Posts already use BlogPosting + FAQPage JSON-LD via `BlogPost.tsx`, so SEO schema is automatic once `faqSchema` is provided.
+- No design, route, or component changes needed; the existing `/blog/:slug` route handles new posts automatically.
