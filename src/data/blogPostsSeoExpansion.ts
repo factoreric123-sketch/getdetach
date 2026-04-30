@@ -7,7 +7,7 @@ export const seoExpansionPosts: BlogPost[] = [
     metaTitle: "Brick Alternative: What to Buy Instead of Brick | Detach",
     metaDescription: "Looking for a Brick alternative? Compare Detach, Brick, and other physical app blockers to see which one makes the most sense.",
     excerpt: "If you are searching for a Brick alternative, the real decision is whether you need cross-platform hardware or just the cheapest effective way to block apps on iPhone.",
-    date: "2026-04-29",
+    date: "2026-03-07",
     content: `
 ## Brick alternative: what are you actually looking for?
 
@@ -77,7 +77,7 @@ If you want a deeper comparison, read [Brick App Blocker Review: Is It Worth $59
     metaTitle: "Best Free App Blockers for iPhone in 2026 | Detach Blog",
     metaDescription: "The best free app blockers for iPhone in 2026, including Screen Time, ScreenZen, one sec, Opal, and Detach.",
     excerpt: "The best free app blockers for iPhone in 2026 are not all trying to do the same thing. Some interrupt habits. Some measure use. Some block harder.",
-    date: "2026-04-29",
+    date: "2025-11-10",
     content: `
 ## Best free app blockers for iPhone in 2026
 
@@ -152,7 +152,7 @@ For harder options, read [Best App Blockers for iPhone in 2026](/blog/best-app-b
     metaTitle: "How to Block Instagram on iPhone Without Deleting It",
     metaDescription: "How to block Instagram on iPhone without deleting it, using Screen Time, schedules, and physical app blockers.",
     excerpt: "If you want to block Instagram on iPhone without deleting it, the goal is not removal. The goal is making access harder during your worst windows.",
-    date: "2026-04-29",
+    date: "2025-08-11",
     content: `
 ## How to block Instagram on iPhone without deleting it
 
@@ -224,7 +224,7 @@ For the deeper habit problem, read [Does Deleting Instagram Actually Work?](/blo
     metaTitle: "How to Block Apps on iPhone Without Deleting Them",
     metaDescription: "A practical guide to how to block apps on iPhone without deleting them, using Screen Time, schedules, and physical app blockers.",
     excerpt: "If you want to block apps on iPhone without deleting them, the best setup is one that limits access during high-risk moments instead of trying to ban everything forever.",
-    date: "2026-04-29",
+    date: "2025-11-27",
     content: `
 ## How to block apps on iPhone without deleting them
 
@@ -313,7 +313,7 @@ For specific examples, read [How to Block Instagram on iPhone Without Deleting I
     metaTitle: "Opal vs Detach: Which iPhone App Blocker Is Better?",
     metaDescription: "Opal vs Detach compared by blocking style, flexibility, and who each one is best for on iPhone.",
     excerpt: "Opal vs Detach comes down to software control versus physical friction. The better choice depends on how much impulse you need to fight.",
-    date: "2026-04-29",
+    date: "2026-02-04",
     content: `
 ## Opal vs Detach
 
@@ -379,7 +379,7 @@ For broader comparisons, read [Best App Blockers for iPhone in 2026](/blog/best-
     metaTitle: "one sec vs Detach: Which Helps More With Mindless Checking?",
     metaDescription: "one sec vs Detach compared by friction style, hardness, and which one works better for mindless checking on iPhone.",
     excerpt: "one sec vs Detach is a clean contrast: pause-based interruption versus hard physical friction.",
-    date: "2026-04-29",
+    date: "2026-03-20",
     content: `
 ## one sec vs Detach
 
@@ -443,7 +443,7 @@ For related reading, see [How to Stop Checking Your Phone Every 5 Minutes](/blog
     metaTitle: "ScreenZen vs Detach: Best Free vs Physical App Blocker",
     metaDescription: "ScreenZen vs Detach compared by price, friction, and who each one is best for on iPhone.",
     excerpt: "ScreenZen vs Detach is mostly a choice between a strong free software blocker and a stronger physical blocker for iPhone.",
-    date: "2026-04-29",
+    date: "2026-02-26",
     content: `
 ## ScreenZen vs Detach
 
@@ -503,7 +503,7 @@ Read [Best Free App Blockers for iPhone in 2026](/blog/best-free-app-blockers-fo
     metaTitle: "Freedom vs Detach: Best for iPhone vs Cross-Device Blocking",
     metaDescription: "Freedom vs Detach compared by device coverage, friction level, and which blocker is better for your workflow.",
     excerpt: "Freedom vs Detach is not really a winner-take-all comparison. It is phone-specific physical friction versus cross-device blocking.",
-    date: "2026-04-29",
+    date: "2026-02-01",
     content: `
 ## Freedom vs Detach
 
@@ -565,7 +565,7 @@ For more, read [How to Stop Doomscrolling at Night](/blog/how-to-stop-doomscroll
     metaTitle: "App Blocker for ADHD: What Actually Helps Adults Focus?",
     metaDescription: "Looking for an app blocker for ADHD? Here is what actually helps adults focus and which blocker styles work best.",
     excerpt: "The best app blocker for ADHD is usually not the one with the most features. It is the one that removes the shortest path to distraction.",
-    date: "2026-04-29",
+    date: "2025-10-27",
     content: `
 ## App blocker for ADHD: what actually helps?
 
@@ -634,7 +634,7 @@ For more, read [How to Stop Checking Your Phone Every 5 Minutes](/blog/how-to-st
     metaTitle: "Best App Blockers for Students in 2026 | Detach Blog",
     metaDescription: "The best app blockers for students in 2026, ranked by study use, hardness, and price.",
     excerpt: "The best app blockers for students are the ones that protect study time without making phone use impossible for everything else.",
-    date: "2026-04-29",
+    date: "2025-12-09",
     content: `
 ## Best app blockers for students in 2026
 
@@ -702,7 +702,7 @@ For related guides, read [App Blocker for ADHD: What Actually Helps Adults Focus
     metaTitle: "How to Reduce Screen Time on iPhone Without Relying on Willpower",
     metaDescription: "How to reduce screen time on iPhone without relying on willpower, using better defaults, app blocking, and physical friction.",
     excerpt: "If you want to reduce screen time on iPhone without relying on willpower, the fix is usually changing access, not changing your personality.",
-    date: "2026-04-29",
+    date: "2026-04-27",
     content: `
 ## How to reduce screen time on iPhone without relying on willpower
 
@@ -779,7 +779,7 @@ For more, read [Why Apple Screen Time Doesn't Work (And What Does)](/blog/why-ap
     metaTitle: "How to Make Apple Screen Time Harder to Bypass",
     metaDescription: "A practical guide to how to make Apple Screen Time harder to bypass and when to switch to stronger app blockers.",
     excerpt: "If you want to make Apple Screen Time harder to bypass, the best moves are reducing loopholes, tightening the setup, and knowing when Screen Time is no longer enough.",
-    date: "2026-04-29",
+    date: "2025-10-14",
     content: `
 ## How to make Apple Screen Time harder to bypass
 
@@ -850,7 +850,7 @@ Read [Why Apple Screen Time Doesn't Work (And What Does)](/blog/why-apple-screen
     metaTitle: "How to Block TikTok on iPhone Without Deleting It",
     metaDescription: "How to block TikTok on iPhone without deleting it, using app limits, schedules, and physical friction.",
     excerpt: "If you want to block TikTok on iPhone without deleting it, the best plan is to block it where you actually lose time: late at night, in bed, and during work or study.",
-    date: "2026-04-29",
+    date: "2026-02-05",
     content: `
 ## How to block TikTok on iPhone without deleting it
 
@@ -905,7 +905,7 @@ Read [How to Do a Dopamine Detox With Your Phone](/blog/how-to-do-a-dopamine-det
     metaTitle: "How to Block Websites on iPhone Without Deleting Safari",
     metaDescription: "How to block websites on iPhone without deleting Safari, including a practical setup for news, Reddit, and social sites.",
     excerpt: "If you want to block websites on iPhone without deleting Safari, the goal is usually to keep the useful web while removing the websites that hijack your attention.",
-    date: "2026-04-29",
+    date: "2025-10-06",
     content: `
 ## How to block websites on iPhone without deleting Safari
 
@@ -969,7 +969,7 @@ For related posts, read [How to Block Apps on iPhone Without Deleting Them](/blo
     metaTitle: "How to Stop Checking Your Phone Every 5 Minutes",
     metaDescription: "How to stop checking your phone every 5 minutes with better friction, fewer cues, and stronger time boundaries.",
     excerpt: "If you check your phone every 5 minutes, the habit is probably less about need and more about an overtrained cue-response loop.",
-    date: "2026-04-29",
+    date: "2026-01-13",
     content: `
 ## How to stop checking your phone every 5 minutes
 
@@ -1045,7 +1045,7 @@ Read [How to Stop Checking Your Phone First Thing in the Morning](/blog/how-to-s
     metaTitle: "How to Stop Opening Instagram Automatically",
     metaDescription: "How to stop opening Instagram automatically by changing cues, blocking access, and making the app less reflexive to use.",
     excerpt: "If you keep opening Instagram automatically, the fix is making the reflex slower and less rewarding, not just promising yourself to stop.",
-    date: "2026-04-29",
+    date: "2026-01-18",
     content: `
 ## How to stop opening Instagram automatically
 
@@ -1114,7 +1114,7 @@ Read [How to Block Instagram on iPhone Without Deleting It](/blog/how-to-block-i
     metaTitle: "How to Quit Social Media Without Deleting Every App",
     metaDescription: "How to quit social media without deleting every app by using blocks, time windows, and a more realistic access plan.",
     excerpt: "If you want to quit social media without deleting every app, the answer is usually controlled access, not total disappearance.",
-    date: "2026-04-29",
+    date: "2026-04-15",
     content: `
 ## How to quit social media without deleting every app
 
@@ -1179,7 +1179,7 @@ Read [How to Do a Dopamine Detox With Your Phone](/blog/how-to-do-a-dopamine-det
     metaTitle: "What Is a Physical App Blocker and Does It Work?",
     metaDescription: "What a physical app blocker is, how it works, and whether physical friction is actually better than software-only blockers.",
     excerpt: "A physical app blocker adds a real-world object between you and your apps. That sounds simple, but it changes behavior more than most software tools do.",
-    date: "2026-04-29",
+    date: "2025-12-19",
     content: `
 ## What is a physical app blocker?
 
@@ -1236,7 +1236,7 @@ For more, read [Physical vs Digital App Blockers: Which Actually Works?](/blog/p
     metaTitle: "Social Media Addiction Symptoms: When You Need More Than Screen Time",
     metaDescription: "Social media addiction symptoms to watch for and how to tell when you need more than Apple's Screen Time to get control back.",
     excerpt: "Social media addiction symptoms usually show up as compulsion, failed self-control, and repeated use at the times you most regret it.",
-    date: "2026-04-29",
+    date: "2025-10-29",
     content: `
 ## Social media addiction symptoms
 
@@ -1302,7 +1302,7 @@ Read [The Science Behind Phone Addiction and How to Break It](/blog/the-science-
     metaTitle: "Digital Detox Plan: A 7-Day Reset for Your Phone Habit",
     metaDescription: "A practical digital detox plan for a 7-day phone reset that uses blocking, routines, and physical friction instead of vague promises.",
     excerpt: "A digital detox plan works better when it is specific, short, and tied to your worst apps and worst time windows.",
-    date: "2026-04-29",
+    date: "2025-12-18",
     content: `
 ## Digital detox plan: a 7-day reset for your phone habit
 

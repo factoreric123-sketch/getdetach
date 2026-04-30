@@ -37,7 +37,7 @@ const baseBlogPosts: BlogPost[] = [
     metaTitle: "Brick App Blocker Review: Is Brick Worth $59? | Detach",
     metaDescription: "An honest Brick app blocker review. Learn what Brick does well, where it falls short, and when Detach is the better buy.",
     excerpt: "Brick is one of the best-known physical app blockers, but at $59 it needs to do more than just work. Here's whether it's actually worth the price.",
-    date: "2026-04-29",
+    date: "2026-02-28",
     content: `
 ## The short answer
 

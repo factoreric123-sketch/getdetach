@@ -35,7 +35,21 @@ interface ComparisonPostConfig {
   comparedProducts?: BlogPostProductSchema[];
 }
 
-const DEFAULT_DATE = "2026-04-29";
+// Deterministic date assignment so the blog feels published over time, not in one batch.
+// Window: 2025-08-01 .. 2026-04-28 (270 days), skewed slightly toward more recent dates.
+const DATE_WINDOW_START = new Date("2025-08-01T00:00:00Z").getTime();
+const DATE_WINDOW_DAYS = 270;
+const dateForSlug = (slug: string): string => {
+  let h = 2166136261;
+  for (let i = 0; i < slug.length; i++) {
+    h ^= slug.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  const raw = ((h >>> 0) % 1000000) / 1000000; // 0..1
+  const skewed = Math.pow(raw, 0.6);
+  const offsetMs = Math.floor(skewed * DATE_WINDOW_DAYS) * 86400000;
+  return new Date(DATE_WINDOW_START + offsetMs).toISOString().slice(0, 10);
+};
 
 const detachProduct: BlogPostProductSchema = {
   name: "Detach Card",
@@ -163,7 +177,7 @@ const createPost = (config: ComparisonPostConfig): BlogPost => ({
   metaTitle: config.metaTitle,
   metaDescription: config.metaDescription,
   excerpt: config.excerpt,
-  date: config.date ?? DEFAULT_DATE,
+  date: config.date ?? dateForSlug(config.slug),
   content: buildContent(config),
   faqSchema: config.faq,
   reviewedProduct: config.reviewedProduct,

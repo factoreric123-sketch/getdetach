@@ -7,7 +7,7 @@ export const trafficExpansionPosts: BlogPost[] = [
     metaTitle: "How to Lock Apps on iPhone",
     metaDescription: "How to lock apps on iPhone, what Apple's built-in app lock does, and when you need a stronger blocker instead.",
     excerpt: "If you want to lock apps on iPhone, Apple's built-in tools can help with privacy. If you want distraction control, you usually need something stronger.",
-    date: "2026-04-29",
+    date: "2026-01-10",
     content: `
 ## How to lock apps on iPhone
 
@@ -73,7 +73,7 @@ Read [How to Hide Apps on iPhone Without Deleting Them](/blog/how-to-hide-apps-o
     metaTitle: "How to Hide Apps on iPhone Without Deleting Them",
     metaDescription: "How to hide apps on iPhone without deleting them, and when hiding is useful versus when blocking is the better move.",
     excerpt: "If you want to hide apps on iPhone without deleting them, Apple gives you a few ways to make apps less visible. That helps with clutter and privacy, but not always with compulsion.",
-    date: "2026-04-29",
+    date: "2026-01-19",
     content: `
 ## How to hide apps on iPhone without deleting them
 
@@ -144,7 +144,7 @@ Read [How to Lock Apps on iPhone](/blog/how-to-lock-apps-on-iphone), [How to Sto
     metaTitle: "How to Block Social Media on iPhone",
     metaDescription: "How to block social media on iPhone using Screen Time, schedules, and stronger app blockers when built-in limits are not enough.",
     excerpt: "If you want to block social media on iPhone, the best setup is usually time-based, app-specific, and harder to override than Apple's defaults.",
-    date: "2026-04-29",
+    date: "2025-11-28",
     content: `
 ## How to block social media on iPhone
 
@@ -212,7 +212,7 @@ Read [How to Block Apps on iPhone Without Deleting Them](/blog/how-to-block-apps
     metaTitle: "How to Block YouTube on iPhone Without Deleting It",
     metaDescription: "How to block YouTube on iPhone without deleting it, including app blocking, web blocking, and short-form video protection.",
     excerpt: "If you want to block YouTube on iPhone without deleting it, you need to block both the app and the habit loops around Shorts, autoplay, and bedtime viewing.",
-    date: "2026-04-29",
+    date: "2025-09-27",
     content: `
 ## How to block YouTube on iPhone without deleting it
 
@@ -277,7 +277,7 @@ Read [How to Stop Watching YouTube Shorts](/blog/how-to-stop-watching-youtube-sh
     metaTitle: "How to Stop Watching YouTube Shorts",
     metaDescription: "How to stop watching YouTube Shorts by blocking the highest-friction triggers and keeping YouTube usable for everything else.",
     excerpt: "If you want to stop watching YouTube Shorts, the trick is not to quit YouTube forever. It is to stop giving infinite short-form video the easiest access.",
-    date: "2026-04-29",
+    date: "2026-03-27",
     content: `
 ## How to stop watching YouTube Shorts
 
@@ -345,7 +345,7 @@ Read [How to Stop Doomscrolling at Night](/blog/how-to-stop-doomscrolling-at-nig
     metaTitle: "How to Block YouTube Shorts on iPhone",
     metaDescription: "How to block YouTube Shorts on iPhone and reduce short-form video without giving up YouTube completely.",
     excerpt: "If you want to block YouTube Shorts on iPhone, the real goal is keeping useful YouTube while cutting off the most addictive layer.",
-    date: "2026-04-29",
+    date: "2026-01-23",
     content: `
 ## How to block YouTube Shorts on iPhone
 
@@ -394,7 +394,7 @@ Read [How to Stop Watching YouTube Shorts](/blog/how-to-stop-watching-youtube-sh
     metaTitle: "Best Screen Time Apps for iPhone in 2026",
     metaDescription: "The best screen time apps for iPhone in 2026, compared by friction level, features, and who each app is best for.",
     excerpt: "The best screen time apps for iPhone in 2026 range from built-in awareness tools to hard blockers with physical friction.",
-    date: "2026-04-29",
+    date: "2026-02-11",
     content: `
 ## Best screen time apps for iPhone in 2026
 
@@ -452,7 +452,7 @@ Read [Best App Blockers for iPhone in 2026](/blog/best-app-blockers-for-iphone-2
     metaTitle: "Best Apps to Reduce Screen Time on iPhone in 2026",
     metaDescription: "The best apps to reduce screen time on iPhone in 2026, from light friction tools to physical blockers.",
     excerpt: "The best apps to reduce screen time on iPhone in 2026 work at different levels: measurement, interruption, blocking, and physical friction.",
-    date: "2026-04-29",
+    date: "2026-02-18",
     content: `
 ## Best apps to reduce screen time on iPhone in 2026
 
@@ -507,7 +507,7 @@ Read [How to Reduce Screen Time on iPhone Without Relying on Willpower](/blog/ho
     metaTitle: "Best Apps to Block Social Media on iPhone in 2026",
     metaDescription: "The best apps to block social media on iPhone in 2026, compared by blocking style, price, and how hard they are to override.",
     excerpt: "The best apps to block social media on iPhone in 2026 are the ones that match the exact level of friction your habit needs.",
-    date: "2026-04-29",
+    date: "2025-12-09",
     content: `
 ## Best apps to block social media on iPhone in 2026
 
@@ -556,7 +556,7 @@ Read [How to Block Social Media on iPhone](/blog/how-to-block-social-media-on-ip
     metaTitle: "Best App Blockers for Work in 2026",
     metaDescription: "The best app blockers for work in 2026, ranked by how well they protect deep work, meetings, and your phone during the workday.",
     excerpt: "The best app blockers for work are the ones that protect your highest-value hours without breaking the rest of your day.",
-    date: "2026-04-29",
+    date: "2026-04-18",
     content: `
 ## Best app blockers for work in 2026
 
@@ -608,7 +608,7 @@ Read [App Blocker for ADHD: What Actually Helps Adults Focus?](/blog/app-blocker
     metaTitle: "App Limits Not Working on iPhone? How to Fix Screen Time",
     metaDescription: "App Limits not working on iPhone? Here is how to fix Screen Time settings and when to switch to a stronger blocker.",
     excerpt: "If App Limits are not working on iPhone, the issue might be settings, sync, or the simple fact that App Limits were never a strong enough barrier in the first place.",
-    date: "2026-04-29",
+    date: "2026-03-29",
     content: `
 ## App Limits not working on iPhone?
 
@@ -662,7 +662,7 @@ Read [How to Make Apple Screen Time Harder to Bypass](/blog/how-to-make-apple-sc
     metaTitle: "How to Use Screen Time on iPhone to Block Apps",
     metaDescription: "How to use Screen Time on iPhone to block apps, set schedules, and create stronger phone boundaries.",
     excerpt: "If you want to use Screen Time on iPhone to block apps, the key is not just turning it on. It is choosing the right apps, times, and allowed exceptions.",
-    date: "2026-04-29",
+    date: "2026-01-13",
     content: `
 ## How to use Screen Time on iPhone to block apps
 
@@ -725,7 +725,7 @@ Read [How to Block Apps on iPhone Without Deleting Them](/blog/how-to-block-apps
     metaTitle: "How to Block Apps During Certain Times on iPhone",
     metaDescription: "How to block apps during certain times on iPhone using Downtime, schedules, and stronger focus tools.",
     excerpt: "If you want to block apps during certain times on iPhone, you need time-based rules built around your real weak spots, not generic daily limits.",
-    date: "2026-04-29",
+    date: "2026-03-30",
     content: `
 ## How to block apps during certain times on iPhone
 
@@ -778,7 +778,7 @@ Read [How to Use Screen Time on iPhone to Block Apps](/blog/how-to-use-screen-ti
     metaTitle: "Apps to Stop Doomscrolling in 2026: What Actually Works?",
     metaDescription: "The best apps to stop doomscrolling in 2026, ranked by friction style, app blocking strength, and whether they actually change behavior.",
     excerpt: "The best apps to stop doomscrolling in 2026 either interrupt the scroll loop or make it physically harder to get back into it.",
-    date: "2026-04-29",
+    date: "2026-03-15",
     content: `
 ## Apps to stop doomscrolling in 2026
 
@@ -833,7 +833,7 @@ Read [How to Stop Doomscrolling at Night](/blog/how-to-stop-doomscrolling-at-nig
     metaTitle: "How to Stop Mindless Scrolling",
     metaDescription: "How to stop mindless scrolling with better friction, fewer cues, and more realistic phone rules.",
     excerpt: "If you want to stop mindless scrolling, the problem is usually not motivation. It is the speed and convenience of the habit loop.",
-    date: "2026-04-29",
+    date: "2026-02-05",
     content: `
 ## How to stop mindless scrolling
 
@@ -886,7 +886,7 @@ Read [How to Stop Checking Your Phone Every 5 Minutes](/blog/how-to-stop-checkin
     metaTitle: "How to Stop Wasting Time on Your Phone",
     metaDescription: "How to stop wasting time on your phone by blocking the real drains, protecting your schedule, and adding friction.",
     excerpt: "If you want to stop wasting time on your phone, the key is not using your phone less in theory. It is making the biggest time leaks harder to reach in practice.",
-    date: "2026-04-29",
+    date: "2025-11-25",
     content: `
 ## How to stop wasting time on your phone
 
@@ -948,7 +948,7 @@ Read [How to Reduce Screen Time on iPhone Without Relying on Willpower](/blog/ho
     metaTitle: "How to Make Your Phone Less Distracting",
     metaDescription: "How to make your phone less distracting by changing cues, layout, notifications, and access to your worst apps.",
     excerpt: "If you want to make your phone less distracting, the goal is to remove the easiest triggers and make the distracting parts slower to reach.",
-    date: "2026-04-29",
+    date: "2026-03-22",
     content: `
 ## How to make your phone less distracting
 
@@ -1004,7 +1004,7 @@ Read [How to Stop Checking Your Phone Every 5 Minutes](/blog/how-to-stop-checkin
     metaTitle: "How to Stay Off Your Phone While Studying",
     metaDescription: "How to stay off your phone while studying with better study blocks, stronger app blocking, and less tempting setups.",
     excerpt: "If you want to stay off your phone while studying, your study setup needs to beat the convenience of your phone, not just compete with it.",
-    date: "2026-04-29",
+    date: "2025-12-22",
     content: `
 ## How to stay off your phone while studying
 
@@ -1059,7 +1059,7 @@ Read [Best App Blockers for Students in 2026](/blog/best-app-blockers-for-studen
     metaTitle: "How to Reduce Social Media Use Without Quitting Everything",
     metaDescription: "How to reduce social media use without quitting everything by using time windows, app blocking, and more selective access.",
     excerpt: "If you want to reduce social media use without quitting everything, the goal is to control when you use it and what parts of it get access to your attention.",
-    date: "2026-04-29",
+    date: "2025-10-19",
     content: `
 ## How to reduce social media use without quitting everything
 
@@ -1111,7 +1111,7 @@ Read [How to Quit Social Media Without Deleting Every App](/blog/how-to-quit-soc
     metaTitle: "Social Media Detox Benefits: What Actually Changes?",
     metaDescription: "The real social media detox benefits, what changes first, and how to make the benefits last after the reset.",
     excerpt: "Social media detox benefits are real, but most of them come from changing access and attention, not from making a dramatic announcement that you are quitting forever.",
-    date: "2026-04-29",
+    date: "2025-12-14",
     content: `
 ## Social media detox benefits
 
@@ -1171,7 +1171,7 @@ Read [Digital Detox Plan: A 7-Day Reset for Your Phone Habit](/blog/digital-deto
     metaTitle: "How to Stop Being Addicted to Your Phone",
     metaDescription: "How to stop being addicted to your phone by changing cues, access, and your highest-risk time windows.",
     excerpt: "If you want to stop being addicted to your phone, the most useful fix is usually not using it less in general. It is making the most addictive parts harder to reach.",
-    date: "2026-04-29",
+    date: "2026-02-23",
     content: `
 ## How to stop being addicted to your phone
 
@@ -1228,7 +1228,7 @@ Read [The Science Behind Phone Addiction and How to Break It](/blog/the-science-
     metaTitle: "How to Stop Watching Instagram Reels",
     metaDescription: "How to stop watching Instagram Reels by changing access, blocking the app, and removing the easiest path back into the loop.",
     excerpt: "If you want to stop watching Instagram Reels, you need to disrupt the muscle memory around opening Instagram, not just tell yourself to scroll less.",
-    date: "2026-04-29",
+    date: "2026-01-05",
     content: `
 ## How to stop watching Instagram Reels
 
@@ -1279,7 +1279,7 @@ Read [How to Block Instagram on iPhone Without Deleting It](/blog/how-to-block-i
     metaTitle: "How to Block Reddit on iPhone Without Deleting It",
     metaDescription: "How to block Reddit on iPhone without deleting it, including app blocking, web blocking, and scheduled restrictions.",
     excerpt: "If you want to block Reddit on iPhone without deleting it, treat it like any other infinite-scroll habit: block the app, block the site, and block the times you lose control.",
-    date: "2026-04-29",
+    date: "2026-01-21",
     content: `
 ## How to block Reddit on iPhone without deleting it
 
