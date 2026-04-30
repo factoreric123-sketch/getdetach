@@ -1551,6 +1551,7 @@ If you've tried other app blockers and they didn't stick, the Detach app's NFC a
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...expansion50Posts,
   ...comparisonExpansionPosts,
   ...trafficExpansionPosts,
   ...seoExpansionPosts,
