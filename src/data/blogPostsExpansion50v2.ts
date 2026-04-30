@@ -7,7 +7,7 @@ export const expansion50v2Posts: BlogPost[] = [
     metaTitle: "How to Stop Phone Addiction in 30 Days | Detach",
     metaDescription: "Learn how to stop phone addiction in 30 days with a clear, realistic plan. Reclaim your focus and time. Learn more at Detach.",
     excerpt: "A step-by-step 30-day guide to breaking phone habits using science-backed methods and the Detach physical card to sustain your new focus.",
-    date: "2026-04-30",
+    date: "2025-12-28",
     content: `Breaking a digital habit is not about willpower alone. If you want to learn how to stop phone addiction in 30 days, you need a system that changes how your brain interacts with your device. Most people try to quit cold turkey and fail because their environment stays the same. To succeed, you must create physical barriers between you and the apps that steal your time. This guide provides a realistic, week-by-week roadmap to help you reclaim your focus and spend less time behind a screen.
 
 ## The Reality of How to Stop Phone Addiction in 30 Days
@@ -75,7 +75,7 @@ Stopping phone addiction is a journey of intentionality. It requires the right t
     metaTitle: "Phone Addiction Test: Are You Addicted? | Detach",
     metaDescription: "Take the phone addiction test to evaluate your screen time habits. Learn how the Detach card helps you regain focus and stop scrolling.",
     excerpt: "Evaluate your relationship with your device using our phone addiction test. Discover practical ways to reduce screen time and regain focus with the Detach card.",
-    date: "2026-04-30",
+    date: "2025-10-15",
     content: `Most of us feel a slight panic when we cannot find our device. We reach into our pockets and feel for that familiar glass rectangle dozens of times per day. But how do you know if your habits have crossed the line from heavy use into a clinical issue? Taking a phone addiction test is the first step toward understanding your relationship with technology. Whether you are scrolling through social media at dinner or checking emails in bed, identifying the signs of excessive use allows you to take back control of your time.
 
 ## Understanding the Phone Addiction Test
@@ -149,7 +149,7 @@ Taking a phone addiction test is the best way to realize that your time is valua
     metaTitle: "Average Screen Time Per Day by Age in 2026 | Detach",
     metaDescription: "Discover the average screen time per day by age in 2026. Learn how to reclaim your focus with the Detach card for only $9.99.",
     excerpt: "A deep dive into average screen time per day by age trends for 2026, exploring the impact of digital fatigue and how physical tools help users find balance.",
-    date: "2026-04-30",
+    date: "2026-01-20",
     content: `Understanding the average screen time per day by age is essential for navigating the modern digital landscape. As we look ahead to 2026, the data suggests that screen usage is becoming more deeply integrated into daily life, yet users are simultaneously seeking better ways to disconnect. Whether it is for education, work, or entertainment, most people now spend the majority of their waking hours staring at a glass rectangle. Finding a balance is no longer just a trend, it is a necessity for mental health and productivity. This is why many are turning to physical solutions like the [Detach card](/shop) to enforce boundaries without the friction of digital settings.
 
 ## Current Trends in Average Screen Time Per Day by Age
@@ -228,7 +228,7 @@ The data surrounding the average screen time per day by age shows that we are sp
     metaTitle: "How Much Screen Time Is Too Much for Adults? | Detach",
     metaDescription: "Learn how much screen time is too much for adults and how to reduce it using the Detach card. Get back your focus for only $9.99 with free shipping.",
     excerpt: "Discover the health impacts of digital overuse and learn practical strategies to reclaim your time using physical limits like the Detach card.",
-    date: "2026-04-30",
+    date: "2026-03-19",
     content: `Determining how much screen time is too much for adults is a common concern in the digital age. Most people find themselves glued to their smartphones for hours every day, often without realizing the cumulative effect on their mental and physical health. While screens are essential for work and communication, excessive use can lead to burnout, poor sleep, and reduced focus. Setting healthy boundaries is the first step toward reclaiming your cognitive freedom. Using a physical tool like the [Detach card](/shop) can help you establish these boundaries without relying on willpower alone.
 
 ## Understanding How Much Screen Time Is Too Much for Adults
@@ -298,7 +298,7 @@ In conclusion, understanding how much screen time is too much for adults is the 
     metaTitle: "How to Stop Using Instagram So Much | Detach",
     metaDescription: "Learn how to stop using Instagram so much without deleting your account. Use these practical tips and the Detach card to reclaim your focus.",
     excerpt: "Discover effective strategies on how to stop using Instagram so much while keeping your account. Learn how physical tools like Detach help break the scrolling habit.",
-    date: "2026-04-30",
+    date: "2026-03-18",
     content: `Instagram is designed to be difficult to put down. Between the endless reels and a perfectly tuned algorithm, many people find themselves asking how to stop using Instagram so much without losing their connections or business presence. You do not have to delete your account to reclaim your time. By implementing specific digital boundaries and using physical tools like the [Detach card](/shop), you can transform your relationship with social media from an addiction into a tool. Understanding the psychology of the scroll is the first step toward reclaiming your focus.
 
 ## The Psychology of the Scroll
@@ -367,7 +367,7 @@ In conclusion, managing your social media intake is about building a system that
     metaTitle: "How to Stop TikTok Addiction: A Step-by-Step Guide | Detach",
     metaDescription: "Learn how to stop TikTok addiction with our practical guide. Use these proven methods and the Detach card to reclaim your time today.",
     excerpt: "Discover effective strategies on how to stop TikTok addiction. Learn tips for setting boundaries and using a physical card to block time-wasting apps.",
-    date: "2026-04-30",
+    date: "2025-09-14",
     content: `Learning how to stop TikTok addiction is one of the most effective ways to reclaim your productivity and mental health in the digital age. TikTok is designed to keep you scrolling for hours. The algorithm is incredibly precise, serving a never ending stream of short videos that trigger dopamine releases in the brain. For many users, what starts as a five minute break turns into a two hour session. This guide will provide actionable steps and tools, including the [Detach](/detach-app) system, to help you break the cycle and regain control over your focus.
 
 ## Understanding Why TikTok is So Addictive
@@ -453,7 +453,7 @@ Learning how to stop TikTok addiction is a journey that requires the right tools
     metaTitle: "How to Stop YouTube Addiction on iPhone | Detach",
     metaDescription: "Learn how to stop YouTube addiction on iPhone with these proven tactics. Take back your time using screen time tools and the Detach card. Start today.",
     excerpt: "Struggling with endless scrolling? This guide explains how to stop YouTube addiction on iPhone using built-in settings and physical friction tools.",
-    date: "2026-04-30",
+    date: "2025-12-31",
     content: `Digital wellness has become a major challenge for smartphone users. If you find yourself losing hours to short-form videos and endless recommendations, you are likely looking for how to stop YouTube addiction on iPhone. The app is designed to keep you watching, using algorithms that understand your interests better than you do. Breaking this cycle requires a combination of self-awareness, software limits, and physical barriers. By implementing a few strategic changes, you can reclaim your focus and use your device as a tool rather than a distraction. This guide will walk you through setting up boundaries that actually stick.
 
 ## Understanding the Mechanics of YouTube Addiction
@@ -529,7 +529,7 @@ By following these steps, you now know how to stop YouTube addiction on iPhone. 
     metaTitle: "How to Quit Social Media for Good | Detach",
     metaDescription: "Learn how to quit social media for good using practical shifts and tools like the Detach card. Reclaim your focus without going off grid today.",
     excerpt: "Quitting social media doesn't require living in the woods. Learn how to quit social media for good using physical boundaries and intentional digital habits.",
-    date: "2026-04-30",
+    date: "2025-12-13",
     content: `Learning how to quit social media for good is one of the most effective ways to reclaim your mental clarity and time in the digital age. Most people feel trapped by endless scrolling, yet they feel they cannot leave because they need their phones for work, navigation, or staying in touch with family. You do not have to throw your smartphone in a lake to find peace. By setting physical boundaries and changing how you interact with your device, you can remove the toxic influence of social platforms while keeping the utility of a modern phone. This guide explores how to dismantle the addiction loop and the tools that make it permanent.
 
 ## Understanding the Frictionless Loop
@@ -597,7 +597,7 @@ In conclusion, you do not need to disappear from society to find digital peace. 
     metaTitle: "Benefits of Leaving Social Media for 30 Days | Detach",
     metaDescription: "Explore the physical and mental benefits of leaving social media for 30 days. Reclaim your time and focus with the Detach app and card.",
     excerpt: "Discover how a month-long digital detox can transform your mental health, sleep, and productivity while using tools like Detach to stay consistent.",
-    date: "2026-04-30",
+    date: "2026-04-25",
     content: `Giving up your favorite platforms can feel like a daunting task, but the benefits of leaving social media for 30 days are profound and lasting. In a world where we spend an average of two to three hours daily scrolling through feeds, stepping back allows your brain to reset from the constant dopamine loops. Many people find that their attention spans have shortened and their anxiety levels have risen due to persistent digital noise. Taking a thirty day break is the gold standard for breaking these habits and rediscovering life outside of a glass screen.
 
 ## Immediate Mental Health Benefits of Leaving Social Media for 30 Days
@@ -672,7 +672,7 @@ The benefits of leaving social media for 30 days are visible in every aspect of 
     metaTitle: "How to Not Look at Your Phone at Work | Detach",
     metaDescription: "Learn how to not look at your phone at work with our guide to deep focus. Discover physical tools like the Detach card to stop distractions.",
     excerpt: "Struggling to stay off your phone during the workday? Learn effective strategies and physical tools to help you stay focused and productive while you work.",
-    date: "2026-04-30",
+    date: "2025-10-23",
     content: `Learning how to not look at your phone at work is one of the most important skills you can develop for your career. In a world where notifications are constant, your smartphone is often the biggest enemy of your productivity. Every time you check a text or scroll through social media, it takes an average of 23 minutes to regain your full focus. If you want to finish your tasks faster and leave the office on time, you need a system that creates a real barrier between you and your digital distractions.
 
 ## The Psychology of Phone Distractions
@@ -743,7 +743,7 @@ Mastering how to not look at your phone at work will transform your professional
     metaTitle: "How to Focus on Studying Without Phone | Detach",
     metaDescription: "Learn how to focus on studying without phone distractions. Improve your concentration with these proven tips and the Detach card. Start today.",
     excerpt: "Discover effective strategies for deep work. Learn how to focus on studying without phone interruptions using simple habits and physical barriers.",
-    date: "2026-04-30",
+    date: "2026-03-30",
     content: `Mastering the ability of how to focus on studying without phone distractions is one of the most important skills a student can develop today. With social media and messaging apps designed to capture your attention, it is easy to find yourself scrolling instead of reading. When you learn how to focus on studying without phone interruptions, your grades improve and your stress decreases. This guide explores practical methods and tools, including the [Detach](/detach-app) system, to help you regain control of your academic life.
 
 ## Why You Must Learn How to Focus on Studying Without Phone Distractions
@@ -819,7 +819,7 @@ Learning how to focus on studying without phone distractions is a journey. Start
     metaTitle: "How to Stop Procrastinating on Your Phone | Detach",
     metaDescription: "Learn how to stop procrastinating on your phone with science-based tips and the Detach card. Reclaim your focus for just $9.99 today.",
     excerpt: "Struggling with screen time? Learn effective strategies and use the Detach card to break the cycle of phone procrastination and regain your focus today.",
-    date: "2026-04-30",
+    date: "2025-10-23",
     content: `Learning how to stop procrastinating on your phone is one of the most important skills you can master in the digital age. Most people find themselves picking up their device for a quick check, only to realize forty minutes have passed in a blur of social media feeds and notifications. This habit is not a lack of willpower, but rather a response to a device designed to keep you engaged. To fix the cycle, you need a combination of environmental changes and physical barriers.
 
 ## Why We Procrastinate on Our Phones
@@ -887,7 +887,7 @@ Breaking the cycle of digital distraction is possible for everyone. By using the
     metaTitle: "How to Do Deep Work With iPhone Distractions | Detach",
     metaDescription: "Learn how to do deep work with iPhone distractions using physical tools. Master focus for $9.99 with no subscriptions. Get the Detach card today.",
     excerpt: "Discover effective strategies for focusing in a digital age and learn how to do deep work with iPhone distractions using physical barriers and smart settings.",
-    date: "2026-04-30",
+    date: "2026-04-17",
     content: `Deep work is the ability to focus without distraction on a cognitively demanding task. It is a superpower in the modern economy, yet it is increasingly difficult to achieve. If you find yourself constantly interrupted by notifications or the urge to scroll, you need to learn how to do deep work with iPhone distractions. The device in your pocket is designed to grab your attention. To reclaim your focus, you must move beyond simple willpower and implement structural changes to your environment and your digital habits.
 
 Developing a deep work practice requires a transition from being reactive to being proactive. Most people start their day by reacting to whatever appears on their lock screen. This puts the brain in a state of fragmented attention. By understanding how to do deep work with iPhone distractions, you can create a sanctuary for your mind. This involves a combination of software settings, behavioral shifts, and physical tools like the [Detach card](/shop). When you remove the friction of decision making, focus becomes the default state rather than an uphill battle.
@@ -969,7 +969,7 @@ Mastering how to do deep work with iPhone distractions is the fastest way to acc
     metaTitle: "How to Use iPhone Without Getting Distracted | Detach",
     metaDescription: "Learn how to use iPhone without getting distracted using built-in tools and the Detach card. Reclaim focus for $9.99 with free shipping.",
     excerpt: "Discover effective strategies and physical tools to help you learn how to use iPhone without getting distracted, including Screen Time and the Detach card.",
-    date: "2026-04-30",
+    date: "2025-09-30",
     content: `Learning how to use iPhone without getting distracted is a essential skill in the digital age. Most people pick up their phone to check a single notification or message, only to find themselves thirty minutes later scrolling through a feed they never intended to open. The iPhone is a powerful tool, but its design is often optimized for engagement rather than productivity. To take back control, you need a combination of software settings, behavioral changes, and physical barriers that help you maintain your focus.
 
 ## Understanding Digital Friction and Focus
@@ -1055,7 +1055,7 @@ Mastering how to use iPhone without getting distracted is a process of trial and
     metaTitle: "How to Make iPhone Boring on Purpose | Detach",
     metaDescription: "Learn how to make iPhone boring to reduce screen time. Use Grayscale, Focus modes, and the Detach card to stay focused. Get Detach for $9.99 today.",
     excerpt: "Discover effective strategies on how to make iPhone boring on purpose to reclaim your attention and reduce digital distractions for good.",
-    date: "2026-04-30",
+    date: "2025-09-17",
     content: `Smartphones are designed to be addictive. Every bright icon, notification sound, and infinite scroll is engineered to capture your attention and keep you staring at the glass. If you find yourself mindlessly opening social media apps for the hundredth time today, you are not alone. Many people are now looking for ways on how to make iPhone boring to regain control over their time. By removing the psychological triggers that make the device exciting, you can turn your smartphone back into a simple utility tool.
 
 Making your device less stimulating is a deliberate process. It involves changing the visual interface, reconfiguring how you receive information, and introducing physical barriers to access. When your phone no longer provides a dopamine hit, you will naturally spend less time on it. This guide explores the most effective techniques to customize your device for maximum focus and minimum distraction.
@@ -1135,7 +1135,7 @@ In conclusion, learning how to make iPhone boring is the best thing you can do f
     metaTitle: "Minimalist iPhone Setup for 2026 | Detach",
     metaDescription: "Learn how to build a minimalist iPhone setup to reclaim your time. Use this 2026 guide to reduce digital distraction with Detach.",
     excerpt: "Discover how a minimalist iPhone setup can help you reclaim hours of your day. This guide covers home screen design, app blocking, and physical tools for focus.",
-    date: "2026-04-30",
+    date: "2025-12-18",
     content: `A minimalist iPhone setup is no longer just an aesthetic choice. In 2026, it is a survival strategy for your attention. As mobile apps become more addictive, the burden of self-control has shifted back to the user. Designing your digital world with intention allows you to use your phone as a tool rather than a constant distraction. By reducing the visual and cognitive load of your device, you create space for deep work and meaningful relationships. This guide explores how to transform your device into a focused machine, using both software tweaks and physical tools like the [Detach card](/shop).
 
 ## The Core Principles of a Minimalist iPhone Setup
@@ -1206,7 +1206,7 @@ To start your journey toward a more mindful relationship with your device, you c
     metaTitle: "Distraction Free iPhone Home Screen Guide | Detach",
     metaDescription: "Learn how to build a distraction free iPhone home screen. Use our minimalism guide and the Detach card to reclaim your focus today.",
     excerpt: "Transform your phone with a distraction free iPhone home screen. Use these expert tips on layout, focus modes, and physical blockers to beat screen addiction.",
-    date: "2026-04-30",
+    date: "2025-12-06",
     content: `Designing a distraction free iPhone home screen is a powerful way to reclaim your focus and beat screen addiction. Most people unlock their phones to check one specific thing, only to find themselves lost in a social media scroll thirty minutes later. This happens because our devices are engineered to grab our attention. By restructuring your digital environment, you can turn your iPhone from a slot machine into a tool. The following guide covers everything from app placement to using the [Detach card](/shop) for physical accountability. 
 
 ## Why You Need a Distraction Free iPhone Home Screen
@@ -1285,7 +1285,7 @@ Building a distraction free iPhone home screen is an ongoing process. It require
     metaTitle: "Block Apps After Bedtime iPhone | Detach",
     metaDescription: "Learn how to block apps after bedtime iPhone to improve sleep. Compare Screen Time and the Detach card. Get better rest today.",
     excerpt: "Discover effective ways to block apps after bedtime iPhone. Improve your sleep hygiene using native controls and physical screen time solutions.",
-    date: "2026-04-30",
+    date: "2025-08-26",
     content: `Late night scrolling is a major hurdle for modern sleep hygiene. If you find yourself losing hours of rest to endless feeds, learning how to block apps after bedtime iPhone is the first step toward reclaimimg your evenings. Reducing blue light exposure and removing the temptation of social media can significantly improve your mental health. While the iPhone offers several built-in tools to manage usage, many users find they need a more physical barrier to break the habit effectively. This guide covers every method from native settings to physical tools like Detach to help you sleep better.
 
 ## Using Screen Time to Block Apps After Bedtime iPhone
@@ -1353,7 +1353,7 @@ Taking control of your screen time does not have to be a struggle. Whether you u
     metaTitle: "How to Stop Late Night Phone Use | Detach",
     metaDescription: "Discover how to stop late night phone use and improve your sleep. Learn about blue light, habits, and the Detach card. Start your digital detox today.",
     excerpt: "Learn how to stop late night phone use with proven strategies. Explore the impact of blue light and how the Detach card can help you reclaim your sleep.",
-    date: "2026-04-30",
+    date: "2025-11-26",
     content: `Late night scrolling is a habit that affects millions of people, yet many struggle to find a permanent fix. If you want to learn how to stop late night phone use, you first need to understand how mobile devices disrupt your natural sleep cycle. The blue light emitted by your iPhone mimics daylight, which suppresses melatonin production and keeps your brain in a high state of alertness. Breaking this cycle requires more than just willpower. It requires a combination of environment changes and physical boundaries that make it harder to access distracting apps when you should be resting.
 
 Developing a healthier relationship with technology starts with acknowledging the friction between your goals and your environment. When your phone is within arm’s reach, the temptation to check one more notification or watch one more video is often too strong to resist. By implementing a few structural changes, you can transform your bedroom into a tech-free sanctuary and finally get the restorative sleep your body needs.
@@ -1429,7 +1429,7 @@ To wrap up, learning how to stop late night phone use is a process of trial and 
     metaTitle: "How to Not Scroll in Bed: Stop the Doomscrolling | Detach",
     metaDescription: "Learn how to not scroll in bed with proven habits and physical tools. Get the Detach card for only $9.99 and reclaim your sleep tonight.",
     excerpt: "Discover effective strategies for how to not scroll in bed. Learn why your brain loves late-night dopamine and how a physical card can break the cycle.",
-    date: "2026-04-30",
+    date: "2025-12-13",
     content: `The habit of scrolling through social media or news feeds late at night is a modern struggle that affects millions. If you are wondering how to not scroll in bed, you are likely familiar with the blue light glow and the sudden realization that it is 2:00 AM. This behavior, often called revenge bedtime procrastination, happens when we seek leisure time at the expense of sleep. Learning how to manage this habit is essential for your mental health and physical rest. By using intentional triggers and physical tools like the [Detach card](/shop), you can finally put the phone down and get the rest you deserve.
 
 ## Understanding Why We Scroll at Night
@@ -1497,7 +1497,7 @@ Learning how to not scroll in bed is a journey of small wins. It starts with ack
     metaTitle: "Why You Can't Stop Scrolling TikTok | Detach",
     metaDescription: "Understand the psychology behind why you can't stop scrolling TikTok and learn how the Detach card helps you regain focus for $9.99.",
     excerpt: "Discover the psychological triggers behind TikTok addiction and learn practical strategies to break the cycle using the Detach app and card.",
-    date: "2026-04-30",
+    date: "2026-01-19",
     content: `If you have ever picked up your phone to check one video only to realize two hours have passed, you are not alone. The question of why you can't stop scrolling TikTok is one of the most common concerns for modern smartphone users. TikTok is designed to be a bottomless well of entertainment, powered by an algorithm that learns your preferences faster than any other platform. Understanding the mechanics behind this habit is the first step toward reclaiming your time. In this guide, we will explore why you can't stop scrolling TikTok and provide a clear path toward digital balance.
 
 ## The Science Behind Why You Can't Stop Scrolling TikTok
@@ -1568,7 +1568,7 @@ In conclusion, the chemical and psychological hooks of TikTok are powerful, but 
     metaTitle: "Why Instagram Reels Are Addictive | Detach",
     metaDescription: "Learn why Instagram Reels are addictive and how the algorithm keeps you scrolling. Reclaim your time with the $9.99 Detach card today.",
     excerpt: "Discover the psychological and technical reasons why Instagram Reels are addictive and learn how to break the infinite scroll with Detach.",
-    date: "2026-04-30",
+    date: "2026-04-17",
     content: `Have you ever opened your phone to check a single notification only to realize forty minutes have passed while you scrolled through short videos? You are not alone. Understanding why Instagram Reels are addictive is the first step toward reclaiming your focus and your time. The platform is designed by world class engineers to capture and hold your attention using a combination of psychological triggers and advanced machine learning. While these features make the app entertaining, they also make it incredibly difficult to put down without a physical intervention like the [Detach card](/shop).
 
 ## The Science Behind Why Instagram Reels Are Addictive
@@ -1633,7 +1633,7 @@ In conclusion, the combination of dopamine triggers, variable rewards, and a fin
     metaTitle: "Dopamine Detox 7 Day Challenge | Detach",
     metaDescription: "Reset your brain with a dopamine detox 7 day challenge. Learn how to break phone addiction and reclaim focus with our guide and the Detach card.",
     excerpt: "Take the dopamine detox 7 day challenge to reset your nervous system. Learn how to limit phone use, restore focus, and live more intentionally in one week.",
-    date: "2026-04-30",
+    date: "2026-01-27",
     content: `Digital addiction is a modern silent epidemic that affects your focus, mood, and sleep. If you find yourself checking your notifications every few minutes, you may need a system reset. Embarking on a dopamine detox 7 day challenge is the most effective way to break the cycle of instant gratification. By intentionally removing overstimulating triggers, you allow your brain to return to a baseline state. This process helps you regain control over your time and attention. Many people start this journey to escape the endless scroll of social media and video apps. One of the best tools to help you stay committed is the [Detach card](/shop). This $9.99 physical solution offers a tactile way to lock your most distracting apps without complicated setup processes.
 
 ## Understanding the Dopamine Detox 7 Day Challenge
@@ -1714,7 +1714,7 @@ A dopamine detox 7 day challenge is a powerful way to reclaim your life from the
     metaTitle: "How to Reset Attention Span in 2024 | Detach",
     metaDescription: "Learn how to reset attention span after years of scrolling. Use physical tools and dopamine detoxes to regain focus. Get your Detach card for $9.99.",
     excerpt: "Discover effective, science-backed strategies to reclaim your focus. Learn how to reset attention span by breaking the cycle of digital overstimulation.",
-    date: "2026-04-30",
+    date: "2026-01-12",
     content: `Living in a world of infinite scrolls and ten-second clips has fundamentally altered how our brains process information. If you find yourself unable to finish a book or focus on a single task for more than a few minutes, you are likely looking for how to reset attention span. This isn't just a lack of willpower. It is a biological response to the constant dopamine spikes triggered by modern smartphone apps. By understanding how the brain adapts to technology, you can begin the process of untethering yourself from the digital noise and regaining control over your mental clarity.
 
 ## The Science of Why You Need to Reset Your Attention Span
@@ -1792,7 +1792,7 @@ Restoring your ability to focus is one of the best investments you can make for 
     metaTitle: "How to Be More Present With Family | Detach",
     metaDescription: "Learn how to be more present with family by reducing screen time. Discover simple habits and tools like Detach to reclaim your time.",
     excerpt: "Discover effective strategies for reducing phone distractions and learning how to be more present with family through simple habits and physical boundaries.",
-    date: "2026-04-30",
+    date: "2025-11-27",
     content: `Learning how to be more present with family is one of the most rewarding goals any parent or partner can set. In an era where digital notifications constantly compete for our attention, the people sitting right next to us often get the least of it. Being present is about more than just being in the same room. It is about emotional availability, active listening, and the ability to set the phone aside. When you master how to be more present with family, you create a deeper sense of security and connection for everyone in your household. This guide explores practical ways to disconnect from your device so you can reconnect with your loved ones.
 
 ## The Real Impact of Digital Distractions on Family Life
@@ -1864,7 +1864,7 @@ Mastering how to be more present with family is an ongoing journey that requires
     metaTitle: "Stop Checking Phone on Dates: 7 Pro Tips | Detach",
     metaDescription: "Learn how to stop checking phone on dates to build better connections. Discover practical tips and the Detach app to stay present today.",
     excerpt: "Struggling to stay off your phone during dinner? Learn how to stop checking phone on dates and build deeper connections with these simple, effective habits.",
-    date: "2026-04-30",
+    date: "2026-01-04",
     content: `Building a connection with someone new requires your full attention. When you constantly glance at your screen, you send a silent message that the person across from you is not a priority. Learning how to stop checking phone on dates is one of the most effective ways to improve your romantic life and foster genuine intimacy. In a world of constant notifications, being the person who stays present is a rare and attractive quality. This guide will provide actionable strategies and digital tools to help you keep your phone out of sight and out of mind.
 
 Modern dating is difficult enough without the distraction of emails, social media, or text messages from friends. When you commit to a date, you are committing your time and energy. If you find yourself reaching for your device during a lull in conversation, it is time to develop a new set of habits. By using external cues and physical boundaries, such as the [Detach card](/shop), you can rewire your brain to focus on the human interaction right in front of you.
@@ -1938,7 +1938,7 @@ To start mastering your focus and improving your dating life, you can download t
     metaTitle: "Stop Using Phone During Meals: 7 Easy Tips | Detach",
     metaDescription: "Learn how to stop using phone during meals to reclaim your dinner time. Discover the $9.99 Detach card for distraction-free dining with no subscriptions.",
     excerpt: "Reclaim your dinner table and focus on your family. Learn why you should stop using phone during meals and how a physical Detach card can help you disconnect.",
-    date: "2026-04-30",
+    date: "2025-12-26",
     content: `Mealtime used to be a sacred window for connection. Today, it is more common to see families sitting together in silence, each person illuminated by the glow of a mobile device. If you want to stop using phone during meals, you are not alone. Constant notifications and the pull of social media make it difficult to stay present. Breaking this habit requires more than just willpower. It requires a change in your physical environment and the right tools to enforce your boundaries. By choosing to put the screen away, you improve your digestion, your relationships, and your overall mental clarity.
 
 Developing a plan to stop using phone during meals is essential for modern well-being. When we eat while scrolling, our brains are distracted. This often leads to overeating because we miss the biological cues that tell us we are full. Furthermore, the emotional distance created by devices can damage the bond between partners and children. To fix this, we need to understand the psychology of phone addiction and implement practical barriers that make it easier to stay focused on the food and the people in front of us.
@@ -2008,7 +2008,7 @@ In conclusion, deciding to stop using phone during meals is one of the simplest 
     metaTitle: "How to Leave Your Phone at Home | Detach",
     metaDescription: "Learn how to leave your phone at home safely. Discover strategies and tools like Detach to break phone addiction and reclaim your focus.",
     excerpt: "Discover practical strategies and physical tools to help you master how to leave your phone at home and enjoy life without digital distractions.",
-    date: "2026-04-30",
+    date: "2025-10-03",
     content: `Learning how to leave your phone at home is one of the most effective ways to reclaim your time and focus. In our modern world, we feel an intense pressure to stay connected every second of the day. This constant accessibility often leads to burnout, anxiety, and a lack of deep focus. By choosing to step outside without a device, you give your brain the space it needs to breathe. Whether you are going for a quick walk or heading to a dinner with friends, the benefits of being phoneless are immense. Many people find that using a [physical tool like Detach](/) provides the friction necessary to make these screen-free moments permanent. It is not just about leaving the house. It is about regaining control over your attention.
 
 ## Why Learning How to Leave Your Phone at Home Changes Everything
@@ -2085,7 +2085,7 @@ Learning how to leave your phone at home is a skill that improves with practice.
     metaTitle: "Phone Free Weekend Guide: How to Disconnect | Detach",
     metaDescription: "Learn how to plan a successful phone free weekend without the stress. Use a physical card to block apps and reclaim your time. Shop Detach for $9.99.",
     excerpt: "A phone free weekend can restore your focus and reduce stress. Learn the step by step process to disconnect using simple tools and a physical blocker card.",
-    date: "2026-04-30",
+    date: "2025-10-30",
     content: `Taking a phone free weekend is one of the most effective ways to reset your mental health and reclaim your attention span. In a world where we spend an average of four to six hours a day on our mobile devices, stepping away for 48 hours feels like a radical act of self-care. It allows your brain to transition from a constant state of dopamine seeking to a more relaxed, present mode of existence. However, the thought of being completely disconnected can trigger anxiety for many people. The key is not to just throw your phone in a drawer and hope for the best, but to create a structured environment that supports your digital detox.
 
 Most people fail their first attempt at a phone free weekend because they rely entirely on willpower. Willpower is a finite resource that often runs out by Saturday afternoon when boredom hits. Instead of fighting your impulses, you should use physical barriers to make distraction more difficult. This is where tools like [Detach](/detach-app) become essential. By using a physical card to lock your most addictive apps, you create a tactile boundary that helps you stay committed to your goals without feeling isolated from essential tools like maps or emergency calls.
@@ -2161,7 +2161,7 @@ A phone free weekend is a powerful tool for resetting your relationship with tec
     metaTitle: "Vacation Without Checking Phone | Detach",
     metaDescription: "Learn how to enjoy your vacation without checking phone apps constantly. Use physical boundaries to reclaim your time. Get Detach for $9.99 today.",
     excerpt: "Discover effective strategies to enjoy a vacation without checking phone notifications, including the use of physical app blockers like the Detach card.",
-    date: "2026-04-30",
+    date: "2025-11-22",
     content: `A true holiday should be a period of rest, rejuvenation, and connection. However, many travelers find it nearly impossible to experience a vacation without checking phone notifications every few minutes. The constant pull of work emails, social media updates, and news alerts can turn a relaxing getaway into a digital extension of your daily grind. Learning to break this habit is essential for mental health and genuinely enjoying your surroundings.
 
 To truly disconnect, you need more than just willpower. Digital habits are deeply ingrained in our neurology. When you feel the buzz of a notification, your brain craves the hit of dopamine that comes from checking it. This cycle is what keeps us tethered to our screens even when we are sitting on a beautiful beach or exploring a historic city. By implementing physical boundaries and intentional habits, you can reclaim your vacation and return home feeling truly refreshed.
@@ -2231,7 +2231,7 @@ Achieving a vacation without checking phone notifications is one of the best gif
     metaTitle: "The Best App Blocker for Writers | Detach",
     metaDescription: "Discover how the right app blocker for writers can end digital distraction. Beat writer's block with the $9.99 Detach card. Free shipping.",
     excerpt: "Learn how to build the perfect deep work environment using an app blocker for writers to eliminate notification noise and finish your manuscript.",
-    date: "2026-04-30",
+    date: "2025-09-11",
     content: `Finding the flow state is the most difficult part of the creative process. Every notification is a potential threat to your productivity, which is why choosing the right app blocker for writers is a critical decision for your career. Whether you are drafting a novel, writing a technical manual, or composing poetry, your iPhone is likely your biggest competitor for your own attention. Most writers attempt to rely on willpower alone, but willpower is a finite resource that dries up quickly during a long writing session.
 
 A physical solution like the [Detach card](/shop) provides a tangible barrier between you and the apps that pull you away from your work. By moving the blocking mechanism outside of your screen and into the physical world, you change the psychology of your workspace. This guide covers how to set up your digital environment so your words can finally take center page.
@@ -2301,7 +2301,7 @@ Choosing the right app blocker for writers is about more than just restricting s
     metaTitle: "App Blocker for College Students | Detach",
     metaDescription: "Discover the best app blocker for college students to boost productivity and focus. Get the Detach physical card for $9.99 with free shipping.",
     excerpt: "Finding a reliable app blocker for college students is essential for managing digital distraction during finals. See why physical blocks beat simple software.",
-    date: "2026-04-30",
+    date: "2026-01-25",
     content: `For many learners, the most difficult part of higher education isn't the coursework, it is managing the device in their pocket. Finding a reliable app blocker for college students is often the difference between a productive study session and three hours of mindless scrolling. With constant notifications from social media and messaging apps, internal willpower is rarely enough. Digital distractions have become a significant barrier to academic success, leading many students to seek out external tools that can help them stay on task.
 
 Most students start with free software limiters or built in screen time settings, but these are often too easy to bypass. When you are tired or stressed during finals week, clicking a Ignore Limit button takes less than a second. This is why more scholars are turning to physical solutions that create a tangible friction between them and their distracting habits. If you want to master your schedule, you need a system that respects your goals while providing enough resistance to keep you focused on your degree.
@@ -2369,7 +2369,7 @@ In conclusion, the best app blocker for college students is one that combines so
     metaTitle: "App Blocker for Entrepreneurs: Stay Focused | Detach",
     metaDescription: "Discover the best app blocker for entrepreneurs. Use Detach to eliminate distractions, ship faster, and scale your business. Only $9.99 with free shipping.",
     excerpt: "Learn why a physical app blocker for entrepreneurs is the ultimate tool for deep work. Save time, stop doomscrolling, and build your business with Detach.",
-    date: "2026-04-30",
+    date: "2025-10-10",
     content: `Entrepreneurs face a unique set of challenges when it comes to time management. When you are the founder, the manager, and the lead developer all at once, your attention is your most valuable asset. However, the smartphone is often the biggest drain on that asset. Finding the right app blocker for entrepreneurs is not just about productivity. It is about survival in a competitive market. To ship products faster and maintain a clear vision, you must guard your focus against the constant pull of social media and notifications. This is where a physical solution like Detach becomes an essential part of your workstation.
 
 ## Why Every Founder Needs an App Blocker for Entrepreneurs
@@ -2431,7 +2431,7 @@ Success in entrepreneurship is a result of consistent, focused effort over a lon
     metaTitle: "App Blocker for Developers | Detach",
     metaDescription: "Discover the best app blocker for developers. Block Reddit, X, and Slack to achieve deep work. Get your Detach card for $9.99 today.",
     excerpt: "Learn how an app blocker for developers can help you eliminate distractions like Reddit and Slack. Improve your deep work sessions with the Detach system.",
-    date: "2026-04-30",
+    date: "2026-03-29",
     content: `Finding the right flow state is the most difficult challenge for any software engineer. Between the constant pull of social media and the notifications from team communication tools, staying focused on complex logic is nearly impossible. This is why using a dedicated app blocker for developers has become a necessity for modern coding. When you are deep in a pull request or trying to map out a new architecture, a single ping from Slack or a quick check on X can break your concentration for twenty minutes. Detach offers a way to regain that focus by physically separating your phone from your workflow.
 
 ## Why You Need an App Blocker for Developers
@@ -2509,7 +2509,7 @@ Choosing the right app blocker for developers is about finding a tool that fits 
     metaTitle: "App Blocker for Creatives | Protect Your Focused Hours",
     metaDescription: "Discover how an app blocker for creatives can save your flow state. Use Detach to block social media and stay focused for $9.99.",
     excerpt: "Learn why a physical app blocker for creatives is the ultimate tool to protect your flow state, eliminate distractions, and finish your best work.",
-    date: "2026-04-30",
+    date: "2026-02-14",
     content: `Finding the perfect flow state is a core part of being a professional artist, designer, or writer. However, digital distractions often make it impossible to stay focused for long periods. An app blocker for creatives is no longer just a luxury, it is a necessity for anyone trying to produce high quality work in the digital age. When you are in the middle of a complex project, a single notification can shatter your concentration. It takes an average of 23 minutes to refocus after a disruption, meaning every buzz from your phone is a direct threat to your productivity.
 
 Creative work requires a deep level of cognitive engagement that social media apps are designed to break. Many people try to rely on willpower alone, but willpower is a finite resource. By using a tool like [Detach](/detach-app), you move the responsibility of discipline away from your brain and onto a physical object. This shift allows you to dedicate all your mental energy to your craft rather than fighting the urge to check your feeds. Using an app blocker for creatives ensures that your digital environment supports your goals instead of undermining them.
@@ -2580,7 +2580,7 @@ Using an app blocker for creatives is the most effective way to reclaim your tim
     metaTitle: "App Blocker Therapy Tools for Clients | Detach",
     metaDescription: "Discover why an app blocker therapy tool can improve mental health outcomes. Learn how experts use Detach to reduce phone anxiety for $9.99.",
     excerpt: "Learn how therapists use app blockers to help clients manage screen addiction, improve focus, and support mental health recovery goals efficiently.",
-    date: "2026-04-30",
+    date: "2025-12-04",
     content: `Modern mental health practitioners increasingly recognize that digital distractions are a primary barrier to successful patient outcomes. When a patient is struggling with anxiety, depression, or ADHD, the constant pull of social media can sabotage the progress made during a session. This is why many clinicians are now suggesting an app blocker therapy intervention as part of a holistic treatment plan. By creating physical distance between the user and their most addictive apps, tools like Detach provide a tangible way to support cognitive behavioral strategies and mindfulness practices outside of the clinic.
 
 ## Why Clinicians Recommend an App Blocker Therapy Approach
@@ -2652,7 +2652,7 @@ Choosing the right app blocker therapy tool is an investment in your mental well
     metaTitle: "How to Use Detach Pomodoro for Focused Work | Detach",
     metaDescription: "Learn how the Detach Pomodoro method improves focus. Stop phone distraction with our $9.99 physical blocker card. Free shipping.",
     excerpt: "Combine the Pomodoro Technique with a physical blocker card to eliminate digital distractions and reclaim your deep work sessions for a one-time price of $9.99.",
-    date: "2026-04-30",
+    date: "2025-12-30",
     content: `Deep work is becoming a rare skill in a world of constant notifications. Many professionals and students rely on time management methods to stay productive, but traditional software often fails to stop the urge to check social media. When you combine a physical solution like the Detach Pomodoro workflow, you create a hardware barrier between your focus and your phone. This approach ensures that during your work intervals, your device is truly inaccessible, allowing you to reach a state of flow without the risk of mindless scrolling.
 
 ## The Science of the Detach Pomodoro Method
@@ -2716,7 +2716,7 @@ Mastering your time does not have to be a constant battle against your own phone
     metaTitle: "Detach Exam Prep: Focus Better for Studying | Detach",
     metaDescription: "Learn how to use Detach exam prep techniques to stop phone distractions. Block apps for $9.99 and master your study sessions today.",
     excerpt: "Maximize your study efficiency with Detach. Learn how a physical card helps you block distracting apps and maintain focus during long exam prep sessions.",
-    date: "2026-04-30",
+    date: "2026-03-25",
     content: `Preparing for exams is a test of discipline. Even the most organized students struggle when their smartphone sits inches away from their textbook. To succeed, you need a strategy for Detach exam prep that removes the temptation to scroll through social media or check notifications every few minutes. Most software solutions are too easy to bypass when stress levels rise. That is where a physical intervention becomes necessary. The Detach system provides a hardware based barrier that forces you to commit to your study schedule without the friction of complex accounts or hidden fees.
 
 ## Transforming Your Study Space with Detach Exam Prep
@@ -2784,7 +2784,7 @@ Exam season does not have to be a struggle against your own phone. By incorporat
     metaTitle: "How to Use Detach at the Office | Detach",
     metaDescription: "Learn how to use Detach at the office to boost focus and hide your card. Master workplace productivity for only $9.99 with free shipping.",
     excerpt: "Discover clever strategies to use Detach at the office to block distracting apps without your coworkers noticing. Stay focused on your work tasks today.",
-    date: "2026-04-30",
+    date: "2026-04-02",
     content: `Workplace distractions are at an all time high. From constant notifications to the temptation of social media, staying focused during your nine to five is a challenge. Many professionals are looking for discreet ways to use Detach at the office to maintain productivity. Unlike software solutions that can be bypassed with a simple click, this physical NFC card creates a tangible barrier between you and your distractions. Because the card is small and minimalist, it fits perfectly into a professional environment without drawing unnecessary attention from your manager or colleagues.
 
 Setting boundaries with technology is essential for career growth. When you use Detach at the office, you are making a commitment to deep work. This guide will show you how to integrate the system into your daily workflow, where to keep your card hidden, and how to stay productive while others are stuck scrolling through their feeds. With no account required and a simple iOS 17 setup, you can start reclaiming your time immediately.
@@ -2850,7 +2850,7 @@ Using Detach at the office is the simplest way to regain control over your atten
     metaTitle: "How to Use Detach on Weekends to Reset Habits | Detach",
     metaDescription: "Learn how to use Detach on weekends to fix your screen time habits. Get your $9.99 card and reclaim your free time today.",
     excerpt: "Discover how using Detach on weekends can transform your relationship with your iPhone. Learn practical strategies to disconnect and enjoy your time off.",
-    date: "2026-04-30",
+    date: "2026-02-23",
     content: `The weekend is supposed to be a time for recovery, but for many of us, it becomes a marathon of mindless scrolling. Learning how to use Detach on weekends is one of the most effective ways to break the cycle of phone addiction and reclaim your mental clarity. By introducing a physical barrier to your most distracting apps, you can transition from a state of constant digital noise to a weekend of genuine presence. This guide will show you exactly how to integrate the Detach card into your Saturday and Sunday routines to ensure you start Monday feeling refreshed rather than depleted.
 
 Developing a healthier relationship with technology does not happen by accident. It requires intentional boundaries. Most people find that their screen time spikes during their time off because the structure of the work week is gone. By using the Detach app and its companion physical card, you can create those missing boundaries without the need for complex software or monthly subscriptions. For a one time cost of $9.99, you get a tool that physically stays at home while you go out, or stays in another room while you relax, making it the perfect partner for a weekend reset.
@@ -2924,7 +2924,7 @@ Using a physical card to manage digital habits is a powerful way to reclaim your
     metaTitle: "Detach vs Apple Screen Time: A Honest Comparison | Detach",
     metaDescription: "Comparing Detach vs Apple Screen Time for focus. Discover which tool actually prevents doomscrolling. Get the physical Detach card for $9.99 today.",
     excerpt: "A deep dive into Detach vs Apple Screen Time. We compare software restrictions against physical intervention to help you reclaim your focus and time.",
-    date: "2026-04-30",
+    date: "2026-03-07",
     content: `When it comes to managing digital habits, most iPhone users start with the default settings. Comparing Detach vs Apple Screen Time is a common path for anyone who has found themselves ignoring their own time limits. While Apple provides a built-in suite of tools, they often fall short because they are too easy to bypass. This comparison explores how a physical solution can fill the gaps left by software alone, helping you find a balance that actually lasts.
 
 ## The Reality of Detach vs Apple Screen Time
@@ -2990,7 +2990,7 @@ Choosing between Detach and the default Apple settings depends on your level of 
     metaTitle: "Detach vs Opal: Which App Blocker Is Better in 2026? | Detach",
     metaDescription: "Comparing Detach vs Opal for screen time control. Discover why the $9.99 Detach card is the best alternative to expensive app subscriptions in 2026.",
     excerpt: "A deep dive comparison of Detach vs Opal to help you choose the best app blocker. Explore features, pricing, and why physical cards beat digital subscriptions.",
-    date: "2026-04-30",
+    date: "2025-08-17",
     content: `Choosing the right tool to manage screen time has become a priority for millions of iPhone users. When comparing Detach vs Opal, it is clear that both apps aim to solve the same problem. They both block distracting apps like Instagram, TikTok, and X to help you reclaim your focus. However, the way they approach this goal is fundamentally different. While Opal relies on a subscription model and digital settings, Detach introduces a physical element that changes how you interact with your phone. In this guide, we will break down the features, costs, and effectiveness of these two industry leaders.
 
 Digital distractions are more aggressive than ever in 2026. Most users find that simple software toggles are too easy to bypass when a craving for dopamine hits. This is where the physical intervention of a tool like the Detach card becomes a game changer for productivity. If you are tired of monthly fees and want a permanent solution for your focus, understanding the nuances of Detach vs Opal is the first step toward digital freedom.
@@ -3068,7 +3068,7 @@ It is time to take control of your time and stop letting algorithms run your lif
     metaTitle: "Detach vs One Sec: The Best Way to Reduce Phone Use | Detach",
     metaDescription: "Compare Detach vs One Sec to see which tool helps you reclaim your time. Learn why a physical card beats software-only solutions for deep focus.",
     excerpt: "A detailed comparison between Detach vs One Sec. We explore how physical friction compares to digital breathing cues for stopping doomscrolling.",
-    date: "2026-04-30",
+    date: "2026-04-20",
     content: `Choosing the right tool to reclaim your focus is a critical step in improving your digital well-being. When looking at Detach vs One Sec, you are comparing two distinct philosophies of habit change. One Sec uses software to introduce a breathing exercise before you open an app, while Detach uses a physical card to lock distracting apps entirely. Both aim to reduce screen time, but they solve the problem through different levels of friction and psychological techniques. If you find yourself mindlessly swiping through social media, understanding these differences will help you decide which method actually keeps you off your phone.
 
 ### The Rise of Screen Time Tools
@@ -3129,7 +3129,7 @@ Taking control of your phone habits does not have to be a constant struggle. By 
     metaTitle: "Detach vs Freedom: Best iPhone App Blocker | Detach",
     metaDescription: "Comparing Detach vs Freedom for screen time. Discover why a physical card is more effective than software. Get Detach for $9.99 with free shipping today.",
     excerpt: "A deep dive into Detach vs Freedom. Learn the differences between physical NFC card blockers and cross-platform software to reclaim your focus.",
-    date: "2026-04-30",
+    date: "2026-04-03",
     content: `Choosing the right tool to reclaim your focus is a personal decision that impacts your daily productivity. When looking at Detach vs Freedom, you are comparing two very different philosophies of digital wellness. Freedom is a long-standing software solution that works across multiple devices, while Detach uses a physical card to create a tangible barrier between you and your distracting apps. Both aim to reduce screen time, but the friction they introduce works in distinct ways. For iPhone users seeking a permanent, low-cost solution, understanding these differences is essential to choosing the method that will actually help you stay off your phone.
 
 ## Detach vs Freedom: Comparing Philosophies
@@ -3197,7 +3197,7 @@ For those ready to take back their time without the burden of monthly fees, Deta
     metaTitle: "Detach vs Screenzen: Which Friction Tool Wins? | Detach",
     metaDescription: "Explore our guide on Detach vs Screenzen to find the best phone friction tool. Learn how physical and software blockers compare. Get Detach now.",
     excerpt: "Choosing between Detach vs Screenzen? We compare physical versus digital friction tools to help you reclaim your focus and beat phone addiction.",
-    date: "2026-04-30",
+    date: "2026-02-01",
     content: `Finding the right way to reduce your screen time often leads to two different paths. One path uses software to create barriers, while the other uses physical hardware. When comparing Detach vs Screenzen, you are looking at the two most effective ways to introduce friction into your digital life. Both tools aim to stop mindless scrolling, but they approach the problem from completely different angles. Screenzen focuses on internal app delays, while Detach uses an external physical card to control access. Understanding which one fits your lifestyle is key to long-term success.
 
 ## The Logic of Detach vs Screenzen
@@ -3263,7 +3263,7 @@ In conclusion, both tools have their place in the fight against digital distract
     metaTitle: "Detach vs Jomo 2026: The Best iPhone App Blocker | Detach",
     metaDescription: "Comparing Detach vs Jomo 2026. Discover why a physical card is more effective than software. Get Detach for $9.99 with free shipping today.",
     excerpt: "A deep dive into Detach vs Jomo 2026, comparing the physical card approach against traditional software blockers for iPhone screen time management.",
-    date: "2026-04-30",
+    date: "2026-03-20",
     content: `Choosing the right tool to manage screen time is an essential decision for anyone looking to reclaim their attention. As we compare Detach vs Jomo 2026, the landscape of app blocking has shifted toward more intentional, friction-based solutions. Jomo represents the pinnacle of software-only approaches, offering deep customization and complicated logic. Detach offers a different philosophy by utilizing a physical card to act as a real-world key for your digital life. This comparison explores why a physical object might be the missing piece in your productivity toolkit.
 
 ## The Evolution of Detach vs Jomo 2026
@@ -3328,7 +3328,7 @@ In the final analysis of Detach vs Jomo 2026, Detach wins on simplicity and fric
     metaTitle: "How Detach Card Works Step by Step | Detach",
     metaDescription: "Learn how Detach card works to reduce screen time. Lock apps with an NFC card for $9.99. Simple setup for iOS 17 with no subscription.",
     excerpt: "Discover how the Detach card works to help you master your focus through physical barriers. A step by step guide to setup and use.",
-    date: "2026-04-30",
+    date: "2026-04-01",
     content: `Mastering your focus in a world of digital distractions requires more than just willpower. Many people wonder how Detach card works to create a lasting change in their screen habits. At its core, Detach is a physical tool designed to bridge the gap between your digital world and your physical environment. By using a specialized card, you can lock away distracting apps and regain control over your time. Unlike software based solutions that are easy to bypass, this physical interaction creates a psychological friction that makes you think twice before mindlessly scrolling. This guide will walk you through every detail of the process, from the initial order to the daily habit of staying productive.
 
 Every journey to digital wellness starts with a simple choice to change. You can get [the Detach card](/shop) for a one time payment of $9.99 with free worldwide shipping. There are no recurring fees or accounts to manage. Once you have the card in your hand, you possess a physical key to your productivity. The system is designed specifically for iOS 17 and later, ensuring that it integrates seamlessly with your iPhone without needing complex overrides or invasive permissions.
@@ -3407,7 +3407,7 @@ In conclusion, managing your digital life should not be a constant struggle agai
     metaTitle: "Detach Shipping FAQ: Delivery and Order Details | Detach",
     metaDescription: "Common questions about the Detach shipping FAQ. Learn about $9.99 pricing, free worldwide delivery, and how to get your app blocker card.",
     excerpt: "Get answers to the most common questions about ordering your card, including worldwide shipping times, costs, and setup for the Detach app on iOS 17.",
-    date: "2026-04-30",
+    date: "2026-04-20",
     content: `When you decide to reclaim your focus and reduce your screen time, you want your tools to arrive quickly and without hassle. This Detach shipping FAQ is designed to answer every question you might have about how we get your physical blocker into your hands. We believe that focus should be accessible to everyone, which is why we have simplified our entire fulfillment process. From the moment you place your order to the second the card arrives at your door, we prioritize transparency and speed. Whether you are in the United States or ordering from abroad, our goal is to help you start your journey toward a more intentional relationship with your iPhone as soon as possible.
 
 ## Detach Shipping FAQ and Delivery Times
@@ -3474,7 +3474,7 @@ Ordering your card is the first step toward reclaiming your time. With no hidden
     metaTitle: "Gift App Blocker for Better Habits | Detach",
     metaDescription: "Discover how to gift an app blocker to help friends reduce screen time. Detach is $9.99 with free shipping. Perfect for improving focus and sleep.",
     excerpt: "Looking for the perfect gift to help a friend beat phone addiction? Learn why a physical card is the most effective and thoughtful gift app blocker available.",
-    date: "2026-04-30",
+    date: "2026-01-30",
     content: `Finding the perfect present for someone who feels tethered to their device can be challenging. You want to be supportive without being judgmental. A physical gift app blocker is a unique way to help a loved one reclaim their time. While many digital solutions exist, they often feel intangible or restrictive. A physical object like the Detach card provides a tactile reminder to stay present. It is a thoughtful way to show you care about their well-being and mental clarity in an increasingly noisy world. At just $9.99, it is an accessible tool for anyone looking to change their relationship with technology.
 
 ## Why a Gift App Blocker is a Thoughtful Choice
@@ -3566,7 +3566,7 @@ Helping someone you care about find balance in a digital world is one of the kin
     metaTitle: "Detach Card Results: Real Success Stories | Detach",
     metaDescription: "Discover real Detach card results from people reducing their screen time. Learn how this $9.99 physical card helps you regain focus. Get yours today.",
     excerpt: "Explore real user success stories and Detach card results. Learn how a simple physical card can help you reclaim hours of your day from social media apps.",
-    date: "2026-04-30",
+    date: "2026-01-21",
     content: `When people first see the Detach card, they often ask if a physical tool can truly change how they use their phone. The Detach card results we see from our community suggest that the answer is a resounding yes. Screen time addiction is a cognitive habit, and breaking it requires more than just willpower. By introducing a physical barrier to your digital life, the Detach card provides a tangible way to pause before you scroll. This post explores how real users have integrated this tool into their lives to see significant drops in their daily screen usage.
 
 ### The Science of Physical Friction
