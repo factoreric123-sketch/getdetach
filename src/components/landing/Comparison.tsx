@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 const competitors = [
   {
     name: "Brick",
-    price: "$59",
+    price: "$71",
     subscription: "No",
     highlight: false,
   },
   {
     name: "Bloom",
-    price: "$39",
+    price: "$47",
     subscription: "Yes",
     highlight: false,
   },
   {
     name: "Blok",
-    price: "$49",
+    price: "$59",
     subscription: "Yes",
     highlight: false,
   },
