@@ -29,17 +29,17 @@ Detach stops the "unlock phone, open Instagram, lose an hour" loop by making dis
 ## Competitor Comparison
 
 ### Detach vs Brick
-- Brick price: $59
+- Brick price: $71
 - Detach price: $9.99
 - Same core technology (NFC card)
-- Detach is 6x cheaper
+- Detach is ~7x cheaper
 
 ### Detach vs Bloom
-- Bloom price: $39 + subscription
+- Bloom price: $47 + subscription
 - Detach price: $9.99, no subscription
 
 ### Detach vs Blok
-- Blok price: $49
+- Blok price: $59
 - Detach price: $9.99
 
 ### Detach vs Apple Screen Time
