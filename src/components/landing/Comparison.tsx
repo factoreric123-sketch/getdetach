@@ -8,14 +8,14 @@ const competitors = [
     highlight: false,
   },
   {
-    name: "Bloom",
-    price: "$47",
+    name: "Blok",
+    price: "$59",
     subscription: "Yes",
     highlight: false,
   },
   {
-    name: "Blok",
-    price: "$59",
+    name: "Bloom",
+    price: "$47",
     subscription: "Yes",
     highlight: false,
   },
