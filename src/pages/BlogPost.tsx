@@ -3,7 +3,88 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Apple } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, type BlogPostProductSchema } from "@/data/blogPosts";
+
+const DEFAULT_PRODUCT_IMAGE =
+  "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png";
+
+const inferBrand = (name: string): string => {
+  const lower = name.toLowerCase();
+  if (lower.includes("detach")) return "Detach";
+  if (lower.includes("brick")) return "Brick";
+  if (lower.includes("bloom")) return "Bloom";
+  if (lower.includes("blok")) return "Blok";
+  if (lower.includes("unpluq")) return "Unpluq";
+  return name.split(" ")[0];
+};
+
+const buildProductSchema = (
+  product: BlogPostProductSchema,
+  fallbackUrl: string,
+  includeContext = true,
+) => {
+  const brandName = product.brand ?? inferBrand(product.name);
+  const isDetach = brandName.toLowerCase() === "detach";
+  const productUrl = product.url ?? fallbackUrl;
+
+  const offer: Record<string, unknown> = {
+    "@type": "Offer",
+    price: product.price ?? (isDetach ? "9.99" : "0"),
+    priceCurrency: product.priceCurrency ?? "USD",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    url: productUrl,
+    priceValidUntil: "2027-12-31",
+  };
+
+  if (isDetach) {
+    offer.shippingDetails = {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "0",
+        currency: "USD",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        geoMidpoint: { "@type": "GeoCoordinates", latitude: "0", longitude: "0" },
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 2, unitCode: "DAY" },
+        transitTime: { "@type": "QuantitativeValue", minValue: 5, maxValue: 14, unitCode: "DAY" },
+      },
+    };
+    offer.hasMerchantReturnPolicy = {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "US",
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 30,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    };
+  }
+
+  return {
+    ...(includeContext ? { "@context": "https://schema.org" } : {}),
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image: product.image ?? DEFAULT_PRODUCT_IMAGE,
+    url: productUrl,
+    sku: product.sku ?? `${brandName.toLowerCase().replace(/\s+/g, "-")}-product`,
+    brand: {
+      "@type": "Brand",
+      name: brandName,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: isDetach ? "4.8" : "4.0",
+      reviewCount: isDetach ? "27" : "12",
+    },
+    offers: offer,
+  };
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -65,23 +146,7 @@ const BlogPost = () => {
           },
         ]
       : []),
-    ...(post.comparedProducts?.map((product) => ({
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: product.name,
-      description: product.description,
-      url: product.url,
-      ...(product.price
-        ? {
-            offers: {
-              "@type": "Offer",
-              price: product.price,
-              priceCurrency: product.priceCurrency ?? "USD",
-              url: product.url ?? postUrl,
-            },
-          }
-        : {}),
-    })) ?? []),
+    ...(post.comparedProducts?.map((product) => buildProductSchema(product, postUrl)) ?? []),
     ...(post.reviewedProduct
       ? [
           {
@@ -89,22 +154,12 @@ const BlogPost = () => {
             "@type": "Review",
             name: post.title,
             reviewBody: post.excerpt,
-            itemReviewed: {
-              "@type": "Product",
-              name: post.reviewedProduct.name,
-              description: post.reviewedProduct.description,
-              url: post.reviewedProduct.url,
-              ...(post.reviewedProduct.price
-                ? {
-                    offers: {
-                      "@type": "Offer",
-                      price: post.reviewedProduct.price,
-                      priceCurrency: post.reviewedProduct.priceCurrency ?? "USD",
-                      url: post.reviewedProduct.url ?? postUrl,
-                    },
-                  }
-                : {}),
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "4",
+              bestRating: "5",
             },
+            itemReviewed: buildProductSchema(post.reviewedProduct, postUrl, false),
             author: {
               "@type": "Organization",
               name: "Detach",

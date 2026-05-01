@@ -17,6 +17,9 @@ export interface BlogPostProductSchema {
   url?: string;
   price?: string;
   priceCurrency?: string;
+  image?: string;
+  brand?: string;
+  sku?: string;
 }
 
 export interface BlogPost {
