@@ -89,6 +89,27 @@ serve(async (req) => {
       });
     }
 
+    // Internal notification to Detach team
+    const { error: internalEmailError } = await supabase.functions.invoke("send-transactional-email", {
+      body: {
+        templateName: "order-notification-internal",
+        recipientEmail: "getdetach@gmail.com",
+        idempotencyKey: `order-internal-${sessionId}`,
+        templateData: {
+          customerName,
+          customerEmail,
+          quantity,
+          total,
+          addressLines,
+          sessionId,
+        },
+      },
+    });
+
+    if (internalEmailError) {
+      console.error("Failed to send internal order notification:", internalEmailError);
+    }
+
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
