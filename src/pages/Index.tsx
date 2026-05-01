@@ -15,6 +15,24 @@ import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   const { hash } = useLocation();
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Detach",
+    applicationCategory: "ProductivityApplication",
+    operatingSystem: "iOS 17 or later",
+    description:
+      "Detach is an iPhone app blocker that uses a physical NFC card to block distracting apps until you tap to end the session.",
+    url: "https://getdetach.app/",
+    downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    offers: {
+      "@type": "Offer",
+      price: "10",
+      priceCurrency: "USD",
+      url: "https://getdetach.app/shop",
+      availability: "https://schema.org/InStock",
+    },
+  };
 
   useEffect(() => {
     if (hash) {
@@ -26,6 +44,10 @@ const Index = () => {
   }, [hash]);
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+      />
       <Navbar />
       <Hero />
       <Comparison />
