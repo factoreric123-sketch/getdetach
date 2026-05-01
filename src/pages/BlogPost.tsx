@@ -65,23 +65,7 @@ const BlogPost = () => {
           },
         ]
       : []),
-    ...(post.comparedProducts?.map((product) => ({
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: product.name,
-      description: product.description,
-      url: product.url,
-      ...(product.price
-        ? {
-            offers: {
-              "@type": "Offer",
-              price: product.price,
-              priceCurrency: product.priceCurrency ?? "USD",
-              url: product.url ?? postUrl,
-            },
-          }
-        : {}),
-    })) ?? []),
+    ...(post.comparedProducts?.map((product) => buildProductSchema(product, postUrl)) ?? []),
     ...(post.reviewedProduct
       ? [
           {
@@ -89,22 +73,12 @@ const BlogPost = () => {
             "@type": "Review",
             name: post.title,
             reviewBody: post.excerpt,
-            itemReviewed: {
-              "@type": "Product",
-              name: post.reviewedProduct.name,
-              description: post.reviewedProduct.description,
-              url: post.reviewedProduct.url,
-              ...(post.reviewedProduct.price
-                ? {
-                    offers: {
-                      "@type": "Offer",
-                      price: post.reviewedProduct.price,
-                      priceCurrency: post.reviewedProduct.priceCurrency ?? "USD",
-                      url: post.reviewedProduct.url ?? postUrl,
-                    },
-                  }
-                : {}),
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "4",
+              bestRating: "5",
             },
+            itemReviewed: buildProductSchema(post.reviewedProduct, postUrl, false),
             author: {
               "@type": "Organization",
               name: "Detach",
