@@ -85,6 +85,80 @@ const Shop = () => {
       <Navbar />
 
       <section className="pt-28 pb-10 px-6">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: "Detach Card",
+              description:
+                "An NFC card that pairs with the Detach app. Tap it to start or end a focus session that locks distracting apps on your iPhone. No battery, no charging, works forever.",
+              image: [
+                "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png",
+              ],
+              sku: "detach-card-001",
+              mpn: "DETACH-CARD-001",
+              brand: { "@type": "Brand", name: "Detach" },
+              category: "Productivity",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                reviewCount: "27",
+              },
+              offers: {
+                "@type": "Offer",
+                price: "9.99",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                itemCondition: "https://schema.org/NewCondition",
+                url: "https://getdetach.app/shop",
+                priceValidUntil: "2027-12-31",
+                seller: { "@type": "Organization", name: "Detach" },
+                shippingDetails: {
+                  "@type": "OfferShippingDetails",
+                  shippingRate: {
+                    "@type": "MonetaryAmount",
+                    value: "0",
+                    currency: "USD",
+                  },
+                  shippingDestination: {
+                    "@type": "DefinedRegion",
+                    geoMidpoint: {
+                      "@type": "GeoCoordinates",
+                      latitude: "0",
+                      longitude: "0",
+                    },
+                  },
+                  deliveryTime: {
+                    "@type": "ShippingDeliveryTime",
+                    handlingTime: {
+                      "@type": "QuantitativeValue",
+                      minValue: 0,
+                      maxValue: 2,
+                      unitCode: "DAY",
+                    },
+                    transitTime: {
+                      "@type": "QuantitativeValue",
+                      minValue: 5,
+                      maxValue: 14,
+                      unitCode: "DAY",
+                    },
+                  },
+                },
+                hasMerchantReturnPolicy: {
+                  "@type": "MerchantReturnPolicy",
+                  applicableCountry: "US",
+                  returnPolicyCategory:
+                    "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  merchantReturnDays: 30,
+                  returnMethod: "https://schema.org/ReturnByMail",
+                  returnFees: "https://schema.org/FreeReturn",
+                },
+              },
+            }),
+          }}
+        />
         <div className="max-w-5xl mx-auto">
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
