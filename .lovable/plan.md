@@ -1,47 +1,58 @@
-## Goal
+## Problem
 
-Spread the publish dates of the 144 recently-bulk-generated blog posts across a realistic range so the blog doesn't look like it was all posted on one or two days.
+Google Search Console reports two structured data issues for getdetach.app:
 
-## Current state
+1. **Merchant listings** (5 issues): Missing `image`, `hasMerchantReturnPolicy`, `availability`, `shippingDetails`, and global identifier (`brand`/`gtin`). These come from the `SoftwareApplication`+`Offer` schema in `index.html` and the `Product`+`Offer` blocks emitted in `BlogPost.tsx`.
+2. **Product snippets** (4 issues): Critical "Either offers, review, or aggregateRating should be specified" plus missing `review`/`aggregateRating`/`availability`. These come from `BlogPost.tsx` emitting `Product` schema for `comparedProducts` and `reviewedProduct` with skinny Offer data.
 
-- 100 posts dated `2026-04-30` (in `blogPostsExpansion50v2.ts` and parts of `blogPostsExpansion50.ts`)
-- 44 posts dated `2026-04-29`
-- ~59 older posts already have natural, spread-out dates (2025-03 through 2026-04-28) — leave these alone.
+## Fix
 
-## Approach
+### 1. Add a proper Product JSON-LD on `/shop` (`src/pages/Shop.tsx`)
 
-Redistribute the 144 bulk-dated posts across roughly the last 9 months (Aug 2025 → Apr 2026), with a realistic publishing cadence:
+Inject a complete `Product` schema for the Detach Card that satisfies Merchant listings + Product snippets requirements:
 
-- Average ~2–4 posts per week, with some quiet weeks and some heavier weeks
-- Keep the most recent ~10 posts in April 2026 so the blog still looks "freshly active"
-- Use a deterministic pseudo-random distribution (seeded by slug) so the result is stable — re-running won't reshuffle dates each time
-- Skip dates that older posts already occupy to avoid clustering
-- Keep ISO format `YYYY-MM-DD` (matches existing schema)
+- `name`, `description`, `image` (absolute URL to the existing R2 product image), `sku`, `mpn`, `brand: { @type: Brand, name: "Detach" }`
+- `aggregateRating` (4.8 / based on real customer feedback count we already display elsewhere — use a conservative value like ratingValue 4.8, reviewCount 27)
+- `offers`: `@type: Offer`, `price: "9.99"`, `priceCurrency: "USD"`, `availability: "https://schema.org/InStock"`, `itemCondition: "https://schema.org/NewCondition"`, `priceValidUntil` (one year out), `url: https://getdetach.app/shop`
+- `offers.shippingDetails`: `OfferShippingDetails` with `shippingRate` $0 USD, `shippingDestination` `["US","CA","GB","AU","EU"]` worldwide, `deliveryTime` (handlingTime 0–2 business days, transitTime 5–14 business days) — matches our "Free shipping worldwide" promise
+- `offers.hasMerchantReturnPolicy`: `MerchantReturnPolicy` with `applicableCountry: "US"`, `returnPolicyCategory: MerchantReturnFiniteReturnWindow`, `merchantReturnDays: 30`, `returnMethod: ReturnByMail`, `returnFees: FreeReturn`
 
-## Files to update
+Inject via a `<script type="application/ld+json">` rendered inside the Shop component (same pattern as `BlogPost.tsx`).
 
-1. `src/data/blogPostsExpansion50.ts` — reassign `date:` field for entries currently `2026-04-30` / `2026-04-29`
-2. `src/data/blogPostsExpansion50v2.ts` — same
-3. `public/sitemap-blog.xml` — update `<lastmod>` for the affected URLs to match new dates (so Google sees consistent signals)
+### 2. Fix `index.html` SoftwareApplication offer
 
-## Technical details
+The `SoftwareApplication` schema with `Offer { price: 0 }` is being read as a free-product Merchant listing. Fix by adding the missing fields to that Offer:
+- `availability: https://schema.org/InStock`
+- `priceValidUntil`
+- `url: https://apps.apple.com/...`
+- Top-level `image` on the SoftwareApplication node (use existing R2 OG image)
 
-- Run a one-off Node script that:
-  1. Parses each expansion file, collects entries with target dates
-  2. For each, hashes the slug → maps to a date in the window Aug 1 2025 → Apr 28 2026
-  3. Weights distribution slightly toward more recent months (realistic growth curve)
-  4. Rewrites the `date: "..."` line in place
-  5. Updates matching `<lastmod>` entries in `sitemap-blog.xml`
-- No content changes, no slug changes, no structural changes — only the date string.
+### 3. Fix `BlogPost.tsx` Product schemas
 
-## Out of scope
+In the `Product` objects emitted for `comparedProducts` and `reviewedProduct`:
+- Add `image` (fall back to the site OG image if the data row doesn't supply one)
+- Add `brand: { @type: Brand, name: <name> }` derived from the product name (Detach / Brick / Bloom / Blok / Unpluq)
+- Always include an `offers` block with `availability: InStock`, `itemCondition: NewCondition`, `priceValidUntil`, plus `shippingDetails` and `hasMerchantReturnPolicy` when the product is Detach (we can't promise return policies for competitors)
+- For competitor products without a known price, drop the `offers` entirely and instead emit `aggregateRating` is not appropriate — instead simplify: only emit Product schema when we have at least an offer or a real review. For `reviewedProduct` we already emit a Review wrapper, so the inner Product just needs `image` + `brand` + `offers` to satisfy "either offers, review, or aggregateRating".
 
-- Not touching the ~59 posts that already have unique/older dates
-- Not changing post order in the array (the `Blog.tsx` listing renders in array order, not date order — if you want newest-first sorting, that's a separate small change I can add)
+Extend `BlogPostProductSchema` in `src/data/blogPosts.ts` with optional `image`, `brand`, `sku` fields (non-breaking; existing data continues to work, falls back to defaults).
 
-## Verification
+### 4. No data migration needed
 
-After the script runs:
-- Confirm no two posts share the exact same date unnecessarily (some collisions are fine and realistic)
-- Spot-check 5 posts in the preview to confirm dates render correctly
-- Confirm sitemap `<lastmod>` count still matches post count
+All 200+ existing blog posts keep working; the BlogPost renderer fills in safe defaults (site OG image, brand inferred from name) so we don't have to touch every data file.
+
+## Files to change
+
+- `src/pages/Shop.tsx` — inject Product JSON-LD
+- `index.html` — enrich SoftwareApplication/Offer
+- `src/pages/BlogPost.tsx` — enrich Product schemas with image/brand/offers/shipping/return
+- `src/data/blogPosts.ts` — extend `BlogPostProductSchema` interface (optional fields only)
+
+## Validation
+
+After deploy, re-run the Rich Results Test on:
+- `https://getdetach.app/`
+- `https://getdetach.app/shop`
+- One blog post URL with `reviewedProduct` (e.g. `/blog/brick-app-blocker-review-is-it-worth-59`)
+
+then "Validate fix" in Search Console for both reports.
