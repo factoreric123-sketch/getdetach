@@ -89,26 +89,16 @@ serve(async (req) => {
       });
     }
 
-    // Internal notification to Detach team
-    const { error: internalEmailError } = await supabase.functions.invoke("send-transactional-email", {
-      body: {
-        templateName: "order-notification-internal",
-        recipientEmail: "getdetach@gmail.com",
-        idempotencyKey: `order-internal-${sessionId}`,
-        templateData: {
-          customerName,
-          customerEmail,
-          quantity,
-          total,
-          addressLines,
-          sessionId,
-        },
-      },
+    // Internal notification to Detach team — sent directly via Resend
+    // to avoid the system-appended unsubscribe footer.
+    const { sendInternalOrderNotification } = await import("../_shared/send-internal-order-notification.ts");
+    await sendInternalOrderNotification({
+      customerName,
+      customerEmail,
+      quantity,
+      total,
+      addressLines,
     });
-
-    if (internalEmailError) {
-      console.error("Failed to send internal order notification:", internalEmailError);
-    }
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
