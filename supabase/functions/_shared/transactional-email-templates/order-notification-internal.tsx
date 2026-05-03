@@ -72,6 +72,7 @@ export const template = {
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
 const container = { padding: '40px 24px', maxWidth: '580px', margin: '0 auto' }
 const h1 = { fontSize: '20px', color: '#222', margin: '0 0 24px', lineHeight: '1.4' }
+const introText = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
 const sectionHeading = { fontSize: '15px', color: '#222', margin: '0 0 6px', lineHeight: '1.6' }
 const detailText = { fontSize: '15px', color: '#222', margin: '0', lineHeight: '1.6' }
 const detailTextLast = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
