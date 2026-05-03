@@ -29,10 +29,12 @@ const OrderNotificationInternalEmail = ({
 }: OrderNotificationInternalProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>New Detach order from {customerName}</Preview>
+    <Preview>Detach Order Confirmation from {customerName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>New Order Received</Heading>
+        <Text style={introText}>
+          Thank you for your order. We've received your Detach order and it's now being processed.
+        </Text>
 
         <Text style={sectionHeading}><strong>Customer</strong></Text>
         <Text style={detailText}>Name: {customerName}</Text>
