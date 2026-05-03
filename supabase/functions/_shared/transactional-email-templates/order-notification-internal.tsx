@@ -57,7 +57,7 @@ const OrderNotificationInternalEmail = ({
 
 export const template = {
   component: OrderNotificationInternalEmail,
-  subject: 'New Detach Order',
+  subject: 'Detach Order Confirmation',
   to: 'getdetach@gmail.com',
   displayName: 'Internal order notification',
   previewData: {
