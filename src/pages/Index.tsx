@@ -62,6 +62,7 @@ const Index = () => {
       <Reality />
       <WhyDetach />
       <Product />
+      <Reviews />
       <AppScreenshots />
       <BestPractices />
       <Features />
