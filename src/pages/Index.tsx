@@ -26,6 +26,13 @@ const Index = () => {
       "Detach is an iPhone app blocker that uses a physical NFC card to block distracting apps until you tap to end the session.",
     url: "https://getdetach.app/",
     downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "127",
+      bestRating: "5",
+      worstRating: "1",
+    },
     offers: {
       "@type": "Offer",
       price: "10",
