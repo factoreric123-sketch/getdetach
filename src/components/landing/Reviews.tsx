@@ -56,10 +56,10 @@ const Reviews = () => {
             ))}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-            Loved by <span className="text-gradient">thousands</span>
+            What our <span className="text-gradient">customers say</span>
           </h2>
           <p className="text-muted-foreground mt-3 text-base">
-            4.8 out of 5 from real customers on the App Store.
+            5.0 out of 5 from 8 reviews on the App Store.
           </p>
         </motion.div>
 
