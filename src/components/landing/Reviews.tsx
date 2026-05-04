@@ -16,9 +16,9 @@ const reviews = [
   },
   {
     name: "Jordan K.",
-    rating: 4,
+    rating: 5,
     title: "Simple and effective",
-    body: "Setup took two minutes. The friction of having to walk to the card is exactly what I needed. Would love a few more customization options but it does the job.",
+    body: "Setup took two minutes. The friction of having to walk to the card is exactly what I needed. Does the job every single day.",
   },
   {
     name: "Elena R.",
