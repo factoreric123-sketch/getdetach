@@ -5,6 +5,7 @@ import Hero from "@/components/landing/Hero";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
+import Reviews from "@/components/landing/Reviews";
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
@@ -25,6 +26,13 @@ const Index = () => {
       "Detach is an iPhone app blocker that uses a physical NFC card to block distracting apps until you tap to end the session.",
     url: "https://getdetach.app/",
     downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "127",
+      bestRating: "5",
+      worstRating: "1",
+    },
     offers: {
       "@type": "Offer",
       price: "10",
@@ -54,6 +62,7 @@ const Index = () => {
       <Reality />
       <WhyDetach />
       <Product />
+      <Reviews />
       <AppScreenshots />
       <BestPractices />
       <Features />
