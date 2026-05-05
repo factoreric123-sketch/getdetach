@@ -15,12 +15,6 @@ const reviews = [
     body: "I keep the card in another room overnight. No more doomscrolling in bed. Worth every penny.",
   },
   {
-    name: "Jordan K.",
-    rating: 4,
-    title: "Simple and effective",
-    body: "Setup took two minutes. The friction of having to walk to the card is exactly what I needed. Would love a few more customization options but it does the job.",
-  },
-  {
     name: "Elena R.",
     rating: 5,
     title: "Better than any subscription app",
@@ -31,12 +25,6 @@ const reviews = [
     rating: 5,
     title: "The physical card is the trick",
     body: "Software-only blockers never worked because I'd just disable them. With Detach you have to physically find the card. Game changer.",
-  },
-  {
-    name: "Aisha N.",
-    rating: 5,
-    title: "Recommended to my whole family",
-    body: "My teenager actually uses it without complaining. The tap-to-end ritual feels less like punishment and more like a habit.",
   },
 ];
 
@@ -50,20 +38,20 @@ const Reviews = () => {
           viewport={{ once: true }}
           className="mb-10 text-center"
         >
-          <div className="flex items-center justify-center gap-2 mb-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-            ))}
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="w-7 h-7 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="text-2xl md:text-3xl font-black tracking-tight">4.9/5</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
             Loved by <span className="text-gradient">thousands</span>
           </h2>
-          <p className="text-muted-foreground mt-3 text-base">
-            4.8 out of 5 from real customers on the App Store.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {reviews.map((r, idx) => (
             <motion.div
               key={r.name}
