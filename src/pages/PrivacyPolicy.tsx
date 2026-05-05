@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
+    setCanonical("/privacy-policy");
     document.title = "Privacy Policy | Detach";
+    return () => resetCanonical();
   }, []);
 
   return (

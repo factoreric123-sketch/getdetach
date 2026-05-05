@@ -7,6 +7,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import nfcDevice from "@/assets/nfc-device.jpg";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const Shop = () => {
   const [searchParams] = useSearchParams();
@@ -27,11 +28,13 @@ const Shop = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setCanonical("/shop");
     document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", "Order the Detach card, the physical device that locks distracting apps and websites. $9.99, one-time purchase, free shipping worldwide.");
     }
+    return () => resetCanonical();
   }, []);
 
   const handleCheckout = async () => {

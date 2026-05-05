@@ -4,6 +4,7 @@ import { Apple, ArrowRight, Smartphone, Shield, Zap, Users } from "lucide-react"
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const faqs = [
   {
@@ -56,12 +57,14 @@ const audiences = [
 
 const DetachApp = () => {
   useEffect(() => {
+    setCanonical("/detach-app");
     document.title = "What is Detach App? The App Blocker That Reduces Screen Time";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", "Detach is an app blocker that blocks social media and reduces screen time using NFC tags. Learn how the Detach app works, who it's for, and why it's different.");
     }
     return () => {
+      resetCanonical();
       document.title = "Detach App Blocker – Block Social Media & Reduce Screen Time";
       if (meta) {
         meta.setAttribute("content", "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.");

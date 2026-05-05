@@ -7,10 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const Contact = () => {
   useEffect(() => {
+    setCanonical("/contact");
     document.title = "Contact Us | Detach";
+    return () => resetCanonical();
   }, []);
 
   const { toast } = useToast();
