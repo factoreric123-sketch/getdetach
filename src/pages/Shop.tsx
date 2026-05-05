@@ -27,11 +27,13 @@ const Shop = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setCanonical("/shop");
     document.title = "Shop – Buy the Detach Card | App Blocker Device";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", "Order the Detach card, the physical device that locks distracting apps and websites. $9.99, one-time purchase, free shipping worldwide.");
     }
+    return () => resetCanonical();
   }, []);
 
   const handleCheckout = async () => {
