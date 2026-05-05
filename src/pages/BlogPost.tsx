@@ -88,24 +88,24 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
+    const fullUrl = window.location.origin + window.location.pathname;
+
+    // ALWAYS set canonical immediately
+    setCanonical(fullUrl);
+
     if (post) {
       document.title = post.metaTitle;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", post.metaDescription);
-      setCanonical(window.location.origin + window.location.pathname);
-    }
-    return () => {
-      resetCanonical();
-      document.title = "Detach App Blocker – Block Social Media & Reduce Screen Time";
+
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
-        meta.setAttribute(
-          "content",
-          "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.",
-        );
+        meta.setAttribute("content", post.metaDescription);
       }
+    }
+
+    return () => {
+      resetCanonical();
     };
-  }, [post]);
+  }, []);
 
   if (!post) return <Navigate to="/blog" replace />;
 
