@@ -10,7 +10,9 @@ import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   useEffect(() => {
+    setCanonical("/contact");
     document.title = "Contact Us | Detach";
+    return () => resetCanonical();
   }, []);
 
   const { toast } = useToast();
