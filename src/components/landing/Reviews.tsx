@@ -44,10 +44,10 @@ const Reviews = () => {
                 <Star key={i} className="w-7 h-7 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-2xl md:text-3xl font-black tracking-tight">4.9/5</span>
+            <span className="text-2xl md:text-3xl font-black tracking-tight">5/5</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-            Loved by <span className="text-gradient">thousands</span>
+            What our <span className="text-gradient">customers say</span>
           </h2>
         </motion.div>
 
