@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const Terms = () => {
   useEffect(() => {
+    setCanonical("/terms");
     document.title = "Terms & Conditions | Detach";
+    return () => resetCanonical();
   }, []);
 
   return (
