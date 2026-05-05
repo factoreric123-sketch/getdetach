@@ -7,6 +7,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import nfcDevice from "@/assets/nfc-device.jpg";
+import { setCanonical, resetCanonical } from "@/lib/canonical";
 
 const Shop = () => {
   const [searchParams] = useSearchParams();
