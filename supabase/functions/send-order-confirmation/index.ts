@@ -67,46 +67,26 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
-      body: {
-        templateName: "order-confirmation",
-        recipientEmail: customerEmail,
-        idempotencyKey: `order-confirm-${sessionId}`,
-        templateData: {
-          customerName,
-          quantity,
-          total,
-          addressLines,
+    // Send the same order confirmation email to both the customer and the Detach team
+    const recipients = [customerEmail, "getdetach@gmail.com"];
+    for (const recipient of recipients) {
+      const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "order-confirmation",
+          recipientEmail: recipient,
+          idempotencyKey: `order-confirm-${sessionId}-${recipient}`,
+          templateData: {
+            customerName,
+            customerEmail,
+            quantity,
+            total,
+            addressLines,
+          },
         },
-      },
-    });
-
-    if (emailError) {
-      console.error("Failed to send order confirmation email:", emailError);
-      return new Response(JSON.stringify({ error: emailError.message }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 500,
       });
-    }
-
-    // Internal notification to Detach team
-    const { error: internalEmailError } = await supabase.functions.invoke("send-transactional-email", {
-      body: {
-        templateName: "order-notification-internal",
-        recipientEmail: "getdetach@gmail.com",
-        idempotencyKey: `order-internal-${sessionId}`,
-        templateData: {
-          customerName,
-          customerEmail,
-          quantity,
-          total,
-          addressLines,
-        },
-      },
-    });
-
-    if (internalEmailError) {
-      console.error("Failed to send internal order notification:", internalEmailError);
+      if (emailError) {
+        console.error(`Failed to send order confirmation to ${recipient}:`, emailError);
+      }
     }
 
     return new Response(JSON.stringify({ success: true }), {

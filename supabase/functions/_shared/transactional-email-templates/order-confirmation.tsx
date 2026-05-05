@@ -8,6 +8,7 @@ const SITE_NAME = "Detach"
 
 interface OrderConfirmationProps {
   customerName?: string
+  customerEmail?: string
   quantity?: number
   total?: string
   addressLines?: string
@@ -15,6 +16,7 @@ interface OrderConfirmationProps {
 
 const OrderConfirmationEmail = ({
   customerName = 'there',
+  customerEmail,
   quantity = 1,
   total = '9.99',
   addressLines = 'N/A',
@@ -32,8 +34,9 @@ const OrderConfirmationEmail = ({
         </Text>
 
         <Text style={sectionHeading}><strong>Order Details</strong></Text>
-        <Text style={detailText}>Items: {SITE_NAME}</Text>
+        <Text style={detailText}>Items: {SITE_NAME} Card</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
+        {customerEmail && <Text style={detailText}>Email: {customerEmail}</Text>}
         <Text style={detailTextLast}>Status: Confirmed</Text>
 
         <Text style={sectionHeading}><strong>Shipping To</strong></Text>
