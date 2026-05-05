@@ -66,7 +66,7 @@ const Index = () => {
       <BestPractices />
       <Features />
       <HowItWorks />
-      <Privacy />
+      
       <Reviews />
       <Footer />
     </div>
