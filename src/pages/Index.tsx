@@ -62,12 +62,12 @@ const Index = () => {
       <Reality />
       <WhyDetach />
       <Product />
-      <Reviews />
       <AppScreenshots />
       <BestPractices />
       <Features />
       <HowItWorks />
       <Privacy />
+      <Reviews />
       <Footer />
     </div>
   );
