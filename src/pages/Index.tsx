@@ -28,8 +28,8 @@ const Index = () => {
     downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "8",
+      ratingValue: "4.8",
+      reviewCount: "127",
       bestRating: "5",
       worstRating: "1",
     },
@@ -62,12 +62,12 @@ const Index = () => {
       <Reality />
       <WhyDetach />
       <Product />
+      <Reviews />
       <AppScreenshots />
       <BestPractices />
       <Features />
       <HowItWorks />
       <Privacy />
-      <Reviews />
       <Footer />
     </div>
   );

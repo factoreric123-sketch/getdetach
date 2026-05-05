@@ -84,7 +84,27 @@ serve(async (req) => {
       const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-      // Single notification to Detach team (contains all order details)
+      const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "order-confirmation",
+          recipientEmail: customerEmail,
+          idempotencyKey: `order-confirm-${session.id}`,
+          templateData: {
+            customerName,
+            quantity,
+            total,
+            addressLines,
+          },
+        },
+      });
+
+      if (emailError) {
+        console.error("Failed to send order confirmation email:", emailError);
+      } else {
+        console.log("Order confirmation email queued for:", customerEmail);
+      }
+
+      // Internal notification to Detach team
       const { error: internalEmailError } = await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "order-notification-internal",

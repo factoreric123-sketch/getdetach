@@ -16,9 +16,9 @@ const reviews = [
   },
   {
     name: "Jordan K.",
-    rating: 5,
+    rating: 4,
     title: "Simple and effective",
-    body: "Setup took two minutes. The friction of having to walk to the card is exactly what I needed. Does the job every single day.",
+    body: "Setup took two minutes. The friction of having to walk to the card is exactly what I needed. Would love a few more customization options but it does the job.",
   },
   {
     name: "Elena R.",
@@ -38,18 +38,6 @@ const reviews = [
     title: "Recommended to my whole family",
     body: "My teenager actually uses it without complaining. The tap-to-end ritual feels less like punishment and more like a habit.",
   },
-  {
-    name: "David L.",
-    rating: 5,
-    title: "Worth every dollar",
-    body: "One-time purchase, no subscription, and it actually works. I get hours of focused work back every week.",
-  },
-  {
-    name: "Hannah B.",
-    rating: 5,
-    title: "Exactly what I was looking for",
-    body: "I needed something that didn't rely on willpower. Walking over to tap the card is just enough friction to break the habit loop.",
-  },
 ];
 
 const Reviews = () => {
@@ -68,10 +56,10 @@ const Reviews = () => {
             ))}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-            What our <span className="text-gradient">customers say</span>
+            Loved by <span className="text-gradient">thousands</span>
           </h2>
           <p className="text-muted-foreground mt-3 text-base">
-            5.0 out of 5 from 8 reviews on the App Store.
+            4.8 out of 5 from real customers on the App Store.
           </p>
         </motion.div>
 
