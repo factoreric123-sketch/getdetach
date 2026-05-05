@@ -19,11 +19,7 @@ const inferBrand = (name: string): string => {
   return name.split(" ")[0];
 };
 
-const buildProductSchema = (
-  product: BlogPostProductSchema,
-  fallbackUrl: string,
-  includeContext = true,
-) => {
+const buildProductSchema = (product: BlogPostProductSchema, fallbackUrl: string, includeContext = true) => {
   const brandName = product.brand ?? inferBrand(product.name);
   const isDetach = brandName.toLowerCase() === "detach";
   const productUrl = product.url ?? fallbackUrl;
@@ -96,14 +92,17 @@ const BlogPost = () => {
       document.title = post.metaTitle;
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute("content", post.metaDescription);
-      setCanonical(`/blog/${post.slug}`);
+      setCanonical(window.location.origin + window.location.pathname);
     }
     return () => {
       resetCanonical();
       document.title = "Detach App Blocker – Block Social Media & Reduce Screen Time";
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
-        meta.setAttribute("content", "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.");
+        meta.setAttribute(
+          "content",
+          "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.",
+        );
       }
     };
   }, [post]);
@@ -192,15 +191,25 @@ const BlogPost = () => {
           tableLines.push(lines[i]);
           i++;
         }
-        const headers = tableLines[0].split("|").filter(Boolean).map((h) => h.trim());
-        const rows = tableLines.slice(2).map((r) => r.split("|").filter(Boolean).map((c) => c.trim()));
+        const headers = tableLines[0]
+          .split("|")
+          .filter(Boolean)
+          .map((h) => h.trim());
+        const rows = tableLines.slice(2).map((r) =>
+          r
+            .split("|")
+            .filter(Boolean)
+            .map((c) => c.trim()),
+        );
         elements.push(
           <div key={`table-${i}`} className="overflow-x-auto my-6">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
                   {headers.map((h, hi) => (
-                    <th key={hi} className="text-left py-2 px-3 font-semibold">{h}</th>
+                    <th key={hi} className="text-left py-2 px-3 font-semibold">
+                      {h}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -208,21 +217,31 @@ const BlogPost = () => {
                 {rows.map((row, ri) => (
                   <tr key={ri} className="border-b border-border/50">
                     {row.map((cell, ci) => (
-                      <td key={ci} className="py-2 px-3 text-muted-foreground">{cell}</td>
+                      <td key={ci} className="py-2 px-3 text-muted-foreground">
+                        {cell}
+                      </td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
+          </div>,
         );
         continue;
       }
 
       if (line.startsWith("## ")) {
-        elements.push(<h2 key={i} className="text-2xl font-bold mt-10 mb-4">{line.slice(3)}</h2>);
+        elements.push(
+          <h2 key={i} className="text-2xl font-bold mt-10 mb-4">
+            {line.slice(3)}
+          </h2>,
+        );
       } else if (line.startsWith("### ")) {
-        elements.push(<h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.slice(4)}</h3>);
+        elements.push(
+          <h3 key={i} className="text-xl font-bold mt-8 mb-3">
+            {line.slice(4)}
+          </h3>,
+        );
       } else if (line.match(/^\d+\.\s/)) {
         const number = line.match(/^\d+/)?.[0];
         const detailedMatch = line.match(/^\d+\.\s\*\*(.+?)\*\*\s*[—–:,-]\s*(.+)/);
@@ -235,7 +254,7 @@ const BlogPost = () => {
               <p className="text-muted-foreground">
                 <strong className="text-foreground">{detailedMatch[1]}</strong> {renderInline(detailedMatch[2])}
               </p>
-            </div>
+            </div>,
           );
         } else if (boldOnlyMatch) {
           elements.push(
@@ -244,14 +263,14 @@ const BlogPost = () => {
               <p className="text-muted-foreground">
                 <strong className="text-foreground">{boldOnlyMatch[1]}</strong>
               </p>
-            </div>
+            </div>,
           );
         } else {
           elements.push(
             <div key={i} className="flex gap-3 my-2">
               <span className="text-primary font-bold">{number}.</span>
               <p className="text-muted-foreground">{renderInline(line.replace(/^\d+\.\s/, ""))}</p>
-            </div>
+            </div>,
           );
         }
       } else if (line.startsWith("- **")) {
@@ -260,8 +279,10 @@ const BlogPost = () => {
           elements.push(
             <li key={i} className="flex items-start gap-2 my-1 text-muted-foreground ml-4">
               <span className="text-accent mt-1">•</span>
-              <span><strong className="text-foreground">{match[1]}</strong> {renderInline(match[2])}</span>
-            </li>
+              <span>
+                <strong className="text-foreground">{match[1]}</strong> {renderInline(match[2])}
+              </span>
+            </li>,
           );
         }
       } else if (line.startsWith("- ")) {
@@ -269,12 +290,16 @@ const BlogPost = () => {
           <li key={i} className="flex items-start gap-2 my-1 text-muted-foreground ml-4">
             <span className="text-accent mt-1">•</span>
             <span>{renderInline(line.slice(2))}</span>
-          </li>
+          </li>,
         );
       } else if (line.trim() === "") {
         elements.push(<div key={i} className="h-2" />);
       } else {
-        elements.push(<p key={i} className="text-muted-foreground leading-relaxed my-2">{renderInline(line)}</p>);
+        elements.push(
+          <p key={i} className="text-muted-foreground leading-relaxed my-2">
+            {renderInline(line)}
+          </p>,
+        );
       }
       i++;
     }
@@ -286,14 +311,33 @@ const BlogPost = () => {
     const parts = text.split(/(\*\*[^*]+\*\*|\[.+?\]\(.+?\))/g);
     return parts.map((part, i) => {
       const boldMatch = part.match(/^\*\*(.+)\*\*$/);
-      if (boldMatch) return <strong key={i} className="text-foreground">{boldMatch[1]}</strong>;
+      if (boldMatch)
+        return (
+          <strong key={i} className="text-foreground">
+            {boldMatch[1]}
+          </strong>
+        );
       const linkMatch = part.match(/^\[(.+?)\]\((.+?)\)$/);
       if (linkMatch) {
         const isExternal = linkMatch[2].startsWith("http");
         if (isExternal) {
-          return <a key={i} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{linkMatch[1]}</a>;
+          return (
+            <a
+              key={i}
+              href={linkMatch[2]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              {linkMatch[1]}
+            </a>
+          );
         }
-        return <Link key={i} to={linkMatch[2]} className="text-primary hover:underline">{linkMatch[1]}</Link>;
+        return (
+          <Link key={i} to={linkMatch[2]} className="text-primary hover:underline">
+            {linkMatch[1]}
+          </Link>
+        );
       }
       return <span key={i}>{part}</span>;
     });
@@ -313,16 +357,17 @@ const BlogPost = () => {
             />
           ))}
 
-          <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+          >
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
 
           <p className="text-sm text-muted-foreground mb-3">{post.date}</p>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">{post.title}</h1>
 
-          <div className="prose-custom">
-            {renderContent(post.content)}
-          </div>
+          <div className="prose-custom">{renderContent(post.content)}</div>
 
           {/* CTA */}
           <div className="mt-12 glass-card p-8 text-center">

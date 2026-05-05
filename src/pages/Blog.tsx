@@ -8,17 +8,23 @@ import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   useEffect(() => {
-    setCanonical("/blog");
+    setCanonical(window.location.origin + window.location.pathname);
     document.title = "Detach Blog – App Blocker Tips & Screen Time Advice";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Read the Detach blog for tips on blocking social media, reducing screen time, and staying focused with the Detach app blocker.");
+      meta.setAttribute(
+        "content",
+        "Read the Detach blog for tips on blocking social media, reducing screen time, and staying focused with the Detach app blocker.",
+      );
     }
     return () => {
       resetCanonical();
       document.title = "Detach App Blocker – Block Social Media & Reduce Screen Time";
       if (meta) {
-        meta.setAttribute("content", "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.");
+        meta.setAttribute(
+          "content",
+          "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.",
+        );
       }
     };
   }, []);
@@ -33,7 +39,8 @@ const Blog = () => {
             Detach <span className="text-gradient">Blog</span>
           </h1>
           <p className="text-center text-muted-foreground text-lg mb-12 max-w-xl mx-auto">
-            Tips and insights on reducing screen time, blocking social media, and staying focused with the Detach app blocker.
+            Tips and insights on reducing screen time, blocking social media, and staying focused with the Detach app
+            blocker.
           </p>
 
           <div className="space-y-6">
@@ -44,9 +51,7 @@ const Blog = () => {
                 className="glass-card p-6 block hover:border-primary/30 transition-colors group"
               >
                 <p className="text-xs text-muted-foreground mb-2">{post.date}</p>
-                <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
+                <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
                 <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm">
                   Read more <ArrowRight className="w-3 h-3" />
