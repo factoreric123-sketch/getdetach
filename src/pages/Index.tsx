@@ -69,6 +69,7 @@ const Index = () => {
       <BestPractices />
       <Features />
       <HowItWorks />
+      <LifeInDots />
       <Footer />
     </div>
   );
