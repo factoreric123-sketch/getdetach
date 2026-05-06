@@ -57,11 +57,7 @@ const LifeInDots = () => {
               return (
                 <div key={rIdx} className="flex items-center gap-3">
                   <div className="w-20 md:w-24 text-right text-[10px] md:text-xs font-semibold leading-tight">
-                    {leftMarker ? (
-                      <span className="text-foreground/80">{leftMarker.label}</span>
-                    ) : (
-                      <span className="text-muted-foreground/40">{rIdx * 3}y</span>
-                    )}
+                    {leftMarker && <span className="text-foreground/80">{leftMarker.label}</span>}
                   </div>
                   <div className="flex-1 grid" style={{ gridTemplateColumns: `repeat(${MONTHS_PER_ROW}, minmax(0, 1fr))`, gap: "4px" }}>
                     {row.map((m) => {
@@ -77,7 +73,7 @@ const LifeInDots = () => {
                       return (
                         <div
                           key={m}
-                          className="aspect-square rounded-full bg-white"
+                          className="aspect-square rounded-full border border-foreground/25"
                         />
                       );
                     })}
@@ -88,15 +84,6 @@ const LifeInDots = () => {
                 </div>
               );
             })}
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-            {markers.map((m) => (
-              <div key={m.label} className="flex items-center gap-2">
-                <span className={`w-2.5 h-2.5 rounded-full ${m.color}`} />
-                <span>{m.label}</span>
-              </div>
-            ))}
           </div>
         </div>
 
