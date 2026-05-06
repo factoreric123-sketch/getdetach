@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
 import ReviewsPage from "./pages/Reviews";
+import LifeInDotsPage from "./pages/LifeInDots";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/life-in-dots" element={<LifeInDotsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
