@@ -45,7 +45,7 @@ const LifeInDots = () => {
           </p>
         </motion.div>
 
-        <div className="rounded-2xl border border-border/40 bg-card/40 backdrop-blur-sm p-6 md:p-10">
+        <div className="p-2 md:p-4">
           <div className="space-y-1.5">
             {rows.map((row, rIdx) => {
               const leftMarker = markers.find(
