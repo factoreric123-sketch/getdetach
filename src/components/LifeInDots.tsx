@@ -77,7 +77,7 @@ const LifeInDots = () => {
                       return (
                         <div
                           key={m}
-                          className="aspect-square rounded-full bg-white"
+                          className="aspect-square rounded-full border border-foreground/25"
                         />
                       );
                     })}
