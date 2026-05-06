@@ -13,6 +13,7 @@ import BestPractices from "@/components/landing/BestPractices";
 import Privacy from "@/components/landing/Privacy";
 import Reality from "@/components/landing/Reality";
 import Footer from "@/components/landing/Footer";
+import LifeInDots from "@/components/LifeInDots";
 import { setCanonical } from "@/lib/canonical";
 
 const Index = () => {
@@ -68,6 +69,7 @@ const Index = () => {
       <BestPractices />
       <Features />
       <HowItWorks />
+      <LifeInDots />
       <Footer />
     </div>
   );
