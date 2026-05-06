@@ -11,6 +11,7 @@ import DetachApp from "./pages/DetachApp";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
+import ReviewsPage from "./pages/Reviews";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />

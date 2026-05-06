@@ -5,7 +5,7 @@ import Hero from "@/components/landing/Hero";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Product from "@/components/landing/Product";
-import Reviews from "@/components/landing/Reviews";
+
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import Comparison from "@/components/landing/Comparison";
 import WhyDetach from "@/components/landing/WhyDetach";
@@ -68,8 +68,6 @@ const Index = () => {
       <BestPractices />
       <Features />
       <HowItWorks />
-      
-      <Reviews />
       <Footer />
     </div>
   );
