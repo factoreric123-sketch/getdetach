@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
 import ReviewsPage from "./pages/Reviews";
+import LifeInDotsPage from "./pages/LifeInDots";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
