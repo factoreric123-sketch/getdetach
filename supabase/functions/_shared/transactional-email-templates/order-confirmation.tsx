@@ -34,20 +34,15 @@ const OrderConfirmationEmail = ({
         </Text>
 
         <Text style={sectionHeading}><strong>Order Details</strong></Text>
-        <Text style={detailText}>Items: {SITE_NAME} Card</Text>
+        <Text style={detailText}>Items: {SITE_NAME}</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
-        {customerEmail && <Text style={detailText}>Email: {customerEmail}</Text>}
         <Text style={detailTextLast}>Status: Confirmed</Text>
-
-        <Text style={sectionHeading}><strong>Shipping To</strong></Text>
-        <Text style={detailTextLast}>{addressLines}</Text>
 
         <Text style={totalText}><strong>Total: ${total}</strong></Text>
         <Text style={shippingNote}>Free shipping</Text>
 
         <Text style={text}>
-          You'll receive a shipping confirmation with tracking info once your
-          card ships.
+          Please note: Your order will be shipped today or tomorrow depending on what time the order was placed, via standard mail with a stamp. We do not provide shipping confirmation, tracking numbers, or delivery confirmation. We hope it arrives in a timely manner.
         </Text>
 
         <Hr style={hr} />
