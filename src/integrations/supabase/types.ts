@@ -14,6 +14,81 @@ export type Database = {
   }
   public: {
     Tables: {
+      affiliate_orders: {
+        Row: {
+          affiliate_code: string
+          amount_total_cents: number
+          commission_cents: number
+          country: string | null
+          created_at: string
+          currency: string | null
+          customer_email: string | null
+          id: string
+          is_us: boolean
+          quantity: number
+          stripe_session_id: string
+        }
+        Insert: {
+          affiliate_code: string
+          amount_total_cents?: number
+          commission_cents?: number
+          country?: string | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          id?: string
+          is_us?: boolean
+          quantity?: number
+          stripe_session_id: string
+        }
+        Update: {
+          affiliate_code?: string
+          amount_total_cents?: number
+          commission_cents?: number
+          country?: string | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          id?: string
+          is_us?: boolean
+          quantity?: number
+          stripe_session_id?: string
+        }
+        Relationships: []
+      }
+      affiliates: {
+        Row: {
+          active: boolean
+          code: string
+          created_at: string
+          id: string
+          intl_commission_cents: number
+          name: string | null
+          updated_at: string
+          us_commission_cents: number
+        }
+        Insert: {
+          active?: boolean
+          code: string
+          created_at?: string
+          id?: string
+          intl_commission_cents?: number
+          name?: string | null
+          updated_at?: string
+          us_commission_cents?: number
+        }
+        Update: {
+          active?: boolean
+          code?: string
+          created_at?: string
+          id?: string
+          intl_commission_cents?: number
+          name?: string | null
+          updated_at?: string
+          us_commission_cents?: number
+        }
+        Relationships: []
+      }
       email_send_log: {
         Row: {
           created_at: string

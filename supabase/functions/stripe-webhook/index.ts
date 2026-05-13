@@ -84,6 +84,41 @@ serve(async (req) => {
       const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+      // Record affiliate order if there's a referral code
+      const affiliateCode = (fullSession.metadata?.affiliate_code || "").toLowerCase().trim();
+      if (affiliateCode) {
+        try {
+          const country = shippingAddress?.country || null;
+          const isUs = country === "US";
+          const { data: aff } = await supabase
+            .from("affiliates")
+            .select("us_commission_cents, intl_commission_cents, active")
+            .eq("code", affiliateCode)
+            .maybeSingle();
+
+          if (aff && aff.active) {
+            const commission = isUs ? aff.us_commission_cents : aff.intl_commission_cents;
+            const { error: affErr } = await supabase.from("affiliate_orders").insert({
+              affiliate_code: affiliateCode,
+              stripe_session_id: fullSession.id,
+              customer_email: customerEmail,
+              country,
+              is_us: isUs,
+              quantity,
+              amount_total_cents: fullSession.amount_total ?? 0,
+              commission_cents: commission,
+              currency: fullSession.currency,
+            });
+            if (affErr) console.error("Failed to record affiliate order:", affErr);
+            else console.log(`Affiliate order recorded for ${affiliateCode} (${isUs ? "US" : "INTL"}, $${(commission / 100).toFixed(2)})`);
+          } else {
+            console.warn(`Affiliate code "${affiliateCode}" not found or inactive`);
+          }
+        } catch (e) {
+          console.error("Affiliate tracking error:", e);
+        }
+      }
+
       // Send the same order confirmation email to both the customer and the Detach team
       const recipients = [customerEmail, "getdetach@gmail.com"];
       for (const recipient of recipients) {

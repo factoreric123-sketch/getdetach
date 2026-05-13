@@ -18,6 +18,15 @@ const Shop = () => {
   const [emailSent, setEmailSent] = useState(false);
 
   useEffect(() => {
+    const ref = searchParams.get("ref");
+    if (ref) {
+      try {
+        localStorage.setItem("detach_affiliate_ref", ref.toLowerCase().trim());
+      } catch {}
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
     if (isSuccess && sessionId && !emailSent) {
       setEmailSent(true);
       supabase.functions.invoke("send-order-confirmation", {
@@ -40,8 +49,10 @@ const Shop = () => {
   const handleCheckout = async () => {
     setLoading(true);
     try {
+      let affiliateCode: string | null = null;
+      try { affiliateCode = localStorage.getItem("detach_affiliate_ref"); } catch {}
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: { quantity },
+        body: { quantity, affiliateCode },
       });
       if (error) throw error;
       if (data?.url) {
