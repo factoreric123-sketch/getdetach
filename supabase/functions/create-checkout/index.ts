@@ -17,7 +17,10 @@ serve(async (req) => {
       apiVersion: "2025-08-27.basil",
     });
 
-    const { quantity = 1 } = await req.json();
+    const { quantity = 1, affiliateCode } = await req.json();
+    const cleanRef = typeof affiliateCode === "string"
+      ? affiliateCode.toLowerCase().trim().slice(0, 64)
+      : "";
 
     const session = await stripe.checkout.sessions.create({
       line_items: [
@@ -30,6 +33,7 @@ serve(async (req) => {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SE", "NO", "DK", "FI", "IE", "NZ", "AT", "BE", "CH", "ES", "IT", "PT"],
       },
+      metadata: cleanRef ? { affiliate_code: cleanRef } : undefined,
       success_url: `${req.headers.get("origin")}/shop?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.get("origin")}/shop`,
     });
