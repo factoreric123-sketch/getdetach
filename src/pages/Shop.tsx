@@ -49,8 +49,10 @@ const Shop = () => {
   const handleCheckout = async () => {
     setLoading(true);
     try {
+      let affiliateCode: string | null = null;
+      try { affiliateCode = localStorage.getItem("detach_affiliate_ref"); } catch {}
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: { quantity },
+        body: { quantity, affiliateCode },
       });
       if (error) throw error;
       if (data?.url) {
