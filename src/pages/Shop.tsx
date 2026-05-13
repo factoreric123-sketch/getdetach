@@ -18,6 +18,15 @@ const Shop = () => {
   const [emailSent, setEmailSent] = useState(false);
 
   useEffect(() => {
+    const ref = searchParams.get("ref");
+    if (ref) {
+      try {
+        localStorage.setItem("detach_affiliate_ref", ref.toLowerCase().trim());
+      } catch {}
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
     if (isSuccess && sessionId && !emailSent) {
       setEmailSent(true);
       supabase.functions.invoke("send-order-confirmation", {
