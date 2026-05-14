@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Minus, Plus, ShoppingBag, Truck, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -13,6 +13,15 @@ const Shop = () => {
   const [searchParams] = useSearchParams();
   const isSuccess = searchParams.get("success") === "true";
   const sessionId = searchParams.get("session_id");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const ref = searchParams.get("ref");
+    if (ref && searchParams.get("success") !== "true") {
+      navigate(`/?ref=${encodeURIComponent(ref)}`, { replace: true });
+    }
+  }, [searchParams, navigate]);
+
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
