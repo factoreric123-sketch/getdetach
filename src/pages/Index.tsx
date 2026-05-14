@@ -44,6 +44,17 @@ const Index = () => {
     },
   };
 
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const ref = searchParams.get("ref");
+    if (ref) {
+      try {
+        localStorage.setItem("detach_affiliate_ref", ref.toLowerCase().trim());
+      } catch {}
+    }
+  }, [searchParams]);
+
   useEffect(() => {
     setCanonical("/");
     if (hash) {
