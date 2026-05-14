@@ -176,6 +176,27 @@ export type Database = {
         }
         Relationships: []
       }
+      order_confirmation_sends: {
+        Row: {
+          created_at: string
+          id: string
+          recipient_email: string
+          stripe_session_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          recipient_email: string
+          stripe_session_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          recipient_email?: string
+          stripe_session_id?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string

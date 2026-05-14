@@ -119,9 +119,22 @@ serve(async (req) => {
         }
       }
 
-      // Send the same order confirmation email to both the customer and the Detach team
+      // Send the same order confirmation email to both the customer and the Detach team.
+      // Dedupe via unique (stripe_session_id, recipient_email) so Stripe webhook retries
+      // never produce a second confirmation for the same order/recipient.
       const recipients = [customerEmail, "getdetach@gmail.com"];
       for (const recipient of recipients) {
+        const { error: claimError } = await supabase
+          .from("order_confirmation_sends")
+          .insert({ stripe_session_id: fullSession.id, recipient_email: recipient });
+        if (claimError) {
+          if ((claimError as any).code === "23505") {
+            console.log(`Order confirmation already sent to ${recipient} for session ${fullSession.id}, skipping.`);
+            continue;
+          }
+          console.error(`Failed to claim send slot for ${recipient}:`, claimError);
+          continue;
+        }
         const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
           body: {
             templateName: "order-confirmation",
