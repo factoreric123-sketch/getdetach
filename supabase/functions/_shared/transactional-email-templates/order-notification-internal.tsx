@@ -1,8 +1,10 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text,
+  Body, Container, Head, Html, Preview, Text, Hr,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
+
+const SITE_NAME = "Detach"
 
 interface OrderNotificationInternalProps {
   customerName?: string
@@ -12,44 +14,40 @@ interface OrderNotificationInternalProps {
   addressLines?: string
 }
 
-const hasValidAddress = (addr?: string) => {
-  if (!addr) return false
-  const trimmed = addr.trim()
-  if (!trimmed || trimmed === 'N/A') return false
-  // Require at least a comma (street + city) to consider it usable
-  return trimmed.includes(',')
-}
-
 const OrderNotificationInternalEmail = ({
-  customerName = 'N/A',
-  customerEmail = 'N/A',
+  customerName = 'there',
   quantity = 1,
   total = '9.99',
-  addressLines,
 }: OrderNotificationInternalProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Detach Order Confirmation from {customerName}</Preview>
+    <Preview>Your {SITE_NAME} order has been confirmed</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Text style={introText}>
-          Thank you for your order. We've received your Detach order and it's now being processed.
+        <Text style={greeting}>Hi {customerName},</Text>
+
+        <Text style={text}>
+          Thank you for your order. This email confirms that we've received your
+          request and it is now being processed.
         </Text>
 
-        <Text style={sectionHeading}><strong>Customer</strong></Text>
-        <Text style={detailText}>Name: {customerName}</Text>
-        <Text style={detailTextLast}>Email: {customerEmail}</Text>
-
-        <Text style={sectionHeading}><strong>Order</strong></Text>
+        <Text style={sectionHeading}><strong>Order Details</strong></Text>
+        <Text style={detailText}>Items: {SITE_NAME}</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
-        <Text style={detailTextLast}>Total: ${total}</Text>
+        <Text style={detailTextLast}>Status: Confirmed</Text>
 
-        {hasValidAddress(addressLines) && (
-          <>
-            <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
-            <Text style={detailTextLast}>{addressLines}</Text>
-          </>
-        )}
+        <Text style={totalText}><strong>Total: ${total}</strong></Text>
+        <Text style={shippingNote}>Free shipping</Text>
+
+        <Text style={text}>
+          Please note: Your order will be shipped today or tomorrow depending on what time the order was placed, via standard mail with a stamp. We do not provide shipping confirmation, tracking numbers, or delivery confirmation. We hope it arrives in a timely manner.
+        </Text>
+
+        <Hr style={hr} />
+
+        <Text style={footer}>
+          Questions? Reply to this email or contact us at getdetach@gmail.com
+        </Text>
       </Container>
     </Body>
   </Html>
@@ -57,9 +55,9 @@ const OrderNotificationInternalEmail = ({
 
 export const template = {
   component: OrderNotificationInternalEmail,
-  subject: 'Detach Order Confirmation',
+  subject: 'Your Detach Order Confirmation',
   to: 'getdetach@gmail.com',
-  displayName: 'Internal order notification',
+  displayName: 'Internal order confirmation',
   previewData: {
     customerName: 'Jane Doe',
     customerEmail: 'jane@example.com',
@@ -71,8 +69,12 @@ export const template = {
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
 const container = { padding: '40px 24px', maxWidth: '580px', margin: '0 auto' }
-const h1 = { fontSize: '20px', color: '#222', margin: '0 0 24px', lineHeight: '1.4' }
-const introText = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
+const greeting = { fontSize: '15px', color: '#222', margin: '0 0 16px', lineHeight: '1.6' }
+const text = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
 const sectionHeading = { fontSize: '15px', color: '#222', margin: '0 0 6px', lineHeight: '1.6' }
 const detailText = { fontSize: '15px', color: '#222', margin: '0', lineHeight: '1.6' }
 const detailTextLast = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
+const totalText = { fontSize: '15px', color: '#222', margin: '0 0 4px', lineHeight: '1.6' }
+const shippingNote = { fontSize: '14px', color: '#666', margin: '0 0 24px', lineHeight: '1.6' }
+const hr = { borderColor: '#eee', margin: '24px 0' }
+const footer = { fontSize: '13px', color: '#999', margin: '0' }
