@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
