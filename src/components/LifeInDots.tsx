@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-
-const YEARS = 90;
-const WEEKS_PER_YEAR = 52;
-const TOTAL = YEARS * WEEKS_PER_YEAR;
+import lifeInWeeks from "@/assets/life-in-weeks.png";
 
 const LifeInDots = () => {
   return (
@@ -19,20 +16,11 @@ const LifeInDots = () => {
           </h2>
         </motion.div>
 
-        <div
-          className="grid mx-auto w-fit"
-          style={{
-            gridTemplateColumns: `repeat(${WEEKS_PER_YEAR}, 7px)`,
-            gap: "2px",
-          }}
-        >
-          {Array.from({ length: TOTAL }).map((_, i) => (
-            <div
-              key={i}
-              className="w-[7px] h-[7px] rounded-full bg-foreground/85"
-            />
-          ))}
-        </div>
+        <img
+          src={lifeInWeeks}
+          alt="A grid of dots, each representing one week of an average human life"
+          className="mx-auto w-full max-w-md h-auto"
+        />
 
         <p className="mt-10 text-center text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
           Each dot is one week. The average person spends{" "}
