@@ -22,14 +22,14 @@ const LifeInDots = () => {
         <div
           className="grid mx-auto w-fit"
           style={{
-            gridTemplateColumns: `repeat(${WEEKS_PER_YEAR}, 5px)`,
+            gridTemplateColumns: `repeat(${WEEKS_PER_YEAR}, 7px)`,
             gap: "2px",
           }}
         >
           {Array.from({ length: TOTAL }).map((_, i) => (
             <div
               key={i}
-              className="w-[5px] h-[5px] rounded-full bg-foreground/85"
+              className="w-[7px] h-[7px] rounded-full bg-foreground/85"
             />
           ))}
         </div>
