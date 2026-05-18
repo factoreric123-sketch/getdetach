@@ -20,16 +20,16 @@ const LifeInDots = () => {
         </motion.div>
 
         <div
-          className="grid mx-auto"
+          className="grid mx-auto w-fit"
           style={{
-            gridTemplateColumns: `repeat(${WEEKS_PER_YEAR}, minmax(0, 1fr))`,
-            gap: "3px",
+            gridTemplateColumns: `repeat(${WEEKS_PER_YEAR}, 5px)`,
+            gap: "2px",
           }}
         >
           {Array.from({ length: TOTAL }).map((_, i) => (
             <div
               key={i}
-              className="aspect-square rounded-full bg-foreground/85"
+              className="w-[5px] h-[5px] rounded-full bg-foreground/85"
             />
           ))}
         </div>
