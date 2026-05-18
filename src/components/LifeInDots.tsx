@@ -46,7 +46,7 @@ const LifeInDots = () => {
         </motion.div>
 
         <div className="p-2 md:p-4">
-          <div className="space-y-1.5">
+          <div className="space-y-3 md:space-y-1.5">
             {rows.map((row, rIdx) => {
               const leftMarker = markers.find(
                 (m) => m.align === "left" && Math.floor(m.monthIndex / MONTHS_PER_ROW) === rIdx,
@@ -54,32 +54,41 @@ const LifeInDots = () => {
               const rightMarker = markers.find(
                 (m) => m.align === "right" && Math.floor(m.monthIndex / MONTHS_PER_ROW) === rIdx,
               );
+              const marker = leftMarker || rightMarker;
               return (
-                <div key={rIdx} className="flex items-center gap-3">
-                  <div className="w-20 md:w-24 text-right text-[10px] md:text-xs font-semibold leading-tight">
-                    {leftMarker && <span className="text-foreground/80">{leftMarker.label}</span>}
-                  </div>
-                  <div className="flex-1 grid" style={{ gridTemplateColumns: `repeat(${MONTHS_PER_ROW}, minmax(0, 1fr))`, gap: "4px" }}>
-                    {row.map((m) => {
-                      const marker = markerByIndex.get(m);
-                      if (marker) {
+                <div key={rIdx}>
+                  {/* Mobile label above */}
+                  {marker && (
+                    <div className="md:hidden mb-1.5 text-[11px] font-semibold text-foreground/80">
+                      {marker.label}
+                    </div>
+                  )}
+                  <div className="flex items-center gap-3">
+                    <div className="hidden md:block w-24 text-right text-xs font-semibold leading-tight">
+                      {leftMarker && <span className="text-foreground/80">{leftMarker.label}</span>}
+                    </div>
+                    <div className="flex-1 grid" style={{ gridTemplateColumns: `repeat(${MONTHS_PER_ROW}, minmax(0, 1fr))`, gap: "3px" }}>
+                      {row.map((m) => {
+                        const cellMarker = markerByIndex.get(m);
+                        if (cellMarker) {
+                          return (
+                            <div
+                              key={m}
+                              className={`aspect-square rounded-full ${cellMarker.color} ring-2`}
+                            />
+                          );
+                        }
                         return (
                           <div
                             key={m}
-                            className={`aspect-square rounded-full ${marker.color} ring-2`}
+                            className="aspect-square rounded-full border border-foreground/25"
                           />
                         );
-                      }
-                      return (
-                        <div
-                          key={m}
-                          className="aspect-square rounded-full border border-foreground/25"
-                        />
-                      );
-                    })}
-                  </div>
-                  <div className="w-20 md:w-24 text-left text-[10px] md:text-xs font-semibold leading-tight">
-                    {rightMarker && <span className="text-foreground/80">{rightMarker.label}</span>}
+                      })}
+                    </div>
+                    <div className="hidden md:block w-24 text-left text-xs font-semibold leading-tight">
+                      {rightMarker && <span className="text-foreground/80">{rightMarker.label}</span>}
+                    </div>
                   </div>
                 </div>
               );
