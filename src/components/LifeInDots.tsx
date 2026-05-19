@@ -23,9 +23,7 @@ const LifeInDots = () => {
         />
 
         <p className="mt-10 text-center text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-          Each dot is one week. The average person spends{" "}
-          <span className="text-foreground font-semibold">over 400 of them</span>{" "}
-          staring at a phone. Detach helps you take some back.
+          This is supposed to be scary. Life is not as long as you expected. You blink and it's over.
         </p>
       </div>
     </section>
