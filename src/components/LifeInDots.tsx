@@ -3,7 +3,7 @@ import lifeInWeeks from "@/assets/life-in-weeks.png";
 
 const LifeInDots = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-10 px-6 border-t border-border/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
