@@ -23,7 +23,7 @@ const LifeInDots = () => {
         />
 
         <p className="mt-10 text-center text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-          This is supposed to be scary. Life is not as long as you expected. You blink and it's over.
+          This is supposed to be scary. Life is not as long as you expected. You blink and it's over. Don't waste it on your phone.
         </p>
       </div>
     </section>
