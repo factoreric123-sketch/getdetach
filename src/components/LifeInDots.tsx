@@ -12,7 +12,7 @@ const LifeInDots = () => {
           className="mb-10 text-center"
         >
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-            This is your life in <span className="text-gradient">weeks</span>.
+            Each dot is one <span className="text-gradient">week</span>. All of them together, that's the average human lifetime.
           </h2>
         </motion.div>
 
