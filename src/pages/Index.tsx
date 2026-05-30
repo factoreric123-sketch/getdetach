@@ -80,7 +80,7 @@ const Index = () => {
       <BestPractices />
       <Features />
       <HowItWorks />
-      {/* <LifeInDots /> */}
+      <LifeInDots />
       <Footer />
     </div>
   );
