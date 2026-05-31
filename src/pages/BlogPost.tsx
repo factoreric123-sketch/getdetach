@@ -4,7 +4,7 @@ import { ArrowLeft, Apple } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { blogPosts, type BlogPostProductSchema } from "@/data/blogPosts";
-import { setCanonical, resetCanonical } from "@/lib/canonical";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const DEFAULT_PRODUCT_IMAGE =
   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png";
