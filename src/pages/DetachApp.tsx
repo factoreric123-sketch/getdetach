@@ -55,6 +55,19 @@ const audiences = [
   "People who've tried other app blockers and failed",
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
 const DetachApp = () => {
   useEffect(() => {
     setCanonical("/detach-app");
@@ -74,6 +87,10 @@ const DetachApp = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
 
       <main className="pt-24 pb-16 px-6">
