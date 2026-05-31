@@ -1,13 +1,22 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { setCanonical, resetCanonical } from "@/lib/canonical";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
     setCanonical("/privacy-policy");
-    document.title = "Privacy Policy | Detach";
-    return () => resetCanonical();
+    setSocialMeta({
+      title: "Privacy Policy | Detach",
+      description:
+        "How Detach handles data: no account required, local-first design, and what we collect when you use our app or order a Detach card.",
+      path: "/privacy-policy",
+      type: "website",
+    });
+    return () => {
+      resetCanonical();
+      resetSocialMeta();
+    };
   }, []);
 
   return (
