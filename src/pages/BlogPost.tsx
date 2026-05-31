@@ -88,22 +88,23 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
-    const fullUrl = window.location.origin + window.location.pathname;
+    const path = window.location.pathname;
 
     // ALWAYS set canonical immediately
-    setCanonical(fullUrl);
+    setCanonical(path);
 
     if (post) {
-      document.title = post.metaTitle;
-
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) {
-        meta.setAttribute("content", post.metaDescription);
-      }
+      setSocialMeta({
+        title: post.metaTitle,
+        description: post.metaDescription,
+        path,
+        type: "article",
+      });
     }
 
     return () => {
       resetCanonical();
+      resetSocialMeta();
     };
   }, []);
 
