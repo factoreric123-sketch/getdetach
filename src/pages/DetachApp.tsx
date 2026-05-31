@@ -87,6 +87,10 @@ const DetachApp = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
 
       <main className="pt-24 pb-16 px-6">
