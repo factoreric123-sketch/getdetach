@@ -3,29 +3,22 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { setCanonical, resetCanonical } from "@/lib/canonical";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   useEffect(() => {
-    setCanonical(window.location.origin + window.location.pathname);
-    document.title = "Detach Blog – App Blocker Tips & Screen Time Advice";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
+    setCanonical("/blog");
+    setSocialMeta({
+      title: "Detach Blog – App Blocker Tips & Screen Time Advice",
+      description:
         "Read the Detach blog for tips on blocking social media, reducing screen time, and staying focused with the Detach app blocker.",
-      );
-    }
+      path: "/blog",
+      type: "website",
+    });
     return () => {
       resetCanonical();
-      document.title = "Detach App Blocker – Block Social Media & Reduce Screen Time";
-      if (meta) {
-        meta.setAttribute(
-          "content",
-          "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+. No account required.",
-        );
-      }
+      resetSocialMeta();
     };
   }, []);
 

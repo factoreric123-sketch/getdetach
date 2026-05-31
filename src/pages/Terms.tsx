@@ -1,13 +1,22 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { setCanonical, resetCanonical } from "@/lib/canonical";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const Terms = () => {
   useEffect(() => {
     setCanonical("/terms");
-    document.title = "Terms & Conditions | Detach";
-    return () => resetCanonical();
+    setSocialMeta({
+      title: "Terms & Conditions | Detach",
+      description:
+        "The terms that apply when you use the Detach app or buy a Detach card.",
+      path: "/terms",
+      type: "website",
+    });
+    return () => {
+      resetCanonical();
+      resetSocialMeta();
+    };
   }, []);
 
   return (
