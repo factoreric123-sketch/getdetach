@@ -4,7 +4,7 @@ import { Apple, ArrowRight, Smartphone, Shield, Zap, Users } from "lucide-react"
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { setCanonical, resetCanonical } from "@/lib/canonical";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const faqs = [
   {
