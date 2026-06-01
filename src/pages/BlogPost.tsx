@@ -88,9 +88,9 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
-    const path = window.location.pathname;
+    const path = `/blog/${slug ?? ""}`;
 
-    // ALWAYS set canonical immediately
+    // ALWAYS set canonical immediately to the current post URL
     setCanonical(path);
 
     if (post) {
@@ -106,7 +106,7 @@ const BlogPost = () => {
       resetCanonical();
       resetSocialMeta();
     };
-  }, []);
+  }, [slug, post]);
 
   if (!post) return <Navigate to="/blog" replace />;
 
