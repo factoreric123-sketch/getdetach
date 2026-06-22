@@ -1,7 +1,17 @@
 const SITE = "https://getdetach.app";
 
+const toAbsoluteUrl = (input: string): string => {
+  if (!input) return `${SITE}/`;
+  // Already absolute — return as-is, never re-prefix with SITE.
+  if (/^https?:\/\//i.test(input)) return input;
+  // Strip any accidental leading copies of the site host (e.g. "getdetach.app/foo").
+  let path = input.replace(/^(https?:\/\/)?(www\.)?getdetach\.app/i, "");
+  if (!path.startsWith("/")) path = `/${path}`;
+  return `${SITE}${path}`;
+};
+
 export const setCanonical = (path: string) => {
-  const href = path.startsWith("http") ? path : `${SITE}${path}`;
+  const href = toAbsoluteUrl(path);
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
   if (!link) {
     link = document.createElement("link");
@@ -42,7 +52,7 @@ export interface SocialMetaOptions {
 }
 
 export const setSocialMeta = ({ title, description, path, type = "website" }: SocialMetaOptions) => {
-  const url = path.startsWith("http") ? path : `${SITE}${path}`;
+  const url = toAbsoluteUrl(path);
   document.title = title;
   setMeta('meta[name="description"]', "name", "description", description);
   setMeta('meta[property="og:title"]', "property", "og:title", title);
