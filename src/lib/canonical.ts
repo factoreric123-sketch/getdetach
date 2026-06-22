@@ -52,7 +52,7 @@ export interface SocialMetaOptions {
 }
 
 export const setSocialMeta = ({ title, description, path, type = "website" }: SocialMetaOptions) => {
-  const url = path.startsWith("http") ? path : `${SITE}${path}`;
+  const url = toAbsoluteUrl(path);
   document.title = title;
   setMeta('meta[name="description"]', "name", "description", description);
   setMeta('meta[property="og:title"]', "property", "og:title", title);
