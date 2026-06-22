@@ -11,6 +11,32 @@ const Unsubscribe = () => {
   const [status, setStatus] = useState<Status>("loading");
 
   useEffect(() => {
+    setCanonical("/unsubscribe");
+    setSocialMeta({
+      title: "Email Preferences | Detach",
+      description:
+        "Manage your Detach email preferences and unsubscribe from future Detach emails using your secure unsubscribe link.",
+      path: "/unsubscribe",
+      type: "website",
+    });
+    // Ask crawlers not to index utility pages.
+    let robots = document.head.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    const prev = robots.getAttribute("content");
+    robots.setAttribute("content", "noindex, nofollow");
+    return () => {
+      resetCanonical();
+      resetSocialMeta();
+      if (prev) robots!.setAttribute("content", prev);
+      else robots!.remove();
+    };
+  }, []);
+
+  useEffect(() => {
     if (!token) {
       setStatus("invalid");
       return;
