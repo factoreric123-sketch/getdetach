@@ -1,7 +1,17 @@
 const SITE = "https://getdetach.app";
 
+const toAbsoluteUrl = (input: string): string => {
+  if (!input) return `${SITE}/`;
+  // Already absolute — return as-is, never re-prefix with SITE.
+  if (/^https?:\/\//i.test(input)) return input;
+  // Strip any accidental leading copies of the site host (e.g. "getdetach.app/foo").
+  let path = input.replace(/^(https?:\/\/)?(www\.)?getdetach\.app/i, "");
+  if (!path.startsWith("/")) path = `/${path}`;
+  return `${SITE}${path}`;
+};
+
 export const setCanonical = (path: string) => {
-  const href = path.startsWith("http") ? path : `${SITE}${path}`;
+  const href = toAbsoluteUrl(path);
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
   if (!link) {
     link = document.createElement("link");
