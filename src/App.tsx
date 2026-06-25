@@ -15,6 +15,7 @@ import ReviewsPage from "./pages/Reviews";
 import LifeInDotsPage from "./pages/LifeInDots";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
+import StartupInspireBadge from "./components/StartupInspireBadge";
 
 const queryClient = new QueryClient();
 
