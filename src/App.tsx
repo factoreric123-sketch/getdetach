@@ -15,7 +15,6 @@ import ReviewsPage from "./pages/Reviews";
 import LifeInDotsPage from "./pages/LifeInDots";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
-import StartupInspireBadge from "./components/StartupInspireBadge";
 
 const queryClient = new QueryClient();
 
@@ -39,8 +38,7 @@ const App = () => (
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-       </BrowserRouter>
-      <StartupInspireBadge />
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
