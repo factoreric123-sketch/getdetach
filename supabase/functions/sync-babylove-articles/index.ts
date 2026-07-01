@@ -78,10 +78,29 @@ Deno.serve(async (req) => {
       }
 
       try {
+        // Small delay to respect rate limits
+        await new Promise((r) => setTimeout(r, 1200));
         const fullRes = await fetch(`${BASE}/articles/${summary.id}`, {
           headers: { "X-API-Key": apiKey, "Content-Type": "application/json" },
         });
+        if (fullRes.status === 429) {
+          // Back off and retry once
+          await new Promise((r) => setTimeout(r, 5000));
+          const retry = await fetch(`${BASE}/articles/${summary.id}`, {
+            headers: { "X-API-Key": apiKey, "Content-Type": "application/json" },
+          });
+          if (!retry.ok) {
+            errors.push(`Article ${summary.id}: ${retry.status} after retry`);
+            continue;
+          }
+          const article: ArticleFull = await retry.json();
+          await upsert(supabase, article, errors) && synced++;
+          continue;
+        }
         if (!fullRes.ok) {
+          errors.push(`Article ${summary.id}: ${fullRes.status}`);
+          continue;
+        }
           errors.push(`Article ${summary.id}: ${fullRes.status}`);
           continue;
         }
