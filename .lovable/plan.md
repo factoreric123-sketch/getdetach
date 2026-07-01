@@ -1,58 +1,52 @@
-## Problem
+## Goal
+Every new article you publish in BabyLoveGrowth appears on `getdetach.app/blog` automatically — no code edits, no redeploy.
 
-Google Search Console reports two structured data issues for getdetach.app:
+## Approach: API polling (as you requested)
+We poll BabyLoveGrowth on a schedule, fetch new articles, store them in the backend. The blog reads from the table.
 
-1. **Merchant listings** (5 issues): Missing `image`, `hasMerchantReturnPolicy`, `availability`, `shippingDetails`, and global identifier (`brand`/`gtin`). These come from the `SoftwareApplication`+`Offer` schema in `index.html` and the `Product`+`Offer` blocks emitted in `BlogPost.tsx`.
-2. **Product snippets** (4 issues): Critical "Either offers, review, or aggregateRating should be specified" plus missing `review`/`aggregateRating`/`availability`. These come from `BlogPost.tsx` emitting `Product` schema for `comparedProducts` and `reviewedProduct` with skinny Offer data.
+## What gets built
 
-## Fix
+### 1. Secret
+Store your API key `c869bfa6-413f-4d23-a4fd-5b70d9f1d912` as `BABYLOVE_API_KEY` (server-side only, never exposed to browser).
 
-### 1. Add a proper Product JSON-LD on `/shop` (`src/pages/Shop.tsx`)
+### 2. Database table `blog_posts_cms`
+Stores synced articles. Kept separate from your existing static `src/data/blogPosts.ts` so nothing breaks.
 
-Inject a complete `Product` schema for the Detach Card that satisfies Merchant listings + Product snippets requirements:
+Columns: `external_id` (unique, from BabyLoveGrowth), `slug` (unique), `title`, `meta_description`, `excerpt`, `content_html`, `content_markdown`, `hero_image_url`, `json_ld`, `faq_json_ld`, `language_code`, `keywords`, `seed_keyword`, `published_at`, `synced_at`.
 
-- `name`, `description`, `image` (absolute URL to the existing R2 product image), `sku`, `mpn`, `brand: { @type: Brand, name: "Detach" }`
-- `aggregateRating` (4.8 / based on real customer feedback count we already display elsewhere — use a conservative value like ratingValue 4.8, reviewCount 27)
-- `offers`: `@type: Offer`, `price: "9.99"`, `priceCurrency: "USD"`, `availability: "https://schema.org/InStock"`, `itemCondition: "https://schema.org/NewCondition"`, `priceValidUntil` (one year out), `url: https://getdetach.app/shop`
-- `offers.shippingDetails`: `OfferShippingDetails` with `shippingRate` $0 USD, `shippingDestination` `["US","CA","GB","AU","EU"]` worldwide, `deliveryTime` (handlingTime 0–2 business days, transitTime 5–14 business days) — matches our "Free shipping worldwide" promise
-- `offers.hasMerchantReturnPolicy`: `MerchantReturnPolicy` with `applicableCountry: "US"`, `returnPolicyCategory: MerchantReturnFiniteReturnWindow`, `merchantReturnDays: 30`, `returnMethod: ReturnByMail`, `returnFees: FreeReturn`
+RLS: public `SELECT` (blog is public). No public writes — only the edge function (service role) writes.
 
-Inject via a `<script type="application/ld+json">` rendered inside the Shop component (same pattern as `BlogPost.tsx`).
+### 3. Edge function `sync-babylove-articles`
+- Public URL, no JWT required
+- Reads `BABYLOVE_API_KEY` from env, calls `X-API-Key` header
+- Paginates `GET https://api.babylovegrowth.ai/api/integrations/v1/articles?limit=50&offset=…`, stops early once it hits an already-synced `external_id` (fast incremental sync)
+- For each new article, fetches full content: `GET .../articles/{id}`
+- Upserts into `blog_posts_cms` by `external_id` (re-syncs handle content updates too)
+- Returns `{ synced, skipped, errors }`
+- Supports `?full=1` for a full re-sync (used once for backfill)
 
-### 2. Fix `index.html` SoftwareApplication offer
+### 4. Scheduled sync (pg_cron + pg_net)
+Runs every **30 minutes** so new articles appear within half an hour of publishing. Also usable as a manual trigger by hitting the URL.
 
-The `SoftwareApplication` schema with `Offer { price: 0 }` is being read as a free-product Merchant listing. Fix by adding the missing fields to that Offer:
-- `availability: https://schema.org/InStock`
-- `priceValidUntil`
-- `url: https://apps.apple.com/...`
-- Top-level `image` on the SoftwareApplication node (use existing R2 OG image)
+### 5. Blog rendering updates
+- **`/blog`** — fetches CMS posts, merges with static posts from `src/data/blogPosts.ts`, sorted newest first, deduped by slug (static wins on collision).
+- **`/blog/:slug`** — first checks static posts, then falls back to a CMS post. CMS posts render sanitized `content_html` (via `isomorphic-dompurify`) inside the same Navbar/Footer shell with canonical + social meta + JSON-LD (from `jsonLd` / `faqJsonLd`).
+- Loading skeleton while CMS posts fetch.
 
-### 3. Fix `BlogPost.tsx` Product schemas
+## Setup flow
+1. Store the API key as `BABYLOVE_API_KEY`.
+2. Migration: create `blog_posts_cms`, enable `pg_cron`/`pg_net`.
+3. Deploy edge function.
+4. Schedule cron (every 30 min).
+5. Update `/blog` and `/blog/:slug` to read from the table.
+6. Trigger the first sync manually with `?full=1` to backfill all existing articles.
 
-In the `Product` objects emitted for `comparedProducts` and `reviewedProduct`:
-- Add `image` (fall back to the site OG image if the data row doesn't supply one)
-- Add `brand: { @type: Brand, name: <name> }` derived from the product name (Detach / Brick / Bloom / Blok / Unpluq)
-- Always include an `offers` block with `availability: InStock`, `itemCondition: NewCondition`, `priceValidUntil`, plus `shippingDetails` and `hasMerchantReturnPolicy` when the product is Detach (we can't promise return policies for competitors)
-- For competitor products without a known price, drop the `offers` entirely and instead emit `aggregateRating` is not appropriate — instead simplify: only emit Product schema when we have at least an offer or a real review. For `reviewedProduct` we already emit a Review wrapper, so the inner Product just needs `image` + `brand` + `offers` to satisfy "either offers, review, or aggregateRating".
+## Technical notes
+- **Sanitization**: `isomorphic-dompurify` before rendering `content_html`.
+- **Sitemap**: static `/sitemap-blog.xml` won't include CMS posts (not blocking for launch; dynamic sitemap can be added later via edge function).
+- **Rate limits**: incremental runs normally hit BabyLoveGrowth once per cycle; backfill respects pagination.
 
-Extend `BlogPostProductSchema` in `src/data/blogPosts.ts` with optional `image`, `brand`, `sku` fields (non-breaking; existing data continues to work, falls back to defaults).
-
-### 4. No data migration needed
-
-All 200+ existing blog posts keep working; the BlogPost renderer fills in safe defaults (site OG image, brand inferred from name) so we don't have to touch every data file.
-
-## Files to change
-
-- `src/pages/Shop.tsx` — inject Product JSON-LD
-- `index.html` — enrich SoftwareApplication/Offer
-- `src/pages/BlogPost.tsx` — enrich Product schemas with image/brand/offers/shipping/return
-- `src/data/blogPosts.ts` — extend `BlogPostProductSchema` interface (optional fields only)
-
-## Validation
-
-After deploy, re-run the Rich Results Test on:
-- `https://getdetach.app/`
-- `https://getdetach.app/shop`
-- One blog post URL with `reviewedProduct` (e.g. `/blog/brick-app-blocker-review-is-it-worth-59`)
-
-then "Validate fix" in Search Console for both reports.
+## Out of scope (say the word to add)
+- Dynamic `/sitemap-blog.xml` including CMS posts
+- Admin page to edit/hide CMS posts
+- Switch from polling to real-time webhook later (both can coexist)
