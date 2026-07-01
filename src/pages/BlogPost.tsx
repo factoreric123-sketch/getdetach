@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Apple } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import CmsBlogPost from "@/pages/CmsBlogPost";
 import { blogPosts, type BlogPostProductSchema } from "@/data/blogPosts";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
@@ -108,7 +109,7 @@ const BlogPost = () => {
     };
   }, [slug, post]);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <CmsBlogPost />;
 
   const postUrl = `https://getdetach.app/blog/${post.slug}`;
   const faqEntities = post.faqSchema?.map((faq) => ({

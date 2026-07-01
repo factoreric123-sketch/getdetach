@@ -89,6 +89,69 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_posts_cms: {
+        Row: {
+          content_html: string | null
+          content_markdown: string | null
+          created_at: string
+          excerpt: string | null
+          external_id: number
+          faq_json_ld: Json | null
+          hero_image_url: string | null
+          id: string
+          json_ld: Json | null
+          keywords: string[] | null
+          language_code: string | null
+          meta_description: string | null
+          published_at: string
+          seed_keyword: string | null
+          slug: string
+          synced_at: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content_html?: string | null
+          content_markdown?: string | null
+          created_at?: string
+          excerpt?: string | null
+          external_id: number
+          faq_json_ld?: Json | null
+          hero_image_url?: string | null
+          id?: string
+          json_ld?: Json | null
+          keywords?: string[] | null
+          language_code?: string | null
+          meta_description?: string | null
+          published_at?: string
+          seed_keyword?: string | null
+          slug: string
+          synced_at?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content_html?: string | null
+          content_markdown?: string | null
+          created_at?: string
+          excerpt?: string | null
+          external_id?: number
+          faq_json_ld?: Json | null
+          hero_image_url?: string | null
+          id?: string
+          json_ld?: Json | null
+          keywords?: string[] | null
+          language_code?: string | null
+          meta_description?: string | null
+          published_at?: string
+          seed_keyword?: string | null
+          slug?: string
+          synced_at?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       email_send_log: {
         Row: {
           created_at: string

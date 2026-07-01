@@ -1,12 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 import { blogPosts } from "@/data/blogPosts";
+import { fetchCmsBlogPosts, formatCmsDate, type CmsBlogPost } from "@/lib/cmsBlog";
+
+interface UnifiedPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  displayDate: string;
+  sortKey: number;
+}
 
 const Blog = () => {
+  const [cmsPosts, setCmsPosts] = useState<CmsBlogPost[]>([]);
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     setCanonical("/blog");
     setSocialMeta({
@@ -16,11 +29,37 @@ const Blog = () => {
       path: "/blog",
       type: "website",
     });
+    fetchCmsBlogPosts().then((posts) => {
+      setCmsPosts(posts);
+      setLoaded(true);
+    });
     return () => {
       resetCanonical();
       resetSocialMeta();
     };
   }, []);
+
+  const staticSlugs = new Set(blogPosts.map((p) => p.slug));
+  const merged: UnifiedPost[] = [
+    ...blogPosts.map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      excerpt: p.excerpt,
+      date: p.date,
+      displayDate: p.date,
+      sortKey: new Date(p.date).getTime() || 0,
+    })),
+    ...cmsPosts
+      .filter((p) => !staticSlugs.has(p.slug))
+      .map((p) => ({
+        slug: p.slug,
+        title: p.title,
+        excerpt: p.excerpt ?? p.meta_description ?? "",
+        date: p.published_at,
+        displayDate: formatCmsDate(p.published_at),
+        sortKey: new Date(p.published_at).getTime() || 0,
+      })),
+  ].sort((a, b) => b.sortKey - a.sortKey);
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,13 +76,13 @@ const Blog = () => {
           </p>
 
           <div className="space-y-6">
-            {blogPosts.map((post) => (
+            {merged.map((post) => (
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
                 className="glass-card p-6 block hover:border-primary/30 transition-colors group"
               >
-                <p className="text-xs text-muted-foreground mb-2">{post.date}</p>
+                <p className="text-xs text-muted-foreground mb-2">{post.displayDate}</p>
                 <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
                 <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm">
@@ -51,6 +90,9 @@ const Blog = () => {
                 </span>
               </Link>
             ))}
+            {!loaded && cmsPosts.length === 0 && (
+              <p className="text-center text-muted-foreground text-sm">Loading latest posts…</p>
+            )}
           </div>
         </div>
       </main>
