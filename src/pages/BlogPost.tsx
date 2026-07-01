@@ -109,7 +109,7 @@ const BlogPost = () => {
     };
   }, [slug, post]);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <CmsBlogPost />;
 
   const postUrl = `https://getdetach.app/blog/${post.slug}`;
   const faqEntities = post.faqSchema?.map((faq) => ({
