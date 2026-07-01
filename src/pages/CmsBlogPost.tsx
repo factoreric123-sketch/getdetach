@@ -1,0 +1,155 @@
+import { useEffect, useState } from "react";
+import { useParams, Link, Navigate } from "react-router-dom";
+import { ArrowLeft, Apple } from "lucide-react";
+import DOMPurify from "isomorphic-dompurify";
+import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
+import { fetchCmsBlogPostBySlug, formatCmsDate, type CmsBlogPost } from "@/lib/cmsBlog";
+
+type LoadState = "loading" | "found" | "not-found";
+
+const CmsBlogPost = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const [post, setPost] = useState<CmsBlogPost | null>(null);
+  const [state, setState] = useState<LoadState>("loading");
+
+  useEffect(() => {
+    if (!slug) return;
+    const path = `/blog/${slug}`;
+    setCanonical(path);
+    fetchCmsBlogPostBySlug(slug).then((p) => {
+      if (p) {
+        setPost(p);
+        setState("found");
+        setSocialMeta({
+          title: p.title,
+          description: p.meta_description ?? p.excerpt ?? p.title,
+          path,
+          type: "article",
+        });
+      } else {
+        setState("not-found");
+      }
+    });
+    return () => {
+      resetCanonical();
+      resetSocialMeta();
+    };
+  }, [slug]);
+
+  if (state === "loading") {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main className="pt-24 pb-16 px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="h-6 w-40 bg-muted/40 rounded animate-pulse mb-6" />
+            <div className="h-10 w-3/4 bg-muted/40 rounded animate-pulse mb-4" />
+            <div className="h-4 w-full bg-muted/30 rounded animate-pulse mb-2" />
+            <div className="h-4 w-11/12 bg-muted/30 rounded animate-pulse mb-2" />
+            <div className="h-4 w-10/12 bg-muted/30 rounded animate-pulse" />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (state === "not-found" || !post) return <Navigate to="/blog" replace />;
+
+  const postUrl = `https://getdetach.app/blog/${post.slug}`;
+  const sanitizedHtml = DOMPurify.sanitize(post.content_html ?? "", {
+    ADD_ATTR: ["target", "rel"],
+  });
+
+  const structuredData: unknown[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.meta_description ?? post.excerpt ?? post.title,
+      datePublished: post.published_at,
+      dateModified: post.published_at,
+      mainEntityOfPage: postUrl,
+      url: postUrl,
+      image: post.hero_image_url ?? undefined,
+      author: { "@type": "Organization", name: "Detach" },
+      publisher: {
+        "@type": "Organization",
+        name: "Detach",
+        url: "https://getdetach.app",
+      },
+    },
+  ];
+  if (post.json_ld) structuredData.push(post.json_ld);
+  if (post.faq_json_ld) structuredData.push(post.faq_json_ld);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+
+      <main className="pt-24 pb-16 px-6">
+        <article className="max-w-3xl mx-auto">
+          {structuredData.map((item, index) => (
+            <script
+              key={`sd-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+            />
+          ))}
+
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" /> Back to Blog
+          </Link>
+
+          <p className="text-sm text-muted-foreground mb-3">{formatCmsDate(post.published_at)}</p>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">{post.title}</h1>
+
+          {post.hero_image_url && (
+            <img
+              src={post.hero_image_url}
+              alt={post.title}
+              className="w-full rounded-lg mb-8"
+              loading="lazy"
+            />
+          )}
+
+          <div
+            className="prose-custom cms-content"
+            dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+          />
+
+          {/* CTA */}
+          <div className="mt-12 glass-card p-8 text-center">
+            <h3 className="text-xl font-bold mb-3">Try Detach: The App Blocker That Works</h3>
+            <p className="text-muted-foreground mb-6">
+              Free to download. No account required. Start blocking social media and reducing screen time today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
+              >
+                <Apple className="w-5 h-5" />
+                Download Detach
+              </a>
+              <Link to="/detach-app" className="text-primary font-semibold hover:underline">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default CmsBlogPost;
