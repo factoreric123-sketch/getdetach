@@ -46,7 +46,7 @@ const Blog = () => {
       title: p.title,
       excerpt: p.excerpt,
       date: p.date,
-      displayDate: p.date,
+      displayDate: formatCmsDate(p.date),
       sortKey: new Date(p.date).getTime() || 0,
     })),
     ...cmsPosts
