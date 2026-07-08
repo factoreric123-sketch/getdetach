@@ -102,4 +102,85 @@
   .section-label {
     @apply text-xs font-semibold tracking-widest uppercase text-muted-foreground;
   }
+
+  /* CMS blog content — matches the styling of static blog posts */
+  .cms-content {
+    @apply text-muted-foreground leading-relaxed;
+  }
+  .cms-content > * + * {
+    @apply mt-4;
+  }
+  .cms-content h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-foreground mt-10 mb-6;
+  }
+  .cms-content h2 {
+    @apply text-2xl font-bold text-foreground mt-10 mb-4;
+  }
+  .cms-content h3 {
+    @apply text-xl font-bold text-foreground mt-8 mb-3;
+  }
+  .cms-content h4 {
+    @apply text-lg font-semibold text-foreground mt-6 mb-2;
+  }
+  .cms-content p {
+    @apply text-muted-foreground leading-relaxed my-4;
+  }
+  .cms-content strong,
+  .cms-content b {
+    @apply text-foreground font-semibold;
+  }
+  .cms-content a {
+    @apply text-primary hover:underline;
+  }
+  .cms-content img {
+    @apply w-full rounded-lg my-8;
+  }
+  .cms-content ul,
+  .cms-content ol {
+    @apply my-4 space-y-2 pl-2;
+  }
+  .cms-content ul > li {
+    @apply relative pl-6 text-muted-foreground;
+  }
+  .cms-content ul > li::before {
+    content: "";
+    @apply absolute left-0 top-[0.7em] w-1.5 h-1.5 rounded-full bg-accent;
+  }
+  .cms-content ol {
+    counter-reset: cms-counter;
+    @apply list-none;
+  }
+  .cms-content ol > li {
+    counter-increment: cms-counter;
+    @apply relative pl-8 text-muted-foreground;
+  }
+  .cms-content ol > li::before {
+    content: counter(cms-counter) ".";
+    @apply absolute left-0 top-0 text-primary font-bold;
+  }
+  .cms-content blockquote {
+    @apply border-l-2 border-primary/60 pl-4 italic text-foreground/90 my-6;
+  }
+  .cms-content code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm text-foreground;
+  }
+  .cms-content pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto my-6;
+  }
+  .cms-content pre code {
+    @apply bg-transparent p-0;
+  }
+  .cms-content table {
+    @apply w-full text-sm my-6 border-collapse;
+  }
+  .cms-content th {
+    @apply text-left py-2 px-3 font-semibold text-foreground border-b border-border;
+  }
+  .cms-content td {
+    @apply py-2 px-3 text-muted-foreground border-b border-border/50;
+  }
+  .cms-content hr {
+    @apply border-border my-8;
+  }
 }
+
