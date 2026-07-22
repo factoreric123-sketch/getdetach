@@ -94,6 +94,7 @@ Deno.serve(async (req) => {
   let synced = 0;
   let skipped = 0;
   const errors: string[] = [];
+  const syncedUrls: string[] = [];
 
   outer: while (true) {
     const listRes = await fetch(`${BASE}/articles?limit=${limit}&offset=${offset}`, {
@@ -126,15 +127,32 @@ Deno.serve(async (req) => {
         continue;
       }
       const err = await upsertArticle(supabase, result);
-      if (err) errors.push(`Upsert ${result.id}: ${err}`);
-      else synced++;
+      if (err) {
+        errors.push(`Upsert ${result.id}: ${err}`);
+      } else {
+        synced++;
+        syncedUrls.push(`https://getdetach.app/blog/${result.slug}`);
+      }
     }
 
     if (articles.length < limit) break;
     offset += limit;
   }
 
-  return json({ synced, skipped, errors, full });
+  // Fire-and-forget IndexNow ping for newly synced posts.
+  if (syncedUrls.length > 0) {
+    try {
+      await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/indexnow-submit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ urls: syncedUrls }),
+      });
+    } catch (e) {
+      errors.push(`IndexNow ping: ${(e as Error).message}`);
+    }
+  }
+
+  return json({ synced, skipped, errors, full, syncedUrls });
 });
 
 function json(body: unknown, status = 200) {

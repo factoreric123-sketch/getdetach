@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Shop from "./pages/Shop";
 import ReviewsPage from "./pages/Reviews";
 import LifeInDotsPage from "./pages/LifeInDots";
+import FactsPage from "./pages/FactsPage";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/shop" element={<Shop />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/life-in-dots" element={<LifeInDotsPage />} />
+          <Route path="/detach-app-blocker-facts" element={<FactsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />

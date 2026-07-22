@@ -10,6 +10,23 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AI search crawlers (citations in ChatGPT search / Perplexity / Google AI Overviews)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Model training crawler (change to Disallow: / to opt out of training)
+User-agent: GPTBot
+Allow: /
+
 User-agent: *
 Allow: /
 

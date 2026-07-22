@@ -68,6 +68,33 @@ const faqSchema = {
   })),
 };
 
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Detach",
+  operatingSystem: "iOS 17",
+  applicationCategory: "HealthApplication",
+  applicationSubCategory: "App Blocker",
+  description:
+    "Detach is a free iPhone app blocker paired with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
+  url: "https://getdetach.app/detach-app",
+  downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+  brand: { "@type": "Brand", name: "Detach" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "27",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    priceValidUntil: "2027-12-31",
+  },
+};
+
 const DetachApp = () => {
   useEffect(() => {
     setCanonical("/detach-app");
@@ -89,6 +116,10 @@ const DetachApp = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
       <Navbar />
 
