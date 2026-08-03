@@ -17,6 +17,10 @@ serve(async (req) => {
       apiVersion: "2025-08-27.basil",
     });
 
+    // Redirect targets are never derived from the request (Origin/Referer can be
+    // spoofed by a third-party site calling this function).
+    const SITE_URL = (Deno.env.get("SITE_URL") || "https://getdetach.app").replace(/\/+$/, "");
+
     const { quantity = 1, affiliateCode } = await req.json();
     const cleanRef = typeof affiliateCode === "string"
       ? affiliateCode.toLowerCase().trim().slice(0, 64)
@@ -35,8 +39,8 @@ serve(async (req) => {
         allowed_countries: ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SE", "NO", "DK", "FI", "IE", "NZ", "AT", "BE", "CH", "ES", "IT", "PT"],
       },
       metadata: cleanRef ? { affiliate_code: cleanRef } : undefined,
-      success_url: `${req.headers.get("origin")}/shop?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.get("origin")}/shop`,
+      success_url: `${SITE_URL}/shop?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${SITE_URL}/shop`,
     });
 
     return new Response(JSON.stringify({ url: session.url }), {
