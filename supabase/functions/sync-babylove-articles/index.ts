@@ -170,9 +170,14 @@ Deno.serve(async (req) => {
     try {
       await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/indexnow-submit`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`,
+          apikey: Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+        },
         body: JSON.stringify({ urls: syncedUrls }),
       });
+
     } catch (e) {
       errors.push(`IndexNow ping: ${(e as Error).message}`);
     }
