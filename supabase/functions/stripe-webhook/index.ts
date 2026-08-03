@@ -155,6 +155,32 @@ serve(async (req) => {
           console.log("Order confirmation email queued for:", recipient);
         }
       }
+
+      // Second email to the customer only: how to start using Detach right away
+      const { error: startClaimError } = await supabase
+        .from("order_confirmation_sends")
+        .insert({ stripe_session_id: fullSession.id, recipient_email: `start-using:${customerEmail}` });
+      if (startClaimError) {
+        if ((startClaimError as any).code === "23505") {
+          console.log(`Start-using email already sent for session ${fullSession.id}, skipping.`);
+        } else {
+          console.error("Failed to claim start-using send slot:", startClaimError);
+        }
+      } else {
+        const { error: startEmailError } = await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "start-using-detach",
+            recipientEmail: customerEmail,
+            idempotencyKey: `start-using-${session.id}-${customerEmail}`,
+            templateData: {},
+          },
+        });
+        if (startEmailError) {
+          console.error("Failed to send start-using email:", startEmailError);
+        } else {
+          console.log("Start-using email queued for:", customerEmail);
+        }
+      }
     }
 
     return new Response(JSON.stringify({ received: true }), {
