@@ -16,7 +16,7 @@ serve(async (req) => {
   try {
     const { sessionId } = await req.json();
 
-    if (!sessionId) {
+    if (typeof sessionId !== "string" || !/^cs_[A-Za-z0-9_]{10,200}$/.test(sessionId)) {
       return new Response(JSON.stringify({ error: "Missing sessionId" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 400,
@@ -70,6 +70,20 @@ serve(async (req) => {
     // Send the same order confirmation email to both the customer and the Detach team
     const recipients = [customerEmail, "getdetach@gmail.com"];
     for (const recipient of recipients) {
+      // Deduplicate: a unique row per (session, recipient) means repeated calls to
+      // this endpoint can never send the same confirmation email twice.
+      const { error: dedupeError } = await supabase
+        .from("order_confirmation_sends")
+        .insert({ stripe_session_id: sessionId, recipient_email: recipient });
+      if (dedupeError) {
+        if (dedupeError.code === "23505") {
+          console.log(`Order confirmation already sent to ${recipient} for ${sessionId}`);
+        } else {
+          console.error(`Dedupe insert failed for ${recipient}:`, dedupeError.message);
+        }
+        continue;
+      }
+
       const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "order-confirmation",
