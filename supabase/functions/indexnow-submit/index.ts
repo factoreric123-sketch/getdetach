@@ -14,16 +14,53 @@ const DEFAULT_URLS = [
   "/life-in-dots",
 ];
 
-function toAbsolute(input: string): string {
-  if (/^https?:\/\//i.test(input)) return input;
-  const path = input.startsWith("/") ? input : `/${input}`;
-  return `https://${HOST}${path}`;
+function parseJwtClaims(token: string): Record<string, unknown> | null {
+  const parts = token.split(".");
+  if (parts.length < 2) return null;
+  try {
+    const payload = parts[1]
+      .replaceAll("-", "+")
+      .replaceAll("_", "/")
+      .padEnd(Math.ceil(parts[1].length / 4) * 4, "=");
+    return JSON.parse(atob(payload)) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+// Only server-to-server callers holding the service_role key may submit URLs.
+function isServiceRole(req: Request): boolean {
+  const token = req.headers.get("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
+  if (!token) return false;
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+  if (serviceKey && token === serviceKey) return true;
+  return parseJwtClaims(token)?.role === "service_role";
+}
+
+// Returns an absolute URL on this site, or null when the input points elsewhere.
+function toSiteUrl(input: unknown): string | null {
+  if (typeof input !== "string" || !input.trim()) return null;
+  const raw = input.trim();
+  try {
+    const url = /^https?:\/\//i.test(raw)
+      ? new URL(raw)
+      : new URL(raw.startsWith("/") ? raw : `/${raw}`, `https://${HOST}`);
+    if (url.protocol !== "https:" && url.protocol !== "http:") return null;
+    if (url.hostname !== HOST) return null;
+    return `https://${HOST}${url.pathname}${url.search}`;
+  } catch {
+    return null;
+  }
 }
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
-  let urls: string[] = [];
+  if (!isServiceRole(req)) {
+    return json({ error: "Forbidden" }, 403);
+  }
+
+  let urls: unknown[] = [];
   try {
     if (req.method === "POST") {
       const body = await req.json().catch(() => ({}));
@@ -39,9 +76,13 @@ Deno.serve(async (req) => {
     urls = DEFAULT_URLS;
   }
 
-  const urlList = Array.from(new Set(urls.map(toAbsolute))).filter(Boolean);
+  if (urls.length > 200) urls = urls.slice(0, 200);
+
+  const urlList = Array.from(
+    new Set(urls.map(toSiteUrl).filter((u): u is string => u !== null)),
+  );
   if (!urlList.length) {
-    return json({ error: "No URLs provided" }, 400);
+    return json({ error: "No valid getdetach.app URLs provided" }, 400);
   }
 
   const payload = {
