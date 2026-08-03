@@ -69,11 +69,37 @@ async function upsertArticle(supabase: SupabaseClient, article: ArticleFull): Pr
   return error?.message ?? null;
 }
 
+function parseJwtClaims(token: string): Record<string, unknown> | null {
+  const parts = token.split(".");
+  if (parts.length < 2) return null;
+  try {
+    const payload = parts[1]
+      .replaceAll("-", "+")
+      .replaceAll("_", "/")
+      .padEnd(Math.ceil(parts[1].length / 4) * 4, "=");
+    return JSON.parse(atob(payload)) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+// Sync is server-to-server only (cron / manual service_role call).
+function isServiceRole(req: Request): boolean {
+  const token = req.headers.get("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
+  if (!token) return false;
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+  if (serviceKey && token === serviceKey) return true;
+  return parseJwtClaims(token)?.role === "service_role";
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
+  if (!isServiceRole(req)) return json({ error: "Forbidden" }, 403);
+
   const apiKey = Deno.env.get("BABYLOVE_API_KEY");
   if (!apiKey) return json({ error: "BABYLOVE_API_KEY not configured" }, 500);
+
 
   const url = new URL(req.url);
   const full = url.searchParams.get("full") === "1";
