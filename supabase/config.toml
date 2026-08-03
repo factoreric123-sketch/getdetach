@@ -4,7 +4,7 @@ project_id = "dxlplpliaylvagnenucj"
 verify_jwt = true
 
 [functions.send-transactional-email]
-verify_jwt = false
+verify_jwt = true
 
 [functions.preview-transactional-email]
 verify_jwt = false
@@ -16,10 +16,10 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.sync-babylove-articles]
-verify_jwt = false
+verify_jwt = true
 
 [functions.mcp]
 verify_jwt = false
 
 [functions.indexnow-submit]
-verify_jwt = false
+verify_jwt = true
