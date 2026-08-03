@@ -11,8 +11,10 @@ export interface TemplateEntry {
 
 import { template as orderConfirmation } from './order-confirmation.tsx'
 import { template as orderNotificationInternal } from './order-notification-internal.tsx'
+import { template as startUsingDetach } from './start-using-detach.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'order-confirmation': orderConfirmation,
   'order-notification-internal': orderNotificationInternal,
+  'start-using-detach': startUsingDetach,
 }
