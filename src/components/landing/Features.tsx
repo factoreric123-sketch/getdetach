@@ -19,8 +19,8 @@ const secondary = [
   },
   {
     icon: AlertTriangle,
-    title: "Emergency override",
-    description: "You get a few. Limited on purpose.",
+    title: "Emergency Unlocks",
+    description: "Choose how many unlocks you get and how often they reset. You decide how strict you want it.",
   },
   {
     icon: BarChart3,
