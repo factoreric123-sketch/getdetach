@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Layers, Calendar, Lock, AlertTriangle, BarChart3 } from "lucide-react";
+import { Layers, Calendar, Lock, AlertTriangle, BarChart3, BadgeDollarSign } from "lucide-react";
 
 const secondary = [
   {
@@ -28,7 +28,7 @@ const secondary = [
     description: "See how much time you've actually spent away from your phone.",
   },
   {
-    icon: AlertTriangle,
+    icon: BadgeDollarSign,
     title: "No subscription",
     description: "Pay once. $9.99 and it's yours forever. No monthly fee, ever.",
   },
