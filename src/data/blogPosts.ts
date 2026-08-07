@@ -5,6 +5,7 @@ import { comparisonExpansionPosts } from "@/data/blogPostsComparisonExpansion";
 import { expansion50Posts } from "@/data/blogPostsExpansion50";
 import { expansion50v2Posts } from "@/data/blogPostsExpansion50v2";
 import { brickAlternativePosts } from "@/data/blogPostsBrickAlternative";
+import { geoPosts } from "@/data/blogPostsGeo";
 
 export interface BlogPostFaq {
   question: string;

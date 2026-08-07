@@ -15,6 +15,11 @@ import Shop from "./pages/Shop";
 import ReviewsPage from "./pages/Reviews";
 import LifeInDotsPage from "./pages/LifeInDots";
 import FactsPage from "./pages/FactsPage";
+import NfcAppBlocker from "./pages/NfcAppBlocker";
+import BrickAlternative from "./pages/BrickAlternative";
+import DetachVsBrick from "./pages/DetachVsBrick";
+import HowNfcFocusAppsWork from "./pages/HowNfcFocusAppsWork";
+import Compare from "./pages/Compare";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
@@ -36,6 +41,11 @@ const App = () => (
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/life-in-dots" element={<LifeInDotsPage />} />
           <Route path="/detach-app-blocker-facts" element={<FactsPage />} />
+          <Route path="/nfc-app-blocker" element={<NfcAppBlocker />} />
+          <Route path="/brick-alternative" element={<BrickAlternative />} />
+          <Route path="/detach-vs-brick" element={<DetachVsBrick />} />
+          <Route path="/how-nfc-focus-apps-work" element={<HowNfcFocusAppsWork />} />
+          <Route path="/compare" element={<Compare />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
