@@ -1,6 +1,16 @@
+## Protected pages (do not touch)
+
+These two ranking posts stay exactly as they are: no edits to title, slug, meta, body, or date.
+
+- `/blog/best-brick-alternatives-2026` (in `src/data/blogPostsComparisonExpansion.ts`)
+- `/blog/brick-alternative-what-to-buy-instead-of-brick` (in `src/data/blogPostsSeoExpansion.ts`)
+
+Consequence for this plan: the new `/brick-alternative` landing page will not compete with them. It will be positioned as a short reference page that links out to both posts as the in-depth reads, with its own distinct title and meta description, and no duplicated body copy. If you would rather I skip `/brick-alternative` entirely to remove any cannibalization risk, say so and I will drop that route and point everything at the two existing posts instead.
+
 ## Goal
 
 Make Detach the canonical, quotable source for "NFC app blocker" across AI answer engines, without touching the homepage. The site already has ~300 blog posts (including most Brick/Bloom/Blok/Unpluq comparisons) and a facts page, so the gap is dedicated evergreen landing pages, a comparison hub, HowTo/schema coverage, and quotable fact blocks.
+
 
 ## 1. New evergreen landing routes (not blog posts)
 
