@@ -75,6 +75,10 @@ Each new post follows the existing `blogPosts` data shape, in a new `src/data/bl
 - Edited: `src/App.tsx` (routes), `src/components/landing/Footer.tsx` (a "Compare" column), `src/pages/Blog.tsx` (registers the new data file), the three sitemaps, `public/llms.txt`.
 - Client-side JSON-LD and meta tags are visible to Googlebot and AI crawlers that execute JS, but social-preview crawlers only see `index.html`. If you want per-page previews and server-rendered content for stricter crawlers, the app can move to SSR via Lovable's latest template ([what the upgrade gives you](https://lovable.dev/blog/building-apps-using-tanstack-start)).
 
-## Open question
+## Terminology rule (resolved)
 
-Project memory says copy always says "card" and never "NFC", "tag", or "chip". Your strategy depends on owning the phrase "NFC app blocker". My default: use "NFC" freely in titles, headings, meta, and schema on these new pages, and keep "card" as the word for the product itself in body copy. Confirm or tell me to keep NFC out of visible copy entirely.
+- Homepage: no "NFC" anywhere. It stays untouched, and any future edits keep using "card".
+- New landing pages and new blog posts: "NFC" is allowed in titles, headings, meta, and schema, since that is the phrase to own. Body copy still calls the product itself a "card".
+- Also no NFC wording added to the Navbar or Footer labels, so the homepage experience reads the same as today. The footer "Compare" links use plain names like "Compare blockers" and "Detach vs Brick".
+- The existing `public/llms.txt` already uses "NFC" and stays as is.
+
