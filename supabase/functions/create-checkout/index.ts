@@ -21,18 +21,27 @@ serve(async (req) => {
     // spoofed by a third-party site calling this function).
     const SITE_URL = (Deno.env.get("SITE_URL") || "https://getdetach.app").replace(/\/+$/, "");
 
-    const { quantity = 1, affiliateCode } = await req.json();
+    const body = await req.json();
+    const { affiliateCode } = body;
     const cleanRef = typeof affiliateCode === "string"
       ? affiliateCode.toLowerCase().trim().slice(0, 64)
       : "";
 
+    const cardQty = Math.min(Math.max(parseInt(String(body.quantity ?? 1), 10) || 1, 1), 50);
+    // Magnet is an add-on: it can never exceed the number of cards, and it
+    // cannot be purchased on its own.
+    const requestedMagnets = parseInt(String(body.magnetQuantity ?? 0), 10) || 0;
+    const magnetQty = Math.min(Math.max(requestedMagnets, 0), cardQty);
+
+    const line_items: Array<{ price: string; quantity: number }> = [
+      { price: "price_1TGWQ8IZGOywGX0dCQgVfK4G", quantity: cardQty },
+    ];
+    if (magnetQty > 0) {
+      line_items.push({ price: "price_1U2JKxIZGOywGX0d16zufVPi", quantity: magnetQty });
+    }
+
     const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          price: "price_1TGWQ8IZGOywGX0dCQgVfK4G",
-          quantity,
-        },
-      ],
+      line_items,
       mode: "payment",
       allow_promotion_codes: true,
       shipping_address_collection: {
