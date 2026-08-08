@@ -67,7 +67,7 @@ const Shop = () => {
       let affiliateCode: string | null = null;
       try { affiliateCode = localStorage.getItem("detach_affiliate_ref"); } catch {}
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: { quantity, affiliateCode },
+        body: { quantity, magnetQuantity: addMagnet ? quantity : 0, affiliateCode },
       });
       if (error) throw error;
       if (data?.url) {
