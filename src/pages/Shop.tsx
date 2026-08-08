@@ -23,6 +23,7 @@ const Shop = () => {
   }, [searchParams, navigate]);
 
   const [quantity, setQuantity] = useState(1);
+  const [addMagnet, setAddMagnet] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
