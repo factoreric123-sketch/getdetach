@@ -266,6 +266,30 @@ const Shop = () => {
                 </div>
               </div>
 
+              {/* Magnet add-on */}
+              <button
+                type="button"
+                onClick={() => setAddMagnet(!addMagnet)}
+                aria-pressed={addMagnet}
+                className={`w-full flex items-center gap-3 text-left border rounded-2xl px-4 py-4 mb-6 transition-colors cursor-pointer ${
+                  addMagnet ? "border-foreground/40 bg-card" : "border-border/50 hover:border-border"
+                }`}
+              >
+                <span
+                  className={`w-5 h-5 shrink-0 rounded-md border flex items-center justify-center transition-colors ${
+                    addMagnet ? "bg-foreground border-foreground" : "border-border"
+                  }`}
+                >
+                  {addMagnet && <Check className="w-3.5 h-3.5 text-background" />}
+                </span>
+                <span className="flex-1">
+                  <span className="block text-sm font-semibold">Add a magnet · +$2.00 each</span>
+                  <span className="block text-xs text-muted-foreground mt-0.5">
+                    Stick your card to the fridge or desk. Only sold with a card.
+                  </span>
+                </span>
+              </button>
+
               {/* Buy Button */}
               <button
                 onClick={handleCheckout}
@@ -273,8 +297,11 @@ const Shop = () => {
                 className="w-full inline-flex items-center justify-center gap-2.5 bg-white text-black px-8 py-4 rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-150 cursor-pointer shadow-[0_0_25px_rgba(255,255,255,0.12)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <ShoppingBag className="w-4.5 h-4.5" />
-                {loading ? "Redirecting…" : `Buy Now · $${(9.99 * quantity).toFixed(2)}`}
+                {loading
+                  ? "Redirecting…"
+                  : `Buy Now · $${((9.99 + (addMagnet ? 2 : 0)) * quantity).toFixed(2)}`}
               </button>
+
 
               <p className="text-xs text-muted-foreground/50 mt-3 text-center">
                 Secure checkout powered by Stripe
