@@ -221,7 +221,7 @@ const Shop = () => {
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                An NFC card that pairs with the Detach app. Place it on your desk, tap it to end a focus session. No battery, no charging, works forever.
+                A card that pairs with the Detach app. Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
               </p>
 
               <div className="mb-8">
@@ -285,7 +285,7 @@ const Shop = () => {
                 <span className="flex-1">
                   <span className="block text-sm font-semibold">Add a Magnet · $2</span>
                   <span className="block text-xs text-muted-foreground mt-0.5">
-                    Stick your card to the fridge.
+                    Stick the card to your fridge.
                   </span>
                 </span>
               </button>
