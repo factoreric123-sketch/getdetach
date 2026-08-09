@@ -283,9 +283,9 @@ const Shop = () => {
                   {addMagnet && <Check className="w-3.5 h-3.5 text-background" />}
                 </span>
                 <span className="flex-1">
-                  <span className="block text-sm font-semibold">Add a magnet · +$2.00 each</span>
+                  <span className="block text-sm font-semibold">Add a magnet · +$2 each</span>
                   <span className="block text-xs text-muted-foreground mt-0.5">
-                    Stick your card to the fridge or desk. Only sold with a card.
+                    Stick your card to the fridge.
                   </span>
                 </span>
               </button>
