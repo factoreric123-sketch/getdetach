@@ -285,7 +285,7 @@ const Shop = () => {
                 <span className="flex-1">
                   <span className="block text-sm font-semibold">Add a Magnet · $2</span>
                   <span className="block text-xs text-muted-foreground mt-0.5">
-                    Stick your card to the fridge.
+                    Stick the card to your fridge.
                   </span>
                 </span>
               </button>
