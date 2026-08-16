@@ -221,7 +221,7 @@ const Shop = () => {
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A card that works with the Detach app. Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
+                Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
               </p>
 
               <div className="mb-8">
@@ -235,7 +235,6 @@ const Shop = () => {
                   "Soft-touch matte finish",
                   "No battery, no charging, ever",
                   "Works with iPhone (iOS 17+)",
-                  "Works with the app instantly",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <Check className="w-4 h-4 text-foreground/40 shrink-0" />
@@ -285,7 +284,7 @@ const Shop = () => {
                 <span className="flex-1">
                   <span className="block text-sm font-semibold">Add a Magnet · $2</span>
                   <span className="block text-xs text-muted-foreground mt-0.5">
-                    Stick the card to your fridge.
+                    Put it on your fridge.
                   </span>
                 </span>
               </button>
