@@ -160,7 +160,7 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">What Detach is</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Detach is a free iPhone app blocker paired with an optional $9.99 physical card. You
+              Detach is a free iPhone app blocker that works with an optional $9.99 physical card. You
               choose which apps and websites to block in the Detach app, then start a focus session.
               Blocked apps become unavailable at the system level. The only way to end the session is
               to physically tap the Detach card, which you keep somewhere in your home. That physical
