@@ -122,7 +122,7 @@ const Shop = () => {
               "@type": "Product",
               name: "Detach Card",
               description:
-                "An NFC card that pairs with the Detach app. Tap it to start or end a focus session that locks distracting apps on your iPhone. No battery, no charging, works forever.",
+                "An NFC card that works with the Detach app. Tap it to start or end a focus session that locks distracting apps on your iPhone. No battery, no charging, works forever.",
               image: [
                 "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15fcea8f-a5d9-445f-8984-aa1b6e0cc5df/id-preview-3450c874--f27795d6-7639-412e-8146-a47983d4fa70.lovable.app-1771286308043.png",
               ],
@@ -221,7 +221,7 @@ const Shop = () => {
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A card that pairs with the Detach app. Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
+                A card that works with the Detach app. Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
               </p>
 
               <div className="mb-8">
@@ -235,7 +235,7 @@ const Shop = () => {
                   "Soft-touch matte finish",
                   "No battery, no charging, ever",
                   "Works with iPhone (iOS 17+)",
-                  "Pairs with the app instantly",
+                  "Works with the app instantly",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <Check className="w-4 h-4 text-foreground/40 shrink-0" />

@@ -147,7 +147,7 @@ Q: How is Detach different from Apple Screen Time?
 A: Screen Time limits are easy to bypass with a passcode or tap. Detach requires a physical tap of the card, so the escape hatch is not on the phone.
 
 Q: What happens if I lose my Detach card?
-A: You can configure a limited number of emergency unlocks in the app, and you can pair a replacement card.
+A: You can configure a limited number of emergency unlocks in the app, and you can use a replacement card once it arrives.
 
 Q: Is the Detach app free?
 A: Yes. The app is free to download and use. The card is $9.99 one time.

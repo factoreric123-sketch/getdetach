@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "What happens if I lose my Detach card?",
     answer:
-      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. You can also pair a replacement card once it arrives.",
+      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. You can also use a replacement card once it arrives.",
   },
   {
     question: "Do you track which apps I block?",
@@ -59,7 +59,7 @@ const faqs = [
   {
     question: "How do I set up Detach with my iPhone?",
     answer:
-      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Pair your Detach card. 4. Choose the apps and websites to block. 5. Start a session. If you get stuck, reach out to us through the contact page.",
+      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Tap your Detach card to verify it. 4. Choose the apps and websites to block. 5. Start a session. If you get stuck, reach out to us through the contact page.",
   },
   {
     question: "Can I block apps without my card?",

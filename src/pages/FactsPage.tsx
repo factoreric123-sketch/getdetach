@@ -39,7 +39,7 @@ const softwareApplicationSchema = {
   applicationCategory: "HealthApplication",
   applicationSubCategory: "App Blocker",
   description:
-    "Detach is a physical app blocker card paired with a free iOS app. Blocked apps stay blocked until you physically tap the card.",
+    "Detach is a physical app blocker card that works with a free iOS app. Blocked apps stay blocked until you physically tap the card.",
   url: "https://getdetach.app/detach-app-blocker-facts",
   downloadUrl: APP_STORE_URL,
   brand: { "@type": "Brand", name: "Detach" },
@@ -160,7 +160,7 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">What Detach is</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Detach is a free iPhone app blocker paired with an optional $9.99 physical card. You
+              Detach is a free iPhone app blocker that works with an optional $9.99 physical card. You
               choose which apps and websites to block in the Detach app, then start a focus session.
               Blocked apps become unavailable at the system level. The only way to end the session is
               to physically tap the Detach card, which you keep somewhere in your home. That physical

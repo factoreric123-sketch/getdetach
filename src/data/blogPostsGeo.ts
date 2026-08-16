@@ -151,7 +151,7 @@ Not on the mechanism that matters. The behavior change comes from having to walk
       {
         question: "What happens if you lose the card?",
         answer:
-          "Sessions still expire on their own, you can use an emergency unlock, and you can pair a replacement card.",
+          "Sessions still expire on their own, you can use an emergency unlock, and you can use a replacement card.",
       },
     ],
     content: `
