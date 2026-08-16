@@ -1,33 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Apple, ArrowRight, Smartphone, Shield, Zap, Users } from "lucide-react";
+import { Apple, ArrowRight, Smartphone, Shield, Zap, Users, HelpCircle } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
-
-const faqs = [
-  {
-    q: "What is Detach app?",
-    a: "Detach is an app blocker for iPhone that helps you reduce screen time by blocking social media and distracting apps. It uses physical NFC tags to start and end focus sessions, creating real friction between you and your phone.",
-  },
-  {
-    q: "How does Detach block apps?",
-    a: "Detach uses Apple's Screen Time API to block apps at the system level. When an app is blocked during a Detach session, you cannot open it at all. Not through notifications, links, or search. To end the session, you must physically tap your NFC card.",
-  },
-  {
-    q: "Is Detach free?",
-    a: "Yes! The Detach app is free to download and use. There are no subscriptions or hidden fees. You just need an NFC card to start sessions, which you can buy for $9.99.",
-  },
-  {
-    q: "Is Detach better than other app blockers?",
-    a: "Detach is different because it uses physical NFC tags instead of software toggles. This physical friction makes it much harder to give in to temptation. Most other app blockers can be disabled with a few taps. Detach requires you to physically walk to your NFC tag.",
-  },
-  {
-    q: "Does Detach work on Android?",
-    a: "Currently, the Detach app is available only for iPhone (iOS 17+). An Android version is not available at this time. Detach uses Apple's Screen Time API for system-level blocking.",
-  },
-];
 
 const steps = [
   {
@@ -37,13 +13,13 @@ const steps = [
   },
   {
     icon: Smartphone,
-    title: "Tap Your NFC Tag",
-    description: "When you're ready to focus, tap a physical NFC tag with your phone to start the session.",
+    title: "Tap Your Card",
+    description: "When you're ready to focus, start a session. Blocked apps are completely inaccessible until you tap the Detach card.",
   },
   {
     icon: Zap,
     title: "Stay Focused",
-    description: "Blocked apps are completely inaccessible. Tap the tag again when your session is over.",
+    description: "Blocked apps are completely inaccessible. Tap the card again when your session is over.",
   },
 ];
 
@@ -54,19 +30,6 @@ const audiences = [
   "Anyone trying to reduce social media usage",
   "People who've tried other app blockers and failed",
 ];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.a,
-    },
-  })),
-};
 
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
@@ -113,10 +76,6 @@ const DetachApp = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
@@ -191,23 +150,26 @@ const DetachApp = () => {
             </div>
           </section>
 
-          {/* FAQ */}
+          {/* FAQ link */}
           <section className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Frequently Asked Questions About Detach
-            </h2>
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="glass-card px-6 border-none">
-                  <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="glass-card p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <HelpCircle className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold mb-1">Have questions?</h2>
+                <p className="text-muted-foreground">
+                  See the full Detach FAQ for answers about setup, blocking, Android, shipping, and more.
+                </p>
+              </div>
+              <Link
+                to="/detach-faq"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline shrink-0"
+              >
+                Read FAQ
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}

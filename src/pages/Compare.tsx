@@ -165,6 +165,11 @@ const Compare = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                  Detach FAQ
+                </Link>
+              </li>
+              <li>
                 <Link to="/detach-app-blocker-facts" className="text-primary underline underline-offset-2">
                   Detach product facts
                 </Link>
