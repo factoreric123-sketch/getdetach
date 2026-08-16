@@ -184,6 +184,11 @@ const NfcAppBlocker = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                  Detach FAQ
+                </Link>
+              </li>
+              <li>
                 <Link to="/compare" className="text-primary underline underline-offset-2">
                   Compare every physical app blocker
                 </Link>
