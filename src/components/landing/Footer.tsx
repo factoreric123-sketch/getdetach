@@ -43,6 +43,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li><Link to="/detach-app" className="hover:text-foreground transition-colors">What is Detach?</Link></li>
+              <li><Link to="/detach-faq" className="hover:text-foreground transition-colors">FAQ</Link></li>
               <li><Link to="/detach-app-blocker-facts" className="hover:text-foreground transition-colors">Product facts</Link></li>
               <li><Link to="/compare" className="hover:text-foreground transition-colors">Compare app blockers</Link></li>
               <li><Link to="/detach-vs-brick" className="hover:text-foreground transition-colors">Detach vs Brick</Link></li>

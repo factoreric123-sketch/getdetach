@@ -20,6 +20,7 @@ import BrickAlternative from "./pages/BrickAlternative";
 import DetachVsBrick from "./pages/DetachVsBrick";
 import HowNfcFocusAppsWork from "./pages/HowNfcFocusAppsWork";
 import Compare from "./pages/Compare";
+import DetachFaq from "./pages/DetachFaq";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/detach-vs-brick" element={<DetachVsBrick />} />
           <Route path="/how-nfc-focus-apps-work" element={<HowNfcFocusAppsWork />} />
           <Route path="/compare" element={<Compare />} />
+          <Route path="/detach-faq" element={<DetachFaq />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
