@@ -39,7 +39,7 @@ const softwareApplicationSchema = {
   applicationCategory: "HealthApplication",
   applicationSubCategory: "App Blocker",
   description:
-    "Detach is a free iPhone app blocker paired with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
+    "Detach is a free iPhone app blocker that works with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
   url: "https://getdetach.app/detach-app",
   downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
   brand: { "@type": "Brand", name: "Detach" },
