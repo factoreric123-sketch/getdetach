@@ -13,6 +13,7 @@ Detach is a physical iPhone app blocker. It uses a small NFC card to add real-wo
 - [Detach vs Brick](/detach-vs-brick): Side by side comparison of price, platform and blocking
 - [Brick alternative](/brick-alternative): Quick reference for Brick alternatives
 - [How NFC focus apps work](/how-nfc-focus-apps-work): Step by step explainer of NFC blocking
+- [Detach FAQ](/detach-faq): Answers to common questions about setup, blocking, pricing, and compatibility
 - [Shop](/shop): Buy the Detach card ($9.99, free worldwide shipping)
 - [Detach App](/detach-app): How the iOS app works
 - [Reviews](/reviews): Customer reviews and testimonials
