@@ -78,10 +78,6 @@ const DetachApp = () => {
     <div className="min-h-screen bg-background">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
       <Navbar />
@@ -154,23 +150,26 @@ const DetachApp = () => {
             </div>
           </section>
 
-          {/* FAQ */}
+          {/* FAQ link */}
           <section className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Frequently Asked Questions About Detach
-            </h2>
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="glass-card px-6 border-none">
-                  <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="glass-card p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <HelpCircle className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold mb-1">Have questions?</h2>
+                <p className="text-muted-foreground">
+                  See the full Detach FAQ for answers about setup, blocking, Android, shipping, and more.
+                </p>
+              </div>
+              <Link
+                to="/detach-faq"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline shrink-0"
+              >
+                Read FAQ
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}
