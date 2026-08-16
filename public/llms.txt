@@ -135,13 +135,22 @@ Q: Does Detach require a subscription?
 A: No. $9.99 one-time for the card. The app is free.
 
 Q: Does Detach work on Android?
-A: No. iOS 17+ only.
+A: Not yet. Detach is currently iPhone only (iOS 17+). An Android version is coming soon.
 
 Q: What apps can Detach block?
-A: Any app or website. Instagram, TikTok, YouTube, Twitter, games, Safari, Chrome, etc.
+A: Any iPhone app or website. Instagram, TikTok, YouTube, X, Reddit, games, Safari, and more.
 
 Q: Why do traditional app blockers fail?
 A: Because they are too easy to bypass. A passcode or a tap and you're back in. Detach requires a physical action, which interrupts the automatic behavior.
+
+Q: How is Detach different from Apple Screen Time?
+A: Screen Time limits are easy to bypass with a passcode or tap. Detach requires a physical tap of the card, so the escape hatch is not on the phone.
+
+Q: What happens if I lose my Detach card?
+A: You can configure a limited number of emergency unlocks in the app, and you can pair a replacement card.
+
+Q: Is the Detach app free?
+A: Yes. The app is free to download and use. The card is $9.99 one time.
 
 ## Keywords
 
