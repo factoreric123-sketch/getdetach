@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "What can I block with Detach?",
     answer:
-      "You can block any iPhone app except Phone, per Apple policy. You can also block selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
+      "You can block iPhone apps and selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
   },
   {
     question: "What happens if I lose my Detach card?",
