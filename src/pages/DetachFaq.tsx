@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "What happens if I lose my Detach card?",
     answer:
-      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. You can also use a replacement card once it arrives.",
+      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out.",
   },
   {
     question: "Do you track which apps I block?",
