@@ -62,8 +62,7 @@ const faqs = [
   },
   {
     question: "Can I block apps without my card?",
-    answer:
-      "Yes. You can start a focus session manually from the app without the card. You will still need the physical card to end the session early.",
+    answer: "Yes. You can start a focus session manually from the app without the card.",
   },
   {
     question: "Can I block websites?",
