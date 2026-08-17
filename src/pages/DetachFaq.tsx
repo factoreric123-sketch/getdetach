@@ -28,8 +28,7 @@ const faqs = [
   },
   {
     question: "Does Detach ship internationally?",
-    answer:
-      "Yes. We ship worldwide and shipping is free. Where available, duties and taxes are calculated at checkout. In some regions, you may need to pay import taxes, customs, or fees upon delivery.",
+    answer: "Yes. We ship worldwide and shipping is free.",
   },
   {
     question: "Is my phone compatible with Detach?",
