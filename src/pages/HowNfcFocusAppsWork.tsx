@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "What happens if I lose the card?",
     answer:
-      "Sessions still expire on their own, and you can use a configured emergency unlock. You can also use a replacement card.",
+      "Sessions still expire on their own, and you can use a configured emergency unlock.",
   },
   {
     question: "Where is NFC on an iPhone?",
