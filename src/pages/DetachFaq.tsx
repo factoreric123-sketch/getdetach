@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "Can I block websites?",
     answer:
-      "Yes. You can block selected websites in Safari and supported browsers. On iOS, blocking a supported app can also restrict its corresponding website.",
+      "Yes. You can block selected websites in browsers. On iOS, blocking a supported app can also restrict its corresponding website.",
   },
   {
     question: "Is the app free?",
