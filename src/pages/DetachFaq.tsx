@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "What can I block with Detach?",
     answer:
-      "You can block iPhone apps and selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
+      "You can block iPhone apps and selected websites in browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
   },
   {
     question: "How many apps can I block with Detach?",
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "How do I set up Detach with my iPhone?",
     answer:
-      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Tap your Detach card to verify it. 4. Choose the apps and websites to block. 5. Start a session. If you get stuck, reach out to us through the contact page.",
+      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Choose the apps and websites to block. 4. Start a session. 5. Tap your Detach card to stop a session early. If you get stuck, reach out to us through the contact page.",
   },
   {
     question: "Can I block apps without my card?",
