@@ -28,8 +28,7 @@ const faqs = [
   },
   {
     question: "Does Detach ship internationally?",
-    answer:
-      "Yes. We ship worldwide and shipping is free. Where available, duties and taxes are calculated at checkout. In some regions, you may need to pay import taxes, customs, or fees upon delivery.",
+    answer: "Yes. We ship worldwide and shipping is free.",
   },
   {
     question: "Is my phone compatible with Detach?",
@@ -44,12 +43,12 @@ const faqs = [
   {
     question: "What can I block with Detach?",
     answer:
-      "You can block any iPhone app except Phone, per Apple policy. You can also block selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
+      "You can block iPhone apps and selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
   },
   {
     question: "What happens if I lose my Detach card?",
     answer:
-      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. You can also use a replacement card once it arrives.",
+      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out.",
   },
   {
     question: "Do you track which apps I block?",
@@ -63,8 +62,7 @@ const faqs = [
   },
   {
     question: "Can I block apps without my card?",
-    answer:
-      "Yes. You can start a focus session manually from the app without the card. You will still need the physical card to end the session early.",
+    answer: "Yes. You can start a focus session manually from the app without the card.",
   },
   {
     question: "Can I block websites?",
