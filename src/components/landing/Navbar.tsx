@@ -32,6 +32,7 @@ const Navbar = () => {
           <Link to="/#features" className="hover:text-foreground transition-colors duration-150">Features</Link>
           <Link to="/#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</Link>
           <Link to="/shop" className="hover:text-foreground transition-colors duration-150">Shop</Link>
+          <Link to="/detach-faq" className="hover:text-foreground transition-colors duration-150">FAQ</Link>
           <a
             href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
             target="_blank"
@@ -65,6 +66,7 @@ const Navbar = () => {
                 { label: "Features", to: "/#features" },
                 { label: "How it works", to: "/#how-it-works" },
                 { label: "Shop", to: "/shop" },
+                { label: "FAQ", to: "/detach-faq" },
               ].map((link) => (
                 <Link
                   key={link.label}
