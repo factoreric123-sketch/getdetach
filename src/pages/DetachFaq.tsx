@@ -46,6 +46,11 @@ const faqs = [
       "You can block iPhone apps and selected websites in Safari and supported browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
   },
   {
+    question: "How many apps can I block with Detach?",
+    answer:
+      "As many as you want. The iPhone system behind the scenes has a built-in limit of about 50 individual apps per setup, but Detach gets around that by letting you block whole app categories like social, games, or entertainment instead of picking every single app by name. You can also add specific apps and websites on top of that. So your block list can be short or long, and the card still handles it with one tap.",
+  },
+  {
     question: "What happens if I lose my Detach card?",
     answer:
       "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. If you run out of emergency unlocks and you are in strict mode, please reach out to us and we will help disable Detach.",
