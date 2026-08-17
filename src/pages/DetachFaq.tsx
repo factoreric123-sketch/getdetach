@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "How many apps can I block with Detach?",
     answer:
-      "As many as you want. The iPhone system behind the scenes has a built-in limit of about 50 individual apps per setup, but Detach gets around that by letting you block whole app categories like social, games, or entertainment instead of picking every single app by name. You can also add specific apps and websites on top of that. So your block list can be short or long, and the card still handles it with one tap.",
+      "Up to 50 apps per configuration. Apple's Screen Time API has a hard limit of 50 individual apps per block setup.",
   },
   {
     question: "What happens if I lose my Detach card?",
