@@ -12,14 +12,14 @@ const PATH = "/detach-faq";
 
 const faqs = [
   {
-    question: "How is Detach different from Apple Screen Time or Android Digital Wellbeing?",
+    question: "How is Detach different from Apple Screen Time?",
     answer:
-      "Screen Time and Digital Wellbeing limits are easy to bypass. A tap on 'ignore limit' or a passcode you already know and you are back in. Detach creates physical separation. Blocked apps stay blocked until you tap the Detach card, which you keep somewhere outside easy reach. That physical step is what makes the habit stick.",
+      "Screen Time limits are easy to bypass. A tap on 'ignore limit' or a passcode you already know and you are back in. Detach creates physical separation. Blocked apps stay blocked until you tap the Detach card, which you keep somewhere outside easy reach. That physical step is what makes the habit stick.",
   },
   {
     question: "Can’t I just delete the app or find a workaround?",
     answer:
-      "We built Detach with Strict Mode for exactly this. In Strict Mode, deleting the app does not lift the block. You cannot change settings to bypass it. The session holds until you tap the card or use a configured emergency unlock.",
+      "We built Detach with Strict Mode for exactly this. In Strict Mode, which is optional, you can not delete the app when a detach session is active.",
   },
   {
     question: "What’s included with a Detach purchase?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "What can I block with Detach?",
     answer:
-      "You can block iPhone apps and selected websites in browsers. Use scheduled sessions, manual sessions, or strict mode to match your routine.",
+      "You can block iPhone apps and selected websites in browsers.",
   },
   {
     question: "How many apps can I block with Detach?",
@@ -53,17 +53,17 @@ const faqs = [
   {
     question: "What happens if I lose my Detach card?",
     answer:
-      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. If you run out of emergency unlocks and you are in strict mode, please reach out to us and we will help disable Detach.",
+      "Accidents happen. You can configure a limited number of emergency unlocks in the app so you are not permanently locked out. If you run out of emergency unlocks and you are also in strict mode, please reach out to us and we will help disable Detach.",
   },
   {
-    question: "Do you track which apps I block?",
+    question: "Does Detach track your data?",
     answer:
-      "No. All blocking information and session history are stored locally on your phone. We cannot see or access your block lists.",
+      "No. Your blocking information and session history are stored locally on your phone. Detach cannot see or access your block lists or session data.",
   },
   {
     question: "How do I set up Detach with my iPhone?",
     answer:
-      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Choose the apps and websites to block. 4. Start a session. 5. Tap your Detach card to stop a session early. If you get stuck, reach out to us through the contact page.",
+      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Choose the apps and websites to block. 4. Start a session. 5. Scan your Detach card to stop a session.",
   },
   {
     question: "Can I block apps without my card?",
@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "Can I block websites?",
     answer:
-      "Yes. You can block selected websites in browsers. On iOS, blocking a supported app can also restrict its corresponding website.",
+      "Yes. You can block selected websites.",
   },
   {
     question: "Is the app free?",
