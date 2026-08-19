@@ -24,7 +24,7 @@ const OrderNotificationInternalEmail = ({
     <Preview>Your {SITE_NAME} order has been confirmed</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Text style={greeting}>{customerName ? `Hi, ${customerName},` : 'Hi,'}</Text>
+        <Text style={greeting}>{customerName ? `Hi ${customerName},` : 'Hi,'}</Text>
 
         <Text style={text}>
           Thank you for your order. This email confirms that we've received your
