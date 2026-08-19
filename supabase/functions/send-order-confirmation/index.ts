@@ -31,7 +31,7 @@ serve(async (req) => {
       expand: ["line_items"],
     });
 
-    if (session.payment_status !== "paid") {
+    if (session.payment_status !== "paid" && session.payment_status !== "no_payment_required") {
       return new Response(JSON.stringify({ error: "Payment not completed" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 400,

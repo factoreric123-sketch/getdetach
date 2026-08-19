@@ -41,7 +41,7 @@ serve(async (req) => {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
 
-      if (session.payment_status !== "paid") {
+      if (session.payment_status !== "paid" && session.payment_status !== "no_payment_required") {
         console.log("Payment not yet completed, skipping email");
         return new Response(JSON.stringify({ received: true }), {
           headers: { ...corsHeaders, "Content-Type": "application/json" },
