@@ -39,7 +39,7 @@ serve(async (req) => {
     }
 
     const customerEmail = session.customer_details?.email;
-    const customerName = session.customer_details?.name || "there";
+    const customerName = session.customer_details?.name || "";
     const shippingAddress = session.shipping_details?.address;
     const quantity = session.line_items?.data?.[0]?.quantity || 1;
     const total = session.amount_total ? (session.amount_total / 100).toFixed(2) : "9.99";
