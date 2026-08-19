@@ -12,7 +12,7 @@ const StartUsingDetachEmail = () => (
       <Container style={container}>
         <Heading style={h1}>Start Using Detach Before Your Card Arrives</Heading>
 
-        <Text style={text}>Hi,</Text>
+        <Text style={text}>Hi.</Text>
 
         <Text style={text}>
           You don't have to wait for your Detach card to arrive before you start using the app.
