@@ -73,9 +73,9 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Comparison />
+      <Product />
       <Reality />
       <WhyDetach />
-      <Product />
       <AppScreenshots />
       <BestPractices />
       <Features />
