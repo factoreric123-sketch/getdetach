@@ -74,6 +74,7 @@ const Index = () => {
       <Hero />
       <Comparison />
       <Product />
+      <AppScreenshots />
       <Reality />
       <WhyDetach />
       <AppScreenshots />
