@@ -30,8 +30,8 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           className="text-[clamp(2.8rem,8vw,5.5rem)] font-black tracking-tight leading-[0.95] mb-7"
         >
-          Put down{" "}
-          <span className="text-gradient">the phone.</span>
+          Put down your{" "}
+          <span className="text-gradient">phone.</span>
           <br />
           For real this time.
         </motion.h1>
