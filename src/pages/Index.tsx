@@ -77,7 +77,6 @@ const Index = () => {
       <AppScreenshots />
       <Reality />
       <WhyDetach />
-      <AppScreenshots />
       <BestPractices />
       <Features />
       <HowItWorks />
