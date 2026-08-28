@@ -27,7 +27,7 @@ const FloatingDownloadBar = () => {
           <div className="flex-1 min-w-0">
             <p className="text-sm font-bold leading-tight truncate">Detach</p>
             <p className="text-xs text-muted-foreground truncate">
-              Free on the App Store
+              Free on iOS
             </p>
           </div>
           <a
