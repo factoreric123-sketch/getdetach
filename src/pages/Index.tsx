@@ -83,6 +83,7 @@ const Index = () => {
       <HowItWorks />
       <LifeInDots />
       <Footer />
+      <FloatingDownloadBar />
     </div>
   );
 };
