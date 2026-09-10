@@ -53,7 +53,7 @@ const OrderNotificationInternalEmail = ({
         ) : null}
 
         <Text style={text}>
-          Orders are mailed via USPS stamped mail. We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day.
+          Orders are mailed via U{'\u200B'}SPS stamped mail. We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day.
         </Text>
 
         <Text style={sectionHeading}><strong>Estimated delivery times:</strong></Text>
