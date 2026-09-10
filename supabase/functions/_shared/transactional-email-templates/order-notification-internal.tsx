@@ -23,23 +23,21 @@ const OrderNotificationInternalEmail = ({
 }: OrderNotificationInternalProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Your {SITE_NAME} order has been confirmed</Preview>
+    <Preview>New {SITE_NAME} order confirmed</Preview>
     <Body style={main}>
       <Container style={container}>
         <Text style={greeting}>{customerName ? `Hi ${customerName},` : 'Hi,'}</Text>
 
         <Text style={text}>
-          Thank you for your order. This email confirms that we've received your
-          request and it is now being processed.
+          Thanks for your order! We've received it and are getting it ready to ship.
         </Text>
 
         <Text style={sectionHeading}><strong>Order Details</strong></Text>
-        <Text style={detailText}>Items: {SITE_NAME}</Text>
+        <Text style={detailText}>Item: {SITE_NAME}</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
+        <Text style={detailText}>Total: ${total}</Text>
+        <Text style={detailText}>Shipping: Free</Text>
         <Text style={detailTextLast}>Status: Confirmed</Text>
-
-        <Text style={totalText}><strong>Total: ${total}</strong></Text>
-        <Text style={shippingNote}>Free shipping</Text>
 
         {addressLines ? (
           <Section>
@@ -55,14 +53,33 @@ const OrderNotificationInternalEmail = ({
         ) : null}
 
         <Text style={text}>
-          Please note: Your order will be shipped today or tomorrow depending on what time the order was placed, via standard mail with a stamp. We do not provide shipping confirmation, tracking numbers, or delivery confirmation. We hope it arrives in a timely manner.
+          Orders are mailed via USPS stamped mail. We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day.
         </Text>
 
+        <Text style={sectionHeading}><strong>Estimated delivery times:</strong></Text>
+        <Text style={listItem}>East Coast U.S.: 2–5 business days</Text>
+        <Text style={listItem}>Midwest/Southern U.S.: 3–6 business days</Text>
+        <Text style={listItem}>West Coast U.S.: 4–7 business days</Text>
+        <Text style={listItem}>Canada: 1–3 weeks</Text>
+        <Text style={listItemLast}>Other international destinations: 2–5 weeks</Text>
+
+        <Text style={text}>
+          Delivery times are estimates and may occasionally take longer. Because orders are sent by stamped mail, tracking and delivery confirmation are not available.
+        </Text>
+
+        <Text style={text}>
+          Thanks for supporting {SITE_NAME}!
+        </Text>
+
+        <Text style={closing}>
+          Best,<br />
+          {SITE_NAME}
+        </Text>
 
         <Hr style={hr} />
 
         <Text style={footer}>
-          Questions? Reply to this email or contact us at getdetach@gmail.com
+          Questions? Contact us at getdetach@gmail.com
         </Text>
       </Container>
     </Body>
@@ -71,7 +88,7 @@ const OrderNotificationInternalEmail = ({
 
 export const template = {
   component: OrderNotificationInternalEmail,
-  subject: 'Your Detach Order Confirmation',
+  subject: 'New Detach Order',
   to: 'getdetach@gmail.com',
   displayName: 'Internal order confirmation',
   previewData: {
@@ -90,7 +107,8 @@ const text = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: 
 const sectionHeading = { fontSize: '15px', color: '#222', margin: '0 0 6px', lineHeight: '1.6' }
 const detailText = { fontSize: '15px', color: '#222', margin: '0', lineHeight: '1.6' }
 const detailTextLast = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
-const totalText = { fontSize: '15px', color: '#222', margin: '0 0 4px', lineHeight: '1.6' }
-const shippingNote = { fontSize: '14px', color: '#666', margin: '0 0 24px', lineHeight: '1.6' }
+const listItem = { fontSize: '15px', color: '#222', margin: '0 0 4px', lineHeight: '1.6' }
+const listItemLast = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
+const closing = { fontSize: '15px', color: '#222', margin: '0 0 24px', lineHeight: '1.6' }
 const hr = { borderColor: '#eee', margin: '24px 0' }
 const footer = { fontSize: '13px', color: '#999', margin: '0' }
