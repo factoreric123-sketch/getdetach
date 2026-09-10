@@ -1,6 +1,6 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Html, Preview, Text, Hr, Section,
+  Body, Container, Head, Html, Link, Preview, Text, Hr, Section,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
@@ -45,7 +45,9 @@ const OrderNotificationInternalEmail = ({
           <Section>
             <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
             {addressLines.split('\n').filter(Boolean).map((line, i) => (
-              <Text key={i} style={detailText}>{line}</Text>
+              <Text key={i} style={detailText}>
+                <Link href="#" style={{ color: '#222', textDecoration: 'none' }}>{line}</Link>
+              </Text>
             ))}
             {customerEmail ? <Text style={detailText}>{customerEmail}</Text> : null}
             <Text style={detailTextLast}> </Text>

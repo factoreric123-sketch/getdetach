@@ -1,6 +1,6 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text, Section, Hr,
+  Body, Container, Head, Heading, Html, Link, Preview, Text, Section, Hr,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
@@ -45,7 +45,9 @@ const OrderConfirmationEmail = ({
           <Section>
             <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
             {addressLines.split('\n').filter(Boolean).map((line, i) => (
-              <Text key={i} style={detailText}>{line}</Text>
+              <Text key={i} style={detailText}>
+                <Link href="#" style={{ color: '#222', textDecoration: 'none' }}>{line}</Link>
+              </Text>
             ))}
             <Text style={detailTextLast}> </Text>
           </Section>
