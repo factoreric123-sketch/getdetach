@@ -1,6 +1,6 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Html, Preview, Text, Hr,
+  Body, Container, Head, Html, Preview, Text, Hr, Section,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
@@ -16,8 +16,10 @@ interface OrderNotificationInternalProps {
 
 const OrderNotificationInternalEmail = ({
   customerName,
+  customerEmail,
   quantity = 1,
   total = '9.99',
+  addressLines = '',
 }: OrderNotificationInternalProps) => (
   <Html lang="en" dir="ltr">
     <Head />
@@ -39,9 +41,21 @@ const OrderNotificationInternalEmail = ({
         <Text style={totalText}><strong>Total: ${total}</strong></Text>
         <Text style={shippingNote}>Free shipping</Text>
 
+        {addressLines ? (
+          <Section>
+            <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
+            {addressLines.split('\n').filter(Boolean).map((line, i) => (
+              <Text key={i} style={detailText}>{line}</Text>
+            ))}
+            {customerEmail ? <Text style={detailText}>{customerEmail}</Text> : null}
+            <Text style={detailTextLast}> </Text>
+          </Section>
+        ) : null}
+
         <Text style={text}>
           Please note: Your order will be shipped today or tomorrow depending on what time the order was placed, via standard mail with a stamp. We do not provide shipping confirmation, tracking numbers, or delivery confirmation. We hope it arrives in a timely manner.
         </Text>
+
 
         <Hr style={hr} />
 
@@ -63,7 +77,7 @@ export const template = {
     customerEmail: 'jane@example.com',
     quantity: 1,
     total: '9.99',
-    addressLines: '123 Main St, New York, NY 10001, US',
+    addressLines: 'Jane Doe\n123 Main St\nNew York, NY 10001\nUS',
   },
 } satisfies TemplateEntry
 

@@ -56,7 +56,14 @@ serve(async (req) => {
 
       const customerEmail = fullSession.customer_details?.email;
       const customerName = fullSession.customer_details?.name || "";
-      const shippingAddress = fullSession.shipping_details?.address;
+      // Stripe moved shipping details to collected_information on newer API versions;
+      // fall back to the legacy field and finally to the billing address.
+      const shippingDetails =
+        (fullSession as any).collected_information?.shipping_details ||
+        (fullSession as any).shipping_details ||
+        null;
+      const shippingAddress = shippingDetails?.address || fullSession.customer_details?.address;
+      const shippingName = shippingDetails?.name || customerName;
       const quantity = fullSession.line_items?.data?.[0]?.quantity || 1;
       const total = fullSession.amount_total ? (fullSession.amount_total / 100).toFixed(2) : "9.99";
 
@@ -70,14 +77,15 @@ serve(async (req) => {
 
       const addressLines = shippingAddress
         ? [
+            shippingName,
             shippingAddress.line1,
             shippingAddress.line2,
-            `${shippingAddress.city}, ${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
+            `${shippingAddress.city || ""}${shippingAddress.city ? ", " : ""}${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
             shippingAddress.country,
           ]
             .filter(Boolean)
-            .join(", ")
-        : "N/A";
+            .join("\n")
+        : "";
 
       // Send order confirmation via Lovable's transactional email system
       const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
