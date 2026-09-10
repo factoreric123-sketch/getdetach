@@ -45,7 +45,9 @@ const OrderNotificationInternalEmail = ({
           <Section>
             <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
             {addressLines.split('\n').filter(Boolean).map((line, i) => (
-              <Text key={i} style={detailText}>{line}</Text>
+              <Text key={i} style={detailText}>
+                <Link href="#" style={{ color: '#222', textDecoration: 'none' }}>{line}</Link>
+              </Text>
             ))}
             {customerEmail ? <Text style={detailText}>{customerEmail}</Text> : null}
             <Text style={detailTextLast}> </Text>
