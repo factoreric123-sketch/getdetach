@@ -45,7 +45,9 @@ const OrderConfirmationEmail = ({
           <Section>
             <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
             {addressLines.split('\n').filter(Boolean).map((line, i) => (
-              <Text key={i} style={detailText}>{line}</Text>
+              <Text key={i} style={detailText}>
+                <Link href="#" style={{ color: '#222', textDecoration: 'none' }}>{line}</Link>
+              </Text>
             ))}
             <Text style={detailTextLast}> </Text>
           </Section>
