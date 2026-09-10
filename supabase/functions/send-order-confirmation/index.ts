@@ -40,7 +40,14 @@ serve(async (req) => {
 
     const customerEmail = session.customer_details?.email;
     const customerName = session.customer_details?.name || "";
-    const shippingAddress = session.shipping_details?.address;
+    // Stripe moved shipping details to collected_information on newer API versions;
+    // fall back to the legacy field and finally to the billing address.
+    const shippingDetails =
+      (session as any).collected_information?.shipping_details ||
+      (session as any).shipping_details ||
+      null;
+    const shippingAddress = shippingDetails?.address || session.customer_details?.address;
+    const shippingName = shippingDetails?.name || customerName;
     const quantity = session.line_items?.data?.[0]?.quantity || 1;
     const total = session.amount_total ? (session.amount_total / 100).toFixed(2) : "9.99";
 
@@ -53,14 +60,15 @@ serve(async (req) => {
 
     const addressLines = shippingAddress
       ? [
+          shippingName,
           shippingAddress.line1,
           shippingAddress.line2,
-          `${shippingAddress.city}, ${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
+          `${shippingAddress.city || ""}${shippingAddress.city ? ", " : ""}${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
           shippingAddress.country,
         ]
           .filter(Boolean)
-          .join(", ")
-      : "N/A";
+          .join("\n")
+      : "";
 
     // Send order confirmation via Lovable's transactional email system
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
