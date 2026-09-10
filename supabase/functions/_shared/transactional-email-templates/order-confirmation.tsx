@@ -19,7 +19,7 @@ const OrderConfirmationEmail = ({
   customerEmail,
   quantity = 1,
   total = '9.99',
-  addressLines = 'N/A',
+  addressLines = '',
 }: OrderConfirmationProps) => (
   <Html lang="en" dir="ltr">
     <Head />
@@ -41,9 +41,20 @@ const OrderConfirmationEmail = ({
         <Text style={totalText}><strong>Total: ${total}</strong></Text>
         <Text style={shippingNote}>Free shipping</Text>
 
+        {addressLines ? (
+          <Section>
+            <Text style={sectionHeading}><strong>Shipping Address</strong></Text>
+            {addressLines.split('\n').filter(Boolean).map((line, i) => (
+              <Text key={i} style={detailText}>{line}</Text>
+            ))}
+            <Text style={detailTextLast}> </Text>
+          </Section>
+        ) : null}
+
         <Text style={text}>
           Please note: Your order will be shipped today or tomorrow depending on what time the order was placed, via standard mail with a stamp. We do not provide shipping confirmation, tracking numbers, or delivery confirmation. We hope it arrives in a timely manner.
         </Text>
+
 
         <Hr style={hr} />
 
