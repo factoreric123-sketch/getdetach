@@ -77,7 +77,7 @@ export const template = {
     customerEmail: 'jane@example.com',
     quantity: 1,
     total: '9.99',
-    addressLines: '123 Main St, New York, NY 10001, US',
+    addressLines: 'Jane Doe\n123 Main St\nNew York, NY 10001\nUS',
   },
 } satisfies TemplateEntry
 
