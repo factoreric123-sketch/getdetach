@@ -77,14 +77,15 @@ serve(async (req) => {
 
       const addressLines = shippingAddress
         ? [
+            shippingName,
             shippingAddress.line1,
             shippingAddress.line2,
-            `${shippingAddress.city}, ${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
+            `${shippingAddress.city || ""}${shippingAddress.city ? ", " : ""}${shippingAddress.state || ""} ${shippingAddress.postal_code || ""}`.trim(),
             shippingAddress.country,
           ]
             .filter(Boolean)
-            .join(", ")
-        : "N/A";
+            .join("\n")
+        : "";
 
       // Send order confirmation via Lovable's transactional email system
       const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
