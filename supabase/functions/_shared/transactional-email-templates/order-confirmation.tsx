@@ -55,17 +55,6 @@ const OrderConfirmationEmail = ({
           Orders are mailed via U{'\u200B'}SPS stamped mail. We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day.
         </Text>
 
-        <Text style={sectionHeading}><strong>Estimated delivery times:</strong></Text>
-        <Text style={listItem}>East Coast U.S.: 2–5 business days</Text>
-        <Text style={listItem}>Midwest/Southern U.S.: 3–6 business days</Text>
-        <Text style={listItem}>West Coast U.S.: 4–7 business days</Text>
-        <Text style={listItem}>Canada: 1–3 weeks</Text>
-        <Text style={listItemLast}>Other international destinations: 2–5 weeks</Text>
-
-        <Text style={text}>
-          Delivery times are estimates and may occasionally take longer. Because orders are sent by stamped mail, tracking and delivery confirmation are not available.
-        </Text>
-
         <Text style={text}>
           Thanks for supporting {SITE_NAME}!
         </Text>
