@@ -1,4 +1,3 @@
-import googlePlayBadgeAsset from "@/assets/google-play-badge.png.asset.json";
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/schema";
 
 type StoreBadgesProps = {
@@ -11,6 +10,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
   const appStoreSize = compact
     ? "gap-2.5 rounded-lg px-3.5 py-2"
     : "w-full gap-4 rounded-[26px] px-7 py-4 sm:w-auto sm:min-w-[320px] sm:gap-5 sm:px-8";
+  const storeButtonClass = `inline-flex shrink-0 items-center border border-border bg-secondary text-secondary-foreground no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-foreground hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${appStoreSize}`;
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
@@ -19,7 +19,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download Detach on the Apple App Store"
-        className={`inline-flex shrink-0 items-center border border-border bg-secondary text-secondary-foreground no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-foreground hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${appStoreSize}`}
+        className={storeButtonClass}
       >
         <svg
           className={compact ? "h-7 w-5 shrink-0" : "h-12 w-9 shrink-0"}
@@ -43,13 +43,26 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get Detach on Google Play"
-        className="inline-flex shrink-0 transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className={storeButtonClass}
       >
-        <img
-          src={googlePlayBadgeAsset.url}
-          alt="Get it on Google Play"
-          className={`${badgeHeight} w-auto`}
-        />
+        <svg
+          className={compact ? "h-7 w-5 shrink-0" : "h-12 w-9 shrink-0"}
+          viewBox="0 0 48 54"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M5 4.5 31.8 27 5 49.5V4.5Z" fill="currentColor" />
+          <path d="m31.8 27 7.7-6.5c2.5-2.1 2.5-5.3-.1-7.1L9.4 1.1A8.2 8.2 0 0 0 5 0v4.5L31.8 27Z" fill="currentColor" opacity=".72" />
+          <path d="m31.8 27 7.7 6.5c2.5 2.1 2.5 5.3-.1 7.1L9.4 52.9A8.2 8.2 0 0 1 5 54v-4.5L31.8 27Z" fill="currentColor" opacity=".48" />
+        </svg>
+        <span className="flex flex-col gap-1 text-left leading-none">
+          <span className={`font-normal uppercase text-muted-foreground ${compact ? "text-[9px]" : "text-xs"}`}>
+            Get it on
+          </span>
+          <span className={`font-bold ${compact ? "text-lg" : "text-[28px]"}`}>
+            Google Play
+          </span>
+        </span>
       </a>
     </div>
   );
