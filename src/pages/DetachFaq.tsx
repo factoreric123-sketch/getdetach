@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Apple, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import StoreBadges from "@/components/StoreBadges";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 import { JsonLd, Breadcrumbs } from "@/components/geo/GeoBlocks";
-import { APP_STORE_URL, GOOGLE_PLAY_URL, breadcrumbSchema, faqPageSchema, softwareApplicationSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqPageSchema, softwareApplicationSchema } from "@/lib/schema";
 
 const PATH = "/detach-faq";
 
@@ -163,24 +164,8 @@ const DetachFaq = () => {
             <p className="text-muted-foreground mb-6">
               Download the free app and buy the $9.99 card when you are ready.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
-              >
-                <Apple className="w-5 h-5" />
-                Apple App Store
-              </a>
-              <a
-                href={GOOGLE_PLAY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition-all"
-              >
-                Google Play
-              </a>
+            <div className="flex flex-col items-center justify-center gap-4">
+              <StoreBadges className="justify-center" />
               <Link
                 to="/shop"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
