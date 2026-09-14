@@ -52,12 +52,12 @@ const Hero = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="flex flex-col items-center justify-center gap-4"
+          className="flex flex-col items-center justify-center gap-3"
         >
           <StoreBadges className="justify-center" />
           <a
             href="/shop"
-            className="inline-flex items-center gap-2.5 bg-white text-black px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-150 shadow-[0_0_25px_rgba(255,255,255,0.18)] cursor-pointer"
+            className="inline-flex w-full items-center justify-center gap-2 border border-border bg-secondary px-5 py-3 rounded-2xl font-semibold text-base text-secondary-foreground no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-foreground hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto sm:min-w-[220px] sm:px-6"
           >
             Order Now
           </a>
