@@ -8,8 +8,8 @@ type StoreBadgesProps = {
 const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
   const appStoreSize = compact
     ? "gap-1.5 rounded-lg px-2.5 py-1.5"
-    : "gap-2 rounded-xl px-4 py-2.5";
-  const storeButtonClass = `inline-flex shrink-0 items-center justify-center border border-black/10 bg-white text-black no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${appStoreSize}`;
+    : "w-[184px] gap-2 rounded-xl px-4 py-2.5"; // both badges the exact same width
+  const storeButtonClass = `inline-flex shrink-0 items-center justify-center border border-black/10 bg-white text-black no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background whitespace-nowrap ${appStoreSize}`;
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
