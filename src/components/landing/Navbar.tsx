@@ -31,16 +31,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           <Link to="/#features" className="hover:text-foreground transition-colors duration-150">Features</Link>
           <Link to="/#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</Link>
-          <Link to="/shop" className="hover:text-foreground transition-colors duration-150">Shop</Link>
           <Link to="/detach-faq" className="hover:text-foreground transition-colors duration-150">FAQ</Link>
-          <a
-            href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/shop"
             className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors duration-150 cursor-pointer"
           >
-            Android
-          </a>
+            Buy Now
+          </Link>
         </div>
 
         <button
