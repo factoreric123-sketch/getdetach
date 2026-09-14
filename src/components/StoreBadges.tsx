@@ -1,8 +1,5 @@
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/schema";
 
-// Temporarily hide the Android / Google Play badge. Set back to true to re-enable.
-const SHOW_ANDROID = false;
-
 type StoreBadgesProps = {
   className?: string;
   compact?: boolean;
@@ -40,7 +37,6 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
           </span>
         </span>
       </a>
-      {SHOW_ANDROID && (
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
@@ -67,7 +63,6 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
           </span>
         </span>
       </a>
-      )}
     </div>
   );
 };
