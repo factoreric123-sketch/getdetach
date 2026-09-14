@@ -7,12 +7,12 @@ type StoreBadgesProps = {
 
 const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
   const appStoreSize = compact
-    ? "gap-2 rounded-lg px-3 py-2"
-    : "w-full gap-3 rounded-2xl px-5 py-3 sm:w-auto sm:min-w-[220px] sm:gap-3.5 sm:px-6";
-  const storeButtonClass = `inline-flex shrink-0 items-center border border-border bg-secondary text-secondary-foreground no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-foreground hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${appStoreSize}`;
+    ? "w-[176px] gap-2 rounded-lg px-3 py-2"
+    : "w-[224px] gap-3 rounded-2xl px-5 py-3";
+  const storeButtonClass = `inline-flex shrink-0 items-center border border-border bg-card text-card-foreground shadow-sm no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${appStoreSize}`;
 
   return (
-    <div className={`flex flex-wrap items-center gap-3 ${className}`}>
+    <div className={`flex flex-col items-center gap-3 ${className}`}>
       <a
         href={APP_STORE_URL}
         target="_blank"

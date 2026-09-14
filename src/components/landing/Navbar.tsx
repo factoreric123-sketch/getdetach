@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link to="/detach-faq" className="hover:text-foreground transition-colors duration-150">FAQ</Link>
           <Link
             to="/shop"
-            className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors duration-150 cursor-pointer"
+            className="cursor-pointer rounded-full bg-foreground px-4 py-1.5 text-sm font-semibold text-background transition-opacity duration-150 hover:opacity-90"
           >
             Buy Now
           </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <div className="pt-2 pb-1">
                 <Link
                   to="/shop"
-                  className="block bg-white text-black text-center px-4 py-2.5 rounded-full text-sm font-semibold cursor-pointer"
+                  className="block cursor-pointer rounded-full bg-foreground px-4 py-2.5 text-center text-sm font-semibold text-background"
                   onClick={() => setOpen(false)}
                 >
                   Buy Now
