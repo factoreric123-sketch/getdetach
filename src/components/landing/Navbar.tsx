@@ -62,7 +62,6 @@ const Navbar = () => {
               {[
                 { label: "Features", to: "/#features" },
                 { label: "How it works", to: "/#how-it-works" },
-                { label: "Shop", to: "/shop" },
                 { label: "FAQ", to: "/detach-faq" },
               ].map((link) => (
                 <Link
@@ -75,15 +74,13 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-2 pb-1">
-                <a
-                  href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/shop"
                   className="block bg-white text-black text-center px-4 py-2.5 rounded-full text-sm font-semibold cursor-pointer"
                   onClick={() => setOpen(false)}
                 >
-                  Download for Android
-                </a>
+                  Buy Now
+                </Link>
               </div>
             </div>
           </motion.div>
