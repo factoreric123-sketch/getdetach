@@ -6,7 +6,6 @@ type StoreBadgesProps = {
 };
 
 const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
-  const badgeHeight = compact ? "h-10" : "h-[52px]";
   const appStoreSize = compact
     ? "gap-2.5 rounded-lg px-3.5 py-2"
     : "w-full gap-4 rounded-[26px] px-7 py-4 sm:w-auto sm:min-w-[320px] sm:gap-5 sm:px-8";
