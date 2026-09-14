@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Does an NFC app blocker work without internet?",
     answer:
-      "Yes. Blocking runs locally through Apple's Screen Time APIs and the NFC tap is a local hardware read, so sessions hold with no connection.",
+      "Yes. Blocking and the NFC tap run locally on your phone, so sessions hold with no connection.",
   },
   {
     question: "Can you bypass an NFC app blocker?",

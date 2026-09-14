@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "How many apps can I block with Detach?",
     answer:
-      "Up to 50 apps per configuration. Apple's Screen Time API has a hard limit of 50 individual apps per block setup.",
+      "On iPhone, you can block up to 50 apps per configuration because of Apple's limit. Android limits may differ.",
   },
   {
     question: "What happens if I lose my Detach card?",
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "How do I set up Detach?",
     answer:
-      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Choose the apps and websites to block. 4. Start a session. 5. Scan your Detach card to stop a session.",
+      "1. Download the free Detach app from the App Store or Google Play. 2. Grant the requested blocking permission. 3. Choose the apps and websites to block. 4. Start a session. 5. Scan your Detach card to stop a session.",
   },
   {
     question: "Can I block apps without my card?",
