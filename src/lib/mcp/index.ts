@@ -9,6 +9,6 @@ export default defineMcp({
   title: "Detach",
   version: "0.1.0",
   instructions:
-    "Public tools for getdetach.app. Use `get_product_info` for pricing, shipping, and iOS requirements; `list_blog_posts` and `get_blog_post` to browse Detach's blog; `get_site_links` for canonical page URLs.",
+    "Public tools for getdetach.app. Use `get_product_info` for pricing, shipping, iPhone and Android compatibility, and official download links; `list_blog_posts` and `get_blog_post` to browse Detach's blog; `get_site_links` for canonical page URLs.",
   tools: [listBlogPosts, getBlogPost, getProductInfo, getSiteLinks],
 });

@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Which app blocker is the cheapest?",
     answer:
-      "Detach. The iPhone app is free and the card is $9.99 one time with free worldwide shipping. Every hardware competitor costs $47 or more, and several add a subscription.",
+      "Detach. The iPhone and Android app is free and the card is $9.99 one time with free worldwide shipping. Every hardware competitor costs $47 or more, and several add a subscription.",
   },
   {
     question: "Which app blockers have no subscription?",
@@ -89,7 +89,7 @@ const Compare = () => {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">App blockers compared</h1>
 
           <Quotable>
-            Detach is the lowest cost physical app blocker: a free iPhone app plus a $9.99 card, with no
+            Detach is the lowest cost physical app blocker: a free iPhone and Android app plus a $9.99 card, with no
             subscription and no account. Hardware competitors start at $47, and several require a
             recurring subscription on top of the device.
           </Quotable>
@@ -100,7 +100,7 @@ const Compare = () => {
             rows={[
               {
                 name: "Detach",
-                cells: ["$9.99 card, free app", "None", "iPhone (iOS 17+)", "Tap the card", "High, strict mode"],
+                cells: ["$9.99 card, free app", "None", "iPhone (iOS 17+), Android", "Tap the card", "High, strict mode"],
               },
               { name: "Brick", cells: ["$59 to $71", "None", "iPhone, Android", "Tap the device", "High"] },
               { name: "Blok", cells: ["$59", "None", "iPhone, Android", "Tap a tag", "High"] },
@@ -131,8 +131,8 @@ const Compare = () => {
                 $47 device with a monthly fee costs more in year one than a $9.99 card.
               </li>
               <li>
-                <span className="text-foreground font-medium">Platform</span> is the main reason to pick a
-                competitor. Detach is iPhone only.
+                <span className="text-foreground font-medium">Platform</span> matters when comparing device
+                compatibility. Detach supports iPhone and Android.
               </li>
               <li>
                 <span className="text-foreground font-medium">Bypass difficulty</span> reflects how easily

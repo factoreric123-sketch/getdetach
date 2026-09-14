@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is the difference between Detach and Brick?",
     answer:
-      "Both block apps until you tap a physical object. Detach is an iPhone app with a $9.99 card and no subscription. Brick is a $59 to $71 hardware device that also supports Android.",
+      "Both block apps until you tap a physical object. Detach supports iPhone and Android with a $9.99 card and no subscription. Brick is a $59 to $71 hardware device.",
   },
   {
     question: "Is Detach cheaper than Brick?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "Does Detach work on Android?",
-    answer: "No. Detach is iPhone only and requires iOS 17 or later. Brick supports both iPhone and Android.",
+    answer: "Yes. Detach and Brick both support iPhone and Android. Detach requires iOS 17 or later on iPhone.",
   },
   {
     question: "Which one is harder to bypass?",
@@ -36,7 +36,7 @@ const DetachVsBrick = () => {
     setSocialMeta({
       title: "Detach vs Brick: Price, Platform and Blocking Compared",
       description:
-        "Detach vs Brick compared on price, platform, subscription, blocking method and bypass difficulty. Detach is $9.99 on iPhone; Brick is $59 to $71 cross platform.",
+        "Detach vs Brick compared on price, platform, subscription, blocking method and bypass difficulty. Both support iPhone and Android; Detach costs $9.99.",
       path: PATH,
       type: "website",
     });
@@ -68,9 +68,8 @@ const DetachVsBrick = () => {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Detach vs Brick</h1>
 
           <Quotable>
-            Detach and Brick both block phone apps until you tap a physical object. Detach is an iPhone
-            only app with a $9.99 card and no subscription. Brick is a $59 to $71 hardware device that
-            works on iPhone and Android.
+            Detach and Brick both block phone apps until you tap a physical object. Both support iPhone
+            and Android. Detach uses a $9.99 card with no subscription, while Brick costs $59 to $71.
           </Quotable>
 
           <ComparisonTable
@@ -79,9 +78,9 @@ const DetachVsBrick = () => {
             rows={[
               { name: "Price", cells: ["$9.99 card, free app", "$59 to $71 device"] },
               { name: "Subscription", cells: ["None", "None"] },
-              { name: "Platform", cells: ["iPhone, iOS 17+", "iPhone and Android"] },
+              { name: "Platform", cells: ["iPhone (iOS 17+), Android", "iPhone and Android"] },
               { name: "Unlock method", cells: ["Tap the Detach card", "Tap the Brick device"] },
-              { name: "Blocking technology", cells: ["Apple Screen Time APIs", "Apple Screen Time APIs"] },
+              { name: "Blocking technology", cells: ["System-level app blocking", "System-level app blocking"] },
               { name: "Account required", cells: ["No", "Account for app features"] },
               { name: "Strict mode", cells: ["Yes, survives app deletion", "Not equivalent"] },
               { name: "Emergency unlocks", cells: ["Configurable limit", "Emergency unbrick"] },
@@ -97,7 +96,7 @@ const DetachVsBrick = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">Choose Detach if</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
-              <li>You use an iPhone on iOS 17 or later.</li>
+              <li>You use an iPhone on iOS 17 or later or an Android phone.</li>
               <li>You want the lowest cost way to add physical friction.</li>
               <li>You want a card you can leave in a drawer or another room.</li>
               <li>You want a block that holds even if you delete the app.</li>
@@ -108,7 +107,7 @@ const DetachVsBrick = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">Choose Brick if</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
-              <li>You use Android, or share a setup across both platforms.</li>
+              <li>You prefer Brick's specific Android or cross-platform experience.</li>
               <li>You prefer a dedicated hardware device over a card.</li>
               <li>You want Brick's specific app ecosystem and modes.</li>
             </ul>

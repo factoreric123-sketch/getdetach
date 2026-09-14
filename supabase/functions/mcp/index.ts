@@ -95,7 +95,7 @@ import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.24.0";
 var get_product_info_default = defineTool3({
   name: "get_product_info",
   title: "Get product info",
-  description: "Return details about the Detach card and companion iOS app: price, shipping, requirements, and purchase / App Store links.",
+  description: "Return details about the Detach card and companion iPhone and Android app: price, shipping, requirements, and official download links.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
@@ -104,9 +104,10 @@ var get_product_info_default = defineTool3({
       tagline: "A physical card that helps you take breaks from your phone.",
       price_usd: 9.99,
       shipping: "Free worldwide shipping.",
-      requirements: "Requires iOS 17 or later. iPhone only.",
+      platforms: "iPhone (iOS 17 or later) and Android.",
       shop_url: "https://getdetach.app/shop",
       app_store_url: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      google_play_url: "https://play.google.com/store/apps/details?id=app.detach&pli=1",
       website: "https://getdetach.app",
       support_email: "getdetach@gmail.com"
     };
@@ -136,7 +137,8 @@ var get_site_links_default = defineTool4({
       contact: "https://getdetach.app/contact",
       privacy_policy: "https://getdetach.app/privacy-policy",
       terms: "https://getdetach.app/terms",
-      app_store: "https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+      app_store: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      google_play: "https://play.google.com/store/apps/details?id=app.detach&pli=1"
     };
     return {
       content: [{ type: "text", text: JSON.stringify(links, null, 2) }],
@@ -150,7 +152,7 @@ var mcp_default = defineMcp({
   name: "detach-mcp",
   title: "Detach",
   version: "0.1.0",
-  instructions: "Public tools for getdetach.app. Use `get_product_info` for pricing, shipping, and iOS requirements; `list_blog_posts` and `get_blog_post` to browse Detach's blog; `get_site_links` for canonical page URLs.",
+  instructions: "Public tools for getdetach.app. Use `get_product_info` for pricing, shipping, iPhone and Android compatibility, and official download links; `list_blog_posts` and `get_blog_post` to browse Detach's blog; `get_site_links` for canonical page URLs.",
   tools: [list_blog_posts_default, get_blog_post_default, get_product_info_default, get_site_links_default]
 });
 

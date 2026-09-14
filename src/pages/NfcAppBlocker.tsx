@@ -14,6 +14,7 @@ import {
 } from "@/components/geo/GeoBlocks";
 import {
   APP_STORE_URL,
+  GOOGLE_PLAY_URL,
   breadcrumbSchema,
   faqPageSchema,
   softwareApplicationSchema,
@@ -51,12 +52,12 @@ const faqs = [
 
 const facts = [
   { label: "Category", value: "NFC app blocker (physical unlock app blocker)" },
-  { label: "How unlocking works", value: "Tap an NFC card with your iPhone" },
+  { label: "How unlocking works", value: "Tap an NFC card with your phone" },
   { label: "Detach card price", value: "$9.99 one time" },
   { label: "Detach app price", value: "Free" },
-  { label: "Platform", value: "iPhone, iOS 17 or later" },
+  { label: "Platform", value: "iPhone (iOS 17 or later) and Android" },
   { label: "Subscription", value: "None" },
-  { label: "Blocking technology", value: "Apple Screen Time APIs" },
+  { label: "Blocking technology", value: "System-level app blocking" },
   { label: "Shipping", value: "Free worldwide" },
   { label: "Last verified", value: "August 2026" },
 ];
@@ -99,7 +100,7 @@ const NfcAppBlocker = () => {
 
           <Quotable>
             An NFC app blocker is an app that blocks distracting apps on your phone and unblocks them
-            only when you physically tap an NFC card. Detach is an iPhone NFC app blocker: the app is
+             only when you physically tap an NFC card. Detach is an iPhone and Android NFC app blocker: the app is
             free, the card is $9.99 one time, and the tap creates physical friction that reduces
             impulsive phone use.
           </Quotable>
@@ -135,7 +136,7 @@ const NfcAppBlocker = () => {
               rows={[
                 {
                   name: "Detach",
-                  cells: ["$9.99 card", "None", "iPhone (iOS 17+)", "Lowest cost, strict mode"],
+                  cells: ["$9.99 card", "None", "iPhone (iOS 17+), Android", "Lowest cost, strict mode"],
                 },
                 {
                   name: "Brick",
