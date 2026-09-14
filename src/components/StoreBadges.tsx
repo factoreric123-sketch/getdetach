@@ -54,8 +54,8 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
           <path d="m31.8 27 7.7-6.5c2.5-2.1 2.5-5.3-.1-7.1L9.4 1.1A8.2 8.2 0 0 0 5 0v4.5L31.8 27Z" fill="currentColor" opacity=".72" />
           <path d="m31.8 27 7.7 6.5c2.5 2.1 2.5 5.3-.1 7.1L9.4 52.9A8.2 8.2 0 0 1 5 54v-4.5L31.8 27Z" fill="currentColor" opacity=".48" />
         </svg>
-        <span className="flex flex-col gap-0.5 text-left leading-none">
-          <span className={`font-normal uppercase text-muted-foreground ${compact ? "text-[8px]" : "text-[10px]"}`}>
+        <span className="flex flex-col gap-0.5 text-center leading-none">
+          <span className={`font-normal uppercase text-black/60 ${compact ? "text-[8px]" : "text-[10px]"}`}>
             Download on the
           </span>
           <span className={`font-bold ${compact ? "text-base" : "text-xl"}`}>
