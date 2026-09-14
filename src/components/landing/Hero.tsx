@@ -57,7 +57,7 @@ const Hero = () => {
           <StoreBadges className="justify-center" />
           <a
             href="/shop"
-            className="inline-flex w-full items-center justify-center gap-2 border border-black/10 bg-white px-5 py-3 rounded-2xl text-center font-semibold text-base text-black no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto sm:min-w-[220px] sm:px-6"
+            className="inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-4 py-2.5 rounded-xl text-center font-semibold text-sm text-black no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Order Now
           </a>
