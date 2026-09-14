@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import heroImage from "@/assets/hero-image.jpg";
+import StoreBadges from "@/components/StoreBadges";
 
 const Hero = () => {
   return (
@@ -51,24 +52,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="flex flex-col items-center justify-center gap-4"
         >
-          <a
-            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 border border-white/15 bg-white/[0.05] text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/[0.08] hover:border-white/25 transition-all duration-150 cursor-pointer"
-          >
-            Apple App Store
-          </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 border border-white/15 bg-white/[0.05] text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/[0.08] hover:border-white/25 transition-all duration-150 cursor-pointer"
-          >
-            Google Play
-          </a>
+          <StoreBadges className="justify-center" />
           <a
             href="/shop"
             className="inline-flex items-center gap-2.5 bg-white text-black px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-150 shadow-[0_0_25px_rgba(255,255,255,0.18)] cursor-pointer"

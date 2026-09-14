@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Apple, ArrowRight, Smartphone, Shield, Zap, Users, HelpCircle } from "lucide-react";
+import { ArrowRight, Smartphone, Shield, Zap, Users, HelpCircle } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import StoreBadges from "@/components/StoreBadges";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const steps = [
@@ -98,26 +99,7 @@ const DetachApp = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
                Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps on iPhone and Android. Instead of relying on willpower, Detach uses a physical card to create real friction between you and your screen.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a
-                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all"
-              >
-                <Apple className="w-5 h-5" />
-                Apple App Store
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary/80 transition-all"
-              >
-                <Smartphone className="w-5 h-5" />
-                Google Play
-              </a>
-            </div>
+            <StoreBadges className="justify-center" />
           </section>
 
           {/* How It Works */}
@@ -192,25 +174,8 @@ const DetachApp = () => {
             <p className="text-muted-foreground mb-6">
               Download the Detach app blocker for free and start reducing your screen time today.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
-              >
-                <Apple className="w-5 h-5" />
-                Apple App Store
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition-all"
-              >
-                <Smartphone className="w-5 h-5" />
-                Google Play
-              </a>
+            <div className="flex flex-col items-center justify-center gap-4">
+              <StoreBadges className="justify-center" />
               <Link
                 to="/blog"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
