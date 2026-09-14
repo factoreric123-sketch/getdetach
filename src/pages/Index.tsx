@@ -23,11 +23,14 @@ const Index = () => {
     "@type": "SoftwareApplication",
     name: "Detach",
     applicationCategory: "ProductivityApplication",
-    operatingSystem: "iOS 17 or later",
+    operatingSystem: ["iOS 17 or later", "Android"],
     description:
-      "Detach is an iPhone app blocker that uses a physical NFC card to block distracting apps until you tap to end the session.",
+      "Detach is an iPhone and Android app blocker that uses a physical NFC card to block distracting apps until you tap to end the session.",
     url: "https://getdetach.app/",
-    downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    downloadUrl: [
+      "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      "https://play.google.com/store/apps/details?id=app.detach&pli=1",
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",

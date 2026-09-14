@@ -214,6 +214,16 @@ const NfcAppBlocker = () => {
                   Detach on the App Store
                 </a>
               </li>
+              <li>
+                <a
+                  href={GOOGLE_PLAY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-2"
+                >
+                  Detach on Google Play
+                </a>
+              </li>
             </ul>
           </section>
         </div>

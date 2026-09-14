@@ -51,7 +51,7 @@ const Product = () => {
                 {[
                   "Soft-touch matte finish",
                   "No battery, no charging, ever",
-                  "Works with iPhone (iOS 17+)",
+                  "Works with iPhone (iOS 17+) and Android",
                   "Add a magnet for $2",
                 ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
