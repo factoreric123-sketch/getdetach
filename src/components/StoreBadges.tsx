@@ -40,6 +40,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
           </span>
         </span>
       </a>
+      {SHOW_ANDROID && (
       <a
         href={GOOGLE_PLAY_URL}
         target="_blank"
