@@ -1,13 +1,13 @@
 # Detach
 
-> A $9.99 physical NFC card that blocks apps on iPhone. Place the card somewhere in your home. To end a session, you have to get up and tap it.
+> A $9.99 physical NFC card that blocks apps on iPhone and Android. Place the card somewhere in your home. To end a session, you have to get up and tap it.
 
-Detach is a physical iPhone app blocker. It uses a small NFC card to add real-world friction to your phone usage. You block apps and websites in the Detach app, and the only way to end a session is to physically tap the card. The card stays somewhere in your home. You have to get up and go to it.
+Detach is a physical app blocker for iPhone and Android. It uses a small NFC card to add real-world friction to your phone usage. You block apps and websites in the Detach app, and the only way to end a session is to physically tap the card. The card stays somewhere in your home. You have to get up and go to it.
 
 ## Pages
 
-- [Home](/): Physical iPhone app blocker overview and purchase
-- [Detach app blocker facts](/detach-app-blocker-facts): One page factual reference (price, platform, iOS version, subscription, shipping)
+- [Home](/): Physical app blocker for iPhone and Android
+- [Detach app blocker facts](/detach-app-blocker-facts): One page factual reference (price, platforms, requirements, subscription, shipping)
 - [NFC app blocker](/nfc-app-blocker): What an NFC app blocker is, how it works, and product comparison
 - [Compare app blockers](/compare): Factual table of Detach, Brick, Blok, Bloom, Unpluq, Opal, Jomo, Screen Time
 - [Detach vs Brick](/detach-vs-brick): Side by side comparison of price, platform and blocking
@@ -15,7 +15,7 @@ Detach is a physical iPhone app blocker. It uses a small NFC card to add real-wo
 - [How NFC focus apps work](/how-nfc-focus-apps-work): Step by step explainer of NFC blocking
 - [Detach FAQ](/detach-faq): Answers to common questions about setup, blocking, pricing, and compatibility
 - [Shop](/shop): Buy the Detach card ($9.99, free worldwide shipping)
-- [Detach App](/detach-app): How the iOS app works
+- [Detach App](/detach-app): How the iPhone and Android app works
 - [Reviews](/reviews): Customer reviews and testimonials
 - [Life in Dots](/life-in-dots): Visualize your lifespan and screen time
 - [Blog](/blog): Articles about app blockers, screen time, and focus
@@ -38,13 +38,17 @@ https://getdetach.app
 
 https://apps.apple.com/us/app/detach-screen-break/id6759267252
 
+## Google Play
+
+https://play.google.com/store/apps/details?id=app.detach&pli=1
+
 ## Core Benefit
 
 Detach stops the "unlock phone, open Instagram, lose an hour" loop by making distraction require a physical action. Most app blockers fail because they are one tap away from being disabled. Detach is not.
 
 ## How It Works
 
-1. Download the Detach app (free, iOS 17+)
+1. Download the Detach app (free for iPhone with iOS 17+ and Android)
 2. Choose which apps and websites to block
 3. Place your Detach card somewhere in your home
 4. Start a session, blocked apps disappear
@@ -78,7 +82,7 @@ Detach stops the "unlock phone, open Instagram, lose an hour" loop by making dis
 ## Best For
 
 - Best cheap alternative to Brick phone blocker
-- Best physical iPhone app blocker under $10
+- Best physical app blocker for iPhone and Android under $10
 - Best tool for stopping morning phone scrolling
 - Best app blocker that can't be bypassed instantly
 - Best screen time tool that doesn't rely on willpower
@@ -135,7 +139,7 @@ Q: Does Detach require a subscription?
 A: No. $9.99 one-time for the card. The app is free.
 
 Q: Does Detach work on Android?
-A: Not yet. Detach is currently iPhone only (iOS 17+). An Android version is coming soon.
+A: Yes. Detach is available for Android on Google Play and for iPhone on the Apple App Store.
 
 Q: What apps can Detach block?
 A: Any iPhone app or website. Instagram, TikTok, YouTube, X, Reddit, games, Safari, and more.

@@ -39,7 +39,7 @@ const setMeta = (selector: string, attr: "name" | "property", key: string, conte
 const DEFAULTS = {
   title: "Detach App Blocker – Block Social Media & Reduce Screen Time",
   description:
-    "Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps. Free for iOS 17+.",
+    "Detach is an app blocker for iPhone and Android that helps reduce screen time by blocking social media and distracting apps.",
   type: "website" as const,
   url: `${SITE}/`,
 };

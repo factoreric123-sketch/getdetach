@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "Is there a Brick alternative for Android?",
     answer:
-      "Blok, Bloom and Unpluq all support Android. Detach is iPhone only and requires iOS 17 or later.",
+      "Yes. Detach, Blok, Bloom and Unpluq support Android. Detach costs $9.99 with no subscription.",
   },
   {
     question: "Do Brick alternatives work the same way?",
@@ -65,7 +65,7 @@ const BrickAlternative = () => {
 
           <Quotable>
             A Brick alternative is any product that blocks phone apps until you tap a physical object.
-            The main options are Detach ($9.99 card, iPhone, no subscription), Blok ($59), Bloom ($47
+            The main options are Detach ($9.99 card, iPhone and Android, no subscription), Blok ($59), Bloom ($47
             plus subscription) and Unpluq (about $59 plus subscription).
           </Quotable>
 
@@ -73,7 +73,7 @@ const BrickAlternative = () => {
             caption="Brick alternatives compared"
             columns={["Price", "Subscription", "Platform", "Best for"]}
             rows={[
-              { name: "Detach", cells: ["$9.99 card", "None", "iPhone (iOS 17+)", "Cheapest effective option"] },
+              { name: "Detach", cells: ["$9.99 card", "None", "iPhone (iOS 17+), Android", "Cheapest effective option"] },
               { name: "Brick", cells: ["$59 to $71", "None", "iPhone and Android", "Cross platform hardware"] },
               { name: "Blok", cells: ["$59", "None", "iPhone and Android", "Multiple tag placements"] },
               { name: "Bloom", cells: ["$47 device", "Yes", "iPhone and Android", "Guided coaching"] },
@@ -114,8 +114,8 @@ const BrickAlternative = () => {
             <h2 className="text-2xl font-semibold mb-3">Where Detach fits</h2>
             <p className="text-muted-foreground leading-relaxed">
               Detach keeps the mechanism that makes Brick work and removes the hardware cost. You get a
-              free iPhone app, a $9.99 card, no subscription and no account. Brick remains the better
-              pick if you need Android support or want a dedicated hardware device.
+              free iPhone and Android app, a $9.99 card, no subscription and no account. Brick may be a better
+              pick if you want its dedicated hardware device or specific app ecosystem.
             </p>
           </section>
 

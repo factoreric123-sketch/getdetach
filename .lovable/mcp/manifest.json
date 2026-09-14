@@ -65,7 +65,7 @@
       {
         "name": "get_product_info",
         "title": "Get product info",
-        "description": "Return details about the Detach card and companion iOS app: price, shipping, requirements, and purchase / App Store links.",
+        "description": "Return details about the Detach card and companion iPhone and Android app: price, shipping, requirements, and official download links.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

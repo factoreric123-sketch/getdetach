@@ -78,12 +78,12 @@ export const ComparisonTable = ({
 
 export const SpecList = () => (
   <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
-    <li>Platform: iPhone only, iOS 17 or later.</li>
+    <li>Platform: iPhone (iOS 17 or later) and Android.</li>
     <li>App price: free to download.</li>
     <li>Detach card: $9.99, one time purchase.</li>
     <li>Subscription: none.</li>
     <li>Account required: none.</li>
-    <li>Blocking method: Apple's Screen Time APIs.</li>
+    <li>Blocking method: system-level app blocking.</li>
     <li>Unlock method: physical NFC tap on the Detach card.</li>
     <li>Session options: scheduled sessions, manual sessions, strict mode.</li>
     <li>Emergency unlocks: a limited number you configure yourself.</li>

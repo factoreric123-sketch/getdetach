@@ -18,6 +18,7 @@ export default defineTool({
       privacy_policy: "https://getdetach.app/privacy-policy",
       terms: "https://getdetach.app/terms",
       app_store: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      google_play: "https://play.google.com/store/apps/details?id=app.detach&pli=1",
     };
     return {
       content: [{ type: "text", text: JSON.stringify(links, null, 2) }],

@@ -1,5 +1,6 @@
 export const SITE = "https://getdetach.app";
 export const APP_STORE_URL = "https://apps.apple.com/us/app/detach-screen-break/id6759267252";
+export const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=app.detach&pli=1";
 
 export const abs = (path: string) => (path.startsWith("http") ? path : `${SITE}${path}`);
 
@@ -7,13 +8,13 @@ export const softwareApplicationSchema = (path: string) => ({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Detach",
-  operatingSystem: "iOS 17",
+  operatingSystem: ["iOS 17 or later", "Android"],
   applicationCategory: "HealthApplication",
   applicationSubCategory: "App Blocker",
   description:
-    "Detach is an iPhone app blocker that uses NFC taps to unlock distracting apps, creating physical friction that reduces impulsive phone use.",
+    "Detach is an iPhone and Android app blocker that uses NFC taps to unlock distracting apps, creating physical friction that reduces impulsive phone use.",
   url: abs(path),
-  downloadUrl: APP_STORE_URL,
+  downloadUrl: [APP_STORE_URL, GOOGLE_PLAY_URL],
   brand: { "@type": "Brand", name: "Detach" },
   offers: {
     "@type": "Offer",
@@ -29,7 +30,7 @@ export const cardProductSchema = () => ({
   "@type": "Product",
   name: "Detach Card",
   description:
-    "Physical NFC card that ends focus sessions in the Detach iOS app. One time purchase, no subscription, free worldwide shipping.",
+    "Physical NFC card that ends focus sessions in the Detach app for iPhone and Android. One time purchase, no subscription, free worldwide shipping.",
   brand: { "@type": "Brand", name: "Detach" },
   category: "App Blocker",
   url: `${SITE}/shop`,
@@ -85,7 +86,7 @@ export const howToSchema = ({
   totalTime: "PT5M",
   estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "9.99" },
   supply: [{ "@type": "HowToSupply", name: "Detach card" }],
-  tool: [{ "@type": "HowToTool", name: "iPhone running iOS 17 or later" }],
+  tool: [{ "@type": "HowToTool", name: "iPhone running iOS 17 or later or an Android phone" }],
   step: steps.map((s, i) => ({
     "@type": "HowToStep",
     position: i + 1,

@@ -6,7 +6,7 @@ import Footer from "@/components/landing/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 import { JsonLd, Breadcrumbs } from "@/components/geo/GeoBlocks";
-import { APP_STORE_URL, breadcrumbSchema, faqPageSchema, softwareApplicationSchema } from "@/lib/schema";
+import { APP_STORE_URL, GOOGLE_PLAY_URL, breadcrumbSchema, faqPageSchema, softwareApplicationSchema } from "@/lib/schema";
 
 const PATH = "/detach-faq";
 
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "What’s included with a Detach purchase?",
     answer:
-      "Your purchase includes the physical Detach card and full access to the Detach iPhone app. No subscriptions, no extra fees. Buy once, use forever.",
+      "Your purchase includes the physical Detach card and full access to the Detach app for iPhone and Android. No subscriptions, no extra fees. Buy once, use forever.",
   },
   {
     question: "Does Detach ship internationally?",
@@ -33,22 +33,22 @@ const faqs = [
   {
     question: "Is my phone compatible with Detach?",
     answer:
-      "Detach currently works with iPhones running iOS 17.0 or later. An Android version is coming soon.",
+      "Detach works with Android phones and iPhones running iOS 17.0 or later.",
   },
   {
     question: "Is Detach available on Android?",
     answer:
-      "Not yet. Detach is currently iPhone only. An Android version is in development and will be released soon.",
+      "Yes. Detach is available for Android on Google Play.",
   },
   {
     question: "What can I block with Detach?",
     answer:
-      "You can block iPhone apps and selected websites in browsers.",
+      "You can block apps and selected websites on iPhone and Android.",
   },
   {
     question: "How many apps can I block with Detach?",
     answer:
-      "Up to 50 apps per configuration. Apple's Screen Time API has a hard limit of 50 individual apps per block setup.",
+      "On iPhone, you can block up to 50 apps per configuration because of Apple's limit. Android limits may differ.",
   },
   {
     question: "What happens if I lose my Detach card?",
@@ -61,9 +61,9 @@ const faqs = [
       "No. Your blocking information and session history are stored locally on your phone. Detach cannot see or access your block lists or session data.",
   },
   {
-    question: "How do I set up Detach with my iPhone?",
+    question: "How do I set up Detach?",
     answer:
-      "1. Download the free Detach app from the App Store. 2. Grant Screen Time permission so the app can block apps at the system level. 3. Choose the apps and websites to block. 4. Start a session. 5. Scan your Detach card to stop a session.",
+      "1. Download the free Detach app from the App Store or Google Play. 2. Grant the requested blocking permission. 3. Choose the apps and websites to block. 4. Start a session. 5. Scan your Detach card to stop a session.",
   },
   {
     question: "Can I block apps without my card?",
@@ -87,7 +87,7 @@ const DetachFaq = () => {
     setSocialMeta({
       title: "Detach FAQ – Pricing, Compatibility, Blocking, and Setup",
       description:
-        "Answers to the most common Detach questions: how it beats Screen Time, strict mode, what you can block, iPhone requirements, Android plans, shipping, and setup.",
+      "Answers to the most common Detach questions: strict mode, blocking, iPhone and Android compatibility, shipping, and setup.",
       path: PATH,
       type: "website",
     });
@@ -171,7 +171,15 @@ const DetachFaq = () => {
                 className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
               >
                 <Apple className="w-5 h-5" />
-                Download Free
+                Apple App Store
+              </a>
+              <a
+                href={GOOGLE_PLAY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition-all"
+              >
+                Google Play
               </a>
               <Link
                 to="/shop"

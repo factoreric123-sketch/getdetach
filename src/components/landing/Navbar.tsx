@@ -34,12 +34,12 @@ const Navbar = () => {
           <Link to="/shop" className="hover:text-foreground transition-colors duration-150">Shop</Link>
           <Link to="/detach-faq" className="hover:text-foreground transition-colors duration-150">FAQ</Link>
           <a
-            href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+            href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors duration-150 cursor-pointer"
           >
-            Download
+            Android
           </a>
         </div>
 
@@ -79,13 +79,13 @@ const Navbar = () => {
               ))}
               <div className="pt-2 pb-1">
                 <a
-                  href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                  href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white text-black text-center px-4 py-2.5 rounded-full text-sm font-semibold cursor-pointer"
                   onClick={() => setOpen(false)}
                 >
-                  Download
+                  Download for Android
                 </a>
               </div>
             </div>

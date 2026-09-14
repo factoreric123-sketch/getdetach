@@ -35,13 +35,16 @@ const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Detach",
-  operatingSystem: "iOS 17",
+  operatingSystem: ["iOS 17 or later", "Android"],
   applicationCategory: "HealthApplication",
   applicationSubCategory: "App Blocker",
   description:
-    "Detach is a free iPhone app blocker that works with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
+    "Detach is a free app blocker for iPhone and Android that works with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
   url: "https://getdetach.app/detach-app",
-  downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+  downloadUrl: [
+    "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    "https://play.google.com/store/apps/details?id=app.detach&pli=1",
+  ],
   brand: { "@type": "Brand", name: "Detach" },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -93,17 +96,28 @@ const DetachApp = () => {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
-              Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps on your iPhone. Instead of relying on willpower, Detach uses physical NFC tags to create real friction between you and your screen.
+               Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps on iPhone and Android. Instead of relying on willpower, Detach uses a physical card to create real friction between you and your screen.
             </p>
-            <a
-              href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all"
-            >
-              <Apple className="w-5 h-5" />
-              Try Detach Free
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all"
+              >
+                <Apple className="w-5 h-5" />
+                Apple App Store
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary/80 transition-all"
+              >
+                <Smartphone className="w-5 h-5" />
+                Google Play
+              </a>
+            </div>
           </section>
 
           {/* How It Works */}
@@ -186,7 +200,16 @@ const DetachApp = () => {
                 className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
               >
                 <Apple className="w-5 h-5" />
-                Download Free
+                Apple App Store
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition-all"
+              >
+                <Smartphone className="w-5 h-5" />
+                Google Play
               </a>
               <Link
                 to="/blog"

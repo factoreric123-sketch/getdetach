@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Apple } from "lucide-react";
+import { Apple, Smartphone } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-lg font-bold">Detach</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              An app blocker for iPhone that uses a physical card to make quitting your session feel intentional, not accidental.
+              An app blocker for iPhone and Android that uses a physical card to make quitting your session feel intentional, not accidental.
             </p>
             <a
               href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
@@ -24,6 +24,15 @@ const Footer = () => {
             >
               <Apple className="w-4 h-4" />
               Download on App Store
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-secondary/80 transition-colors mt-2"
+            >
+              <Smartphone className="w-4 h-4" />
+              Get it on Google Play
             </a>
           </div>
 

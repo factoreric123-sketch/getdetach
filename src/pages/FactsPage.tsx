@@ -5,11 +5,12 @@ import Footer from "@/components/landing/Footer";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/detach-screen-break/id6759267252";
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=app.detach&pli=1";
 
 const facts: Array<{ label: string; value: React.ReactNode }> = [
-  { label: "Product category", value: "Physical app blocker card + iOS app" },
-  { label: "Platform", value: "iPhone" },
-  { label: "Minimum system", value: "iOS 17" },
+  { label: "Product category", value: "Physical app blocker card + mobile app" },
+  { label: "Platform", value: "iPhone and Android" },
+  { label: "iPhone requirement", value: "iOS 17 or later" },
   { label: "App price", value: "Free" },
   { label: "Optional Detach card", value: "$9.99 one time" },
   { label: "Subscription", value: "None" },
@@ -27,21 +28,34 @@ const facts: Array<{ label: string; value: React.ReactNode }> = [
       </a>
     ),
   },
+  {
+    label: "Google Play",
+    value: (
+      <a
+        href={GOOGLE_PLAY_URL}
+        className="text-primary underline underline-offset-2 hover:text-primary/80"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Direct listing
+      </a>
+    ),
+  },
   { label: "Shipping", value: "Free worldwide" },
-  { label: "Last verified", value: "July 2026" },
+  { label: "Last verified", value: "September 2026" },
 ];
 
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Detach",
-  operatingSystem: "iOS 17",
+  operatingSystem: ["iOS 17 or later", "Android"],
   applicationCategory: "HealthApplication",
   applicationSubCategory: "App Blocker",
   description:
-    "Detach is a physical app blocker card that works with a free iOS app. Blocked apps stay blocked until you physically tap the card.",
+    "Detach is a physical app blocker card that works with a free app for iPhone and Android. Blocked apps stay blocked until you physically tap the card.",
   url: "https://getdetach.app/detach-app-blocker-facts",
-  downloadUrl: APP_STORE_URL,
+  downloadUrl: [APP_STORE_URL, GOOGLE_PLAY_URL],
   brand: { "@type": "Brand", name: "Detach" },
   offers: {
     "@type": "Offer",
@@ -57,7 +71,7 @@ const productSchema = {
   "@type": "Product",
   name: "Detach Card",
   description:
-    "Physical NFC card that ends focus sessions in the Detach iOS app. One time purchase, no subscription, free worldwide shipping.",
+    "Physical NFC card that ends focus sessions in the Detach app for iPhone and Android. One time purchase, no subscription, free worldwide shipping.",
   brand: { "@type": "Brand", name: "Detach" },
   category: "App Blocker",
   url: "https://getdetach.app/shop",
@@ -84,6 +98,7 @@ const organizationSchema = {
   sameAs: [
     "https://getdetach.app",
     APP_STORE_URL,
+    GOOGLE_PLAY_URL,
   ],
 };
 
@@ -105,9 +120,9 @@ const FactsPage = () => {
   useEffect(() => {
     setCanonical("/detach-app-blocker-facts");
     setSocialMeta({
-      title: "Detach App Blocker Facts – Price, Platform, iOS Requirements",
+      title: "Detach App Blocker Facts – Price and Compatibility",
       description:
-        "Fast factual reference for Detach: physical app blocker card plus free iOS app. $9.99 card, no subscription, no account, iOS 17+, free worldwide shipping.",
+        "Detach facts: free app for iPhone and Android, $9.99 physical card, no subscription, no account, and free worldwide shipping.",
       path: "/detach-app-blocker-facts",
       type: "website",
     });
@@ -160,7 +175,7 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">What Detach is</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Detach is a free iPhone app blocker that works with an optional $9.99 physical card. You
+              Detach is a free app blocker for iPhone and Android that works with an optional $9.99 physical card. You
               choose which apps and websites to block in the Detach app, then start a focus session.
               Blocked apps become unavailable at the system level. The only way to end the session is
               to physically tap the Detach card, which you keep somewhere in your home. That physical
@@ -172,7 +187,7 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">How it works</h2>
             <ol className="list-decimal pl-5 space-y-2 text-muted-foreground leading-relaxed">
-              <li>Download the free Detach app on iPhone (iOS 17 or later).</li>
+              <li>Download the free Detach app on iPhone (iOS 17 or later) or Android.</li>
               <li>Choose the apps and websites you want blocked during focus sessions.</li>
               <li>Place your Detach card somewhere out of easy reach.</li>
               <li>Start a session. Blocked apps become inaccessible immediately.</li>
@@ -183,8 +198,8 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">What Detach can block</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Any iOS app or website: Instagram, TikTok, YouTube, X (Twitter), Reddit, Snapchat,
-              Facebook, games, Safari, Chrome, and more. Blocking uses Apple's Screen Time API, so
+              Apps and websites including Instagram, TikTok, YouTube, X (Twitter), Reddit, Snapchat,
+              Facebook, games, Safari, Chrome, and more. Detach uses system-level controls, so
               blocked apps cannot be opened through notifications, links, or search during a session.
             </p>
           </section>
@@ -203,7 +218,7 @@ const FactsPage = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-3">Pricing</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
-              <li>Detach iOS app: free.</li>
+              <li>Detach app for iPhone and Android: free.</li>
               <li>Detach card: $9.99, one time purchase, no subscription.</li>
               <li>Shipping: free worldwide.</li>
               <li>No account is required to use the app.</li>
@@ -251,6 +266,16 @@ const FactsPage = () => {
                   className="text-primary underline underline-offset-2 hover:text-primary/80"
                 >
                   Apple App Store listing
+                </a>
+              </li>
+              <li>
+                <a
+                  href={GOOGLE_PLAY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-2 hover:text-primary/80"
+                >
+                  Google Play listing
                 </a>
               </li>
             </ul>

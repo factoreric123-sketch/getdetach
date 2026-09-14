@@ -43,7 +43,7 @@ const Terms = () => {
             <h2 className="text-xl font-bold mb-3">Use of the App</h2>
             <p className="text-muted-foreground">
               Detach is a digital wellness tool that helps you manage screen time by blocking apps and websites
-              during focus sessions. The app uses Apple's Screen Time API and NFC technology to provide its functionality.
+              during focus sessions. The app uses system-level blocking controls and NFC technology to provide its functionality.
               You are responsible for your own use of the app and any consequences thereof.
             </p>
           </section>
