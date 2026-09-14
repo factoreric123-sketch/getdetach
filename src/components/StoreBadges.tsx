@@ -67,6 +67,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
           </span>
         </span>
       </a>
+      )}
     </div>
   );
 };
