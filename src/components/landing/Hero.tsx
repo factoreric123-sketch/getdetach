@@ -59,7 +59,15 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 border border-white/15 bg-white/[0.05] text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/[0.08] hover:border-white/25 transition-all duration-150 cursor-pointer"
           >
-            Download App
+            Apple App Store
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=app.detach&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 border border-white/15 bg-white/[0.05] text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/[0.08] hover:border-white/25 transition-all duration-150 cursor-pointer"
+          >
+            Google Play
           </a>
           <a
             href="/shop"

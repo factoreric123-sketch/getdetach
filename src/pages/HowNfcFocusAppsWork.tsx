@@ -11,7 +11,7 @@ const PATH = "/how-nfc-focus-apps-work";
 const steps = [
   {
     name: "Install the app",
-    text: "Download the Detach app on an iPhone running iOS 17 or later. No account is required.",
+    text: "Download the Detach app on an iPhone running iOS 17 or later or on Android. No account is required.",
   },
   {
     name: "Grant Screen Time permission",
