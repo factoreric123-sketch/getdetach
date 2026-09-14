@@ -1,5 +1,8 @@
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/schema";
 
+// Temporarily hide the Android / Google Play badge. Set back to true to re-enable.
+const SHOW_ANDROID = false;
+
 type StoreBadgesProps = {
   className?: string;
   compact?: boolean;
