@@ -38,6 +38,79 @@ serve(async (req) => {
 
     const event = await stripe.webhooks.constructEventAsync(body, signature, webhookSecret);
 
+    if (event.type === "payment_intent.payment_failed") {
+      const pi = event.data.object as Stripe.PaymentIntent;
+
+      // Find an email for the failed attempt: receipt email, the failing payment
+      // method's billing details, or the attached customer record.
+      let failedEmail: string | null =
+        pi.receipt_email ||
+        (pi.last_payment_error?.payment_method as any)?.billing_details?.email ||
+        null;
+
+      if (!failedEmail && pi.customer) {
+        try {
+          const customerId = typeof pi.customer === "string" ? pi.customer : pi.customer.id;
+          const customer = await stripe.customers.retrieve(customerId);
+          failedEmail = (customer as Stripe.Customer).email ?? null;
+        } catch (e) {
+          console.error("Could not retrieve customer for failed payment:", e);
+        }
+      }
+
+      if (!failedEmail) {
+        console.log("Payment failed with no email available, nothing to follow up:", pi.id);
+        return new Response(JSON.stringify({ received: true }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 200,
+        });
+      }
+
+      const email = failedEmail.toLowerCase().trim();
+      const supabase = createClient(
+        Deno.env.get("SUPABASE_URL")!,
+        Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+      );
+
+      const { data: existing } = await supabase
+        .from("failed_payment_followups")
+        .select("id, sent_at, cancelled_at")
+        .eq("email", email)
+        .maybeSingle();
+
+      if (!existing) {
+        const { error: insertError } = await supabase.from("failed_payment_followups").insert({
+          email,
+          stripe_payment_intent_id: pi.id,
+          first_failed_at: new Date().toISOString(),
+          send_after: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
+        });
+        if (insertError) console.error("Failed to record failed payment follow-up:", insertError);
+        else console.log("Failed payment follow-up scheduled for:", email);
+      } else if (existing.sent_at || existing.cancelled_at) {
+        // Previous cycle is closed; start a fresh 5 minute window.
+        const { error: resetError } = await supabase
+          .from("failed_payment_followups")
+          .update({
+            stripe_payment_intent_id: pi.id,
+            first_failed_at: new Date().toISOString(),
+            send_after: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
+            sent_at: null,
+            cancelled_at: null,
+          })
+          .eq("id", existing.id);
+        if (resetError) console.error("Failed to reschedule follow-up:", resetError);
+      } else {
+        // Pending follow-up already exists; keep the original send time.
+        console.log("Follow-up already pending for:", email);
+      }
+
+      return new Response(JSON.stringify({ received: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 200,
+      });
+    }
+
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
 
@@ -91,6 +164,18 @@ serve(async (req) => {
       const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
       const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+      // A successful order cancels any pending "payment failed" follow-up for this email.
+      {
+        const { error: cancelError } = await supabase
+          .from("failed_payment_followups")
+          .update({ cancelled_at: new Date().toISOString() })
+          .eq("email", customerEmail.toLowerCase().trim())
+          .is("sent_at", null)
+          .is("cancelled_at", null);
+        if (cancelError) console.error("Failed to cancel payment follow-up:", cancelError);
+      }
+
 
       // Record affiliate order if there's a referral code
       const affiliateCode = (fullSession.metadata?.affiliate_code || "").toLowerCase().trim();

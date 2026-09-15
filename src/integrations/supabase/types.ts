@@ -239,6 +239,42 @@ export type Database = {
         }
         Relationships: []
       }
+      failed_payment_followups: {
+        Row: {
+          cancelled_at: string | null
+          created_at: string
+          email: string
+          first_failed_at: string
+          id: string
+          send_after: string
+          sent_at: string | null
+          stripe_payment_intent_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          cancelled_at?: string | null
+          created_at?: string
+          email: string
+          first_failed_at?: string
+          id?: string
+          send_after?: string
+          sent_at?: string | null
+          stripe_payment_intent_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          cancelled_at?: string | null
+          created_at?: string
+          email?: string
+          first_failed_at?: string
+          id?: string
+          send_after?: string
+          sent_at?: string | null
+          stripe_payment_intent_id?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       order_confirmation_sends: {
         Row: {
           created_at: string
