@@ -165,6 +165,18 @@ serve(async (req) => {
       const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+      // A successful order cancels any pending "payment failed" follow-up for this email.
+      {
+        const { error: cancelError } = await supabase
+          .from("failed_payment_followups")
+          .update({ cancelled_at: new Date().toISOString() })
+          .eq("email", customerEmail.toLowerCase().trim())
+          .is("sent_at", null)
+          .is("cancelled_at", null);
+        if (cancelError) console.error("Failed to cancel payment follow-up:", cancelError);
+      }
+
+
       // Record affiliate order if there's a referral code
       const affiliateCode = (fullSession.metadata?.affiliate_code || "").toLowerCase().trim();
       if (affiliateCode) {
