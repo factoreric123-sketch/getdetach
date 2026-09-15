@@ -72,37 +72,50 @@ serve(async (req) => {
         Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
       );
 
+      const now = new Date();
+      const nowIso = now.toISOString();
+
       const { data: existing } = await supabase
         .from("failed_payment_followups")
-        .select("id, sent_at, cancelled_at")
+        .select("id, sent_at")
         .eq("email", email)
         .maybeSingle();
 
-      if (!existing) {
-        const { error: insertError } = await supabase.from("failed_payment_followups").insert({
-          email,
-          stripe_payment_intent_id: pi.id,
-          first_failed_at: new Date().toISOString(),
-          send_after: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
+      // Guard against back-to-back retries producing several emails: only one
+      // follow-up per email per 30 minutes.
+      if (existing?.sent_at && now.getTime() - new Date(existing.sent_at).getTime() < 30 * 60 * 1000) {
+        console.log("Follow-up already sent recently for:", email);
+        return new Response(JSON.stringify({ received: true }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 200,
         });
-        if (insertError) console.error("Failed to record failed payment follow-up:", insertError);
-        else console.log("Failed payment follow-up scheduled for:", email);
-      } else if (existing.sent_at || existing.cancelled_at) {
-        // Previous cycle is closed; start a fresh 5 minute window.
-        const { error: resetError } = await supabase
-          .from("failed_payment_followups")
-          .update({
-            stripe_payment_intent_id: pi.id,
-            first_failed_at: new Date().toISOString(),
-            send_after: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
-            sent_at: null,
-            cancelled_at: null,
-          })
-          .eq("id", existing.id);
-        if (resetError) console.error("Failed to reschedule follow-up:", resetError);
+      }
+
+      const record = {
+        email,
+        stripe_payment_intent_id: pi.id,
+        first_failed_at: nowIso,
+        send_after: nowIso,
+        sent_at: nowIso,
+        cancelled_at: null,
+      };
+      const { error: claimError } = existing
+        ? await supabase.from("failed_payment_followups").update(record).eq("id", existing.id)
+        : await supabase.from("failed_payment_followups").insert(record);
+
+      if (claimError) {
+        console.error("Failed to record failed payment follow-up:", claimError);
       } else {
-        // Pending follow-up already exists; keep the original send time.
-        console.log("Follow-up already pending for:", email);
+        const { error: sendError } = await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "payment-failed-followup",
+            recipientEmail: email,
+            idempotencyKey: `payment-failed-${pi.id}`,
+            templateData: {},
+          },
+        });
+        if (sendError) console.error("Failed to send payment follow-up email:", sendError);
+        else console.log("Payment failed follow-up email queued for:", email);
       }
 
       return new Response(JSON.stringify({ received: true }), {
