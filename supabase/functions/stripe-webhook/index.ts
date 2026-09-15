@@ -81,10 +81,10 @@ serve(async (req) => {
         .eq("email", email)
         .maybeSingle();
 
-      // Guard against back-to-back retries producing several emails: only one
-      // follow-up per email per 30 minutes.
-      if (existing?.sent_at && now.getTime() - new Date(existing.sent_at).getTime() < 30 * 60 * 1000) {
-        console.log("Follow-up already sent recently for:", email);
+      // Never send duplicates: once this email has been sent to an address,
+      // that address is permanently marked and never emailed again.
+      if (existing?.sent_at) {
+        console.log("Follow-up already sent for this email, never resending:", email);
         return new Response(JSON.stringify({ received: true }), {
           headers: { ...corsHeaders, "Content-Type": "application/json" },
           status: 200,
