@@ -270,12 +270,12 @@ const Shop = () => {
                 type="button"
                 onClick={() => setAddMagnet(!addMagnet)}
                 aria-pressed={addMagnet}
-                className={`w-full flex items-center gap-3 text-left border rounded-2xl px-4 py-4 mb-6 transition-colors cursor-pointer ${
-                  addMagnet ? "border-foreground/40 bg-card" : "border-border/50 hover:border-border"
+                className={`w-full flex items-center gap-3 text-left border border-foreground/40 rounded-2xl px-4 py-4 mb-6 cursor-pointer ${
+                  addMagnet ? "bg-card" : "bg-transparent"
                 }`}
               >
                 <span
-                  className={`w-5 h-5 shrink-0 rounded-md border flex items-center justify-center transition-colors ${
+                  className={`w-5 h-5 shrink-0 rounded-md border flex items-center justify-center ${
                     addMagnet ? "bg-foreground border-foreground" : "border-border"
                   }`}
                 >
