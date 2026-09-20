@@ -52,7 +52,11 @@ const OrderConfirmationEmail = ({
         ) : null}
 
         <Text style={text}>
-          Orders are mailed via U{'\u200B'}SPS stamped mail. We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day.
+          Orders are mailed via U{'\u200B'}SPS using a non-machinable stamp. Because this type of mail does not include tracking, you will not receive a shipping confirmation, tracking number, or delivery confirmation.
+        </Text>
+
+        <Text style={text}>
+          We do not ship on Saturdays or Sundays, so weekend orders will be mailed on the next business day. We hope your order arrives in a timely manner.
         </Text>
 
         <Text style={text}>
