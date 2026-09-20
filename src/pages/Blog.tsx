@@ -94,7 +94,7 @@ const Blog = () => {
                 <p className="text-xs text-muted-foreground mb-2">{post.displayDate}</p>
                 <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
                 <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm">
+                <span className="inline-flex items-center gap-1 text-foreground font-semibold text-sm">
                   Read more <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>

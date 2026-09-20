@@ -23,7 +23,7 @@ const WhatIsDetach = () => {
           </p>
           <Link
             to="/detach-app"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-200"
+            className="inline-flex items-center gap-2 text-foreground font-semibold hover:gap-3 transition-all duration-200"
           >
             Learn more about Detach
             <ArrowRight className="w-4 h-4" />
