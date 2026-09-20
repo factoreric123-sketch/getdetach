@@ -29,6 +29,7 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-foreground transition-colors duration-150">Home</Link>
           <Link to="/#features" className="hover:text-foreground transition-colors duration-150">Features</Link>
           <Link to="/#how-it-works" className="hover:text-foreground transition-colors duration-150">How it works</Link>
           <Link to="/detach-faq" className="hover:text-foreground transition-colors duration-150">FAQ</Link>
@@ -60,6 +61,7 @@ const Navbar = () => {
           >
             <div className="px-6 py-4 space-y-1">
               {[
+                { label: "Home", to: "/" },
                 { label: "Features", to: "/#features" },
                 { label: "How it works", to: "/#how-it-works" },
                 { label: "FAQ", to: "/detach-faq" },
