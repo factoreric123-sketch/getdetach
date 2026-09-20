@@ -142,17 +142,17 @@ const DetachFaq = () => {
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/detach-app-blocker-facts" className="text-primary underline underline-offset-2">
+                <Link to="/detach-app-blocker-facts" className="text-foreground underline underline-offset-2">
                   Detach product facts
                 </Link>
               </li>
               <li>
-                <Link to="/compare" className="text-primary underline underline-offset-2">
+                <Link to="/compare" className="text-foreground underline underline-offset-2">
                   Compare app blockers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary underline underline-offset-2">
+                <Link to="/contact" className="text-foreground underline underline-offset-2">
                   Contact support
                 </Link>
               </li>
@@ -168,7 +168,7 @@ const DetachFaq = () => {
               <StoreBadges className="justify-center" />
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                className="inline-flex items-center gap-2 text-foreground font-semibold hover:underline"
               >
                 Buy the card
                 <ArrowRight className="w-4 h-4" />

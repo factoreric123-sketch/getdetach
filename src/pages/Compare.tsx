@@ -145,32 +145,32 @@ const Compare = () => {
             <h2 className="text-2xl font-semibold mb-3">Head to head pages</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/detach-vs-brick" className="text-primary underline underline-offset-2">
+                <Link to="/detach-vs-brick" className="text-foreground underline underline-offset-2">
                   Detach vs Brick
                 </Link>
               </li>
               <li>
-                <Link to="/brick-alternative" className="text-primary underline underline-offset-2">
+                <Link to="/brick-alternative" className="text-foreground underline underline-offset-2">
                   Brick alternatives at a glance
                 </Link>
               </li>
               <li>
-                <Link to="/nfc-app-blocker" className="text-primary underline underline-offset-2">
+                <Link to="/nfc-app-blocker" className="text-foreground underline underline-offset-2">
                   What an NFC app blocker is
                 </Link>
               </li>
               <li>
-                <Link to="/how-nfc-focus-apps-work" className="text-primary underline underline-offset-2">
+                <Link to="/how-nfc-focus-apps-work" className="text-foreground underline underline-offset-2">
                   How NFC focus apps work
                 </Link>
               </li>
               <li>
-                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                <Link to="/detach-faq" className="text-foreground underline underline-offset-2">
                   Detach FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/detach-app-blocker-facts" className="text-primary underline underline-offset-2">
+                <Link to="/detach-app-blocker-facts" className="text-foreground underline underline-offset-2">
                   Detach product facts
                 </Link>
               </li>

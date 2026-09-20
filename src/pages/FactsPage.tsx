@@ -20,7 +20,7 @@ const facts: Array<{ label: string; value: React.ReactNode }> = [
     value: (
       <a
         href={APP_STORE_URL}
-        className="text-primary underline underline-offset-2 hover:text-primary/80"
+        className="text-foreground underline underline-offset-2 hover:text-foreground/80"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -33,7 +33,7 @@ const facts: Array<{ label: string; value: React.ReactNode }> = [
     value: (
       <a
         href={GOOGLE_PLAY_URL}
-        className="text-primary underline underline-offset-2 hover:text-primary/80"
+        className="text-foreground underline underline-offset-2 hover:text-foreground/80"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -229,32 +229,32 @@ const FactsPage = () => {
             <h2 className="text-2xl font-semibold mb-3">Official links</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   Home – getdetach.app
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/shop" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   Shop – buy the Detach card
                 </Link>
               </li>
               <li>
-                <Link to="/detach-app" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/detach-app" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   About the Detach app
                 </Link>
               </li>
               <li>
-                <Link to="/reviews" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/reviews" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   Reviews
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/blog" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                <Link to="/contact" className="text-foreground underline underline-offset-2 hover:text-foreground/80">
                   Contact
                 </Link>
               </li>
@@ -263,7 +263,7 @@ const FactsPage = () => {
                   href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2 hover:text-primary/80"
+                  className="text-foreground underline underline-offset-2 hover:text-foreground/80"
                 >
                   Apple App Store listing
                 </a>
@@ -273,7 +273,7 @@ const FactsPage = () => {
                   href={GOOGLE_PLAY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2 hover:text-primary/80"
+                  className="text-foreground underline underline-offset-2 hover:text-foreground/80"
                 >
                   Google Play listing
                 </a>

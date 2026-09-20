@@ -156,7 +156,7 @@ const NfcAppBlocker = () => {
             <p className="text-sm text-muted-foreground">
               Prices last verified August 2026. Competitor pricing changes, so check their sites before
               buying. Full breakdown on the{" "}
-              <Link to="/compare" className="text-primary underline underline-offset-2">
+              <Link to="/compare" className="text-foreground underline underline-offset-2">
                 comparison hub
               </Link>
               .
@@ -180,27 +180,27 @@ const NfcAppBlocker = () => {
             <h2 className="text-2xl font-semibold mb-3">Related reading</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/how-nfc-focus-apps-work" className="text-primary underline underline-offset-2">
+                <Link to="/how-nfc-focus-apps-work" className="text-foreground underline underline-offset-2">
                   How NFC focus apps work, step by step
                 </Link>
               </li>
               <li>
-                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                <Link to="/detach-faq" className="text-foreground underline underline-offset-2">
                   Detach FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/compare" className="text-primary underline underline-offset-2">
+                <Link to="/compare" className="text-foreground underline underline-offset-2">
                   Compare every physical app blocker
                 </Link>
               </li>
               <li>
-                <Link to="/detach-app-blocker-facts" className="text-primary underline underline-offset-2">
+                <Link to="/detach-app-blocker-facts" className="text-foreground underline underline-offset-2">
                   Detach product facts
                 </Link>
               </li>
               <li>
-                <Link to="/blog/all-nfc-phone-blockers-compared-2026" className="text-primary underline underline-offset-2">
+                <Link to="/blog/all-nfc-phone-blockers-compared-2026" className="text-foreground underline underline-offset-2">
                   All NFC phone blockers compared
                 </Link>
               </li>
@@ -209,7 +209,7 @@ const NfcAppBlocker = () => {
                   href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2"
+                  className="text-foreground underline underline-offset-2"
                 >
                   Detach on the App Store
                 </a>
@@ -219,7 +219,7 @@ const NfcAppBlocker = () => {
                   href={GOOGLE_PLAY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2"
+                  className="text-foreground underline underline-offset-2"
                 >
                   Detach on Google Play
                 </a>
