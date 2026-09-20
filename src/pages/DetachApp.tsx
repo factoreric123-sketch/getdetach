@@ -160,7 +160,7 @@ const DetachApp = () => {
               </div>
               <Link
                 to="/detach-faq"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline shrink-0"
+                className="inline-flex items-center gap-2 text-foreground font-semibold hover:underline shrink-0"
               >
                 Read FAQ
                 <ArrowRight className="w-4 h-4" />
@@ -178,7 +178,7 @@ const DetachApp = () => {
               <StoreBadges className="justify-center" />
               <Link
                 to="/blog"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                className="inline-flex items-center gap-2 text-foreground font-semibold hover:underline"
               >
                 Read the Blog
                 <ArrowRight className="w-4 h-4" />

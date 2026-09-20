@@ -119,22 +119,22 @@ const DetachVsBrick = () => {
             <h2 className="text-2xl font-semibold mb-3">Related pages</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/brick-alternative" className="text-primary underline underline-offset-2">
+                <Link to="/brick-alternative" className="text-foreground underline underline-offset-2">
                   Brick alternatives at a glance
                 </Link>
               </li>
               <li>
-                <Link to="/blog/best-brick-alternatives-2026" className="text-primary underline underline-offset-2">
+                <Link to="/blog/best-brick-alternatives-2026" className="text-foreground underline underline-offset-2">
                   Best Brick alternatives in 2026
                 </Link>
               </li>
               <li>
-                <Link to="/compare" className="text-primary underline underline-offset-2">
+                <Link to="/compare" className="text-foreground underline underline-offset-2">
                   Compare all physical app blockers
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-primary underline underline-offset-2">
+                <Link to="/shop" className="text-foreground underline underline-offset-2">
                   Buy the Detach card
                 </Link>
               </li>

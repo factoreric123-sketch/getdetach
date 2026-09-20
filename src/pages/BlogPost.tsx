@@ -329,14 +329,14 @@ const BlogPost = () => {
               href={linkMatch[2]}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="text-foreground hover:underline"
             >
               {linkMatch[1]}
             </a>
           );
         }
         return (
-          <Link key={i} to={linkMatch[2]} className="text-primary hover:underline">
+          <Link key={i} to={linkMatch[2]} className="text-foreground hover:underline">
             {linkMatch[1]}
           </Link>
         );
@@ -387,7 +387,7 @@ const BlogPost = () => {
                 <Apple className="w-5 h-5" />
                 Download Detach
               </a>
-              <Link to="/detach-app" className="text-primary font-semibold hover:underline">
+              <Link to="/detach-app" className="text-foreground font-semibold hover:underline">
                 Learn More →
               </Link>
             </div>

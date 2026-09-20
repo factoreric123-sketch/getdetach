@@ -92,7 +92,7 @@ const BrickAlternative = () => {
               <li>
                 <Link
                   to="/blog/best-brick-alternatives-2026"
-                  className="text-primary underline underline-offset-2"
+                  className="text-foreground underline underline-offset-2"
                 >
                   Best Brick alternatives in 2026
                 </Link>{" "}
@@ -101,7 +101,7 @@ const BrickAlternative = () => {
               <li>
                 <Link
                   to="/blog/brick-alternative-what-to-buy-instead-of-brick"
-                  className="text-primary underline underline-offset-2"
+                  className="text-foreground underline underline-offset-2"
                 >
                   Brick alternative: what to buy instead of Brick
                 </Link>{" "}
@@ -125,22 +125,22 @@ const BrickAlternative = () => {
             <h2 className="text-2xl font-semibold mb-3">More references</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/detach-vs-brick" className="text-primary underline underline-offset-2">
+                <Link to="/detach-vs-brick" className="text-foreground underline underline-offset-2">
                   Detach vs Brick, side by side
                 </Link>
               </li>
               <li>
-                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                <Link to="/detach-faq" className="text-foreground underline underline-offset-2">
                   Detach FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/compare" className="text-primary underline underline-offset-2">
+                <Link to="/compare" className="text-foreground underline underline-offset-2">
                   Comparison hub
                 </Link>
               </li>
               <li>
-                <Link to="/nfc-app-blocker" className="text-primary underline underline-offset-2">
+                <Link to="/nfc-app-blocker" className="text-foreground underline underline-offset-2">
                   What an NFC app blocker is
                 </Link>
               </li>

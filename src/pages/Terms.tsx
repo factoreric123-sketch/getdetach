@@ -87,7 +87,7 @@ const Terms = () => {
             <h2 className="text-xl font-bold mb-3">Contact</h2>
             <p className="text-muted-foreground">
               For questions about these Terms & Conditions,{" "}
-              <Link to="/contact" className="text-primary hover:underline">contact us</Link>.
+              <Link to="/contact" className="text-foreground hover:underline">contact us</Link>.
             </p>
           </section>
         </div>

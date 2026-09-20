@@ -159,27 +159,27 @@ const HowNfcFocusAppsWork = () => {
             <h2 className="text-2xl font-semibold mb-3">Related pages</h2>
             <ul className="list-disc pl-5 space-y-1.5 text-muted-foreground leading-relaxed">
               <li>
-                <Link to="/nfc-app-blocker" className="text-primary underline underline-offset-2">
+                <Link to="/nfc-app-blocker" className="text-foreground underline underline-offset-2">
                   NFC app blocker overview
                 </Link>
               </li>
               <li>
-                <Link to="/detach-faq" className="text-primary underline underline-offset-2">
+                <Link to="/detach-faq" className="text-foreground underline underline-offset-2">
                   Detach FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/compare" className="text-primary underline underline-offset-2">
+                <Link to="/compare" className="text-foreground underline underline-offset-2">
                   Comparison hub
                 </Link>
               </li>
               <li>
-                <Link to="/detach-app-blocker-facts" className="text-primary underline underline-offset-2">
+                <Link to="/detach-app-blocker-facts" className="text-foreground underline underline-offset-2">
                   Detach product facts
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="text-primary underline underline-offset-2">
+                <Link to="/shop" className="text-foreground underline underline-offset-2">
                   Buy the Detach card
                 </Link>
               </li>

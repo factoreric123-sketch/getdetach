@@ -148,7 +148,7 @@ const CmsBlogPost = () => {
                 <Apple className="w-5 h-5" />
                 Download Detach
               </a>
-              <Link to="/detach-app" className="text-primary font-semibold hover:underline">
+              <Link to="/detach-app" className="text-foreground font-semibold hover:underline">
                 Learn More →
               </Link>
             </div>
