@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, Minus, Plus, ShoppingBag, Truck, Shield } from "lucide-react";
+import { Check, Minus, Plus, ShoppingBag } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -302,22 +302,10 @@ const Shop = () => {
               </button>
 
 
-              <p className="text-xs text-muted-foreground/50 mt-3 text-center">
+              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
                 Secure checkout powered by Stripe
               </p>
 
-              {/* Trust signals */}
-              <div className="grid grid-cols-2 gap-4 mt-10 pt-8 border-t border-border/30">
-                {[
-                  { icon: Truck, label: "Free Shipping Worldwide" },
-                  { icon: Shield, label: "Secure Payment" },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-center gap-2 text-center">
-                    <Icon className="w-4 h-4 text-muted-foreground/50" />
-                    <span className="text-xs text-muted-foreground/60">{label}</span>
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </div>
