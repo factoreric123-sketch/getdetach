@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import lifeInWeeks from "@/assets/life-in-weeks.png";
 
-const LifeInDots = () => {
+const LifeInDots = ({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" }) => {
   return (
     <section className="py-10 px-6 border-t border-border/30">
       <div className="max-w-4xl mx-auto">
@@ -11,9 +11,9 @@ const LifeInDots = () => {
           viewport={{ once: true }}
           className="mb-10 text-center"
         >
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+          <Heading className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
             Each dot is one week. All of them together, that's the average <span className="text-gradient">human lifespan</span>.
-          </h1>
+          </Heading>
         </motion.div>
 
         <img
