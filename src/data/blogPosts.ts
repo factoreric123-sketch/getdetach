@@ -129,7 +129,7 @@ Read [Physical vs Digital App Blockers: Which Actually Works?](/blog/physical-vs
   {
     slug: "how-to-stop-checking-your-phone-first-thing-in-the-morning",
     title: "How to Stop Checking Your Phone First Thing in the Morning",
-    metaTitle: "How to Stop Checking Your Phone First Thing in the Morning",
+    metaTitle: "How to Stop Checking Your Phone First Thing in the Morning | Detach",
     metaDescription: "A practical plan to stop checking your phone the moment you wake up and reclaim your mornings from social media and email.",
     excerpt: "If your hand reaches for your phone before your feet hit the floor, the fix is not more discipline. It's better friction.",
     date: "2026-04-28",
@@ -332,7 +332,7 @@ If you want a deeper comparison of blocker styles, read [Physical vs Digital App
   {
     slug: "why-apple-screen-time-doesnt-work-and-what-does",
     title: "Why Apple Screen Time Doesn't Work (And What Does)",
-    metaTitle: "Why Apple Screen Time Doesn't Work (And What Does)",
+    metaTitle: "Why Apple Screen Time Doesn't Work (And What Does) | Detach",
     metaDescription: "Apple Screen Time is useful for awareness, but weak for behavior change. Here's why it doesn't work for most people and what does.",
     excerpt: "Apple Screen Time fails for the same reason most software blockers fail: the override button lives on the same phone you're trying to control.",
     date: "2026-04-26",
@@ -432,7 +432,7 @@ Read [Physical vs Digital App Blockers: Which Actually Works?](/blog/physical-vs
   {
     slug: "how-to-do-a-dopamine-detox-with-your-phone",
     title: "How to Do a Dopamine Detox With Your Phone",
-    metaTitle: "How to Do a Dopamine Detox With Your Phone",
+    metaTitle: "How to Do a Dopamine Detox With Your Phone | Detach",
     metaDescription: "A practical, non-cringe guide to doing a dopamine detox with your phone by reducing stimulation and rebuilding control.",
     excerpt: "A phone dopamine detox is not about eliminating dopamine. It's about reducing constant stimulation long enough to feel your own attention again.",
     date: "2026-04-25",
@@ -549,7 +549,7 @@ For a more durable version of the same idea, read [The Science Behind Phone Addi
   {
     slug: "physical-vs-digital-app-blockers-which-actually-works",
     title: "Physical vs Digital App Blockers: Which Actually Works?",
-    metaTitle: "Physical vs Digital App Blockers: Which Actually Works?",
+    metaTitle: "Physical vs Digital App Blockers: Which Actually Works? | Detach",
     metaDescription: "Physical and digital app blockers solve phone distraction in different ways. Here's which one actually works for real habits.",
     excerpt: "Digital blockers add friction on your screen. Physical blockers move the decision off your screen. That difference matters more than most people think.",
     date: "2026-04-24",
@@ -665,7 +665,7 @@ For product comparisons, read [Brick App Blocker Review: Is It Worth $59?](/blog
   {
     slug: "how-to-stop-doomscrolling-at-night",
     title: "How to Stop Doomscrolling at Night",
-    metaTitle: "How to Stop Doomscrolling at Night",
+    metaTitle: "How to Stop Doomscrolling at Night | Detach",
     metaDescription: "A practical night routine to stop doomscrolling before bed and make your phone less tempting when you're tired.",
     excerpt: "Night doomscrolling is not a character flaw. It is what happens when an exhausted brain has unlimited access to infinite content in bed.",
     date: "2026-04-23",
@@ -748,7 +748,7 @@ For the morning side of the problem, read [How to Stop Checking Your Phone First
   {
     slug: "unpluq-vs-brick-vs-detach-which-physical-app-blocker-should-you-buy",
     title: "Unpluq vs Brick vs Detach: Which Physical App Blocker Should You Buy?",
-    metaTitle: "Unpluq vs Brick vs Detach: Which Physical App Blocker Should You Buy?",
+    metaTitle: "Unpluq vs Brick vs Detach: Which Physical App Blocker Should You Buy? | Detach",
     metaDescription: "Compare Unpluq, Brick, and Detach on price, platform support, and blocking style to see which physical app blocker fits best.",
     excerpt: "Unpluq, Brick, and Detach all add real-world friction to phone use. The best one depends on whether you want Android support, premium hardware, or the best price.",
     date: "2026-04-22",
@@ -840,7 +840,7 @@ For a deeper take on Brick specifically, read [Brick App Blocker Review: Is It W
   {
     slug: "does-deleting-instagram-actually-work",
     title: "Does Deleting Instagram Actually Work?",
-    metaTitle: "Does Deleting Instagram Actually Work?",
+    metaTitle: "Does Deleting Instagram Actually Work? | Detach",
     metaDescription: "Deleting Instagram can help temporarily, but it rarely fixes the deeper habit. Here's what works better if you keep reinstalling it.",
     excerpt: "Deleting Instagram feels decisive, but for most people it is a short-term move that does not fix the underlying loop.",
     date: "2026-04-21",
@@ -950,7 +950,7 @@ Read [How to Do a Dopamine Detox With Your Phone](/blog/how-to-do-a-dopamine-det
   {
     slug: "how-to-protect-your-morning-routine-from-your-phone",
     title: "How to Protect Your Morning Routine From Your Phone",
-    metaTitle: "How to Protect Your Morning Routine From Your Phone",
+    metaTitle: "How to Protect Your Morning Routine From Your Phone | Detach",
     metaDescription: "Build a morning routine that your phone cannot hijack with better defaults, app blocking, and physical friction.",
     excerpt: "A strong morning routine is less about adding perfect habits and more about removing the phone behaviors that wreck the first hour.",
     date: "2026-04-20",
@@ -1065,7 +1065,7 @@ If you want the quicker tactical fix, read [How to Stop Checking Your Phone Firs
   {
     slug: "screen-time-statistics-2026-how-much-time-are-we-really-losing",
     title: "Screen Time Statistics 2026: How Much Time Are We Really Losing?",
-    metaTitle: "Screen Time Statistics 2026: How Much Time Are We Really Losing?",
+    metaTitle: "Screen Time Statistics 2026: How Much Time Are We Really Losing? | Detach",
     metaDescription: "The most useful screen time statistics for 2026, including near-constant internet use, daily mobile time, and what those numbers mean.",
     excerpt: "The headline numbers around screen time are already huge. The more important question is what they mean for your actual life and attention.",
     date: "2026-04-19",
@@ -1165,7 +1165,7 @@ For the behavior side of the problem, read [The Science Behind Phone Addiction a
   {
     slug: "the-science-behind-phone-addiction-and-how-to-break-it",
     title: "The Science Behind Phone Addiction and How to Break It",
-    metaTitle: "The Science Behind Phone Addiction and How to Break It",
+    metaTitle: "The Science Behind Phone Addiction and How to Break It | Detach",
     metaDescription: "What research says about phone addiction, dopamine, sleep, and habit loops and how to use that knowledge to break the cycle.",
     excerpt: "The science of phone addiction is less about moral weakness and more about reinforcement, convenience, and repeated cue-response loops.",
     date: "2026-04-18",
@@ -1341,7 +1341,7 @@ Learn more about [how Detach compares to other app blockers](/blog/detach-vs-oth
   {
     slug: "detach-app-review",
     title: "Detach App Review: Does It Actually Reduce Screen Time?",
-    metaTitle: "Detach App Review: Does This App Blocker Actually Work?",
+    metaTitle: "Detach App Review: Does This App Blocker Actually Work? | Detach",
     metaDescription: "An honest review of Detach app. Does the NFC-based app blocker actually reduce screen time and help you block social media?",
     excerpt: "We review whether the Detach app blocker actually delivers on its promise to reduce screen time using NFC cards.",
     date: "2025-03-20",
@@ -1391,7 +1391,7 @@ The Detach app is one of the most effective app blockers available for iPhone. I
   {
     slug: "how-detach-blocks-social-media",
     title: "How Detach Blocks Social Media Without Willpower",
-    metaTitle: "How Detach Blocks Social Media Apps: No Willpower Needed",
+    metaTitle: "How Detach Blocks Social Media Apps: No Willpower Needed | Detach",
     metaDescription: "Discover how Detach app blocks social media like Instagram, TikTok, and Twitter using NFC cards instead of willpower.",
     excerpt: "Detach doesn't rely on willpower to block social media. Instead, it uses physical NFC cards and system-level blocking to keep you off distracting apps.",
     date: "2025-03-25",
@@ -1446,7 +1446,7 @@ Users of the Detach app report spending significantly less time on social media.
   {
     slug: "detach-vs-brick-vs-blok-vs-bloom",
     title: "Detach vs Brick vs Blok vs Bloom: They All Do the Same Thing",
-    metaTitle: "Detach vs Brick vs Blok vs Bloom: Which App Blocker Is Worth It?",
+    metaTitle: "Detach vs Brick vs Blok vs Bloom: Which App Blocker Is Worth It? | Detach",
     metaDescription: "Brick, Blok, and Bloom all do the same thing as Detach: block your apps with a physical card. The difference is price. Here's why you're being overcharged.",
     excerpt: "Brick, Blok, and Bloom all use a physical card to block your apps. So does Detach. The difference? They charge $50+. We charge $9.99.",
     date: "2025-04-01",
@@ -1502,7 +1502,7 @@ If you want a nicer unboxing experience, Brick or Bloom might feel more premium.
   {
     slug: "detach-vs-other-app-blockers",
     title: "Detach vs Other App Blockers: What's Different?",
-    metaTitle: "Detach vs Other App Blockers: Why Detach Wins",
+    metaTitle: "Detach vs Other App Blockers: Why Detach Wins | Detach",
     metaDescription: "Compare Detach to other app blockers like Opal, One Sec, and Freedom. See why Detach's NFC approach is more effective at reducing screen time.",
     excerpt: "How does Detach compare to app blockers like Opal, One Sec, and Freedom? We break down what makes Detach different.",
     date: "2025-03-28",
