@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <img src={logo} alt="Detach logo" className="w-7 h-7 rounded-lg" />
+              <img src={logo} alt="Detach" className="w-7 h-7 rounded-lg" />
               <span className="text-lg font-bold">Detach</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
