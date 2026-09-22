@@ -232,7 +232,7 @@ const Shop = () => {
               </div>
 
               {/* Features */}
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-3">
                 {[
                   "Soft-touch matte finish",
                   "No battery, no charging, ever",
@@ -243,6 +243,16 @@ const Shop = () => {
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </div>
                 ))}
+                <p className="text-xs text-muted-foreground pt-1">
+                  Using Android? The card needs a phone with an NFC reader.{" "}
+                  <button
+                    type="button"
+                    onClick={() => setNfcOpen(true)}
+                    className="text-foreground underline underline-offset-2 cursor-pointer"
+                  >
+                    See details
+                  </button>
+                </p>
               </div>
 
               {/* Quantity */}
