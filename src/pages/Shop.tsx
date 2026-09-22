@@ -25,6 +25,7 @@ const Shop = () => {
 
   const [quantity, setQuantity] = useState(1);
   const [addMagnet, setAddMagnet] = useState(false);
+  const [nfcOpen, setNfcOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
