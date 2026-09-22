@@ -139,15 +139,7 @@ const CmsBlogPost = () => {
               Free to download. No account required. Start blocking social media and reducing screen time today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
-              >
-                <Apple className="w-5 h-5" />
-                Download Detach
-              </a>
+              <StoreBadges />
               <Link to="/detach-app" className="text-foreground font-semibold hover:underline">
                 Learn More →
               </Link>
