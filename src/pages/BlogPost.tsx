@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Apple } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import StoreBadges from "@/components/StoreBadges";
 import CmsBlogPost from "@/pages/CmsBlogPost";
 import { blogPosts, type BlogPostProductSchema } from "@/data/blogPosts";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";

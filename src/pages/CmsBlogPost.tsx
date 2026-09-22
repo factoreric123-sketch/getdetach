@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, Apple } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import StoreBadges from "@/components/StoreBadges";
 import DOMPurify from "isomorphic-dompurify";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
