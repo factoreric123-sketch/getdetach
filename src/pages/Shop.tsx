@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Minus, Plus, ShoppingBag } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -24,6 +25,7 @@ const Shop = () => {
 
   const [quantity, setQuantity] = useState(1);
   const [addMagnet, setAddMagnet] = useState(false);
+  const [nfcOpen, setNfcOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
@@ -230,7 +232,7 @@ const Shop = () => {
               </div>
 
               {/* Features */}
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-3">
                 {[
                   "Soft-touch matte finish",
                   "No battery, no charging, ever",
@@ -241,6 +243,16 @@ const Shop = () => {
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </div>
                 ))}
+                <p className="text-xs text-muted-foreground pt-1">
+                  Using Android? The card needs a phone with an NFC reader.{" "}
+                  <button
+                    type="button"
+                    onClick={() => setNfcOpen(true)}
+                    className="text-foreground underline underline-offset-2 cursor-pointer"
+                  >
+                    See details
+                  </button>
+                </p>
               </div>
 
               {/* Quantity */}
@@ -305,6 +317,30 @@ const Shop = () => {
               <p className="text-xs text-muted-foreground/80 mt-3 text-center">
                 Secure checkout powered by Stripe
               </p>
+
+              {/* Android NFC details popup */}
+              <Dialog open={nfcOpen} onOpenChange={setNfcOpen}>
+                <DialogContent className="max-w-sm">
+                  <DialogHeader>
+                    <DialogTitle className="text-left">Using an Android phone?</DialogTitle>
+                    <DialogDescription className="text-left leading-relaxed">
+                      The Detach card works with your phone's NFC reader. Most Android phones have
+                      one, but some don't. If yours doesn't, the card won't work with it.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    No NFC? You can still use Detach. Email us at{" "}
+                    <a
+                      href="mailto:getdetach@gmail.com"
+                      className="text-foreground underline underline-offset-2"
+                    >
+                      getdetach@gmail.com
+                    </a>{" "}
+                    and we'll send you a QR code you can print and scan with your camera, the same
+                    way you'd tap the card.
+                  </p>
+                </DialogContent>
+              </Dialog>
 
             </motion.div>
           </div>
