@@ -34,12 +34,12 @@ const faqs = [
   {
     question: "Is my phone compatible with Detach?",
     answer:
-      "Detach works with Android phones and iPhones running iOS 17.0 or later.",
+      "Detach works with Android phones and iPhones running iOS 17.0 or later. The Detach card needs a phone with an NFC reader. Most Android phones have one, but if yours doesn't, you can use a printable QR code instead: email us at getdetach@gmail.com and we'll send you one.",
   },
   {
     question: "Is Detach available on Android?",
     answer:
-      "Yes. Detach is available for Android on Google Play.",
+      "Yes. Detach is available for Android on Google Play. Keep in mind the card works with your phone's NFC reader, so make sure your Android has NFC. If it doesn't, email us at getdetach@gmail.com and we'll send you a printable QR code you can scan with your camera instead of tapping the card.",
   },
   {
     question: "What can I block with Detach?",
