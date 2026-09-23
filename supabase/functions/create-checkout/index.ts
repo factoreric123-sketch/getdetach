@@ -45,7 +45,15 @@ serve(async (req) => {
       mode: "payment",
       allow_promotion_codes: true,
       shipping_address_collection: {
-        allowed_countries: ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SE", "NO", "DK", "FI", "IE", "NZ", "AT", "BE", "CH", "ES", "IT", "PT"],
+        allowed_countries: [
+          "US", "CA", "GB", "AU", "NZ", "IE",
+          "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "CH",
+          "JP", "HK", "SG", "KR", "TW", "IL", "AE", "QA", "SA", "KW", "BH", "OM",
+          "MX", "BR", "AR", "CL", "CO", "PE", "UY", "CR", "PA", "PR", "TT", "BS", "BB", "JM", "GY", "SR", "DO", "EC", "BO", "PY", "GT", "SV", "HN", "NI",
+          "ZA", "EG", "MA", "KE", "NG", "GH",
+          "IN", "TH", "MY", "PH", "ID", "VN", "PK", "BD", "LK", "NP",
+          "TR", "GE", "AM", "AZ", "KZ", "UZ", "MN", "AL", "BA", "RS", "ME", "MK", "MD", "UA", "SM", "MC", "AD", "GI",
+        ],
       },
       metadata: cleanRef ? { affiliate_code: cleanRef } : undefined,
       success_url: `${SITE_URL}/shop?success=true&session_id={CHECKOUT_SESSION_ID}`,
