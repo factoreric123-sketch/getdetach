@@ -1729,6 +1729,93 @@ Use your phone intentionally instead of letting your phone decide what gets your
 [Try Detach on Android](https://play.google.com/store/apps/details?id=app.detach&pli=1) or learn more on the [Detach app page](/detach-app).
     `.trim(),
   },
+  {
+    slug: "how-to-block-apps-on-android-without-deleting-them",
+    title: "How to Block Apps on Android Without Deleting Them",
+    metaTitle: "How to Block Apps on Android Without Deleting Them | Detach",
+    metaDescription:
+      "Want to block apps on Android without deleting them? Here are 3 simple methods in 2026, plus the one that actually stops you from bypassing it.",
+    excerpt:
+      "Deleting an app feels drastic. Here's how to block apps on Android while keeping them installed, and which method actually holds when you're tempted.",
+    date: "2026-09-24",
+    faqSchema: [
+      {
+        question: "How do I block apps on Android without deleting them?",
+        answer:
+          "Open Settings, go to Digital Wellbeing & parental controls, and use App timers or Focus Mode to pause apps without uninstalling them. The app and your data stay intact. For blocking that's hard to override, use a strict-mode app blocker like Detach.",
+      },
+      {
+        question: "Can you block apps on Android for free?",
+        answer:
+          "Yes. Digital Wellbeing is free and built-in, and free third-party blockers like Detach add a stricter block that's harder to bypass.",
+      },
+      {
+        question: "Why can I still open apps after setting a timer on Android?",
+        answer:
+          "Because Digital Wellbeing timers are soft limits. They reset at midnight, and you can remove them in Settings anytime. For a block that holds, you need a strict or commitment mode that can't be undone in one tap.",
+      },
+      {
+        question: "How do I block social media apps like Instagram and TikTok on Android?",
+        answer:
+          "Add them to a Digital Wellbeing timer or Focus Mode session. For stronger control, block them on a fixed schedule with a blocker you can't quickly disable.",
+      },
+      {
+        question: "Does blocking an app on Android delete its data?",
+        answer:
+          "No. Blocking only restricts access. The app stays installed, and all your accounts, messages, and data stay intact.",
+      },
+    ],
+    content: `
+Deleting an app feels drastic. You lose your logins, your messages, your history, and most people just reinstall it a week later. The better move is to block the app while keeping it installed. Here's how to do that on Android, step by step, and which method actually holds when you're tempted.
+
+## Can you block apps on Android without deleting them?
+
+Yes. Android lets you restrict access to any app while leaving it fully installed and your data untouched. The app stays on your phone; you just can't open it while it's blocked. You can do it in three ways, from Android's free built-in tools to a dedicated blocker that's much harder to bypass.
+
+### Method 1: Block apps with Digital Wellbeing
+
+Most Android phones on Android 10 or newer include Digital Wellbeing, Google's built-in screen-time tool.
+
+- Open Settings and scroll to Digital Wellbeing & parental controls
+- Tap Dashboard to see your app usage
+- Find the app you want to block (like Instagram or TikTok) and tap the hourglass icon
+- Set a daily time limit and confirm
+
+Once the timer runs out, the app greys out and won't open until the next day. It stays installed; nothing is deleted.
+
+### Method 2: Pause apps with Focus Mode
+
+Focus Mode inside Digital Wellbeing pauses a group of apps during set times, ideal for work, study, or bedtime.
+
+- Go to Settings → Digital Wellbeing & parental controls → Focus mode
+- Select the apps you want to pause
+- Turn it on now, or set a schedule
+
+The apps stay installed but grey out during each session.
+
+## Why the built-in tools aren't enough
+
+Here's the honest problem: Digital Wellbeing timers and Focus Mode are soft limits. They reset at midnight, and you can turn them off in Settings in one tap. In the moment you actually crave the app, that off switch is right there, which is exactly why most people set a limit and blow straight past it. If you've done this, it's not a willpower failure. The block was just too easy to undo.
+
+### Method 3: Block apps the way that actually holds
+
+If you keep bypassing Digital Wellbeing, you need a blocker with a strict mode you can't cancel on impulse.
+
+[Detach](/detach-app) is a free app blocker for Android that blocks distracting apps on a schedule you set once. Its strict mode means you can't switch a block off the second you feel the urge, and its optional NFC card takes it further: you tap a real card to unlock your apps, so opening them becomes a deliberate choice, not a reflex. The apps stay installed; they're just genuinely out of reach until you decide otherwise.
+
+Looking for options? See our full guide to the [best app blockers for Android in 2026](/blog/best-app-blockers-for-android-2026).
+
+## Which method should you choose?
+
+- **Digital Wellbeing timers** for light daily limits you usually respect
+- **Focus Mode** for protecting specific work or study sessions
+- **Detach** if you've tried the built-in tools and keep overriding them
+
+## Block apps that actually stay blocked
+
+Detach blocks distracting apps on Android with a strict mode you can't cancel on impulse. Free, no account, set up in five minutes. [Get Detach](https://getdetach.app).
+    `.trim(),
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
