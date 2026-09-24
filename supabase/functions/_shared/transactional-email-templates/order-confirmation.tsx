@@ -52,7 +52,7 @@ const OrderConfirmationEmail = ({
         ) : null}
 
         <Text style={text}>
-          Orders are mailed via U{'\u200B'}SPS using a non-machinable stamp. Because this type of mail does not include tracking, you will not receive a shipping confirmation, tracking number, or delivery confirmation.
+          Orders are mailed via USPS using a non-machinable stamp. Because this type of mail does not include tracking, you will not receive a shipping confirmation, tracking number, or delivery confirmation.
         </Text>
 
         <Text style={text}>
