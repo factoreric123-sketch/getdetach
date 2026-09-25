@@ -16,6 +16,14 @@ serve(async (req) => {
   }
 
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+  const token = (req.headers.get("Authorization") || "").replace("Bearer ", "").trim();
+  if (!token || token !== serviceKey) {
+    return new Response(JSON.stringify({ error: "Forbidden" }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 403,
+    });
+  }
+
   const supabase = createClient(Deno.env.get("SUPABASE_URL")!, serviceKey);
 
   try {
