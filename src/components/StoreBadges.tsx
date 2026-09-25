@@ -59,7 +59,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
             Download on the
           </span>
           <span className={`font-bold ${compact ? "text-base" : "text-xl"}`}>
-            Google Play
+            Play Store
           </span>
         </span>
       </a>
