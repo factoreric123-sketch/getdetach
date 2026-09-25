@@ -1,3 +1,4 @@
+import { sendEmailAndLog } from '../_shared/transactional-email-templates/send-and-log.ts'
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "npm:@supabase/supabase-js@2";
@@ -92,7 +93,7 @@ serve(async (req) => {
         continue;
       }
 
-      const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
+      const { error: emailError } = await sendEmailAndLog(supabase, {
         body: {
           templateName: "order-confirmation",
           recipientEmail: recipient,
