@@ -296,6 +296,39 @@ export type Database = {
         }
         Relationships: []
       }
+      review_offer_followups: {
+        Row: {
+          created_at: string
+          customer_name: string | null
+          email: string
+          id: string
+          send_after: string
+          sent_at: string | null
+          stripe_session_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          customer_name?: string | null
+          email: string
+          id?: string
+          send_after: string
+          sent_at?: string | null
+          stripe_session_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          customer_name?: string | null
+          email?: string
+          id?: string
+          send_after?: string
+          sent_at?: string | null
+          stripe_session_id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
