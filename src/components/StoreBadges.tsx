@@ -41,7 +41,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
         href={GOOGLE_PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Download Detach on Google Play"
+        aria-label="Download Detach on the Play Store"
         className={storeButtonClass}
       >
         <svg
@@ -59,7 +59,7 @@ const StoreBadges = ({ className = "", compact = false }: StoreBadgesProps) => {
             Download on the
           </span>
           <span className={`font-bold ${compact ? "text-base" : "text-xl"}`}>
-            Google Play
+            Play Store
           </span>
         </span>
       </a>
