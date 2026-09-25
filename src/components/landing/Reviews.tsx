@@ -28,7 +28,8 @@ const reviews = [
   },
 ];
 
-const Reviews = () => {
+const Reviews = ({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) => {
+  const Heading = headingLevel;
   return (
     <section id="reviews" className="py-16 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
@@ -46,9 +47,9 @@ const Reviews = () => {
             </div>
             <span className="text-2xl md:text-3xl font-black tracking-tight">5/5</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+          <Heading className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
             What our <span className="text-gradient">customers say</span>
-          </h2>
+          </Heading>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-5">

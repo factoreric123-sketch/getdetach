@@ -24,7 +24,7 @@ const ReviewsPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="pt-24">
-        <ReviewsSection />
+        <ReviewsSection headingLevel="h1" />
       </main>
       <Footer />
     </div>
