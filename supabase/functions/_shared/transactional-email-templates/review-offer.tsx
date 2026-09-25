@@ -11,7 +11,7 @@ interface ReviewOfferProps {
 const ReviewOfferEmail = ({ customerName }: ReviewOfferProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Leave a review and we'll include a free extra Detach card in your envelope</Preview>
+    <Preview>Leave a review and we'll include an extra Detach card in your envelope</Preview>
     <Body style={main}>
       <Container style={container}>
         <Text style={text}>{customerName ? `Hi ${customerName},` : 'Hi,'}</Text>
@@ -28,7 +28,7 @@ const ReviewOfferEmail = ({ customerName }: ReviewOfferProps) => (
         </Text>
 
         <Text style={text}>
-          As a thank you, we'll include a <strong>free extra Detach card</strong> in your envelope.
+          As a thank you, we'll include an <strong>extra Detach card</strong> in your envelope.
         </Text>
 
         <Text style={text}>
@@ -58,7 +58,7 @@ const ReviewOfferEmail = ({ customerName }: ReviewOfferProps) => (
 
 export const template = {
   component: ReviewOfferEmail,
-  subject: 'Want a Free Extra Detach Card?',
+  subject: 'Want an Extra Detach Card?',
   displayName: 'Review offer',
   previewData: { customerName: 'Jane' },
 } satisfies TemplateEntry
