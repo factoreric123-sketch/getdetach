@@ -1,3 +1,4 @@
+import { sendEmailAndLog } from '../_shared/transactional-email-templates/send-and-log.ts'
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "npm:@supabase/supabase-js@2";
@@ -106,7 +107,7 @@ serve(async (req) => {
       if (claimError) {
         console.error("Failed to record failed payment follow-up:", claimError);
       } else {
-        const { error: sendError } = await supabase.functions.invoke("send-transactional-email", {
+        const { error: sendError } = await sendEmailAndLog(supabase, {
           body: {
             templateName: "payment-failed-followup",
             recipientEmail: email,
@@ -241,7 +242,7 @@ serve(async (req) => {
           console.error(`Failed to claim send slot for ${recipient}:`, claimError);
           continue;
         }
-        const { error: emailError } = await supabase.functions.invoke("send-transactional-email", {
+        const { error: emailError } = await sendEmailAndLog(supabase, {
           body: {
             templateName: "order-confirmation",
             recipientEmail: recipient,
@@ -273,7 +274,7 @@ serve(async (req) => {
           console.error("Failed to claim start-using send slot:", startClaimError);
         }
       } else {
-        const { error: startEmailError } = await supabase.functions.invoke("send-transactional-email", {
+        const { error: startEmailError } = await sendEmailAndLog(supabase, {
           body: {
             templateName: "start-using-detach",
             recipientEmail: customerEmail,
@@ -299,7 +300,7 @@ serve(async (req) => {
           console.error("Failed to claim review-offer send slot:", reviewClaimError);
         }
       } else {
-        const { error: reviewEmailError } = await supabase.functions.invoke("send-transactional-email", {
+        const { error: reviewEmailError } = await sendEmailAndLog(supabase, {
           body: {
             templateName: "review-offer",
             recipientEmail: customerEmail,
