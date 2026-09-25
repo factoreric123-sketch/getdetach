@@ -1,1 +1,0 @@
-- Delay the review-offer purchase email through `review_offer_followups` and `process-review-offer-followups` so it does not arrive in the same inbox batch as order emails.

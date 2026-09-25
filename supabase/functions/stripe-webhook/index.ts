@@ -289,33 +289,31 @@ serve(async (req) => {
         }
       }
 
-      // Third email to the customer only: delay the review offer so Gmail does not batch it
-      // with the two order emails and hide it behind Promotions until search.
-      const reviewEmail = customerEmail.toLowerCase().trim();
+      // Third email to the customer only: review offer for a free extra card
       const { error: reviewClaimError } = await supabase
         .from("order_confirmation_sends")
-        .insert({ stripe_session_id: fullSession.id, recipient_email: `review-offer:${reviewEmail}` });
+        .insert({ stripe_session_id: fullSession.id, recipient_email: `review-offer:${customerEmail}` });
       if (reviewClaimError) {
         if ((reviewClaimError as any).code === "23505") {
-          console.log(`Review-offer email already queued for session ${fullSession.id}, skipping.`);
+          console.log(`Review-offer email already sent for session ${fullSession.id}, skipping.`);
         } else {
           console.error("Failed to claim review-offer send slot:", reviewClaimError);
         }
       } else {
-        const sendAfter = new Date(Date.now() + 5 * 60 * 1000).toISOString();
-        const { error: reviewFollowupError } = await supabase
-          .from("review_offer_followups")
-          .insert({
-            stripe_session_id: fullSession.id,
-            email: reviewEmail,
-            customer_name: customerName || null,
-            send_after: sendAfter,
-          });
-
-        if (reviewFollowupError) {
-          console.error("Failed to schedule review-offer email:", reviewFollowupError);
+        const { error: reviewEmailError } = await sendEmailAndLog(supabase, {
+          body: {
+            templateName: "review-offer",
+            recipientEmail: customerEmail,
+            idempotencyKey: `review-offer-${session.id}-${customerEmail}`,
+            templateData: {
+              customerName,
+            },
+          },
+        });
+        if (reviewEmailError) {
+          console.error("Failed to send review-offer email:", reviewEmailError);
         } else {
-          console.log("Review-offer email scheduled for:", reviewEmail);
+          console.log("Review-offer email queued for:", customerEmail);
         }
       }
     }
