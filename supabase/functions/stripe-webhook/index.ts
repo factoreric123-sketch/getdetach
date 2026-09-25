@@ -287,6 +287,34 @@ serve(async (req) => {
           console.log("Start-using email queued for:", customerEmail);
         }
       }
+
+      // Third email to the customer only: review offer for a free extra card
+      const { error: reviewClaimError } = await supabase
+        .from("order_confirmation_sends")
+        .insert({ stripe_session_id: fullSession.id, recipient_email: `review-offer:${customerEmail}` });
+      if (reviewClaimError) {
+        if ((reviewClaimError as any).code === "23505") {
+          console.log(`Review-offer email already sent for session ${fullSession.id}, skipping.`);
+        } else {
+          console.error("Failed to claim review-offer send slot:", reviewClaimError);
+        }
+      } else {
+        const { error: reviewEmailError } = await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "review-offer",
+            recipientEmail: customerEmail,
+            idempotencyKey: `review-offer-${session.id}-${customerEmail}`,
+            templateData: {
+              customerName,
+            },
+          },
+        });
+        if (reviewEmailError) {
+          console.error("Failed to send review-offer email:", reviewEmailError);
+        } else {
+          console.log("Review-offer email queued for:", customerEmail);
+        }
+      }
     }
 
     return new Response(JSON.stringify({ received: true }), {
