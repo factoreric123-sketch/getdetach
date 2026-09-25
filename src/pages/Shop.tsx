@@ -99,9 +99,23 @@ const Shop = () => {
             <p className="text-muted-foreground mb-6">
               Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
+            <div className="border border-border/60 rounded-2xl px-5 py-4 mb-6 text-left">
+              <p className="font-semibold mb-1">Want an extra Detach card?</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                If you leave us a review, send an email to{" "}
+                <a
+                  href="mailto:getdetach@gmail.com"
+                  className="text-foreground underline underline-offset-2"
+                >
+                  getdetach@gmail.com
+                </a>{" "}
+                with a screenshot or confirmation of your review. We'll include an extra Detach card
+                in your envelope as a thank you!
+              </p>
+            </div>
             <a
               href="/"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-colors"
             >
               Back to Home
             </a>
