@@ -90,22 +90,24 @@ const Shop = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="max-w-md text-center"
+            className="max-w-2xl text-center"
           >
             <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
               <Check className="w-8 h-8 text-green-500" />
             </div>
             <h1 className="text-3xl font-black mb-3">Order Confirmed!</h1>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-8">
               Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
-            <div className="border border-border/60 rounded-2xl px-5 py-4 mb-6 text-left">
-              <p className="font-semibold mb-1">Want an extra Detach card?</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+            <div className="w-full bg-card/50 border border-border/60 rounded-[2rem] px-8 py-8 md:px-10 md:py-9 mb-8 text-left shadow-2xl">
+              <h2 className="text-xl font-semibold tracking-tight mb-3">
+                Want an extra Detach card?
+              </h2>
+              <p className="text-[15px] text-muted-foreground leading-relaxed">
                 If you leave us a review, send an email to{" "}
                 <a
                   href="mailto:getdetach@gmail.com"
-                  className="text-foreground underline underline-offset-2"
+                  className="text-foreground underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors"
                 >
                   getdetach@gmail.com
                 </a>{" "}
