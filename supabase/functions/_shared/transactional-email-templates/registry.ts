@@ -13,10 +13,12 @@ import { template as orderConfirmation } from './order-confirmation.tsx'
 import { template as orderNotificationInternal } from './order-notification-internal.tsx'
 import { template as startUsingDetach } from './start-using-detach.tsx'
 import { template as paymentFailedFollowup } from './payment-failed-followup.tsx'
+import { template as reviewOffer } from './review-offer.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'order-confirmation': orderConfirmation,
   'order-notification-internal': orderNotificationInternal,
   'start-using-detach': startUsingDetach,
   'payment-failed-followup': paymentFailedFollowup,
+  'review-offer': reviewOffer,
 }
