@@ -31,12 +31,13 @@ const StartUsingDetachEmail = ({ qrCode, qrImageUrl }: StartUsingDetachProps) =>
           This lets you use the QR code included with this email instead of tapping your Detach card. When you want to end a blocking session, simply scan the QR code with your phone.
         </Text>
 
-        {qrImageUrl && qrCode ? (
+        {qrImageUrl ? (
           <>
-            <Img src={qrImageUrl} width="220" height="220" alt="Your Detach QR code" style={qrImage} />
-            <Text style={text}>Your QR code: <strong>{qrCode}</strong></Text>
+            <Link href={qrImageUrl}><Img src={qrImageUrl} width="220" height="220" alt="Your Detach QR code" style={qrImage} /></Link>
+            <Text style={text}><Link href={qrImageUrl} style={link}>Open your QR code to print it</Link></Text>
           </>
         ) : null}
+        {qrCode ? <Text style={text}>Your QR code: <strong>{qrCode}</strong></Text> : null}
 
         <Text style={text}>If you're on Android, you do not need a code to enable the QR feature.</Text>
 
@@ -87,7 +88,7 @@ export const template = {
   component: StartUsingDetachEmail,
   subject: 'Start Using Detach Before Your Card Arrives',
   displayName: 'Start using Detach',
-  previewData: { qrCode: '383894', qrImageUrl: 'https://getdetach.app/favicon.png' },
+  previewData: { qrCode: '000000' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
