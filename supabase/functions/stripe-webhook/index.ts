@@ -2,6 +2,7 @@ import { sendEmailAndLog } from '../_shared/transactional-email-templates/send-a
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "npm:@supabase/supabase-js@2";
+import QRCode from "npm:qrcode@1.5.4";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -264,28 +265,54 @@ serve(async (req) => {
       }
 
       // Second email to the customer only: how to start using Detach right away
-      const { error: startClaimError } = await supabase
+      const startRecipient = `start-using:${customerEmail}`;
+      const { data: priorStart, error: priorStartError } = await supabase
         .from("order_confirmation_sends")
-        .insert({ stripe_session_id: fullSession.id, recipient_email: `start-using:${customerEmail}` });
-      if (startClaimError) {
-        if ((startClaimError as any).code === "23505") {
-          console.log(`Start-using email already sent for session ${fullSession.id}, skipping.`);
-        } else {
-          console.error("Failed to claim start-using send slot:", startClaimError);
-        }
-      } else {
-        const { error: startEmailError } = await sendEmailAndLog(supabase, {
-          body: {
-            templateName: "start-using-detach",
-            recipientEmail: customerEmail,
-            idempotencyKey: `start-using-${session.id}-${customerEmail}`,
-            templateData: {},
-          },
-        });
-        if (startEmailError) {
-          console.error("Failed to send start-using email:", startEmailError);
-        } else {
-          console.log("Start-using email queued for:", customerEmail);
+        .select("id")
+        .eq("stripe_session_id", fullSession.id)
+        .eq("recipient_email", startRecipient)
+        .maybeSingle();
+      if (priorStartError) {
+        console.error("Failed to check start-using send slot:", priorStartError);
+      } else if (!priorStart) {
+        try {
+          // Reserve one code atomically per checkout; a replay gets the same code.
+          const { data: qrCode, error: qrError } = await supabase.rpc("assign_order_qr_code", {
+            _session_id: fullSession.id,
+          });
+          if (qrError || typeof qrCode !== "string" || !/^\d{6}$/.test(qrCode)) {
+            throw qrError || new Error("Could not assign a QR code");
+          }
+
+          const qrDataUrl = await QRCode.toDataURL(qrCode, { errorCorrectionLevel: "M", margin: 4, width: 500 });
+          const imageBytes = Uint8Array.from(atob(qrDataUrl.split(",")[1]), (char) => char.charCodeAt(0));
+          const imagePath = `order-qr/${fullSession.id}.png`;
+          const { error: imageError } = await supabase.storage.from("email-assets").upload(imagePath, imageBytes, {
+            contentType: "image/png",
+            upsert: true,
+          });
+          if (imageError) throw imageError;
+          const { data: imageData } = supabase.storage.from("email-assets").getPublicUrl(imagePath);
+
+          const { error: startClaimError } = await supabase
+            .from("order_confirmation_sends")
+            .insert({ stripe_session_id: fullSession.id, recipient_email: startRecipient });
+          if (startClaimError) {
+            if ((startClaimError as any).code !== "23505") console.error("Failed to claim start-using send slot:", startClaimError);
+          } else {
+            const { error: startEmailError } = await sendEmailAndLog(supabase, {
+              body: {
+                templateName: "start-using-detach",
+                recipientEmail: customerEmail,
+                idempotencyKey: `start-using-${session.id}-${customerEmail}`,
+                templateData: { qrCode, qrImageUrl: imageData.publicUrl },
+              },
+            });
+            if (startEmailError) console.error("Failed to send start-using email:", startEmailError);
+            else console.log("Start-using email sent for session:", fullSession.id);
+          }
+        } catch (startError) {
+          console.error("Could not prepare start-using email:", startError);
         }
       }
 

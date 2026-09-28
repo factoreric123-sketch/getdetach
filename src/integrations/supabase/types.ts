@@ -296,6 +296,48 @@ export type Database = {
         }
         Relationships: []
       }
+      order_qr_codes: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          stripe_session_id: string
+          updated_at: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          stripe_session_id: string
+          updated_at?: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          stripe_session_id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      qr_code_pool: {
+        Row: {
+          code: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       review_offer_followups: {
         Row: {
           created_at: string
@@ -358,7 +400,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      assign_order_qr_code: { Args: { _session_id: string }; Returns: string }
     }
     Enums: {
       [_ in never]: never

@@ -1,10 +1,15 @@
 import * as React from 'npm:react@18.3.1'
 import {
-  Body, Container, Head, Heading, Html, Preview, Text, Hr,
+  Body, Container, Head, Heading, Html, Preview, Text, Hr, Img, Link,
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
-const StartUsingDetachEmail = () => (
+interface StartUsingDetachProps {
+  qrCode?: string
+  qrImageUrl?: string
+}
+
+const StartUsingDetachEmail = ({ qrCode, qrImageUrl }: StartUsingDetachProps) => (
   <Html lang="en" dir="ltr">
     <Head />
     <Preview>You can start using Detach today, before your card arrives</Preview>
@@ -19,19 +24,30 @@ const StartUsingDetachEmail = () => (
         </Text>
 
         <Text style={text}>
-          Download Detach at https://getdetach.app and temporarily set your number of Emergency
-          Unlocks to a higher amount. Until your card arrives, you can use an Emergency Unlock
-          whenever you need to end a blocking session.
+          Download Detach at <Link href="https://getdetach.app" style={link}>https://getdetach.app</Link>, then go to Settings and turn on Use a QR Code.
         </Text>
 
         <Text style={text}>
-          Once your Detach card arrives, you can lower the number of Emergency Unlocks and use the
-          card to unlock your apps instead.
+          This lets you use the QR code included with this email instead of tapping your Detach card. When you want to end a blocking session, simply scan the QR code with your phone.
         </Text>
 
-        <Text style={text}>
-          This lets you start building better habits right away while your card is on the way.
-        </Text>
+        {qrImageUrl ? (
+          <>
+            <Link href={qrImageUrl}><Img src={qrImageUrl} width="220" height="220" alt="Your Detach QR code" style={qrImage} /></Link>
+            <Text style={text}><Link href={qrImageUrl} style={link}>Open your QR code to print it</Link></Text>
+          </>
+        ) : null}
+        {qrCode ? <Text style={text}>Your QR code: <strong>{qrCode}</strong></Text> : null}
+
+        <Text style={text}>If you're on Android, you do not need a code to enable the QR feature.</Text>
+
+        <Text style={text}>If you're on iOS, enter this code to enable it: <strong>000026</strong></Text>
+
+        <Text style={text}>You can also print out the QR code, cut out a small piece of cardboard, and tape the QR code onto it. Then you can use it like a temporary Detach card until your real one arrives.</Text>
+
+        <Text style={text}>Once your Detach card arrives, you can switch back to using the physical card whenever you'd like.</Text>
+
+        <Text style={text}>This way, you can start using Detach right away while your card is on the way.</Text>
 
         <Text style={text}>
           <strong>Best Practice</strong>: Block Social Media in the Morning
@@ -72,12 +88,14 @@ export const template = {
   component: StartUsingDetachEmail,
   subject: 'Start Using Detach Before Your Card Arrives',
   displayName: 'Start using Detach',
-  previewData: {},
+  previewData: { qrCode: '000000' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
 const container = { padding: '40px 24px', maxWidth: '580px', margin: '0 auto' }
 const h1 = { fontSize: '20px', color: '#111', margin: '0 0 24px', lineHeight: '1.4' }
 const text = { fontSize: '15px', color: '#222', margin: '0 0 20px', lineHeight: '1.6' }
+const link = { color: '#222', textDecoration: 'none' }
+const qrImage = { display: 'block', margin: '0 0 12px' }
 const hr = { borderColor: '#eee', margin: '24px 0' }
 const footer = { fontSize: '13px', color: '#999', margin: '0' }
