@@ -40,7 +40,7 @@ const PaymentFailedFollowupEmail = () => (
         <Hr style={hr} />
 
         <Text style={footer}>
-          Questions? Reply to this email or contact us at getdetach@gmail.com
+          Questions? Contact us at getdetach@gmail.com
         </Text>
       </Container>
     </Body>
