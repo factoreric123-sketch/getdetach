@@ -296,6 +296,30 @@ export type Database = {
         }
         Relationships: []
       }
+      order_qr_codes: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          stripe_session_id: string
+          updated_at: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          stripe_session_id: string
+          updated_at?: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          stripe_session_id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       review_offer_followups: {
         Row: {
           created_at: string
