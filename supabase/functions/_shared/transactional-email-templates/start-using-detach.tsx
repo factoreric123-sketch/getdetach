@@ -33,15 +33,13 @@ const StartUsingDetachEmail = ({ qrCode, qrImageUrl }: StartUsingDetachProps) =>
 
         {qrImageUrl ? (
           <>
-            <Link href={qrImageUrl}><Img src={qrImageUrl} width="220" height="220" alt="Your Detach QR code" style={qrImage} /></Link>
-            <Text style={text}><Link href={qrImageUrl} style={link}>Open your QR code to print it</Link></Text>
+            <Link href={qrImageUrl}><Img src={qrImageUrl} width="220" height="220" alt="Detach QR code" style={qrImage} /></Link>
+            <Text style={text}><Link href={qrImageUrl} style={link}>Open the QR code to print it</Link></Text>
           </>
         ) : null}
-        {qrCode ? <Text style={text}>Your QR code: <strong>{qrCode}</strong></Text> : null}
-
         <Text style={text}>If you're on Android, you do not need a code to enable the QR feature.</Text>
 
-        <Text style={text}>If you're on iOS, enter this code to enable it: <strong>000026</strong></Text>
+        <Text style={text}>If you're on iOS, enter this code to enable it: <strong>{qrCode || '000026'}</strong></Text>
 
         <Text style={text}>You can also print out the QR code, cut out a small piece of cardboard, and tape the QR code onto it. Then you can use it like a temporary Detach card until your real one arrives.</Text>
 
@@ -88,7 +86,7 @@ export const template = {
   component: StartUsingDetachEmail,
   subject: 'Start Using Detach Before Your Card Arrives',
   displayName: 'Start using Detach',
-  previewData: { qrCode: '000000' },
+  previewData: { qrCode: '123456', qrImageUrl: 'https://dxlplpliaylvagnenucj.supabase.co/storage/v1/object/public/email-assets/detach-unlock-qr.png' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }

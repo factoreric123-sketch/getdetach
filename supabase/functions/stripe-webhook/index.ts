@@ -284,15 +284,8 @@ serve(async (req) => {
             throw qrError || new Error("Could not assign a QR code");
           }
 
-          const qrDataUrl = await QRCode.toDataURL(qrCode, { errorCorrectionLevel: "M", margin: 4, width: 500 });
-          const imageBytes = Uint8Array.from(atob(qrDataUrl.split(",")[1]), (char) => char.charCodeAt(0));
-          const imagePath = `order-qr/${fullSession.id}.png`;
-          const { error: imageError } = await supabase.storage.from("email-assets").upload(imagePath, imageBytes, {
-            contentType: "image/png",
-            upsert: true,
-          });
-          if (imageError) throw imageError;
-          const { data: imageData } = supabase.storage.from("email-assets").getPublicUrl(imagePath);
+          // Everyone shares the same unlock QR image; only the iOS code is unique.
+          const { data: imageData } = supabase.storage.from("email-assets").getPublicUrl("detach-unlock-qr.png");
 
           const { error: startClaimError } = await supabase
             .from("order_confirmation_sends")
