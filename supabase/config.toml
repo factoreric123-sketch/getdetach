@@ -17,3 +17,6 @@ verify_jwt = true
 
 [functions.handle-email-events]
 verify_jwt = false
+
+[functions.get-order-code]
+verify_jwt = false
