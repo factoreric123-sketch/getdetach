@@ -28,6 +28,7 @@ const Shop = () => {
   const [nfcOpen, setNfcOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
+  const [orderCode, setOrderCode] = useState<{ code: string; qrImageUrl: string } | null>(null);
 
   useEffect(() => {
     const ref = searchParams.get("ref");
@@ -44,6 +45,9 @@ const Shop = () => {
       supabase.functions.invoke("send-order-confirmation", {
         body: { sessionId },
       }).catch((err) => console.error("Order confirmation email error:", err));
+      supabase.functions.invoke("get-order-code", { body: { sessionId } })
+        .then(({ data }) => { if (data?.code) setOrderCode(data); })
+        .catch((err) => console.error("Order code error:", err));
     }
   }, [isSuccess, sessionId, emailSent]);
 
@@ -99,6 +103,23 @@ const Shop = () => {
             <p className="text-muted-foreground mb-8">
               Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
+            {orderCode && (
+              <div className="w-full bg-card/50 border border-border/60 rounded-[2rem] px-8 py-8 md:px-10 md:py-9 mb-6 text-left shadow-2xl">
+                <h2 className="text-xl font-semibold tracking-tight mb-3">
+                  Start using Detach before your card arrives
+                </h2>
+                <p className="text-[15px] text-muted-foreground leading-relaxed mb-5">
+                  Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. On Android, no code is needed. On iOS, enter this code to enable it:
+                </p>
+                <p className="text-3xl font-black tracking-[0.3em] mb-6 text-center">{orderCode.code}</p>
+                <a href={orderCode.qrImageUrl} target="_blank" rel="noopener noreferrer" className="block mx-auto w-48">
+                  <img src={orderCode.qrImageUrl} alt="Detach QR code" className="w-48 h-48 rounded-xl" />
+                </a>
+                <p className="text-sm text-muted-foreground text-center mt-3">
+                  We also emailed this to you so you can print it.
+                </p>
+              </div>
+            )}
             <div className="w-full bg-card/50 border border-border/60 rounded-[2rem] px-8 py-8 md:px-10 md:py-9 mb-8 text-left shadow-2xl">
               <h2 className="text-xl font-semibold tracking-tight mb-3">
                 Want an extra Detach card?
