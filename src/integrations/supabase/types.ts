@@ -324,16 +324,25 @@ export type Database = {
         Row: {
           code: string
           created_at: string
+          customer_email: string | null
+          customer_name: string | null
+          sent_out: boolean
           updated_at: string
         }
         Insert: {
           code: string
           created_at?: string
+          customer_email?: string | null
+          customer_name?: string | null
+          sent_out?: boolean
           updated_at?: string
         }
         Update: {
           code?: string
           created_at?: string
+          customer_email?: string | null
+          customer_name?: string | null
+          sent_out?: boolean
           updated_at?: string
         }
         Relationships: []

@@ -284,6 +284,14 @@ serve(async (req) => {
             throw qrError || new Error("Could not assign a QR code");
           }
 
+          // Record who this code was sent to so the pool table shows it.
+          const { error: poolUpdateError } = await supabase
+            .from("qr_code_pool")
+            .update({ sent_out: true, customer_name: customerName || null, customer_email: customerEmail || null })
+            .eq("code", qrCode);
+          if (poolUpdateError) console.error("Failed to mark QR code as sent:", poolUpdateError);
+
+
           // Everyone shares the same unlock QR image; only the iOS code is unique.
           const { data: imageData } = supabase.storage.from("email-assets").getPublicUrl("detach-unlock-qr.png");
 
