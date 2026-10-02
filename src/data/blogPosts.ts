@@ -1730,6 +1730,110 @@ Use your phone intentionally instead of letting your phone decide what gets your
     `.trim(),
   },
   {
+    slug: "how-to-block-websites-on-android",
+    title: "How to Block Websites on Android in 2026 (Chrome and All Browsers)",
+    metaTitle: "How to Block Websites on Android in 2026 (Chrome & Browsers)",
+    metaDescription:
+      "Chrome on Android has no button to block websites. Here are the methods that actually work in 2026, from Private DNS to a blocker that holds. Step by step.",
+    excerpt:
+      "Chrome on Android has no built in site blocker. Here are the methods that actually work in 2026, from Private DNS to a blocker that holds.",
+    date: "2026-10-02",
+    faqSchema: [
+      {
+        question: "How do I block a website on Chrome on Android?",
+        answer:
+          "Chrome on Android has no built in site blocker. Your real options are Private DNS filtering (Settings, Network & internet, Private DNS), Google Family Link for a child's phone, or a dedicated app blocker like Detach for blocking specific sites in a way that actually holds.",
+      },
+      {
+        question: "Does Android have a built in way to block websites?",
+        answer:
+          "Not really. Digital Wellbeing can time limit your whole browser, and Family Link can restrict sites on a child's account, but there's no native toggle to block one specific website in Chrome. For that you'll need DNS filtering or a third party blocker.",
+      },
+      {
+        question: "How do I block adult websites on Android?",
+        answer:
+          "On a child's device, use Family Link, then Controls, Content restrictions, Chrome, and \"Try to block explicit sites.\" For your own phone, a filtering Private DNS service like AdGuard DNS blocks adult content across every browser automatically.",
+      },
+      {
+        question: "Can I block websites on Android without installing an app?",
+        answer:
+          "Yes. Private DNS and Family Link both work without a separate app, so they're the safest no app routes. A dedicated blocker just gives you stronger, harder to bypass control if you want it.",
+      },
+      {
+        question: "Why do website blocks on Android keep turning off?",
+        answer:
+          "Because tools like Digital Wellbeing keep the off switch right there in Settings, so most people cancel them within a few days. For something that sticks, you need strict mode or physical friction, like Detach's NFC card, that you can't undo in one tap.",
+      },
+    ],
+    content: `
+## The Short Answer
+
+Chrome on Android has no built in button to block a specific website. To actually block one, you can use Private DNS filtering, Google Family Link, or a Digital Wellbeing timer on your browser. And if you want a block that you can't switch off the moment you get the urge, a dedicated app blocker like [Detach](/detach-app) handles both sites and apps.
+
+So you want to stop opening a certain website on your phone, and you've realised Chrome on Android just won't let you. You're not imagining it. The mobile version of Chrome has no "block this site" option like the desktop one does. The workarounds exist, but some of them actually hold and some of them you'll switch off by Thursday. Here's what works in 2026, sorted from the easiest to the one that actually sticks.
+
+## Why Chrome on Android fights you on this
+
+Here's the frustrating part. Chrome on Android has no native site blocker at all. Digital Wellbeing can put a timer on your whole browser, but it can't block one specific site. So the simple toggle you're hunting for doesn't exist, and every method below is a way around that gap. Worth knowing which ones are real and which ones just make you feel productive for a day.
+
+## Method 1: Put a timer on Chrome with Digital Wellbeing
+
+This is the quickest free option. Head to Settings, then Digital Wellbeing & parental controls, then Dashboard, find Chrome, tap the little hourglass, and set a daily limit. Once you hit it, Chrome greys out for the day.
+
+The problem is it limits your entire browser, not the one site you're trying to avoid. And the off switch sits right there in Settings, so on a bad day you'll cancel it in two seconds. Good for a gentle nudge. Not much of a wall.
+
+## Method 2: Block sites everywhere with Private DNS
+
+If you want something that works across every browser and app, not just Chrome, this is the one. Set up a filtering DNS service like NextDNS or AdGuard DNS, then go to Settings, Network & internet, Private DNS, and enter the hostname they give you. Add the sites you want gone, and they stop loading across your whole phone, even in Incognito.
+
+It takes a few minutes to set up and it's not the most beginner friendly thing on this list. But once it's running, it's one of the more serious free methods out there.
+
+## Method 3: Block sites for your kids with Family Link
+
+If this is about a child's phone rather than your own, Google Family Link is built for exactly that. On their account, go to Controls, then Content restrictions, then Google Chrome, pick "Try to block explicit sites," and add the specific URLs you want blocked.
+
+Just know this one is designed for supervised child accounts. It isn't really meant for blocking your own grown up phone.
+
+## Method 4: Block websites and apps together with a real blocker
+
+Let's be honest about the methods above. Digital Wellbeing is too easy to cancel, DNS is a bit fiddly, and Family Link is for kids. If you keep turning your own blocks off, that's not you being weak. It's the block being too easy to undo.
+
+This is where a dedicated blocker earns its place. Detach blocks the websites and apps that pull you in, on a schedule you set once, and it comes with a physical NFC card you tap to unlock everything. Leave that card in another room and suddenly opening a blocked site means actually getting up and going to find it. That tiny bit of real world effort is usually enough to kill the impulse. Everything's still there when you genuinely need it, it's just out of reach during the hours you want to focus. It's free, there's no account to make, and setup takes a few minutes.
+
+## So which one should you actually pick?
+
+Go with Digital Wellbeing if you just want a light limit you'll mostly respect. Use Private DNS if you want free blocking that covers every browser on the phone. Family Link is your answer for a child's device. And if you've already tried the built in stuff and kept switching it off, go with Detach, because a block you can't undo on a whim is the only kind that survives a weak moment.
+
+Want to compare your options first? Take a look at our guide to the [best app blockers for Android in 2026](/blog/best-app-blockers-for-android-2026).
+
+## Block the sites that keep stealing your focus
+
+Detach blocks distracting websites and apps on Android, with physical NFC friction that holds even when your willpower doesn't. Free, no account, ready in five minutes. [Get Detach on Google Play](https://play.google.com/store/apps/details?id=app.detach&pli=1) or learn more on the [Detach app page](/detach-app).
+
+## Frequently Asked Questions
+
+### How do I block a website on Chrome on Android?
+
+Chrome on Android has no built in site blocker. Your real options are Private DNS filtering (Settings, Network & internet, Private DNS), Google Family Link for a child's phone, or a dedicated app blocker like Detach for blocking specific sites in a way that actually holds.
+
+### Does Android have a built in way to block websites?
+
+Not really. Digital Wellbeing can time limit your whole browser, and Family Link can restrict sites on a child's account, but there's no native toggle to block one specific website in Chrome. For that you'll need DNS filtering or a third party blocker.
+
+### How do I block adult websites on Android?
+
+On a child's device, use Family Link, then Controls, Content restrictions, Chrome, and "Try to block explicit sites." For your own phone, a filtering Private DNS service like AdGuard DNS blocks adult content across every browser automatically.
+
+### Can I block websites on Android without installing an app?
+
+Yes. Private DNS and Family Link both work without a separate app, so they're the safest no app routes. A dedicated blocker just gives you stronger, harder to bypass control if you want it.
+
+### Why do website blocks on Android keep turning off?
+
+Because tools like Digital Wellbeing keep the off switch right there in Settings, so most people cancel them within a few days. For something that sticks, you need strict mode or physical friction, like Detach's NFC card, that you can't undo in one tap.
+    `.trim(),
+  },
+  {
     slug: "how-to-reduce-screen-time-on-android",
     title: "How to Reduce Screen Time on Android in 2026 (Step-by-Step)",
     metaTitle: "How to Reduce Screen Time on Android in 2026 (Step-by-Step)",
