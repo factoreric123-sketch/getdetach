@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.get-order-code]
 verify_jwt = false
+
+[functions.send-qr-code]
+verify_jwt = false
