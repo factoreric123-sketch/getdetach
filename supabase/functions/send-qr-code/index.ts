@@ -12,8 +12,9 @@ const corsHeaders = {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
-  const auth = req.headers.get("authorization") || "";
-  if (auth !== `Bearer ${Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`) {
+  const auth = req.headers.get("x-qr-send-secret") || "";
+  const expected = Deno.env.get("QR_SEND_SECRET") || "";
+  if (!expected || auth !== expected) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
