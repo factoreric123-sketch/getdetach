@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.send-qr-code]
 verify_jwt = false
+
+[functions.process-shipping-confirmations]
+verify_jwt = false

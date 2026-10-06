@@ -380,6 +380,29 @@ serve(async (req) => {
           console.log("Review-offer email queued for:", customerEmail);
         }
       }
+
+      // Schedule the shipping confirmation for 3:00 PM ET the next business day
+      // (never Saturday or Sunday). Unique stripe_session_id makes this idempotent.
+      {
+        const sendAfter = shippingSendAfter(new Date());
+        const { error: shipError } = await supabase
+          .from("shipping_confirmation_sends")
+          .insert({
+            stripe_session_id: fullSession.id,
+            recipient_email: customerEmail.toLowerCase().trim(),
+            customer_name: customerName || null,
+            send_after: sendAfter.toISOString(),
+          });
+        if (shipError) {
+          if ((shipError as any).code === "23505") {
+            console.log("Shipping confirmation already scheduled for session:", fullSession.id);
+          } else {
+            console.error("Failed to schedule shipping confirmation:", shipError);
+          }
+        } else {
+          console.log("Shipping confirmation scheduled for", sendAfter.toISOString(), "->", customerEmail);
+        }
+      }
     }
 
     return new Response(JSON.stringify({ received: true }), {
