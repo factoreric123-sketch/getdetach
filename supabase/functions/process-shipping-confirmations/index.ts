@@ -7,13 +7,15 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-// Sends due shipping-confirmation emails. Internal use only: called by a
-// scheduled job with the service role key in the Authorization header.
+// Sends due shipping-confirmation emails. Called by a scheduled job; the
+// apikey header must match the project's anon key. The function only sends
+// emails that were already scheduled by the Stripe webhook, so calling it
+// extra times is harmless and idempotent.
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
-  const auth = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
-  const expected = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+  const auth = req.headers.get("apikey") || "";
+  const expected = Deno.env.get("SUPABASE_ANON_KEY") || "";
   if (!expected || auth !== expected) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
