@@ -1730,6 +1730,112 @@ Use your phone intentionally instead of letting your phone decide what gets your
     `.trim(),
   },
   {
+    slug: "how-to-block-youtube-shorts-android",
+    title: "How to Block YouTube Shorts on Android Without Blocking YouTube (2026)",
+    metaTitle: "How to Block YouTube Shorts on Android (2026 Guide)",
+    metaDescription:
+      "YouTube has no permanent off switch for Shorts. Here are the methods that actually block YouTube Shorts on Android in 2026, without losing normal YouTube.",
+    excerpt:
+      "YouTube has no permanent off switch for Shorts. Here are the methods that actually block Shorts on Android in 2026, without losing normal YouTube.",
+    date: "2026-10-06",
+    faqSchema: [
+      {
+        question: "How do I block YouTube Shorts on Android?",
+        answer:
+          "Open YouTube, go to Settings, Time management, Shorts feed limit, and set it to zero minutes to stop the feed loading. For a stronger block you can't easily undo, use a scheduled app blocker like Detach to lock YouTube during focus hours.",
+      },
+      {
+        question: "Can I block YouTube Shorts without blocking YouTube?",
+        answer:
+          "Yes, partly. Setting the Shorts feed limit to zero and pausing Watch History both cut Shorts while keeping normal YouTube. Browser blocks and dedicated Shorts tools can target the feed too. App blockers like Detach instead block the full app during set hours.",
+      },
+      {
+        question: "Is there a permanent way to disable YouTube Shorts?",
+        answer:
+          "No. As of 2026, YouTube has no setting that removes Shorts forever. The closest options are the Shorts feed limit, pausing Watch History, or a third-party blocker, and each built-in method can be switched back on.",
+      },
+      {
+        question: "Why do YouTube Shorts keep coming back after I block them?",
+        answer:
+          "Because the built-in settings all have an off switch, and the algorithm keeps resurfacing Shorts once Watch History is on. To stop flipping the block back yourself, use a tool with friction you can't undo in one tap, like Detach's NFC card.",
+      },
+      {
+        question: "How do I stop wasting time on YouTube Shorts?",
+        answer:
+          "Set the Shorts feed limit to zero, pause Watch History so the feed gets less tempting, and block YouTube during your work or study hours with a scheduled blocker. Removing the easy access matters more than relying on willpower.",
+      },
+    ],
+    content: `
+## The Short Answer
+
+YouTube has no permanent off switch for Shorts, but you can get close. On Android, set the Shorts feed limit to zero in the YouTube app, pause your Watch History, or use a dedicated blocker. To keep yourself from switching it all back on, a scheduled app blocker like [Detach](/detach-app) locks YouTube during your focus hours so you can't cave.
+
+You open YouTube to watch one thing, and twenty minutes later you're still thumbing through Shorts you never meant to watch. You're not alone, and you're not weak. Shorts runs on the same infinite scroll and quick dopamine hits as TikTok and Reels, and it's built to keep you there. The annoying part is that YouTube still won't give you a clean button to turn it off for good. Here's what actually works on Android in 2026, and how to make it stick.
+
+## Can you permanently disable YouTube Shorts?
+
+Short version: no. As of 2026, YouTube still has no setting that removes Shorts forever. What it does have is a few ways to heavily reduce them, plus third-party tools that go further. Every free method leaves a small way back in, which is exactly why the last step on this list matters so much.
+
+### Method 1: Set the Shorts feed limit to zero
+
+This is the newest and easiest one. In April 2026, YouTube added a Shorts feed limit inside the app. Open YouTube, go to Settings, tap Time management, then Shorts feed limit, and set it to zero minutes. The Shorts feed stops loading on your home screen.
+
+It's free and official, but it's a setting you can switch back on in seconds, so it only helps if you leave it alone.
+
+### Method 2: Pause your Watch History
+
+Shorts gets more tempting the more the algorithm learns what you like. Turn that off. Go to your Google account, then Your data in YouTube, then YouTube Watch History, and turn it off. With no personalised feed, Shorts becomes far less of a trap.
+
+The trade-off is that the rest of your YouTube recommendations get more generic too.
+
+### Method 3: Hide Shorts in your browser
+
+If you watch YouTube in a mobile browser, some browsers like Brave can block the Shorts feed directly in their settings. On desktop, extensions that hide Shorts work well. This keeps normal videos while the Shorts feed disappears.
+
+The catch is that it only covers the browser, not the YouTube app itself.
+
+### Method 4: Block the whole thing during focus hours with Detach
+
+Here's the honest problem with everything above. Each method has an off switch sitting right there, and on a weak afternoon you'll flip it. If you keep turning your own blocks back on, the issue isn't willpower. It's that nothing is stopping you.
+
+This is where a scheduled blocker earns its place. Detach blocks YouTube and your other distraction apps on a schedule you set once, and it comes with a physical NFC card you tap to unlock them. Leave the card in another room and opening YouTube during your focus hours means actually getting up to find it. That small bit of friction is usually enough to kill the urge. YouTube is still there when you genuinely want it, just not during the hours you've decided to protect. It's free, there's no account to make, and setup takes a few minutes.
+
+Worth knowing: Detach blocks the full YouTube app during a session rather than filtering out only the Shorts feed, so it's the right pick when the real problem is reaching for YouTube at all, not just the Shorts tab.
+
+## Which method should you use?
+
+Use the Shorts feed limit and pause Watch History if a gentle reduction is enough for you. Use a browser block if you mostly watch on the web. And use Detach if you've already tried the built in settings and keep switching them off, because a block you can't undo on impulse is the only kind that survives a bored moment.
+
+Want to compare your options first? See our guide to the [best app blockers for Android in 2026](/blog/best-app-blockers-for-android-2026).
+
+## Take back the hours Shorts keeps stealing
+
+Detach blocks YouTube and other distraction apps on Android, with physical NFC friction that holds even when your willpower doesn't. Free, no account, ready in five minutes. [Get Detach on Google Play](https://play.google.com/store/apps/details?id=app.detach&pli=1) or head to [getdetach.app](/).
+
+## Frequently Asked Questions
+
+### How do I block YouTube Shorts on Android?
+
+Open YouTube, go to Settings, Time management, Shorts feed limit, and set it to zero minutes to stop the feed loading. For a stronger block you can't easily undo, use a scheduled app blocker like Detach to lock YouTube during focus hours.
+
+### Can I block YouTube Shorts without blocking YouTube?
+
+Yes, partly. Setting the Shorts feed limit to zero and pausing Watch History both cut Shorts while keeping normal YouTube. Browser blocks and dedicated Shorts tools can target the feed too. App blockers like Detach instead block the full app during set hours.
+
+### Is there a permanent way to disable YouTube Shorts?
+
+No. As of 2026, YouTube has no setting that removes Shorts forever. The closest options are the Shorts feed limit, pausing Watch History, or a third-party blocker, and each built-in method can be switched back on.
+
+### Why do YouTube Shorts keep coming back after I block them?
+
+Because the built-in settings all have an off switch, and the algorithm keeps resurfacing Shorts once Watch History is on. To stop flipping the block back yourself, use a tool with friction you can't undo in one tap, like Detach's NFC card.
+
+### How do I stop wasting time on YouTube Shorts?
+
+Set the Shorts feed limit to zero, pause Watch History so the feed gets less tempting, and block YouTube during your work or study hours with a scheduled blocker. Removing the easy access matters more than relying on willpower.
+    `.trim(),
+  },
+  {
     slug: "how-to-block-websites-on-android",
     title: "How to Block Websites on Android in 2026 (Chrome and All Browsers)",
     metaTitle: "How to Block Websites on Android in 2026 (Chrome & Browsers)",
