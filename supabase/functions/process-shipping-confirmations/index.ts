@@ -16,6 +16,7 @@ Deno.serve(async (req) => {
 
   const auth = req.headers.get("apikey") || "";
   const expected = Deno.env.get("SUPABASE_ANON_KEY") || "";
+  console.log("debug auth:", { gotLen: auth.length, gotPrefix: auth.slice(0, 10), expLen: expected.length, expPrefix: expected.slice(0, 10) });
   if (!expected || auth !== expected) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
