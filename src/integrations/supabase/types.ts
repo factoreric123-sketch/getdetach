@@ -380,6 +380,36 @@ export type Database = {
         }
         Relationships: []
       }
+      shipping_confirmation_sends: {
+        Row: {
+          created_at: string
+          customer_name: string | null
+          id: string
+          recipient_email: string
+          send_after: string
+          sent_at: string | null
+          stripe_session_id: string
+        }
+        Insert: {
+          created_at?: string
+          customer_name?: string | null
+          id?: string
+          recipient_email: string
+          send_after: string
+          sent_at?: string | null
+          stripe_session_id: string
+        }
+        Update: {
+          created_at?: string
+          customer_name?: string | null
+          id?: string
+          recipient_email?: string
+          send_after?: string
+          sent_at?: string | null
+          stripe_session_id?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
