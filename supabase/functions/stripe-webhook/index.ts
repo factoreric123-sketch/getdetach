@@ -14,6 +14,42 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
   apiVersion: "2025-08-27.basil",
 });
 
+// --- Shipping confirmation scheduling (3:00 PM America/New_York, next business day) ---
+const ET_TZ = "America/New_York";
+
+function etOffsetMinutes(date: Date): number {
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone: ET_TZ, hour12: false,
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", second: "2-digit",
+  });
+  const parts = Object.fromEntries(dtf.formatToParts(date).map((p) => [p.type, p.value]));
+  const asUtc = Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute, +parts.second);
+  return (asUtc - date.getTime()) / 60000;
+}
+
+function etWallToUtc(y: number, mo: number, d: number, h: number, mi: number): Date {
+  const guess = Date.UTC(y, mo - 1, d, h, mi);
+  const off = etOffsetMinutes(new Date(guess));
+  return new Date(guess - off * 60000);
+}
+
+// 3:00 PM ET the day after purchase; if that day is Saturday or Sunday, move to Monday.
+function shippingSendAfter(now: Date): Date {
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone: ET_TZ, year: "numeric", month: "2-digit", day: "2-digit",
+  });
+  const parts = Object.fromEntries(dtf.formatToParts(now).map((p) => [p.type, p.value]));
+  // Start from the ET calendar date of purchase, then add one day.
+  let day = new Date(Date.UTC(+parts.year, +parts.month - 1, +parts.day));
+  day = new Date(day.getTime() + 86400000);
+  // Skip weekend: Saturday (6) -> +2, Sunday (0) -> +1
+  const dow = day.getUTCDay();
+  if (dow === 6) day = new Date(day.getTime() + 2 * 86400000);
+  else if (dow === 0) day = new Date(day.getTime() + 86400000);
+  return etWallToUtc(day.getUTCFullYear(), day.getUTCMonth() + 1, day.getUTCDate(), 15, 0);
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
