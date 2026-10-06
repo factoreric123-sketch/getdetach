@@ -15,9 +15,12 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   const auth = req.headers.get("apikey") || "";
+  // Accept either the runtime's publishable key or the site's public anon JWT
+  // (both are public, non-secret keys; the function only sends emails that
+  // were already scheduled by the Stripe webhook).
+  const SITE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bHBscGxpYXlsdmFnbmVudWNqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4MzY0MDYsImV4cCI6MjA5MDQxMjQwNn0.EOXXKbqXKm_UreQz1zrRZJqQHMVR6cPa4i0tfVVOqjw";
   const expected = Deno.env.get("SUPABASE_ANON_KEY") || "";
-  console.log("debug auth:", { gotLen: auth.length, gotPrefix: auth.slice(0, 10), expLen: expected.length, expPrefix: expected.slice(0, 10) });
-  if (!expected || auth !== expected) {
+  if (!auth || (auth !== expected && auth !== SITE_ANON_KEY)) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
