@@ -1800,7 +1800,7 @@ Here's the honest problem with everything above. Each method has an off switch s
 
 This is where a scheduled blocker earns its place. Detach blocks YouTube and your other distraction apps on a schedule you set once, and it comes with a physical NFC card you tap to unlock them. Leave the card in another room and opening YouTube during your focus hours means actually getting up to find it. That small bit of friction is usually enough to kill the urge. YouTube is still there when you genuinely want it, just not during the hours you've decided to protect. It's free, there's no account to make, and setup takes a few minutes.
 
-Worth knowing: Detach blocks the full YouTube app during a session rather than filtering out only the Shorts feed, so it's the right pick when the real problem is reaching for YouTube at all, not just the Shorts tab.
+Worth knowing: [Detach](/) blocks the full YouTube app during a session rather than filtering out only the Shorts feed, so it's the right pick when the real problem is reaching for YouTube at all, not just the Shorts tab.
 
 ## Which method should you use?
 
