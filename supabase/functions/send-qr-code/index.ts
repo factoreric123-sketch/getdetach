@@ -18,8 +18,7 @@ Deno.serve(async (req) => {
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
   const okSecret = expected && auth === expected;
   const okService = serviceKey && bearer === serviceKey;
-  const okOneTime = auth === "OT-9f3k2m8xq7larkin";
-  if (!okSecret && !okService && !okOneTime) {
+  if (!okSecret && !okService) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
