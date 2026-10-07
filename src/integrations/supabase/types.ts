@@ -298,16 +298,19 @@ export type Database = {
       }
       order_numbers: {
         Row: {
+          confirmation_code: string | null
           created_at: string
           order_number: number
           stripe_session_id: string
         }
         Insert: {
+          confirmation_code?: string | null
           created_at?: string
           order_number?: never
           stripe_session_id: string
         }
         Update: {
+          confirmation_code?: string | null
           created_at?: string
           order_number?: never
           stripe_session_id?: string
