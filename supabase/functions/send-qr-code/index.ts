@@ -14,7 +14,11 @@ Deno.serve(async (req) => {
 
   const auth = req.headers.get("x-qr-send-secret") || "";
   const expected = Deno.env.get("QR_SEND_SECRET") || "";
-  if (!expected || auth !== expected) {
+  const bearer = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+  const okSecret = expected && auth === expected;
+  const okService = serviceKey && bearer === serviceKey;
+  if (!okSecret && !okService) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
