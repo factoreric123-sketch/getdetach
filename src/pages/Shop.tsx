@@ -8,6 +8,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import AppScreenshots from "@/components/shop/AppScreenshots";
 import nfcDevice from "@/assets/nfc-device.jpg";
+import magnetFridge from "@/assets/magnet-fridge.jpg.asset.json";
 import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
 
 const Shop = () => {
@@ -336,6 +337,12 @@ const Shop = () => {
                     Put it on your fridge.
                   </span>
                 </span>
+                <img
+                  src={magnetFridge.url}
+                  alt="Detach card magnet on a stainless steel fridge"
+                  className="ml-auto shrink-0 w-28 h-[72px] object-cover rounded-lg border border-border/40"
+                  loading="lazy"
+                />
               </button>
 
               {/* Buy Button */}
