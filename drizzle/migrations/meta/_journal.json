@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791395620393,
+      "tag": "0000_add_stable_order_numbers",
+      "breakpoints": true
+    }
+  ]
+}

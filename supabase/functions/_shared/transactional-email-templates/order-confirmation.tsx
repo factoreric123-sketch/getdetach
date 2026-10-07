@@ -7,6 +7,7 @@ import type { TemplateEntry } from './registry.ts'
 const SITE_NAME = "Detach"
 
 interface OrderConfirmationProps {
+  orderNumber?: string
   customerName?: string
   customerEmail?: string
   quantity?: number
@@ -15,6 +16,7 @@ interface OrderConfirmationProps {
 }
 
 const OrderConfirmationEmail = ({
+  orderNumber,
   customerName,
   customerEmail,
   quantity = 1,
@@ -33,6 +35,7 @@ const OrderConfirmationEmail = ({
         </Text>
 
         <Text style={sectionHeading}><strong>Order Details</strong></Text>
+        {orderNumber ? <Text style={detailText}>Order Number: {orderNumber}</Text> : null}
         <Text style={detailText}>Item: {SITE_NAME}</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
         <Text style={detailText}>Total: ${total}</Text>
@@ -83,6 +86,7 @@ export const template = {
   subject: 'Your Detach Order Confirmation',
   displayName: 'Order confirmation',
   previewData: {
+    orderNumber: 'DET-1001',
     customerName: 'Jane',
     quantity: 1,
     total: '9.99',

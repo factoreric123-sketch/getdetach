@@ -76,6 +76,13 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+    const { data: orderNumber, error: orderNumberError } = await supabase.rpc("get_or_create_order_number", {
+      _session_id: sessionId,
+    });
+    if (orderNumberError || typeof orderNumber !== "string") {
+      throw orderNumberError || new Error("Could not assign an order number");
+    }
+
     // Send the same order confirmation email to both the customer and the Detach team
     const recipients = [customerEmail, "getdetach@gmail.com"];
     for (const recipient of recipients) {
@@ -99,6 +106,7 @@ serve(async (req) => {
           recipientEmail: recipient,
           idempotencyKey: `order-confirm-${sessionId}-${recipient}`,
           templateData: {
+            orderNumber,
             customerName,
             customerEmail,
             quantity,

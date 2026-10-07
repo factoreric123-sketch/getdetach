@@ -296,6 +296,24 @@ export type Database = {
         }
         Relationships: []
       }
+      order_numbers: {
+        Row: {
+          created_at: string
+          order_number: number
+          stripe_session_id: string
+        }
+        Insert: {
+          created_at?: string
+          order_number?: never
+          stripe_session_id: string
+        }
+        Update: {
+          created_at?: string
+          order_number?: never
+          stripe_session_id?: string
+        }
+        Relationships: []
+      }
       order_qr_codes: {
         Row: {
           code: string
@@ -440,6 +458,10 @@ export type Database = {
     }
     Functions: {
       assign_order_qr_code: { Args: { _session_id: string }; Returns: string }
+      get_or_create_order_number: {
+        Args: { _session_id: string }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
