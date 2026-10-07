@@ -216,6 +216,13 @@ serve(async (req) => {
       const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+      const { data: orderNumber, error: orderNumberError } = await supabase.rpc("get_or_create_order_number", {
+        _session_id: fullSession.id,
+      });
+      if (orderNumberError || typeof orderNumber !== "string") {
+        throw orderNumberError || new Error("Could not assign an order number");
+      }
+
       // A successful order cancels any pending "payment failed" follow-up for this email.
       {
         const { error: cancelError } = await supabase
@@ -285,6 +292,7 @@ serve(async (req) => {
             recipientEmail: recipient,
             idempotencyKey: `order-confirm-${session.id}-${recipient}`,
             templateData: {
+              orderNumber,
               customerName,
               customerEmail,
               quantity,
