@@ -86,7 +86,7 @@ export const template = {
   subject: 'Your Detach Order Confirmation',
   displayName: 'Order confirmation',
   previewData: {
-    orderNumber: 'DET-1001',
+    orderNumber: '7K42P8',
     customerName: 'Jane',
     quantity: 1,
     total: '9.99',
