@@ -15,6 +15,13 @@
       "when": 1791402002495,
       "tag": "0001_random_six_character_order_numbers",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791441796394,
+      "tag": "0002_exclude_ambiguous_order_number_characters",
+      "breakpoints": true
     }
   ]
 }
