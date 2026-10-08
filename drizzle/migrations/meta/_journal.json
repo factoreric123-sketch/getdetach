@@ -22,6 +22,13 @@
       "when": 1791441796394,
       "tag": "0002_exclude_ambiguous_order_number_characters",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791441942979,
+      "tag": "0003_use_readable_order_number_alphabet",
+      "breakpoints": true
     }
   ]
 }
