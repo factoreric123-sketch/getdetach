@@ -1730,6 +1730,108 @@ Use your phone intentionally instead of letting your phone decide what gets your
     `.trim(),
   },
   {
+    slug: "how-to-block-instagram-on-android",
+    title: "How to Block Instagram on Android Without Deleting It (2026)",
+    metaTitle: "How to Block Instagram on Android Without Deleting It",
+    metaDescription:
+      "Want to block Instagram on Android but keep your account? Here are the methods that actually work in 2026, from Digital Wellbeing to a blocker that holds.",
+    excerpt:
+      "Want to block Instagram on Android but keep your account? Here are the methods that actually work in 2026, from Digital Wellbeing to a blocker that holds.",
+    date: "2026-10-08",
+    faqSchema: [
+      {
+        question: "How do I block Instagram on Android without deleting it?",
+        answer:
+          "Open Settings, Digital Wellbeing and parental controls, Dashboard, find Instagram, tap the hourglass, and set a timer. Your account and data stay intact. For a block you can't easily undo, use a scheduled app blocker like Detach.",
+      },
+      {
+        question: "How do I block the Instagram app and website at the same time?",
+        answer:
+          "Digital Wellbeing only limits the app, so the website stays open. To close both doors, use a blocker that lets you add both the Instagram app and instagram.com to one block list, then apply a schedule.",
+      },
+      {
+        question: "Why do I keep unblocking Instagram on my phone?",
+        answer:
+          "Because the built in limits all have an off switch, so in a weak moment you cancel them without thinking. To stop doing that, use a tool with friction you can't undo in one tap, like Detach's NFC card kept out of reach.",
+      },
+      {
+        question: "Is there a free app to block Instagram on Android?",
+        answer:
+          "Yes. Android's Digital Wellbeing is free and built in, and free blockers like Detach add stronger, harder to bypass control with scheduled blocking on top of the basic timer.",
+      },
+      {
+        question: "Does blocking Instagram delete my account or messages?",
+        answer:
+          "No. Blocking only restricts access to the app. Your Instagram account, DMs, posts, and saved content all stay exactly as they were. You just can't open the app during the block.",
+      },
+    ],
+    content: `
+## The Short Answer
+
+You don't need to delete Instagram to stop using it. On Android, you can block it with a Digital Wellbeing app timer, limit it through Family Link, or use a dedicated app blocker. For a block you can't switch off the moment you get the urge, a scheduled blocker like [Detach](/) locks Instagram during your focus hours while keeping your account intact.
+
+Deleting Instagram feels like the obvious fix until you realise you'd lose your DMs, your saved posts, and the account you've had for years. Then you reinstall it a week later anyway. The smarter move is to block it while keeping it installed, so it's there when you actually want it and gone when you don't. Here's how to do that on Android in 2026, from the free built in options to the one that actually holds.
+
+## Can you block Instagram without deleting it?
+
+Yes, easily. Every method below leaves your Instagram account, messages, and data completely untouched. You're just restricting access to the app during the times it tends to eat your day. Nothing gets lost, and you can still use it on your own schedule.
+
+## Method 1: Set an app timer with Digital Wellbeing
+
+This is the quickest free option, built right into Android. Open Settings, tap Digital Wellbeing and parental controls, then Dashboard. Find Instagram in the list, tap the hourglass icon, and set a daily timer. To block it almost entirely, set the timer to zero minutes and the app greys out for the day.
+
+The catch is that the off switch sits right there in Settings. On a bored evening you can lift the limit in a couple of taps, which is why this works for gentle control but not for a real habit.
+
+## Method 2: Restrict Instagram with Family Link
+
+If this is for a child's phone, Google Family Link is built for it. On their supervised account you can set app limits on Instagram or block it outright, and they can't undo it without your approval.
+
+Just know Family Link is designed for parents managing a kid's device, not for blocking your own phone.
+
+## Method 3: Block the app and the website together
+
+Here's a gap people miss. Even with the app blocked, Instagram's website is one browser tap away, and the habit sneaks back in. If you want it properly handled, block both the app and instagram.com. Some blockers let you add the website to the same block list so both doors are closed at once.
+
+## Method 4: Block Instagram in a way that actually sticks
+
+Let's be honest about the methods above. Digital Wellbeing is too easy to cancel, Family Link is for kids, and most free tools have an off switch you'll reach for in a weak moment. If you keep turning your own blocks off, that isn't a willpower problem. It's that nothing is really stopping you.
+
+This is where a dedicated blocker earns its spot. Detach blocks Instagram and your other distraction apps on a schedule you set once, and it comes with a physical NFC card you tap to unlock them. Leave the card in another room and opening Instagram during your focus hours means getting up to go find it. That small bit of real effort is usually enough to break the reflex. Your account stays exactly as it was, and Instagram is still available outside your blocked hours. It's free, there's no account to create, and setup takes a few minutes.
+
+## Which method should you choose?
+
+Use Digital Wellbeing if a light daily limit is enough and you'll mostly respect it. Use Family Link for a child's phone. Block the website too if you catch yourself opening Instagram in the browser. And use Detach if you've already tried the built in tools and keep switching them off, because a block you can't undo on impulse is the only kind that survives a weak moment.
+
+Want to compare your options first? See our guide to the [best app blockers for Android in 2026](/blog/best-app-blockers-for-android-2026).
+
+## Take back the time Instagram keeps stealing
+
+Detach blocks Instagram and other distraction apps on Android, with physical NFC friction that holds even when your willpower doesn't. Free, no account, ready in five minutes. Head to [getdetach.app](/).
+
+## Frequently Asked Questions
+
+### How do I block Instagram on Android without deleting it?
+
+Open Settings, Digital Wellbeing and parental controls, Dashboard, find Instagram, tap the hourglass, and set a timer. Your account and data stay intact. For a block you can't easily undo, use a scheduled app blocker like Detach.
+
+### How do I block the Instagram app and website at the same time?
+
+Digital Wellbeing only limits the app, so the website stays open. To close both doors, use a blocker that lets you add both the Instagram app and instagram.com to one block list, then apply a schedule.
+
+### Why do I keep unblocking Instagram on my phone?
+
+Because the built in limits all have an off switch, so in a weak moment you cancel them without thinking. To stop doing that, use a tool with friction you can't undo in one tap, like Detach's NFC card kept out of reach.
+
+### Is there a free app to block Instagram on Android?
+
+Yes. Android's Digital Wellbeing is free and built in, and free blockers like Detach add stronger, harder to bypass control with scheduled blocking on top of the basic timer.
+
+### Does blocking Instagram delete my account or messages?
+
+No. Blocking only restricts access to the app. Your Instagram account, DMs, posts, and saved content all stay exactly as they were. You just can't open the app during the block.
+    `.trim(),
+  },
+  {
     slug: "how-to-block-youtube-shorts-android",
     title: "How to Block YouTube Shorts on Android Without Blocking YouTube (2026)",
     metaTitle: "How to Block YouTube Shorts on Android (2026 Guide)",
