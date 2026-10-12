@@ -1730,6 +1730,106 @@ Use your phone intentionally instead of letting your phone decide what gets your
     `.trim(),
   },
   {
+    slug: "how-to-block-tiktok-on-android",
+    title: "How to Block TikTok on Android Without Deleting It (2026)",
+    metaTitle: "How to Block TikTok on Android Without Deleting It",
+    metaDescription:
+      "Want to block TikTok on Android but keep your account? Here are the methods that actually work in 2026, from Digital Wellbeing to a blocker that holds.",
+    excerpt:
+      "Want to block TikTok on Android but keep your account? Here are the methods that actually work in 2026, from Digital Wellbeing to a blocker that holds.",
+    date: "2026-10-12",
+    faqSchema: [
+      {
+        question: "How do I block TikTok on Android without deleting it?",
+        answer:
+          "Open Settings, Digital Wellbeing and parental controls, Dashboard, find TikTok, tap the hourglass, and set a timer. Your account and data stay intact. For a block you can't easily undo, use a scheduled app blocker like Detach.",
+      },
+      {
+        question: "How do I block the TikTok app and website at the same time?",
+        answer:
+          "Digital Wellbeing only limits the app, so the website stays open. To close both, use a blocker that lets you add both the TikTok app and tiktok.com to one block list, then set a schedule.",
+      },
+      {
+        question: "Why do I keep unblocking TikTok on my phone?",
+        answer:
+          "Because the built in limits all have an off switch, so in a weak moment you cancel them without thinking. To stop doing that, use a tool with friction you can't undo in one tap, like Detach's NFC card kept out of reach.",
+      },
+      {
+        question: "Is there a free app to block TikTok on Android?",
+        answer:
+          "Yes. Android's Digital Wellbeing is free and built in, and free blockers like Detach add stronger, harder to bypass control with scheduled blocking on top of the basic timer.",
+      },
+      {
+        question: "Does blocking TikTok delete my account or videos?",
+        answer:
+          "No. Blocking only restricts access to the app. Your TikTok account, DMs, and saved videos all stay exactly as they were. You just can't open it during the block.",
+      },
+    ],
+    content: `
+## The Short Answer
+
+You don't have to delete TikTok to break the habit. On Android you can block it with a Digital Wellbeing app timer, restrict it through Family Link, or block both the app and the website. For a block you can't switch off the second the urge hits, a scheduled blocker like [Detach](/) locks TikTok during your focus hours while your account stays exactly as it is.
+
+You tell yourself you'll check TikTok for five minutes, and an hour later you're still scrolling the For You feed. It's not a lack of discipline. TikTok's whole design is built to keep you there, and the app is very good at its job. Deleting it feels like the only escape, but then you lose your account and reinstall it a few days later anyway. The better move is to block it while keeping it installed. Here's how to do that on Android in 2026.
+
+## Can you block TikTok without deleting it?
+
+Yes, and it's the smarter approach. Every method below leaves your TikTok account, DMs, and saved videos untouched. You're only cutting off access during the hours it tends to swallow your time. When you genuinely want it, it's still there. You just stop reaching for it on autopilot.
+
+## Set an app timer with Digital Wellbeing
+
+This is the fastest free option, already built into Android. Open Settings, tap Digital Wellbeing and parental controls, then Dashboard. Find TikTok, tap the hourglass icon, and set a daily timer. Set it to zero minutes and TikTok greys out for the rest of the day without being uninstalled.
+
+The weakness is that the off switch sits right there in Settings. On a slow afternoon you can lift the limit in seconds, so this works for a gentle nudge but rarely for a real habit.
+
+## Restrict TikTok with Family Link
+
+If this is for a child's phone, Google Family Link is made for it. On their supervised account you can set a daily limit on TikTok or block it completely, and they can't reverse it without your approval. Just remember Family Link is built for parents managing a kid's device, not for blocking your own.
+
+## Block the app and the website together
+
+Here's something people overlook. Even with the app blocked, tiktok.com is one browser tap away, and the habit quietly slips back in. If you want it handled properly, block both the TikTok app and the website so both doors are shut. Some blockers let you add the site to the same block list in one step.
+
+## Block TikTok in a way that actually sticks
+
+Let's be honest about everything above. Digital Wellbeing is too easy to cancel, Family Link is for kids, and most free tools keep an off switch you'll reach for in a weak moment. If you keep turning your own blocks back on, that isn't weakness. It's that nothing is really stopping you.
+
+This is where a dedicated blocker earns its place. [Detach](/) blocks TikTok and your other distraction apps on a schedule you set once, and it comes with a physical NFC card you tap to unlock them. Leave the card in another room and opening TikTok during your focus hours means actually getting up to find it. That small bit of real effort is usually enough to break the reflex before it starts. Your account stays exactly as it was, and TikTok is still there outside your blocked hours. It's free, there's no account to create, and setup takes a few minutes.
+
+## Which method should you choose?
+
+Use Digital Wellbeing if a light daily limit is enough and you'll mostly stick to it. Use Family Link for a child's phone. Block the website too if you catch yourself opening TikTok in the browser. And use Detach if you've already tried the built in tools and keep switching them off, because a block you can't undo on impulse is the only kind that survives a bored moment.
+
+Want to compare your options first? See our guide to the [best app blockers for Android in 2026](/blog/best-app-blockers-for-android-2026).
+
+## Take back the hours TikTok keeps stealing
+
+Detach blocks TikTok and other distraction apps on Android, with physical NFC friction that holds even when your willpower doesn't. Free, no account, ready in five minutes. Head to [getdetach.app](/).
+
+## Frequently Asked Questions
+
+### How do I block TikTok on Android without deleting it?
+
+Open Settings, Digital Wellbeing and parental controls, Dashboard, find TikTok, tap the hourglass, and set a timer. Your account and data stay intact. For a block you can't easily undo, use a scheduled app blocker like Detach.
+
+### How do I block the TikTok app and website at the same time?
+
+Digital Wellbeing only limits the app, so the website stays open. To close both, use a blocker that lets you add both the TikTok app and tiktok.com to one block list, then set a schedule.
+
+### Why do I keep unblocking TikTok on my phone?
+
+Because the built in limits all have an off switch, so in a weak moment you cancel them without thinking. To stop doing that, use a tool with friction you can't undo in one tap, like Detach's NFC card kept out of reach.
+
+### Is there a free app to block TikTok on Android?
+
+Yes. Android's Digital Wellbeing is free and built in, and free blockers like Detach add stronger, harder to bypass control with scheduled blocking on top of the basic timer.
+
+### Does blocking TikTok delete my account or videos?
+
+No. Blocking only restricts access to the app. Your TikTok account, DMs, and saved videos all stay exactly as they were. You just can't open it during the block.
+    `.trim(),
+  },
+  {
     slug: "how-to-block-instagram-on-android",
     title: "How to Block Instagram on Android Without Deleting It (2026)",
     metaTitle: "How to Block Instagram on Android Without Deleting It",
