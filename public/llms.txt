@@ -58,6 +58,7 @@ Detach stops the "unlock phone, open Instagram, lose an hour" loop by making dis
 
 - App: Free to download
 - Detach card: $9.99 one-time, no subscription, free shipping (USA)
+- Guarantee: 30-day 100% money-back when your card is received
 
 ## Competitor Comparison
 
@@ -137,6 +138,9 @@ A: Not easily. Deleting the app doesn't help in strict mode. The block holds unt
 
 Q: Does Detach require a subscription?
 A: No. $9.99 one-time for the card. The app is free.
+
+Q: Does Detach have a money-back guarantee?
+A: Yes. 30-day 100% money-back guarantee when your card is received.
 
 Q: Does Detach work on Android?
 A: Yes. Detach is available for Android on Google Play and for iPhone on the Apple App Store.
