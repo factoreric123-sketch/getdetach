@@ -267,6 +267,7 @@ const Shop = () => {
               <div className="mb-8">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>
                 <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping worldwide</p>
+                <p className="text-sm text-muted-foreground mt-0.5">30-day 100% money-back guarantee when your card is received</p>
               </div>
 
               {/* Features */}

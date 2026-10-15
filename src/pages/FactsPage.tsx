@@ -13,6 +13,7 @@ const facts: Array<{ label: string; value: React.ReactNode }> = [
   { label: "iPhone requirement", value: "iOS 17 or later" },
   { label: "App price", value: "Free" },
   { label: "Optional Detach card", value: "$9.99 one time" },
+  { label: "Guarantee", value: "30-day 100% money-back when your card is received" },
   { label: "Subscription", value: "None" },
   { label: "Account required", value: "No" },
   {
@@ -221,6 +222,7 @@ const FactsPage = () => {
               <li>Detach app for iPhone and Android: free.</li>
               <li>Detach card: $9.99, one time purchase, no subscription.</li>
               <li>Shipping: free worldwide.</li>
+              <li>30-day 100% money-back guarantee when your card is received.</li>
               <li>No account is required to use the app.</li>
             </ul>
           </section>
