@@ -382,9 +382,14 @@ const Shop = () => {
                   : `Buy Now · $${((9.99 + (addMagnet ? 2 : 0)) * quantity).toFixed(2)}`}
               </button>
 
-
-              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                30-day 100% money-back guarantee when your card is received
+              </p>
+              <p className="text-xs text-muted-foreground/80 mt-1.5 text-center">
                 Secure checkout powered by Stripe
+              </p>
+              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
+                Soft-touch matte finish · No battery, ever
               </p>
 
               {/* Android NFC details popup */}
