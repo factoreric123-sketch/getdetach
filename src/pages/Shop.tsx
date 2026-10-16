@@ -281,34 +281,33 @@ const Shop = () => {
               <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
                 Detach Card
               </p>
-              <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2">
+              <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-3">
                 The Card That Locks{" "}
                 <span className="text-gradient">Distracting Apps</span>
               </h1>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Detach makes accessing distracting apps a physical action. Tap your card to block, then tap it again when you're ready to unlock. No subscription. No battery. No charging. Works forever.
+              <p className="text-muted-foreground mb-5 leading-relaxed">
+                Tap your card to block distracting apps. Tap again to unlock. Take control of your screen time.
               </p>
 
-              <div className="mb-8">
+              <div className="mb-5 flex items-baseline gap-3">
                 <span className="text-5xl font-black tracking-tight">$9.99</span>
-                <p className="text-sm text-muted-foreground mt-1">One-time purchase · Free shipping worldwide</p>
-                <p className="text-sm text-muted-foreground mt-0.5">30-day 100% money-back guarantee when your card is received</p>
+                <span className="text-sm text-muted-foreground">One-time purchase</span>
               </div>
 
               {/* Features */}
-              <div className="space-y-3 mb-3">
+              <div className="space-y-2.5 mb-2">
                 {[
-                  "Soft-touch matte finish",
-                  "No battery, no charging, ever",
-                  "Works with iPhone (iOS 17+) and Android",
+                  "Free worldwide shipping",
+                  "Works with iPhone and Android*",
+                  "No subscriptions or charging",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <Check className="w-4 h-4 text-foreground/40 shrink-0" />
+                    <Check className="w-4 h-4 text-green-500 shrink-0" />
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </div>
                 ))}
                 <p className="text-xs text-muted-foreground pt-1">
-                  Using Android? The card needs a phone with an NFC reader.{" "}
+                  *Using Android? The card needs a phone with an NFC reader.{" "}
                   <button
                     type="button"
                     onClick={() => setNfcOpen(true)}
@@ -383,9 +382,14 @@ const Shop = () => {
                   : `Buy Now · $${((9.99 + (addMagnet ? 2 : 0)) * quantity).toFixed(2)}`}
               </button>
 
-
-              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                30-day 100% money-back guarantee when your card is received
+              </p>
+              <p className="text-xs text-muted-foreground/80 mt-1.5 text-center">
                 Secure checkout powered by Stripe
+              </p>
+              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
+                Soft-touch matte finish · No battery, ever
               </p>
 
               {/* Android NFC details popup */}
