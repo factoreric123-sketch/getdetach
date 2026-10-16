@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, Download, Minus, Plus, ShoppingBag } from "lucide-react";
+import { Check, Download, Lock, Minus, Plus, ShieldCheck, ShoppingBag } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/landing/Navbar";
@@ -382,15 +382,31 @@ const Shop = () => {
                   : `Buy Now · $${((9.99 + (addMagnet ? 2 : 0)) * quantity).toFixed(2)}`}
               </button>
 
-              <p className="text-xs text-muted-foreground mt-3 text-center">
-                30-day 100% money-back guarantee when your card is received
-              </p>
-              <p className="text-xs text-muted-foreground/80 mt-1.5 text-center">
-                Secure checkout powered by Stripe
-              </p>
-              <p className="text-xs text-muted-foreground/80 mt-3 text-center">
-                Soft-touch matte finish · No battery, ever
-              </p>
+              <div className="mt-4 flex items-center justify-center gap-x-8 gap-y-3">
+                <div className="flex items-center gap-2.5">
+                  <ShieldCheck
+                    className="w-5 h-5 shrink-0 text-muted-foreground"
+                    strokeWidth={1.5}
+                  />
+                  <span>
+                    <span className="block text-xs font-semibold text-foreground">
+                      30-Day Money-Back
+                    </span>
+                    <span className="block text-[11px] text-muted-foreground">100% Guarantee</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Lock className="w-5 h-5 shrink-0 text-muted-foreground" strokeWidth={1.5} />
+                  <span>
+                    <span className="block text-xs font-semibold text-foreground">
+                      Secure Checkout
+                    </span>
+                    <span className="block text-[11px] text-muted-foreground">
+                      Powered by Stripe
+                    </span>
+                  </span>
+                </div>
+              </div>
 
               {/* Android NFC details popup */}
               <Dialog open={nfcOpen} onOpenChange={setNfcOpen}>
