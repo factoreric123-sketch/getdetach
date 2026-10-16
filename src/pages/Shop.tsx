@@ -87,55 +87,80 @@ const Shop = () => {
     }
   };
 
+  const downloadQr = async () => {
+    if (!orderCode?.qrImageUrl) return;
+    try {
+      const res = await fetch(orderCode.qrImageUrl);
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `detach-qr-${orderCode.code}.png`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
+    } catch {
+      window.open(orderCode.qrImageUrl, "_blank");
+    }
+  };
+
   if (isSuccess) {
     return (
       <div className="min-h-screen bg-background">
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center px-6">
+        <div className="min-h-screen flex items-center justify-center px-4 py-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="max-w-2xl text-center"
+            className="w-full max-w-4xl text-center"
           >
-            <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
-              <Check className="w-8 h-8 text-green-500" />
+            <div className="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+              <Check className="w-7 h-7 text-green-500" />
             </div>
-            <h1 className="text-3xl font-black mb-3">Order Confirmed!</h1>
-            <p className="text-muted-foreground mb-8">
+            <h1 className="text-3xl font-black mb-2">Order Confirmed!</h1>
+            <p className="text-muted-foreground mb-6">
               Your Detach card is on its way. You'll receive a shipping confirmation email soon.
             </p>
-            {orderCode && (
-              <div className="w-full bg-card/50 border border-border/60 rounded-[2rem] px-8 py-8 md:px-10 md:py-9 mb-6 text-left shadow-2xl">
-                <h2 className="text-xl font-semibold tracking-tight mb-3">
-                  Start using Detach before your card arrives
+            <div className="grid gap-4 md:grid-cols-2 mb-6 items-stretch">
+              {orderCode && (
+                <div className="w-full bg-card/50 border border-border/60 rounded-[1.75rem] px-6 py-6 text-left shadow-2xl flex flex-col">
+                  <h2 className="text-lg font-semibold tracking-tight mb-2">
+                    Start using Detach before your card arrives
+                  </h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. On Android, no code is needed. On iOS, enter this code to enable it:
+                  </p>
+                  <p className="text-2xl font-black tracking-[0.3em] mb-4 text-center">{orderCode.code}</p>
+                  <img src={orderCode.qrImageUrl} alt="Detach QR code" className="w-36 h-36 rounded-xl mx-auto" />
+                  <button
+                    onClick={downloadQr}
+                    className="mt-4 mx-auto inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download QR Code
+                  </button>
+                  <p className="text-xs text-muted-foreground text-center mt-3">
+                    We also emailed this to you so you can print it.
+                  </p>
+                </div>
+              )}
+              <div className="w-full bg-card/50 border border-border/60 rounded-[1.75rem] px-6 py-6 text-left shadow-2xl flex flex-col">
+                <h2 className="text-lg font-semibold tracking-tight mb-2">
+                  Want an extra Detach card?
                 </h2>
-                <p className="text-[15px] text-muted-foreground leading-relaxed mb-5">
-                  Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. On Android, no code is needed. On iOS, enter this code to enable it:
-                </p>
-                <p className="text-3xl font-black tracking-[0.3em] mb-6 text-center">{orderCode.code}</p>
-                <a href={orderCode.qrImageUrl} target="_blank" rel="noopener noreferrer" className="block mx-auto w-48">
-                  <img src={orderCode.qrImageUrl} alt="Detach QR code" className="w-48 h-48 rounded-xl" />
-                </a>
-                <p className="text-sm text-muted-foreground text-center mt-3">
-                  We also emailed this to you so you can print it.
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  If you leave us a review, send an email to{" "}
+                  <a
+                    href="mailto:getdetach@gmail.com"
+                    className="text-foreground underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors"
+                  >
+                    getdetach@gmail.com
+                  </a>{" "}
+                  with a screenshot or confirmation of your review. We'll include an extra Detach card
+                  in your envelope as a thank you!
                 </p>
               </div>
-            )}
-            <div className="w-full bg-card/50 border border-border/60 rounded-[2rem] px-8 py-8 md:px-10 md:py-9 mb-8 text-left shadow-2xl">
-              <h2 className="text-xl font-semibold tracking-tight mb-3">
-                Want an extra Detach card?
-              </h2>
-              <p className="text-[15px] text-muted-foreground leading-relaxed">
-                If you leave us a review, send an email to{" "}
-                <a
-                  href="mailto:getdetach@gmail.com"
-                  className="text-foreground underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors"
-                >
-                  getdetach@gmail.com
-                </a>{" "}
-                with a screenshot or confirmation of your review. We'll include an extra Detach card
-                in your envelope as a thank you!
-              </p>
             </div>
             <a
               href="/"
