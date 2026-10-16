@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Download, Lock, Minus, Plus, ShieldCheck, ShoppingBag } from "lucide-react";
@@ -30,6 +30,19 @@ const Shop = () => {
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [orderCode, setOrderCode] = useState<{ code: string; qrImageUrl: string } | null>(null);
+  const qrLandingRef = useRef<HTMLParagraphElement>(null);
+  const hasPositionedSuccess = useRef(false);
+
+  useEffect(() => {
+    if (!isSuccess || !orderCode || hasPositionedSuccess.current || !window.matchMedia("(max-width: 767px)").matches) return;
+    const frame = requestAnimationFrame(() => {
+      const target = qrLandingRef.current;
+      if (!target) return;
+      hasPositionedSuccess.current = true;
+      window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top - 84, behavior: "instant" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [isSuccess, orderCode]);
 
   useEffect(() => {
     const ref = searchParams.get("ref");
@@ -131,7 +144,7 @@ const Shop = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. On Android, no code is needed. On iOS, enter this code to enable it:
                   </p>
-                  <p className="text-2xl font-black tracking-[0.3em] mb-4 text-center">{orderCode.code}</p>
+                  <p ref={qrLandingRef} className="text-2xl font-black tracking-[0.3em] mb-4 text-center">{orderCode.code}</p>
                   <img src={orderCode.qrImageUrl} alt="Detach QR code" className="w-36 h-36 rounded-xl mx-auto" />
                   <button
                     onClick={downloadQr}
