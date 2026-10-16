@@ -41,7 +41,7 @@ const StartUsingDetachEmail = ({ qrCode, qrImageUrl }: StartUsingDetachProps) =>
 
         <Text style={text}>If you're on iOS, enter this code to enable it: <strong>{qrCode || '000026'}</strong></Text>
 
-        <Text style={text}>You can also print out the QR code, cut out a small piece of cardboard, and tape the QR code onto it. Then you can use it like a temporary Detach card until your real one arrives.</Text>
+        <Text style={text}>You can also print out the QR code, tape it onto an old card you no longer use, and use it as a temporary Detach card until your real one arrives.</Text>
 
         <Text style={text}>Once your Detach card arrives, you can switch back to using the physical card whenever you'd like.</Text>
 
