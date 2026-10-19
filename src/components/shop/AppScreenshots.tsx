@@ -11,7 +11,6 @@ import shield from "@/assets/06-shield-real.png.asset.json";
 import sessionLength from "@/assets/07-session-length.png.asset.json";
 import endsAt from "@/assets/08-ends-at.png.asset.json";
 import modes from "@/assets/09-modes.png.asset.json";
-import modeEditor from "@/assets/10-mode-editor.png.asset.json";
 import schedules from "@/assets/12-schedules.png.asset.json";
 import editSchedule from "@/assets/13-edit.png.asset.json";
 import activity from "@/assets/14-activity-real.png.asset.json";
@@ -27,7 +26,6 @@ const screenshots = [
   { src: sessionLength.url, alt: "Choose your Detach session length" },
   { src: endsAt.url, alt: "Set when your Detach focus session ends" },
   { src: modes.url, alt: "Detach blocking modes" },
-  { src: modeEditor.url, alt: "Edit apps and websites in a Detach blocking mode" },
   { src: schedules.url, alt: "Detach schedules for morning and night blocking" },
   { src: editSchedule.url, alt: "Create and edit a Detach blocking schedule" },
   { src: activity.url, alt: "Detach activity screen showing daily and weekly focus time" },
