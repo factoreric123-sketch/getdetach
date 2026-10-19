@@ -2,26 +2,28 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import screenshot1 from "@/assets/app-screenshot-1.jpg";
-import screenshot2 from "@/assets/app-screenshot-2.jpg";
-import screenshot3 from "@/assets/app-screenshot-3.jpg";
-import screenshot4 from "@/assets/app-screenshot-4.jpg";
-import screenshotBePresent from "@/assets/app-screenshot-be-present.jpg";
-import screenshot5 from "@/assets/detach-schedules-6.5in-v2.jpg.asset.json";
-import screenshot6 from "@/assets/app-screenshot-6.jpg";
-import screenshot7 from "@/assets/app-screenshot-7.jpg";
-import screenshot8 from "@/assets/detach-settings-6.5in.jpg.asset.json";
+import home from "@/assets/01-home.png.asset.json";
+import scan from "@/assets/02-scan.png.asset.json";
+import hold from "@/assets/03-hold.png.asset.json";
+import active from "@/assets/04-active.png.asset.json";
+import unlock from "@/assets/05-unlock.png.asset.json";
+import shield from "@/assets/06-shield-real.png.asset.json";
+import sessionLength from "@/assets/07-session-length.png.asset.json";
+import endsAt from "@/assets/08-ends-at.png.asset.json";
+import modes from "@/assets/09-modes.png.asset.json";
+import modeEditor from "@/assets/10-mode-editor.png.asset.json";
 
 const screenshots = [
-  { src: screenshot1, alt: "Detach app home screen – tap or hold to start a focus session" },
-  { src: screenshot2, alt: "Ready to scan – hold the NFC card to your phone" },
-  { src: screenshot3, alt: "Active Detach session with timer counting up" },
-  { src: screenshotBePresent, alt: "Be Present screen – the best moments happen when you look up" },
-  { src: screenshot4, alt: "Modes screen – create Focus and Bedtime blocking modes" },
-  { src: screenshot5.url, alt: "Schedules screen – set automatic daily blocking schedules" },
-  { src: screenshot6, alt: "Edit schedule – configure start time, days, and mode" },
-  { src: screenshot7, alt: "Activity analytics – track your detach time by week" },
-  { src: screenshot8.url, alt: "Settings – strict mode, emergency overrides, manual detach" },
+  { src: home.url, alt: "Detach home screen with focus mode and session timer" },
+  { src: scan.url, alt: "Scan your Detach card to start a focus session" },
+  { src: hold.url, alt: "Hold to start a Detach focus session" },
+  { src: active.url, alt: "Active Detach focus session" },
+  { src: unlock.url, alt: "Unlock apps with your Detach card" },
+  { src: shield.url, alt: "Detach blocked app reminder screen" },
+  { src: sessionLength.url, alt: "Choose your Detach session length" },
+  { src: endsAt.url, alt: "Set when your Detach focus session ends" },
+  { src: modes.url, alt: "Detach blocking modes" },
+  { src: modeEditor.url, alt: "Edit apps and websites in a Detach blocking mode" },
 ];
 
 const AppScreenshots = () => {
