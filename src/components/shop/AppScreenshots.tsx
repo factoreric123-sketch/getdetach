@@ -28,6 +28,10 @@ const screenshots = [
   { src: endsAt.url, alt: "Set when your Detach focus session ends" },
   { src: modes.url, alt: "Detach blocking modes" },
   { src: modeEditor.url, alt: "Edit apps and websites in a Detach blocking mode" },
+  { src: schedules.url, alt: "Detach schedules for morning and night blocking" },
+  { src: editSchedule.url, alt: "Create and edit a Detach blocking schedule" },
+  { src: activity.url, alt: "Detach activity screen showing daily and weekly focus time" },
+  { src: settings.url, alt: "Detach settings for strict mode and emergency overrides" },
 ];
 
 const AppScreenshots = () => {
