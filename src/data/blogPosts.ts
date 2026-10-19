@@ -1832,7 +1832,7 @@ No. Blocking only restricts access to the app. Your TikTok account, DMs, and sav
   {
     slug: "why-you-cant-stop-picking-up-your-phone",
     title: "Why You Can't Stop Picking Up Your Phone (The Psychology Behind It)",
-    metaTitle: "Why You Can't Stop Picking Up Your Phone (The Psychology)",
+    metaTitle: "Why You Can't Stop Picking Up Your Phone (The Psychology) | Detach",
     metaDescription:
       "Why can't you stop checking your phone? The real psychology behind the habit, why willpower fails, and what actually works to break the loop in 2026.",
     excerpt:
