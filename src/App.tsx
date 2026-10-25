@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import DetachGuardianPrivacyPolicy from "./pages/DetachGuardianPrivacyPolicy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
 import DetachApp from "./pages/DetachApp";
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/compare" element={<Compare />} />
           <Route path="/detach-faq" element={<DetachFaq />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/detach-guardian-privacy-policy" element={<DetachGuardianPrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
