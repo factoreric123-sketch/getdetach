@@ -37,9 +37,8 @@ const StartUsingDetachEmail = ({ qrCode, qrImageUrl }: StartUsingDetachProps) =>
             <Text style={text}><Link href={qrImageUrl} style={link}>Open the QR code to print it</Link></Text>
           </>
         ) : null}
-        <Text style={text}>
-          Enter this code in the app to turn on the QR feature. It works on both iPhone and Android: <strong>{qrCode || '000026'}</strong>
-        </Text>
+        <Text style={text}>Enter this code in the app to turn on the QR feature: <strong>{qrCode || '000026'}</strong></Text>
+
 
 
         <Text style={text}>You can also print out the QR code, tape it onto an old card you no longer use, and use it as a temporary Detach card until your real one arrives.</Text>
