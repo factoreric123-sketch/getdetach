@@ -142,7 +142,7 @@ const Shop = () => {
                     Start using Detach before your card arrives
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. On Android, no code is needed. On iOS, enter this code to enable it:
+                    Download Detach, go to Settings and turn on Use a QR Code. Scan this QR code to end a blocking session. Enter this code to enable it (works on iPhone and Android):
                   </p>
                   <p ref={qrLandingRef} className="text-2xl font-black tracking-[0.3em] mb-4 text-center">{orderCode.code}</p>
                   <img src={orderCode.qrImageUrl} alt="Detach QR code" className="w-36 h-36 rounded-xl mx-auto" />
