@@ -36,6 +36,7 @@ const OrderConfirmationEmail = ({
 
         <Text style={sectionHeading}><strong>Order Details</strong></Text>
         {orderNumber ? <Text style={detailText}>Order Number: {orderNumber}</Text> : null}
+        {customerEmail ? <Text style={detailText}>Email: {customerEmail}</Text> : null}
         <Text style={detailText}>Item: {SITE_NAME}</Text>
         <Text style={detailText}>Quantity: {quantity}</Text>
         <Text style={detailText}>Total: ${total}</Text>
@@ -88,6 +89,7 @@ export const template = {
   previewData: {
     orderNumber: '7K42P8',
     customerName: 'Jane',
+    customerEmail: 'jane@example.com',
     quantity: 1,
     total: '9.99',
     addressLines: 'Jane Doe\n123 Main St\nNew York, NY 10001\nUS',
