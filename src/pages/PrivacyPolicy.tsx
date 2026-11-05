@@ -103,13 +103,6 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-3">Service Providers</h2>
-            <p className="text-muted-foreground">
-              We use Supabase (backend), Stripe (payments), and Resend and Lovable (email delivery) to operate Detach.
-            </p>
-          </section>
-
-          <section>
             <h2 className="text-xl font-bold mb-3">Data Retention</h2>
             <p className="text-muted-foreground mb-2">
               On-device data is removed when you delete the app, except the QR device ID, which stays on your phone so a free trial or redeemed code carries over after reinstalling. Its server records are kept to operate QR unlock.
