@@ -61,6 +61,9 @@ const Hero = () => {
           >
             Order Now
           </a>
+          <p className="max-w-xs text-sm leading-relaxed text-muted-foreground sm:max-w-none">
+            Try it free for 14 days with a printed QR code.
+          </p>
         </motion.div>
 
 
