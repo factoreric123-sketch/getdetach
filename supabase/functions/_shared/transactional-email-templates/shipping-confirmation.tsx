@@ -27,7 +27,7 @@ const ShippingConfirmationEmail = ({ customerName }: ShippingConfirmationProps) 
           </Text>
 
           <Text style={text}>
-            In the meantime, remember that you can still use the QR code. You can print it out, tape it to an old card you no longer use, or even attach it to a small piece of cardboard and use it just like your Detach card.
+            In the meantime, remember that you can still use the QR code. You can print it out, tape it onto an old card or your fridge, and use it just like your Detach card.
           </Text>
 
           <Text style={text}>
