@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Download } from "lucide-react";
-import trialQr from "@/assets/detach-trial-qr.png.asset.json";
+const trialQr = { url: "https://dxlplpliaylvagnenucj.supabase.co/storage/v1/object/public/email-assets/detach-unlock-qr.png" };
 import StoreBadges from "@/components/StoreBadges";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
