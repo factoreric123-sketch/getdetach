@@ -36,8 +36,6 @@ const Hero = () => {
           <span className="text-gradient">phone.</span>
           <br />
           For real this time.
-          <br />
-          <span className="text-[clamp(1.4rem,4vw,2.5rem)]">Only $10!!!</span>
         </motion.h1>
 
         {/* Sub */}
@@ -62,7 +60,7 @@ const Hero = () => {
             href="/shop"
             className="inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-4 py-2.5 rounded-xl text-center font-semibold text-sm text-black no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/20 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Order Now
+            Get Detach for $9.99
           </a>
           <QrTrialDialog />
         </motion.div>
