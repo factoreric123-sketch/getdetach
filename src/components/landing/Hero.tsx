@@ -36,6 +36,8 @@ const Hero = () => {
           <span className="text-gradient">phone.</span>
           <br />
           For real this time.
+          <br />
+          <span className="text-[clamp(1.4rem,4vw,2.5rem)]">Only $10!!!</span>
         </motion.h1>
 
         {/* Sub */}
