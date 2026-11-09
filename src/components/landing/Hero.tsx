@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import heroImage from "@/assets/hero-image.jpg";
 import StoreBadges from "@/components/StoreBadges";
+import QrTrialDialog from "@/components/landing/QrTrialDialog";
 
 const Hero = () => {
   return (
@@ -61,9 +62,7 @@ const Hero = () => {
           >
             Order Now
           </a>
-          <p className="max-w-xs text-sm leading-relaxed text-muted-foreground sm:max-w-none">
-            Try it free for 14 days with a printed QR code.
-          </p>
+          <QrTrialDialog />
         </motion.div>
 
 
