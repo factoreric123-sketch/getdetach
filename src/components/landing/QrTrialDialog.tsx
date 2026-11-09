@@ -44,7 +44,7 @@ const QrTrialDialog = () => {
           <li>Download Detach from the App Store or Play Store.</li>
           <li>Open the app and go to <strong>Settings</strong>.</li>
           <li>Turn on <strong>Use a QR Code</strong>, then start your <strong>free trial</strong>.</li>
-          <li>Download and print the QR code below. Tape it onto an old card or a small piece of cardboard.</li>
+          <li>Download and print the QR code below. Tape it onto an old card or your fridge.</li>
           <li>Start a blocking session in Detach. To unlock, scan your printed QR code using the app.</li>
         </ol>
         <StoreBadges compact className="justify-center" />
