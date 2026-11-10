@@ -1,0 +1,1 @@
+ALTER TABLE public.affiliates ADD COLUMN us_commission_magnet_cents integer, ADD COLUMN intl_commission_magnet_cents integer;

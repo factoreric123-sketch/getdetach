@@ -64,9 +64,11 @@ export type Database = {
           dashboard_token: string
           id: string
           intl_commission_cents: number
+          intl_commission_magnet_cents: number | null
           name: string | null
           updated_at: string
           us_commission_cents: number
+          us_commission_magnet_cents: number | null
         }
         Insert: {
           active?: boolean
@@ -75,9 +77,11 @@ export type Database = {
           dashboard_token: string
           id?: string
           intl_commission_cents?: number
+          intl_commission_magnet_cents?: number | null
           name?: string | null
           updated_at?: string
           us_commission_cents?: number
+          us_commission_magnet_cents?: number | null
         }
         Update: {
           active?: boolean
@@ -86,9 +90,11 @@ export type Database = {
           dashboard_token?: string
           id?: string
           intl_commission_cents?: number
+          intl_commission_magnet_cents?: number | null
           name?: string | null
           updated_at?: string
           us_commission_cents?: number
+          us_commission_magnet_cents?: number | null
         }
         Relationships: []
       }
