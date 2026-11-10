@@ -23,6 +23,8 @@ type DashboardData = {
   code: string;
   usCommissionCents: number;
   intlCommissionCents: number;
+  usCommissionMagnetCents: number | null;
+  intlCommissionMagnetCents: number | null;
   totalOrders: number;
   usOrders: number;
   intlOrders: number;

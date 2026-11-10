@@ -65,6 +65,8 @@ Deno.serve(async (req) => {
       code: affiliate.code,
       usCommissionCents: affiliate.us_commission_cents,
       intlCommissionCents: affiliate.intl_commission_cents,
+      usCommissionMagnetCents: affiliate.us_commission_magnet_cents,
+      intlCommissionMagnetCents: affiliate.intl_commission_magnet_cents,
       totalOrders,
       usOrders,
       intlOrders: totalOrders - usOrders,
