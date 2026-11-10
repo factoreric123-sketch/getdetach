@@ -158,6 +158,13 @@ const AffiliateDashboard = () => {
                 <p className="mt-1 text-2xl font-semibold">{money(data.usCommissionCents)}</p>
                 <p className="text-xs text-foreground/80">
                   US · {money(data.intlCommissionCents)} intl
+                  {data.usCommissionMagnetCents != null && data.intlCommissionMagnetCents != null && (
+                    <>
+                      <br />
+                      With magnet: {money(data.usCommissionMagnetCents)} US · {money(data.intlCommissionMagnetCents)}{" "}
+                      intl
+                    </>
+                  )}
                 </p>
               </div>
             </div>
