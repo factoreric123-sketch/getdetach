@@ -50,6 +50,7 @@ const App = () => (
           <Route path="/how-nfc-focus-apps-work" element={<HowNfcFocusAppsWork />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/detach-faq" element={<DetachFaq />} />
+          <Route path="/affiliate/:code" element={<AffiliateDashboard />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/detach-guardian-privacy-policy" element={<DetachGuardianPrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
