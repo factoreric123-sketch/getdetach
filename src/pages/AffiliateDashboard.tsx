@@ -140,7 +140,7 @@ const AffiliateDashboard = () => {
               <span className="text-foreground">{`https://getdetach.app/?ref=${data.code}`}</span>
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-border bg-card p-5">
                 <p className="text-sm text-foreground/80">Total earned</p>
                 <p className="mt-1 text-2xl font-semibold">{money(data.totalCommissionCents)}</p>
@@ -153,21 +153,46 @@ const AffiliateDashboard = () => {
                 <p className="text-sm text-foreground/80">Last 30 days</p>
                 <p className="mt-1 text-2xl font-semibold">{monthlyOrders}</p>
               </div>
-              <div className="rounded-2xl border border-border bg-card p-5">
-                <p className="text-sm text-foreground/80">Per order</p>
-                <p className="mt-1 text-2xl font-semibold">{money(data.usCommissionCents)}</p>
-                <p className="text-xs text-foreground/80">
-                  US · {money(data.intlCommissionCents)} intl
-                  {data.usCommissionMagnetCents != null && data.intlCommissionMagnetCents != null && (
-                    <>
-                      <br />
-                      With magnet: {money(data.usCommissionMagnetCents)} US · {money(data.intlCommissionMagnetCents)}{" "}
-                      intl
-                    </>
-                  )}
-                </p>
-              </div>
             </div>
+
+            <section className="mt-12 rounded-3xl border border-border bg-card p-6 sm:p-10">
+              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Commission per order</h2>
+              {data.usCommissionMagnetCents != null && (
+                <p className="mt-2 text-lg text-foreground/80">30% of net profit</p>
+              )}
+
+              <p className="mt-8 text-sm font-semibold uppercase tracking-widest text-foreground/80">
+                {data.usCommissionMagnetCents != null ? "Standard card" : "Card"}
+              </p>
+              <div className="mt-3 rounded-2xl border border-border">
+                <div className="flex items-center justify-between px-5 py-4">
+                  <span>US order</span>
+                  <span className="text-xl font-semibold">{money(data.usCommissionCents)}</span>
+                </div>
+                <div className="flex items-center justify-between border-t border-border px-5 py-4">
+                  <span>International order</span>
+                  <span className="text-xl font-semibold">{money(data.intlCommissionCents)}</span>
+                </div>
+              </div>
+
+              {data.usCommissionMagnetCents != null && data.intlCommissionMagnetCents != null && (
+                <>
+                  <p className="mt-8 text-sm font-semibold uppercase tracking-widest text-foreground/80">
+                    Card + magnet
+                  </p>
+                  <div className="mt-3 rounded-2xl border border-border">
+                    <div className="flex items-center justify-between px-5 py-4">
+                      <span>US order</span>
+                      <span className="text-xl font-semibold">{money(data.usCommissionMagnetCents)}</span>
+                    </div>
+                    <div className="flex items-center justify-between border-t border-border px-5 py-4">
+                      <span>International order</span>
+                      <span className="text-xl font-semibold">{money(data.intlCommissionMagnetCents)}</span>
+                    </div>
+                  </div>
+                </>
+              )}
+            </section>
 
             <h2 className="mt-12 text-xl font-semibold">Referred orders</h2>
             {data.orders.length === 0 ? (
