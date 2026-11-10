@@ -29,6 +29,13 @@
       "when": 1791441942979,
       "tag": "0003_use_readable_order_number_alphabet",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794349108245,
+      "tag": "0004_add_affiliate_dashboard_tokens",
+      "breakpoints": true
     }
   ]
 }

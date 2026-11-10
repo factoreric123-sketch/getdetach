@@ -61,6 +61,7 @@ export type Database = {
           active: boolean
           code: string
           created_at: string
+          dashboard_token: string
           id: string
           intl_commission_cents: number
           name: string | null
@@ -71,6 +72,7 @@ export type Database = {
           active?: boolean
           code: string
           created_at?: string
+          dashboard_token: string
           id?: string
           intl_commission_cents?: number
           name?: string | null
@@ -81,6 +83,7 @@ export type Database = {
           active?: boolean
           code?: string
           created_at?: string
+          dashboard_token?: string
           id?: string
           intl_commission_cents?: number
           name?: string | null
