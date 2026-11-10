@@ -243,12 +243,17 @@ serve(async (req) => {
           const isUs = country === "US";
           const { data: aff } = await supabase
             .from("affiliates")
-            .select("us_commission_cents, intl_commission_cents, active")
+            .select("us_commission_cents, intl_commission_cents, us_commission_magnet_cents, intl_commission_magnet_cents, active")
             .eq("code", affiliateCode)
             .maybeSingle();
 
           if (aff && aff.active) {
-            const commission = isUs ? aff.us_commission_cents : aff.intl_commission_cents;
+            const hasMagnet = (fullSession.line_items?.data || []).some(
+              (li: any) => li?.price?.id === "price_1U2JKxIZGOywGX0d16zufVPi",
+            );
+            const commission = isUs
+              ? (hasMagnet && aff.us_commission_magnet_cents != null ? aff.us_commission_magnet_cents : aff.us_commission_cents)
+              : (hasMagnet && aff.intl_commission_magnet_cents != null ? aff.intl_commission_magnet_cents : aff.intl_commission_cents);
             const { error: affErr } = await supabase.from("affiliate_orders").insert({
               affiliate_code: affiliateCode,
               stripe_session_id: fullSession.id,
