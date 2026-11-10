@@ -22,6 +22,7 @@ import DetachVsBrick from "./pages/DetachVsBrick";
 import HowNfcFocusAppsWork from "./pages/HowNfcFocusAppsWork";
 import Compare from "./pages/Compare";
 import DetachFaq from "./pages/DetachFaq";
+import AffiliateDashboard from "./pages/AffiliateDashboard";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 
