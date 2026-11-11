@@ -1,5 +1,5 @@
-- Assign post-purchase QR codes only in the Stripe webhook through the service-role-only `assign_order_qr_code` RPC, keyed by checkout session; this prevents duplicate or shared codes across orders.
-- Keep the uploaded six-digit QR pool and per-order assignments private in the database; email images are generated per paid order and hosted in the existing email-assets bucket so mail clients can display and print them.
+- Assign post-purchase QR codes only through the service-role-only `assign_order_qr_code` RPC, keyed by checkout session, called from the Stripe webhook and the `get-order-code` function; this prevents duplicate or shared codes across orders.
+- Keep the uploaded six-digit QR pool and per-order assignments private in the database; the email image is one shared detach-unlock-qr.png hosted in the existing email-assets bucket so mail clients can display and print it.
 - Public trial access uses the existing shared printable QR in a dedicated dialog; never expose or consume private paid-order activation codes for trials.
 - Keep Guardian legal content in its own route component, separate from the main Detach privacy policy, so the two products' disclosures remain independent.
 - Assign confirmation order numbers through the service-role-only `get_or_create_order_number` RPC keyed by Stripe checkout session in both confirmation send paths; a unique nullable confirmation code and per-session transaction lock keep new random numbers collision-safe and retry-stable while preserving historical identity-based numbers privately.
