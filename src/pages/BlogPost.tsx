@@ -188,7 +188,7 @@ const BlogPost = () => {
       const line = lines[i];
 
       // Table detection
-      if (line.includes("|") && i + 1 < lines.length && lines[i + 1]?.match(/^\|[\s-|]+\|$/)) {
+      if (line.includes("|") && i + 1 < lines.length && lines[i + 1]?.match(/^\s*\|[\s:\-|]+\|\s*$/)) {
         const tableLines: string[] = [];
         while (i < lines.length && lines[i].includes("|")) {
           tableLines.push(lines[i]);
