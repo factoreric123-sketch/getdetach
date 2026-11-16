@@ -48,8 +48,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground/60">
+        <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
           <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
+          <a
+            href="https://startupbase.io/products/get-detach?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Launched on StartupBase"
+            className="inline-flex shrink-0"
+          >
+            <img
+              src="https://statics.startupbase.io/site/badges/launched-on-sb-dark.svg"
+              alt="Launched on StartupBase"
+              height="55"
+              style={{ height: "55px", width: "auto" }}
+            />
+          </a>
         </div>
       </div>
     </footer>
