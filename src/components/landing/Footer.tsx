@@ -50,15 +50,6 @@ const Footer = () => {
 
         <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
           <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
-          <a
-            href="https://www.adhdproducts.directory/"
-            target="_blank"
-            rel="sponsored nofollow noopener"
-            data-directory-listing="19812cd4-a2f3-4f09-b369-b6c43186d706"
-            className="text-foreground/70 hover:text-foreground transition-colors"
-          >
-            ADHD Product Directory
-          </a>
         </div>
       </div>
     </footer>
