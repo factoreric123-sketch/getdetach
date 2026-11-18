@@ -50,6 +50,21 @@ const Footer = () => {
 
         <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
           <span>© {new Date().getFullYear()} Detach. All rights reserved.</span>
+          <a
+            href="https://fazier.com/launches/getdetach.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Detach launched on Fazier"
+          >
+            <img
+              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=dark"
+              width={120}
+              height={51}
+              alt="Launched on Fazier"
+              className="h-auto w-[120px] opacity-80 transition-opacity hover:opacity-100"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
     </footer>
